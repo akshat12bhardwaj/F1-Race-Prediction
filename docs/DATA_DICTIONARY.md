@@ -33,6 +33,9 @@ Category codes (blueprint §13): **A** = directly from source · **B** = derived
 | `outputs/tables/historical_status_vocabulary.csv` | Report | 5 | 245 | **Created** |
 | `outputs/tables/historical_field_coverage.csv` | Report | 5 | per season × endpoint × field | **Created** |
 | `outputs/tables/subset_*.csv`, `data/interim/subset_*.csv` | Resume-test evidence | 5 | 1950–1951 | **Created** |
+| `data/interim/results_policy.csv` | Interim + approved policy flags | 5.6 | 25,873 | **Created** |
+| `data/interim/races_policy.csv` | Interim + approved policy flags | 5.6 | 1,149 | **Created** |
+| `outputs/tables/policy_application_summary.csv` | Report | 5.6 | 27 | **Created** |
 | `data/interim/weather_race.csv` | Interim | 6 | about 1,149 | Not created |
 | `data/interim/master_base.csv` | Interim | 9 | about 25,873 | Not created |
 | `data/processed/master_features.csv` | Processed | 11 | — | Not created |
@@ -75,6 +78,35 @@ Observed coverage across 1950–2025 (from `historical_field_coverage.csv` and `
 | status | 136 distinct values in race results |
 
 Keys: `(season, round, driver_id)` is **not unique** in 1950–1964 (172 rows in 40 races: shared drives). `(season, round, position)` is not unique in 46 races up to 1964 (shared cars). Both are kept and reported; see `historical_edge_cases.csv`.
+
+### `data/interim/results_policy.csv` (Step 5.6, approved policies P-01…P-11)
+**All columns of `results.csv`, byte-for-byte the same values**, followed by these derived columns (written by `src/policies.py`; True/False flags unless stated). One row per result row (25,873), nothing removed.
+
+| Column | Policy | Meaning |
+|---|---|---|
+| entry_count | P-01 | Number of car entries of this driver in this race (1–3) |
+| multi_entry_driver | P-01 | entry_count > 1 |
+| is_primary_entry | P-01 | The driver's best-placed started entry in this race (tie-break: car number) |
+| shared_position | P-02 | Another driver has the same position in this race (co-drivers) |
+| shared_position_count | P-02 | Number of drivers credited with this position (integer) |
+| race_has_shared_win | P-02 | The race has a shared position 1 |
+| race_has_qualifying | P-03 | The race has any qualifying data |
+| has_qualifying_row | P-03 | This driver has a qualifying row for this race |
+| grid_status | P-04 | given / pit_lane_start / unknown / non_starter (raw `grid` unchanged) |
+| pit_lane_start | P-04 | grid_status == pit_lane_start |
+| result_category_detail | P-05 | finished, classified_not_running, started_not_classified, disqualified, did_not_start, ambiguous_withdrawn_after_start, ambiguous_classified_withdrawn, ambiguous_classified_not_classified, unknown |
+| result_category | P-05/P-07 | result_category_detail with ambiguous rows mapped per P-07 |
+| ambiguous_status | P-07 | result_category_detail is one of the ambiguous categories |
+| started | P-07/P-08 | result_category ∈ {finished, classified_not_running, started_not_classified, disqualified} |
+| retired_while_classified | P-06 | result_category == classified_not_running (NOT a DNF) |
+| laps_order_exception | P-10 | Row is part of a laps inversion among non-classified rows |
+| is_indianapolis_500 | P-11 | race_name == "Indianapolis 500" |
+| in_model_population | P-08 | started ∧ is_primary_entry ∧ ¬is_indianapolis_500 (25,066 rows) |
+
+DNF (P-06) is `result_category == "started_not_classified"` (function `is_dnf`). No DNF target column exists yet.
+
+### `data/interim/races_policy.csv` (Step 5.6)
+All columns of `races.csv` plus: result_rows, model_population_rows, race_has_qualifying, race_has_shared_win, race_has_shared_position, race_has_laps_order_exception, is_indianapolis_500, **exclude_from_winner_metrics** (P-02: the 3 shared-win races).
 
 ### `outputs/tables/historical_collection_summary.csv`
 One row per season: races, races_missing_race_time, result_rows, qualifying_rows, sprint_rows, unique_drivers, unique_constructors (in results), drivers_in_season_list, constructors_in_season_list, duplicate_result_keys / duplicate_qualifying_keys / duplicate_sprint_keys (rows involved), missing_race_ids / missing_driver_ids / missing_constructor_ids, **api_total_*** (`MRData.total` of each endpoint), **matches_api_totals** (True when every count equals the API total).

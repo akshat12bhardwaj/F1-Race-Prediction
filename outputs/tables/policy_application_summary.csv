@@ -1,0 +1,28 @@
+policy,measure,value
+P-01,result rows kept (all entries),25873
+P-01,rows of drivers with several entries in a race,172
+P-01,secondary entries (not primary),89
+P-02,rows with a shared position,228
+P-02,races excluded from winner metrics (shared win),3
+P-03,races without qualifying (kept),631
+P-03,result rows without a qualifying row (kept),14907
+P-04,grid = 0 rows (raw value kept),267
+P-04,pit-lane starts,48
+P-04,started with grid = 0 and 0 laps: grid unknown,17
+P-05,distinct raw status values kept,136
+P-06,"DNF rows (started, not classified)",9141
+P-06,"retired while classified (not DNF, flagged)",678
+P-07,ambiguous rows treated as started (flagged),24
+P-08,started rows,25535
+P-08,non-starter rows (not in population),338
+P-08,model population rows,25066
+P-09,"constructor_id values (unchanged, not merged)",203
+P-10,rows flagged as laps-order exceptions,16
+P-10,races with a laps-order exception,8
+P-11,Indianapolis 500 races (excluded from population),11
+P-11,Indianapolis 500 rows,405
+P-05,result_category = finished,15554
+P-05,result_category = started_not_classified,9141
+P-05,result_category = classified_not_running,678
+P-05,result_category = did_not_start,338
+P-05,result_category = disqualified,162

@@ -1,0 +1,247 @@
+source,status,position_text_type,proposed_category,records,first_season,last_season,category_group
+race,Finished,numeric,finished,8004,1950,2025,a) started and finished
+race,+1 Lap,numeric,finished,3849,1950,2022,a) started and finished
+race,Engine,R,started_not_classified,1855,1950,2022,"b) started, did not finish (not classified)"
+race,+2 Laps,numeric,finished,1592,1950,2022,a) started and finished
+race,Accident,R,started_not_classified,947,1950,2023,"b) started, did not finish (not classified)"
+race,Collision,R,started_not_classified,785,1950,2022,"b) started, did not finish (not classified)"
+race,Gearbox,R,started_not_classified,763,1950,2022,"b) started, did not finish (not classified)"
+race,Spun off,R,started_not_classified,750,1951,2022,"b) started, did not finish (not classified)"
+race,+3 Laps,numeric,finished,730,1950,2021,a) started and finished
+race,Suspension,R,started_not_classified,406,1950,2022,"b) started, did not finish (not classified)"
+race,+4 Laps,numeric,finished,404,1950,2016,a) started and finished
+race,Transmission,R,started_not_classified,309,1950,2020,"b) started, did not finish (not classified)"
+race,Lapped,numeric,finished,297,2023,2025,a) started and finished
+race,Electrical,R,started_not_classified,295,1952,2021,"b) started, did not finish (not classified)"
+race,Brakes,R,started_not_classified,230,1950,2021,"b) started, did not finish (not classified)"
+race,Withdrew,W,did_not_start,223,1950,2023,d) did not start
+race,+5 Laps,numeric,finished,221,1950,2020,a) started and finished
+race,Retired,R,started_not_classified,215,1950,2025,"b) started, did not finish (not classified)"
+race,Clutch,R,started_not_classified,200,1950,2014,"b) started, did not finish (not classified)"
+race,Not classified,R,started_not_classified,171,1950,2004,"b) started, did not finish (not classified)"
+race,+6 Laps,numeric,finished,152,1950,2022,a) started and finished
+race,Disqualified,D,disqualified,150,1952,2025,c) disqualified
+race,Turbo,R,started_not_classified,142,1952,2022,"b) started, did not finish (not classified)"
+race,Engine,numeric,classified_not_running,138,1953,2022,"b) started, did not finish (classified)"
+race,Fuel system,R,started_not_classified,137,1951,2003,"b) started, did not finish (not classified)"
+race,Hydraulics,R,started_not_classified,129,1987,2022,"b) started, did not finish (not classified)"
+race,Overheating,R,started_not_classified,127,1950,2020,"b) started, did not finish (not classified)"
+race,Oil leak,R,started_not_classified,122,1950,2022,"b) started, did not finish (not classified)"
+race,Ignition,R,started_not_classified,118,1951,1994,"b) started, did not finish (not classified)"
+race,Throttle,R,started_not_classified,105,1953,2015,"b) started, did not finish (not classified)"
+race,+7 Laps,numeric,finished,96,1950,2005,a) started and finished
+race,Halfshaft,R,started_not_classified,96,1952,2001,"b) started, did not finish (not classified)"
+race,Wheel,R,started_not_classified,82,1951,2020,"b) started, did not finish (not classified)"
+race,Out of fuel,numeric,classified_not_running,79,1964,2005,"b) started, did not finish (classified)"
+race,Oil pressure,R,started_not_classified,77,1950,2017,"b) started, did not finish (not classified)"
+race,Accident,numeric,classified_not_running,71,1953,2021,"b) started, did not finish (classified)"
+race,Fuel pump,R,started_not_classified,60,1953,2022,"b) started, did not finish (not classified)"
+race,Differential,R,started_not_classified,56,1952,2022,"b) started, did not finish (not classified)"
+race,Handling,R,started_not_classified,54,1958,2004,"b) started, did not finish (not classified)"
+race,Tyre,R,started_not_classified,51,1956,2018,"b) started, did not finish (not classified)"
+race,+8 Laps,numeric,finished,49,1950,2014,a) started and finished
+race,Fuel leak,R,started_not_classified,49,1951,2022,"b) started, did not finish (not classified)"
+race,Steering,R,started_not_classified,45,1954,2018,"b) started, did not finish (not classified)"
+race,Collision,numeric,classified_not_running,44,1972,2022,"b) started, did not finish (classified)"
+race,Radiator,R,started_not_classified,42,1950,2020,"b) started, did not finish (not classified)"
+race,Collision damage,R,started_not_classified,41,2012,2023,"b) started, did not finish (not classified)"
+race,Spun off,numeric,classified_not_running,41,1950,2009,"b) started, did not finish (classified)"
+race,Puncture,R,started_not_classified,36,1962,2021,"b) started, did not finish (not classified)"
+race,+9 Laps,numeric,finished,35,1951,1980,a) started and finished
+race,Gearbox,numeric,classified_not_running,35,1955,2021,"b) started, did not finish (classified)"
+race,Power Unit,R,started_not_classified,34,2014,2022,"b) started, did not finish (not classified)"
+race,Wheel bearing,R,started_not_classified,34,1950,1999,"b) started, did not finish (not classified)"
+race,Injection,R,started_not_classified,33,1954,1991,"b) started, did not finish (not classified)"
+race,Retired,numeric,classified_not_running,32,2012,2025,"b) started, did not finish (classified)"
+race,Water leak,R,started_not_classified,32,1957,2022,"b) started, did not finish (not classified)"
+race,+10 Laps,numeric,finished,30,1950,1969,a) started and finished
+race,Physical,R,started_not_classified,30,1953,1999,"b) started, did not finish (not classified)"
+race,Accident,W,did_not_start,29,1950,1995,d) did not start
+race,Chassis,R,started_not_classified,29,1956,2002,"b) started, did not finish (not classified)"
+race,Fuel pressure,R,started_not_classified,29,1955,2020,"b) started, did not finish (not classified)"
+race,Exhaust,R,started_not_classified,27,1952,2019,"b) started, did not finish (not classified)"
+race,Mechanical,R,started_not_classified,27,1982,2022,"b) started, did not finish (not classified)"
+race,Alternator,R,started_not_classified,26,1965,2013,"b) started, did not finish (not classified)"
+race,Suspension,numeric,classified_not_running,24,1963,2020,"b) started, did not finish (classified)"
+race,Driveshaft,R,started_not_classified,23,1987,2017,"b) started, did not finish (not classified)"
+race,Magneto,R,started_not_classified,21,1951,1961,"b) started, did not finish (not classified)"
+race,Out of fuel,R,started_not_classified,21,1950,2019,"b) started, did not finish (not classified)"
+race,Withdrew,W,ambiguous_withdrawn_after_start,20,1952,2023,e) ambiguous
+race,Brakes,numeric,classified_not_running,19,1960,2019,"b) started, did not finish (classified)"
+race,Axle,R,started_not_classified,18,1950,1970,"b) started, did not finish (not classified)"
+race,Electrical,numeric,classified_not_running,18,1966,2010,"b) started, did not finish (classified)"
+race,Engine,W,did_not_start,18,1950,2016,d) did not start
+race,Heat shield fire,R,started_not_classified,18,1951,2011,"b) started, did not finish (not classified)"
+race,Battery,R,started_not_classified,15,1962,2018,"b) started, did not finish (not classified)"
+race,Fuel system,numeric,classified_not_running,15,1960,1993,"b) started, did not finish (classified)"
+race,Oil pump,R,started_not_classified,14,1950,1996,"b) started, did not finish (not classified)"
+race,+11 Laps,numeric,finished,13,1950,1965,a) started and finished
+race,+13 Laps,numeric,finished,13,1950,1960,a) started and finished
+race,Clutch,numeric,classified_not_running,13,1954,2014,"b) started, did not finish (classified)"
+race,Power loss,R,started_not_classified,13,2002,2022,"b) started, did not finish (not classified)"
+race,Distributor,R,started_not_classified,12,1957,1990,"b) started, did not finish (not classified)"
+race,+14 Laps,numeric,finished,11,1952,1965,a) started and finished
+race,Oil pipe,R,started_not_classified,11,1950,1971,"b) started, did not finish (not classified)"
+race,Transmission,numeric,classified_not_running,11,1960,2015,"b) started, did not finish (classified)"
+race,+12 Laps,numeric,finished,10,1950,1965,a) started and finished
+race,Broken wing,R,started_not_classified,10,1968,2006,"b) started, did not finish (not classified)"
+race,Electronics,R,started_not_classified,10,2002,2020,"b) started, did not finish (not classified)"
+race,Oil pressure,numeric,classified_not_running,10,1961,1993,"b) started, did not finish (classified)"
+race,+15 Laps,numeric,finished,9,1950,1965,a) started and finished
+race,Did not start,W,did_not_start,9,2023,2025,d) did not start
+race,Driver unwell,R,started_not_classified,9,1964,1988,"b) started, did not finish (not classified)"
+race,Excluded,D,disqualified,8,1987,2015,c) disqualified
+race,Ignition,numeric,classified_not_running,8,1962,1984,"b) started, did not finish (classified)"
+race,Injury,W,did_not_start,8,1966,2011,d) did not start
+race,Rear wing,R,started_not_classified,8,1999,2021,"b) started, did not finish (not classified)"
+race,Wheel nut,R,started_not_classified,8,2011,2021,"b) started, did not finish (not classified)"
+race,+16 Laps,numeric,finished,7,1950,1964,a) started and finished
+race,Gearbox,W,did_not_start,7,1995,2015,d) did not start
+race,Hydraulics,numeric,classified_not_running,7,1998,2022,"b) started, did not finish (classified)"
+race,Vibrations,R,started_not_classified,7,1960,2017,"b) started, did not finish (not classified)"
+race,Water pump,R,started_not_classified,7,1957,2022,"b) started, did not finish (not classified)"
+race,+17 Laps,numeric,finished,6,1953,1965,a) started and finished
+race,Collision damage,numeric,classified_not_running,6,2017,2023,"b) started, did not finish (classified)"
+race,Fuel pressure,numeric,classified_not_running,6,1970,2022,"b) started, did not finish (classified)"
+race,Injured,W,did_not_start,6,1988,2009,d) did not start
+race,Wheel,numeric,classified_not_running,6,1977,2018,"b) started, did not finish (classified)"
+race,Alternator,numeric,classified_not_running,5,1965,2012,"b) started, did not finish (classified)"
+race,Differential,numeric,classified_not_running,5,1962,2009,"b) started, did not finish (classified)"
+race,Fuel pump,numeric,classified_not_running,5,1950,2010,"b) started, did not finish (classified)"
+race,Magneto,numeric,classified_not_running,5,1953,1960,"b) started, did not finish (classified)"
+race,Puncture,numeric,classified_not_running,5,1974,2018,"b) started, did not finish (classified)"
+race,Supercharger,R,started_not_classified,5,1950,1952,"b) started, did not finish (not classified)"
+race,Throttle,numeric,classified_not_running,5,1975,1996,"b) started, did not finish (classified)"
+race,Water pressure,R,started_not_classified,5,2014,2022,"b) started, did not finish (not classified)"
+race,+11 Laps,R,started_not_classified,4,1978,2012,"b) started, did not finish (not classified)"
+race,+18 Laps,numeric,finished,4,1952,1965,a) started and finished
+race,+19 Laps,numeric,finished,4,1951,1963,a) started and finished
+race,+22 Laps,numeric,finished,4,1951,1964,a) started and finished
+race,+24 Laps,numeric,finished,4,1953,1964,a) started and finished
+race,Axle,numeric,classified_not_running,4,1953,1960,"b) started, did not finish (classified)"
+race,Collision,W,did_not_start,4,1998,1998,d) did not start
+race,Front wing,R,started_not_classified,4,2007,2017,"b) started, did not finish (not classified)"
+race,Fuel,R,started_not_classified,4,1997,2003,"b) started, did not finish (not classified)"
+race,Injury,R,started_not_classified,4,1982,2002,"b) started, did not finish (not classified)"
+race,Pneumatics,R,started_not_classified,4,2004,2013,"b) started, did not finish (not classified)"
+race,Power Unit,numeric,classified_not_running,4,2015,2022,"b) started, did not finish (classified)"
+race,Turbo,numeric,classified_not_running,4,1984,1986,"b) started, did not finish (classified)"
+race,Tyre,numeric,classified_not_running,4,1990,2015,"b) started, did not finish (classified)"
+race,+25 Laps,numeric,finished,3,1963,1965,a) started and finished
+race,+7 Laps,R,started_not_classified,3,1978,1978,"b) started, did not finish (not classified)"
+race,+8 Laps,R,started_not_classified,3,1978,2014,"b) started, did not finish (not classified)"
+race,+9 Laps,R,started_not_classified,3,1980,2011,"b) started, did not finish (not classified)"
+race,Disqualified,numeric,disqualified,3,2023,2024,c) disqualified
+race,ERS,R,started_not_classified,3,2014,2015,"b) started, did not finish (not classified)"
+race,Fuel system,W,did_not_start,3,1960,2015,d) did not start
+race,Halfshaft,numeric,classified_not_running,3,1969,1976,"b) started, did not finish (classified)"
+race,Injection,numeric,classified_not_running,3,1961,1982,"b) started, did not finish (classified)"
+race,Overheating,numeric,classified_not_running,3,1964,1984,"b) started, did not finish (classified)"
+race,Power Unit,W,did_not_start,3,2014,2020,d) did not start
+race,Spark plugs,R,started_not_classified,3,1982,2017,"b) started, did not finish (not classified)"
+race,Technical,R,started_not_classified,3,2006,2014,"b) started, did not finish (not classified)"
+race,Undertray,R,started_not_classified,3,2022,2023,"b) started, did not finish (not classified)"
+race,Vibrations,numeric,classified_not_running,3,2012,2022,"b) started, did not finish (classified)"
+race,Water pipe,R,started_not_classified,3,1950,1970,"b) started, did not finish (not classified)"
+race,Water pressure,numeric,classified_not_running,3,2007,2017,"b) started, did not finish (classified)"
+race,Wheel bearing,numeric,classified_not_running,3,1977,1980,"b) started, did not finish (classified)"
+race,Withdrew,numeric,ambiguous_classified_withdrawn,3,1996,2020,e) ambiguous
+race,+10 Laps,R,started_not_classified,2,2010,2011,"b) started, did not finish (not classified)"
+race,+12 Laps,R,started_not_classified,2,1978,2005,"b) started, did not finish (not classified)"
+race,Battery,numeric,classified_not_running,2,1964,2016,"b) started, did not finish (classified)"
+race,Damage,R,started_not_classified,2,2019,2021,"b) started, did not finish (not classified)"
+race,Distributor,numeric,classified_not_running,2,1981,1983,"b) started, did not finish (classified)"
+race,Drivetrain,R,started_not_classified,2,2002,2014,"b) started, did not finish (not classified)"
+race,Electrical,W,did_not_start,2,1995,2005,d) did not start
+race,Exhaust,numeric,classified_not_running,2,1985,2012,"b) started, did not finish (classified)"
+race,Fatal accident,R,started_not_classified,2,1974,1982,"b) started, did not finish (not classified)"
+race,Fire,R,started_not_classified,2,1989,2004,"b) started, did not finish (not classified)"
+race,Fuel pipe,R,started_not_classified,2,1970,1976,"b) started, did not finish (not classified)"
+race,Fuel rig,R,started_not_classified,2,2001,2003,"b) started, did not finish (not classified)"
+race,Hydraulics,W,did_not_start,2,2010,2016,d) did not start
+race,Ignition,W,did_not_start,2,1975,2002,d) did not start
+race,Oil line,R,started_not_classified,2,1950,2003,"b) started, did not finish (not classified)"
+race,Safety,W,did_not_start,2,2002,2002,d) did not start
+race,Safety concerns,W,did_not_start,2,2000,2000,d) did not start
+race,Stalled,R,started_not_classified,2,1950,2001,"b) started, did not finish (not classified)"
+race,Steering,numeric,classified_not_running,2,1952,2006,"b) started, did not finish (classified)"
+race,Wheel rim,numeric,classified_not_running,2,2002,2005,"b) started, did not finish (classified)"
+race,+1 Lap,R,started_not_classified,1,2005,2005,"b) started, did not finish (not classified)"
+race,+14 Laps,R,started_not_classified,1,2011,2011,"b) started, did not finish (not classified)"
+race,+17 Laps,R,started_not_classified,1,2006,2006,"b) started, did not finish (not classified)"
+race,+2 Laps,R,started_not_classified,1,2005,2005,"b) started, did not finish (not classified)"
+race,+20 Laps,numeric,finished,1,1951,1951,a) started and finished
+race,+21 Laps,numeric,finished,1,1962,1962,a) started and finished
+race,+23 Laps,numeric,finished,1,1963,1963,a) started and finished
+race,+26 Laps,R,started_not_classified,1,2005,2005,"b) started, did not finish (not classified)"
+race,+29 Laps,numeric,finished,1,1964,1964,a) started and finished
+race,+3 Laps,R,started_not_classified,1,1967,1967,"b) started, did not finish (not classified)"
+race,+30 Laps,numeric,finished,1,1960,1960,a) started and finished
+race,+4 Laps,R,started_not_classified,1,1980,1980,"b) started, did not finish (not classified)"
+race,+42 Laps,R,started_not_classified,1,2011,2011,"b) started, did not finish (not classified)"
+race,+44 Laps,numeric,finished,1,1960,1960,a) started and finished
+race,+46 Laps,numeric,finished,1,1954,1954,a) started and finished
+race,+6 Laps,R,started_not_classified,1,1956,1956,"b) started, did not finish (not classified)"
+race,Brake duct,R,started_not_classified,1,2015,2015,"b) started, did not finish (not classified)"
+race,Brakes,W,did_not_start,1,2021,2021,d) did not start
+race,Broken wing,numeric,classified_not_running,1,1986,1986,"b) started, did not finish (classified)"
+race,CV joint,R,started_not_classified,1,1985,1985,"b) started, did not finish (not classified)"
+race,Clutch,W,did_not_start,1,2003,2003,d) did not start
+race,Cooling system,R,started_not_classified,1,2022,2022,"b) started, did not finish (not classified)"
+race,Crankshaft,R,started_not_classified,1,2001,2001,"b) started, did not finish (not classified)"
+race,Debris,R,started_not_classified,1,2020,2020,"b) started, did not finish (not classified)"
+race,Driver Seat,R,started_not_classified,1,2008,2008,"b) started, did not finish (not classified)"
+race,Driver unwell,W,did_not_start,1,1985,1985,d) did not start
+race,Driveshaft,W,did_not_start,1,2021,2021,d) did not start
+race,Driveshaft,numeric,classified_not_running,1,2007,2007,"b) started, did not finish (classified)"
+race,ERS,W,did_not_start,1,2015,2015,d) did not start
+race,ERS,numeric,classified_not_running,1,2014,2014,"b) started, did not finish (classified)"
+race,Electronics,numeric,classified_not_running,1,2020,2020,"b) started, did not finish (classified)"
+race,Engine fire,R,started_not_classified,1,2005,2005,"b) started, did not finish (not classified)"
+race,Engine misfire,R,started_not_classified,1,2011,2011,"b) started, did not finish (not classified)"
+race,Exhaust,W,did_not_start,1,2020,2020,d) did not start
+race,Eye injury,R,started_not_classified,1,1972,1972,"b) started, did not finish (not classified)"
+race,Fatal accident,W,did_not_start,1,1970,1970,d) did not start
+race,Fire,W,did_not_start,1,1999,1999,d) did not start
+race,Front wing,numeric,classified_not_running,1,2022,2022,"b) started, did not finish (classified)"
+race,Fuel leak,numeric,classified_not_running,1,1969,1969,"b) started, did not finish (classified)"
+race,Fuel pipe,numeric,classified_not_running,1,1978,1978,"b) started, did not finish (classified)"
+race,Fuel pump,W,did_not_start,1,1990,1990,d) did not start
+race,Heat shield fire,numeric,classified_not_running,1,1983,1983,"b) started, did not finish (classified)"
+race,Illness,R,started_not_classified,1,2020,2020,"b) started, did not finish (not classified)"
+race,Illness,W,did_not_start,1,2021,2021,d) did not start
+race,Injured,R,started_not_classified,1,1977,1977,"b) started, did not finish (not classified)"
+race,Injury,numeric,classified_not_running,1,1998,1998,"b) started, did not finish (classified)"
+race,Launch control,R,started_not_classified,1,2003,2003,"b) started, did not finish (not classified)"
+race,Mechanical,numeric,classified_not_running,1,2013,2013,"b) started, did not finish (classified)"
+race,Not classified,numeric,ambiguous_classified_not_classified,1,1972,1972,e) ambiguous
+race,Not restarted,W,did_not_start,1,2000,2000,d) did not start
+race,Oil leak,numeric,classified_not_running,1,1987,1987,"b) started, did not finish (classified)"
+race,Oil pipe,numeric,classified_not_running,1,1964,1964,"b) started, did not finish (classified)"
+race,Physical,W,did_not_start,1,1975,1975,d) did not start
+race,Power loss,W,did_not_start,1,2015,2015,d) did not start
+race,Rear wing,numeric,classified_not_running,1,2010,2010,"b) started, did not finish (classified)"
+race,Refuelling,R,started_not_classified,1,2007,2007,"b) started, did not finish (not classified)"
+race,Retired,W,did_not_start,1,2016,2016,d) did not start
+race,Safety belt,R,started_not_classified,1,1996,1996,"b) started, did not finish (not classified)"
+race,Seat,R,started_not_classified,1,2017,2017,"b) started, did not finish (not classified)"
+race,Spun off,W,did_not_start,1,1991,1991,d) did not start
+race,Suspension,W,did_not_start,1,1987,1987,d) did not start
+race,Technical,numeric,classified_not_running,1,2007,2007,"b) started, did not finish (classified)"
+race,Throttle,W,did_not_start,1,1997,1997,d) did not start
+race,Track rod,R,started_not_classified,1,2010,2010,"b) started, did not finish (not classified)"
+race,Track rod,numeric,classified_not_running,1,2006,2006,"b) started, did not finish (classified)"
+race,Transmission,W,did_not_start,1,1975,1975,d) did not start
+race,Tyre puncture,numeric,classified_not_running,1,2005,2005,"b) started, did not finish (classified)"
+race,Underweight,D,disqualified,1,1997,1997,c) disqualified
+race,Wheel nut,numeric,classified_not_running,1,2005,2005,"b) started, did not finish (classified)"
+race,Wheel rim,R,started_not_classified,1,2006,2006,"b) started, did not finish (not classified)"
+sprint,Finished,numeric,finished,448,2021,2025,a) started and finished
+sprint,Retired,R,started_not_classified,21,2022,2025,"b) started, did not finish (not classified)"
+sprint,Accident,R,started_not_classified,3,2021,2023,"b) started, did not finish (not classified)"
+sprint,Collision damage,R,started_not_classified,2,2023,2023,"b) started, did not finish (not classified)"
+sprint,Retired,numeric,classified_not_running,2,2024,2025,"b) started, did not finish (classified)"
+sprint,Brakes,R,started_not_classified,1,2023,2023,"b) started, did not finish (not classified)"
+sprint,Collision damage,numeric,classified_not_running,1,2022,2022,"b) started, did not finish (classified)"
+sprint,Electrical,R,started_not_classified,1,2022,2022,"b) started, did not finish (not classified)"
+sprint,Vibrations,R,started_not_classified,1,2021,2021,"b) started, did not finish (not classified)"

@@ -87,6 +87,18 @@ python -m src.collect --start 1950 --end 1951 --output-prefix subset_
 - **Validate:** `python -m pytest tests/ -v`. The season summary's `matches_api_totals` column must be `True` for every season.
 - Nothing is removed or recoded at this stage; duplicates and odd records are **flagged** in the reports.
 
+## Historical data policies (Steps 5.5–5.6)
+
+```powershell
+python -m src.policy_analysis   # read-only analysis of historical edge cases (Step 5.5)
+python -m src.policies          # apply the APPROVED policies P-01…P-11 (Step 5.6)
+```
+
+- The approved policies (shared drives, shared positions, qualifying gaps, grid = 0, status categories, DNF definition, ambiguous rows, model population, constructor identity, order exceptions, Indianapolis 500) are described with rationale and consequences in `docs/DECISIONS_LOG.md`.
+- They are applied as **extra columns** on copies of the interim tables: `data/interim/results_policy.csv` and `races_policy.csv`. The original collected files are never changed or reduced.
+- `in_model_population = True` marks the 25,066 rows that the later model dataset will use (drivers who started, primary entry, not the Indianapolis 500).
+- Counts: `outputs/tables/policy_application_summary.csv`.
+
 ## Running tests
 
 ```powershell
@@ -123,7 +135,9 @@ F1-Race-Prediction/
 | 2 | Jolpica API exploration (`notebooks/01_api_exploration.ipynb`) | Complete |
 | 3 | Cached API client (`src/api_client.py`) | Complete |
 | 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete |
-| 5 | Historical collection 1950–2025 (`python -m src.collect`, `src/collection_checks.py`) | Complete, awaiting review: 1,149 races, 25,873 results |
+| 5 | Historical collection 1950–2025 (`python -m src.collect`, `src/collection_checks.py`) | Complete: 1,149 races, 25,873 results |
+| 5.5 | Historical data policy analysis (`python -m src.policy_analysis`) | Complete |
+| 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED**; awaiting review |
 | 6 | Weather collection | Not started |
 
 ## Reproducibility

@@ -1,0 +1,105 @@
+issue_id,sub_issue,season,round,race_id,race_name,driver_id,constructor_id,driver_number,grid,position,position_text,laps,status,note
+1,1a,1950,3,1950_03,Indianapolis 500,bettenhausen,deidt,14,8,31,R,30,Wheel bearing,"same driver, different car numbers"
+1,1a,1950,3,1950_03,Indianapolis 500,bettenhausen,kurtis_kraft,17,9,5,5,136,+2 Laps,"same driver, different car numbers"
+1,1a,1950,6,1950_06,French Grand Prix,rosier,lago,20,6,12,R,10,Overheating,"same driver, different car numbers"
+1,1a,1950,6,1950_06,French Grand Prix,rosier,lago,26,15,6,6,56,+8 Laps,"same driver, different car numbers"
+1,1a,1950,7,1950_07,Italian Grand Prix,ascari,ferrari,16,2,17,R,21,Engine,"same driver, different car numbers"
+1,1a,1950,7,1950_07,Italian Grand Prix,ascari,ferrari,48,6,2,2,80,Finished,"same driver, different car numbers"
+1,1b,1951,4,1951_04,French Grand Prix,fangio,alfa,8,7,1,1,77,Finished,co-drivers of one car credited with the same position
+1,1b,1951,4,1951_04,French Grand Prix,fagioli,alfa,8,7,1,1,77,Finished,co-drivers of one car credited with the same position
+1,1b,1956,1,1956_01,Argentine Grand Prix,fangio,ferrari,34,3,1,1,98,Finished,co-drivers of one car credited with the same position
+1,1b,1956,1,1956_01,Argentine Grand Prix,musso,ferrari,34,3,1,1,98,Finished,co-drivers of one car credited with the same position
+1,1b,1957,5,1957_05,British Grand Prix,brooks,vanwall,20,3,1,1,90,Finished,co-drivers of one car credited with the same position
+1,1b,1957,5,1957_05,British Grand Prix,moss,vanwall,20,3,1,1,90,Finished,co-drivers of one car credited with the same position
+2,2b,1994,4,1994_04,Monaco Grand Prix,michael_schumacher,benetton,5,1,1,1,78,Finished,race with results but no qualifying records
+2,2b,1996,8,1996_08,Canadian Grand Prix,damon_hill,williams,5,1,1,1,69,Finished,race with results but no qualifying records
+2,2b,1996,9,1996_09,French Grand Prix,damon_hill,williams,5,2,1,1,72,Finished,race with results but no qualifying records
+2,2b,1996,10,1996_10,British Grand Prix,villeneuve,williams,6,2,1,1,61,Finished,race with results but no qualifying records
+2,2b,1996,11,1996_11,German Grand Prix,damon_hill,williams,5,1,1,1,45,Finished,race with results but no qualifying records
+2,2c,1994,5,1994_05,Spanish Grand Prix,montermini,simtek,32,0,27,W,0,Injury,result row without a qualifying row
+2,2c,2011,4,2011_04,Turkish Grand Prix,kobayashi,sauber,16,24,10,10,58,Finished,result row without a qualifying row
+2,2c,2011,5,2011_05,Spanish Grand Prix,heidfeld,renault,9,24,8,8,65,+1 Lap,result row without a qualifying row
+2,2c,2011,12,2011_12,Belgian Grand Prix,michael_schumacher,mercedes,7,24,5,5,44,Finished,result row without a qualifying row
+2,2c,2011,18,2011_18,Abu Dhabi Grand Prix,barrichello,williams,11,24,12,12,54,+1 Lap,result row without a qualifying row
+3,3a,1952,5,1952_05,British Grand Prix,aston,butterworth,2,0,32,W,0,Withdrew,grid 0 non-starter
+3,3a,1954,4,1954_04,French Grand Prix,mantovani,maserati,40,0,22,W,0,Withdrew,grid 0 non-starter
+3,3a,1954,7,1954_07,Swiss Grand Prix,manzon,ferrari,24,0,17,W,0,Accident,grid 0 non-starter
+3,3a,1954,9,1954_09,Spanish Grand Prix,collins,vanwall,42,0,22,W,0,Accident,grid 0 non-starter
+3,3b,2015,6,2015_06,Monaco Grand Prix,sainz,toro_rosso,55,0,10,10,78,Finished,grid 0 and laps > 0: pit-lane start
+3,3b,2016,6,2016_06,Monaco Grand Prix,nasr,sauber,12,0,17,R,48,Retired,grid 0 and laps > 0: pit-lane start
+3,3b,2016,6,2016_06,Monaco Grand Prix,max_verstappen,red_bull,33,0,18,R,34,Accident,grid 0 and laps > 0: pit-lane start
+3,3b,2016,9,2016_09,Austrian Grand Prix,massa,williams,19,0,20,20,63,Brakes,grid 0 and laps > 0: pit-lane start
+3,3c,1981,4,1981_04,San Marino Grand Prix,lammers,ats,9,0,27,R,0,Retired,"grid 0, started category, no laps"
+3,3c,1984,1,1984_01,Brazilian Grand Prix,manfred_winkelhock,ats,14,0,27,D,0,Disqualified,"grid 0, started category, no laps"
+3,3c,1984,12,1984_12,Austrian Grand Prix,bellof,tyrrell,4,0,26,D,0,Disqualified,"grid 0, started category, no laps"
+3,3c,1987,4,1987_04,Monaco Grand Prix,danner,zakspeed,10,0,26,D,0,Excluded,"grid 0, started category, no laps"
+4,finished,1950,1,1950_01,British Grand Prix,farina,alfa,2,1,1,1,70,Finished,a) started and finished
+4,finished,1950,1,1950_01,British Grand Prix,fagioli,alfa,3,2,2,2,70,Finished,a) started and finished
+4,finished,1950,1,1950_01,British Grand Prix,reg_parnell,alfa,4,4,3,3,70,Finished,a) started and finished
+4,classified_not_running,1950,3,1950_03,Indianapolis 500,mcgrath,kurtis_kraft,49,6,14,14,131,Spun off,"b) started, did not finish (classified)"
+4,classified_not_running,1950,3,1950_03,Indianapolis 500,holmes,olson,77,30,23,23,123,Spun off,"b) started, did not finish (classified)"
+4,classified_not_running,1950,6,1950_06,French Grand Prix,farina,alfa,2,2,7,7,55,Fuel pump,"b) started, did not finish (classified)"
+4,started_not_classified,1950,1,1950_01,British Grand Prix,fangio,alfa,1,3,12,R,62,Oil leak,"b) started, did not finish (not classified)"
+4,started_not_classified,1950,1,1950_01,British Grand Prix,kelly,alta,23,19,13,R,57,Not classified,"b) started, did not finish (not classified)"
+4,started_not_classified,1950,1,1950_01,British Grand Prix,bira,maserati,21,5,14,R,49,Out of fuel,"b) started, did not finish (not classified)"
+4,disqualified,1952,6,1952_06,German Grand Prix,bonetto,maserati,105,10,25,D,1,Disqualified,c) disqualified
+4,disqualified,1954,1,1954_01,Argentine Grand Prix,behra,gordini,18,17,10,D,61,Disqualified,c) disqualified
+4,disqualified,1954,1,1954_01,Argentine Grand Prix,hawthorn,ferrari,14,4,11,D,52,Disqualified,c) disqualified
+4,did_not_start,1950,2,1950_02,Monaco Grand Prix,whitehead,ferrari,28,21,20,W,0,Engine,d) did not start
+4,did_not_start,1950,2,1950_02,Monaco Grand Prix,pian,maserati,4,18,21,W,0,Accident,d) did not start
+4,did_not_start,1950,7,1950_07,Italian Grand Prix,bonetto,milano,52,23,27,W,0,Withdrew,d) did not start
+4,ambiguous_withdrawn_after_start,1952,1,1952_01,Swiss Grand Prix,moss,hwm,46,9,12,W,24,Withdrew,e) ambiguous
+4,ambiguous_withdrawn_after_start,1952,1,1952_01,Swiss Grand Prix,macklin,hwm,20,12,13,W,24,Withdrew,e) ambiguous
+4,ambiguous_withdrawn_after_start,1962,1,1962_01,Dutch Grand Prix,salvadori,lola,20,17,17,W,12,Withdrew,e) ambiguous
+4,ambiguous_classified_withdrawn,1996,6,1996_06,Monaco Grand Prix,frentzen,sauber,15,9,4,4,74,Withdrew,e) ambiguous
+4,ambiguous_classified_withdrawn,2013,2,2013_02,Malaysian Grand Prix,button,mclaren,5,7,17,17,53,Withdrew,e) ambiguous
+4,ambiguous_classified_withdrawn,2020,14,2020_14,Turkish Grand Prix,kevin_magnussen,haas,20,13,17,17,55,Withdrew,e) ambiguous
+4,ambiguous_classified_not_classified,1972,12,1972_12,United States Grand Prix,lauda,march,5,25,19,19,49,Not classified,e) ambiguous
+5,5a,1952,,,,crespo,,,,,,,,"listed for the season, no records"
+5,5a,1952,,,,dusio,,,,,,,,"listed for the season, no records"
+5,5a,1954,,,,riu,,,,,,,,"listed for the season, no records"
+5,5a,1955,,,,whiteaway,,,,,,,,"listed for the season, no records"
+5,5b,1994,3,1994_03,San Marino Grand Prix,belmondo,pacific,33,,,,,,qualifying row but no race result
+5,5b,1996,5,1996_05,San Marino Grand Prix,montermini,forti,23,,,,,,qualifying row but no race result
+5,5b,2011,1,2011_01,Australian Grand Prix,liuzzi,hrt,23,,,,,,qualifying row but no race result
+5,5b,2011,1,2011_01,Australian Grand Prix,karthikeyan,hrt,22,,,,,,qualifying row but no race result
+5,5b,2012,1,2012_01,Australian Grand Prix,rosa,hrt,22,,,,,,qualifying row but no race result
+5,5d,1950,2,1950_02,Monaco Grand Prix,whitehead,ferrari,28,21,20,W,0,Engine,did not start but has a grid value
+5,5d,1950,2,1950_02,Monaco Grand Prix,pian,maserati,4,18,21,W,0,Accident,did not start but has a grid value
+5,5d,1950,7,1950_07,Italian Grand Prix,bonetto,milano,52,23,27,W,0,Withdrew,did not start but has a grid value
+5,5d,1951,7,1951_07,Italian Grand Prix,reg_parnell,brm,30,8,21,W,0,Withdrew,did not start but has a grid value
+6,6b,,,,,,aston_martin,,,,,,,"seasons 1959-2025, largest gap 61"
+6,6b,,,,,,mercedes,,,,,,,"seasons 1954-2025, largest gap 55"
+6,6b,,,,,,honda,,,,,,,"seasons 1964-2008, largest gap 38"
+6,6b,,,,,,alfa,,,,,,,"seasons 1950-2023, largest gap 34"
+6,6b,,,,,,renault,,,,,,,"seasons 1977-2020, largest gap 17"
+6,6b,,,,,,ats,,,,,,,"seasons 1963-1984, largest gap 15"
+6,6c,,,,,,,,,,,,,alphatauri->rb (2024)
+6,6c,,,,,,,,,,,,,bar->super_aguri (2006)
+6,6c,,,,,,,,,,,,,caterham->manor (2015)
+6,6c,,,,,,,,,,,,,dallara->sauber (1993)
+6,6c,,,,,,,,,,,,,eurobrun->jordan (1991)
+6,6c,,,,,,,,,,,,,force_india->racing_point (2019)
+6,6c,,,,,,,,,,,,,honda->brawn (2009)
+6,6c,,,,,,,,,,,,,jaguar->red_bull (2005)
+7,7a,1951,2,1951_02,Indianapolis 500,scarborough,kurtis_kraft,73,15,18,R,93,Heat shield fire,later position has more laps
+7,7a,1951,2,1951_02,Indianapolis 500,mackey,hall,71,33,19,R,97,Clutch,later position has more laps
+7,7a,1968,3,1968_03,Monaco Grand Prix,rodriguez,brm,4,9,7,R,16,Accident,later position has more laps
+7,7a,1968,3,1968_03,Monaco Grand Prix,siffert,lotus-ford,17,3,8,R,17,Differential,later position has more laps
+7,7a,1971,11,1971_11,United States Grand Prix,posey,surtees,19,17,25,R,15,Engine,later position has more laps
+7,7a,1971,11,1971_11,United States Grand Prix,pescarolo,march-ford,21,20,26,R,23,Engine,later position has more laps
+7,7b,1954,2,1954_02,Indianapolis 500,fonder,schroeder,33,26,31,R,101,Brakes,bottom of classification
+7,7b,1954,2,1954_02,Indianapolis 500,parsons,kurtis_kraft,15,15,32,R,79,Engine,bottom of classification
+7,7b,1954,2,1954_02,Indianapolis 500,homeier,kurtis_kraft,51,18,33,R,74,Accident,bottom of classification
+7,7b,2005,1,2005_01,Australian Grand Prix,michael_schumacher,ferrari,1,19,18,R,42,Accident,bottom of classification
+7,7b,2005,1,2005_01,Australian Grand Prix,heidfeld,williams,8,7,19,R,42,Accident,bottom of classification
+7,7b,2005,1,2005_01,Australian Grand Prix,albers,minardi,21,17,20,R,16,Gearbox,bottom of classification
+7,7b,2023,18,2023_18,United States Grand Prix,ocon,alpine,31,8,18,R,6,Retired,bottom of classification
+7,7b,2023,18,2023_18,United States Grand Prix,hamilton,mercedes,44,3,19,19,56,Disqualified,bottom of classification
+7,7b,2023,18,2023_18,United States Grand Prix,leclerc,ferrari,16,1,20,20,56,Disqualified,bottom of classification
+8,8a,1950,3,1950_03,Indianapolis 500,parsons,kurtis_kraft,1,5,1,1,138,Finished,Indianapolis 500 (exclude)
+8,8a,1951,2,1951_02,Indianapolis 500,wallard,kurtis_kraft,99,2,1,1,200,Finished,Indianapolis 500 (exclude)
+8,8a,1952,2,1952_02,Indianapolis 500,ruttman,kuzma,98,7,1,1,200,Finished,Indianapolis 500 (exclude)
+8,8a,2000,15,2000_15,United States Grand Prix,michael_schumacher,ferrari,3,1,1,1,73,Finished,US GP at the same circuit_id (keep)
+8,8a,2001,16,2001_16,United States Grand Prix,hakkinen,mclaren,3,4,1,1,73,Finished,US GP at the same circuit_id (keep)
+8,8a,2002,16,2002_16,United States Grand Prix,barrichello,ferrari,2,2,1,1,73,Finished,US GP at the same circuit_id (keep)

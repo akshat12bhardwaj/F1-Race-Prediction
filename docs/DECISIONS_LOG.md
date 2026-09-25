@@ -115,6 +115,41 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 - **Identity:** no constructorId has more than one name, no name has more than one ID, and no driverId has more than one identity (the API supplies one current name per ID). No unexpected JSON fields.
 - **Other flags:** 793 absent-between-appearances (mostly before 1990), 142 season-list drivers without records, 363 races whose result count differs from the season median.
 
+### F-004 · 2026-09-25 · Step 5.5 · Historical policy analysis (read-only)
+- Produced by `python -m src.policy_analysis` from `data/interim/*.csv`, which was **not modified** (hashes verified before and after). Outputs: `outputs/tables/historical_policy_analysis.csv` (27 rows), `historical_policy_examples.csv` (104), `historical_status_category_proposal.csv` (246), `historical_qualifying_coverage.csv` (36).
+- **Shared drives:** 83 duplicate (season, round, driver_id) groups = 172 rows in 40 races (1950–1964). **Every group has a different car number per row**, and `(season, round, driver_id, driver_number)` is unique across all 25,873 rows. Shared positions: 105 groups, 228 rows, 46 races, **all the same car and constructor** (co-drivers). 3 shared wins (1951 French, 1956 Argentine, 1957 British GP).
+- **Status:** 136 race statuses. **78 statuses occur in more than one category** (e.g. Engine: R 1,855 / W 18 / numeric 138), so status alone cannot define DNF. Proposed categories (count): finished 15,554 · classified_not_running 674 · started_not_classified 9,121 · disqualified 162 · did_not_start 338 · ambiguous 24 (20 W with laps > 0, all "Withdrew"; 3 classified "Withdrew"; 1 classified "Not classified"). Total 25,873.
+- **grid = 0 (267):** 202 non-starters/ambiguous (143 of them 1950–1969); **48 started with laps > 0, all 2015–2024** (pit-lane starts); 17 started categories with 0 laps (13 disqualified).
+- **Populations:** 25,511 started rows (candidate model rows before Indy exclusion); 338 non-starters with a row (136 of them with grid > 0); 7 failed-to-qualify rows (visible only 1994+); 142 list-only driver-seasons (62 drivers never raced).
+- **Constructors:** 203 IDs ↔ 203 names (strict 1:1). 20 IDs reused after gaps of 5+ seasons (aston_martin 1959–60 & 2021–25, mercedes 1954–55 & 2010–25, alfa 4 blocks, renault 3 blocks...). 28 automatic "succession" candidates mix real renames with driver moves.
+- **Retiree ordering:** 7,998 adjacent R pairs, **8 laps inversions** (8 races, 1951–1992, none after 2009). 4 races have an R row above a classified row (1954 Indy 500; 2005 Australian GP: button/sato R at positions 11 and 14; 2023_18 and 2024_14: numeric-code disqualifications).
+- **Indianapolis:** `race_name == "Indianapolis 500"` selects exactly 11 races / 405 rows / 107 drivers (4 also raced other GPs: ascari, ruby, ruttman, ward). circuit_id `indianapolis` is also used by the 8 US GPs 2000–2007.
+
+## Historical data policies P-01 … P-11: **APPROVED** (2026-09-25, Step 5.6)
+
+Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in Step 5.6 by `python -m src.policies` (code: `src/policies.py`, tests: `tests/test_policies.py`).
+
+**How they are applied:** as extra columns on copies of the interim tables:
+- `data/interim/results_policy.csv`: all 25,873 rows, every original column unchanged, plus 18 policy columns.
+- `data/interim/races_policy.csv`: all 1,149 races, plus race-level flags.
+- Counts: `outputs/tables/policy_application_summary.csv`.
+
+`results.csv`, `races.csv`, `qualifying.csv` and all raw API files are **not modified**; 813 files were verified by SHA-256 before and after. No target columns, features or recoded grid numbers are created yet.
+
+| ID | Approved policy | Implemented as | Rationale | Consequence (numbers from the applied run) |
+|---|---|---|---|---|
+| P-01 | Keep every car entry. In the model dataset, a driver with several entries in a race is represented by the **best-placed started entry**; an entry count is kept. Raw entries are never deleted. | `entry_count`, `multi_entry_driver`, `is_primary_entry` (ranking: started first, then lowest position, then car number) | 1950–1964 shared drives are separate car entries with different car numbers; `(season, round, driver_id, driver_number)` is unique | 172 rows of multi-entry drivers; 89 secondary entries kept but outside the model population. Derived season points must later sum **all** entries |
+| P-02 | Keep co-driver rows at their official position with a shared-position flag. Shared-win races are excluded **only** from winner-specific metrics. | `shared_position`, `shared_position_count`, `race_has_shared_win`; race level `exclude_from_winner_metrics` | Co-drivers of one car are credited with the same position | 228 rows flagged; 3 races (1951 French, 1956 Argentine, 1957 British GP) excluded from winner metrics only |
+| P-03 | Missing qualifying stays missing; never drop a race for it. Availability indicators at race and driver level. | `race_has_qualifying`, `has_qualifying_row` (availability flags only; no values imputed) | No qualifying before 1994, gaps 1994–2002 | 631 races without qualifying kept; 14,907 result rows without a qualifying row kept |
+| P-04 | grid = 0: started with laps > 0 → pit-lane start; started with 0 laps → unknown; non-starter → non_starter. Raw grid preserved. No era cut-off. | `grid_status` ∈ {given, pit_lane_start, unknown, non_starter}, `pit_lane_start` | grid 0 is mostly non-starters historically; every started grid-0 row with laps > 0 is 2015–2024 | 267 grid-0 rows unchanged; 48 pit-lane starts; 17 unknown. The numeric pit-lane value (field_size + 1) is set when the model dataset is built |
+| P-05 | Preserve raw status and positionText; derive categories separately. | `result_category_detail` (9 categories), `result_category` (after P-07) | Status alone is ambiguous (78 of 136 statuses occur in more than one category) | 136 raw statuses kept. result_category: finished 15,554 · started_not_classified 9,141 · classified_not_running 678 · did_not_start 338 · disqualified 162 |
+| P-06 | Primary DNF definition = **started, not classified**. Classified-but-not-running is flagged separately and is not DNF. | `is_dnf(category)` function (no target column yet); `retired_while_classified` | Matches blueprint §14 (positionText R); classified retirements hold a legitimate classified position | 9,141 rows would be DNF; 678 flagged as retired while classified |
+| P-07 | The 24 ambiguous rows count as started, with an ambiguity flag. | `ambiguous_status`; mapping: W + laps > 0 → started_not_classified (20); classified "Withdrew"/"Not classified" → classified_not_running (4) | They completed laps or hold a classified position | 24 rows added to the started population, all flagged |
+| P-08 | Model population = drivers who actually started, excluding the Indianapolis 500. Non-starters are not counted as starts in history features. | `started`, `in_model_population` (= started ∧ primary entry ∧ not Indy 500) | The prediction point is after the grid is final; non-starters are known then | 25,535 started rows; 338 non-starters excluded; **25,066 model-population rows**, unique per (season, round, driver_id) |
+| P-09 | Use API `constructor_id` as-is; no automatic merging by name or rename detection. | No new column; constructor_id untouched | Automatic succession detection mixes real renames with driver moves | 203 IDs unchanged; constructor history restarts when the API ID changes (e.g. alphatauri → rb) |
+| P-10 | Use the official API position order; flag the 8 ordering exceptions; never re-sort. | `laps_order_exception` (both rows of each inverted pair); race level `race_has_laps_order_exception` | Order follows laps in 7,990 of 7,998 adjacent pairs | 16 rows / 8 races flagged; positions unchanged |
+| P-11 | Exclude races with `race_name == "Indianapolis 500"` (exact); never by circuit_id. | `is_indianapolis_500` (row and race level); used in `in_model_population` | circuit_id `indianapolis` is also used by the 2000–2007 US GPs | 11 races / 405 rows outside the model population; the 8 US GPs stay. History features must also skip these rows |
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
@@ -123,22 +158,22 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 |---|---|---|
 | Jolpica rate limit ≈ 4 req/s burst, 500 req/h | Step 2 | **Confirmed from official docs** (F-001); no rate-limit headers are sent |
 | Open-Meteo free limits ≈ 600/min, 5,000/h, 10,000/day | Step 6 | Open |
-| `grid = 0` means pit-lane start | Step 7 | **Mostly false historically** (F-003): of 267 rows, 202 are non-starters (W). Only 40 classified finishers could be pit-lane starts. Meaning must be decided with status/positionText at Step 7 |
+| `grid = 0` means pit-lane start | Step 7 | **Resolved by P-04:** pit-lane start only when the driver started and completed laps (48 rows); otherwise unknown or non-starter |
 | `positionText` codes D, E, F, N meanings | Step 7 | **Resolved (F-003):** only R, W, D exist in 1950–2025. E, F, N never occur. W covers several non-start statuses |
-| `position` orders retirees by laps completed | Step 7 | **Confirmed for 2024** (24/24 races); older eras still to check at Step 7 |
+| `position` orders retirees by laps completed | Step 7 | **Confirmed for 1950–2025 (F-004):** 8 inversions in 7,998 adjacent pairs, none after 2009 |
 | circuitId `indianapolis` reused for 2000–2007 US GP | Step 7 | **Confirmed (F-003):** US GP 2000–2007 uses it. Filter the Indy 500 by race name |
 | 1950s shared drives appear as separate rows | Step 7 | **Confirmed (F-003):** separate rows; driver_id repeats within a race (172 rows, 1950–1964) |
 | Qualifying available from 1994 (blueprint §11.1, §13.2) | Step 7 | **Only partly (F-003):** 1994–2002 has qualifying for only some races; complete from 2003 |
 | Constructor renames produce different constructorIds | Step 11 | **Confirmed for 2023→2024** (alfa→sauber, alphatauri→rb); earlier renames open. No ID ever has two names in the API |
 | Open-Meteo Historical Forecast API exists (Future Work only) | — | Open |
 
-## Decisions pending (raised by Step 2, to be decided at Step 7, not yet changed)
+## Earlier pending questions: **resolved by the approved policies**
 
-| Question | Evidence |
+| Question (raised in Steps 2–5) | Resolved by |
 |---|---|
-| Does a *classified* retirement (status "Retired", numeric positionText) count as DNF? The blueprint §14 rule (positionText R/N) says no. | 6 such records in 2024 |
-| DSQ detection must also use `status`, because positionText can be numeric for a disqualification | Belgian GP 2024, RUS |
-| The non-starter filter must use status or positionText, not grid, because DNS records carry a grid value | GAS British GP, ALB/STR São Paulo GP 2024 |
-| Should drivers absent from a race entirely (no row), or listed in the season driver list without records, be handled explicitly? | R3 2024 `sargeant`; 2024 `antonelli` (F-002); 793 absences, 142 list-only drivers across history (F-003) |
-| How should duplicate (season, round, driver_id) rows (1950s shared drives) and shared positions be represented? The blueprint key and "one winner per race" assumption do not hold before 1965 | F-003: 172 rows / 40 races; shared positions in 46 races |
-| How should the 1994–2002 qualifying gaps affect `qualifying_position` features and the missing-value rule (§13.2 assumed 1994+)? | F-003 coverage table |
+| Does a *classified* retirement count as DNF? | P-06: no; flagged `retired_while_classified` |
+| DSQ detection must also use `status` (positionText can be numeric) | P-05: `result_category_detail` uses positionText **and** status |
+| The non-starter filter must not use grid (DNS rows carry a grid value) | P-04 / P-08: `started` comes from the category, not from grid |
+| Drivers absent from a race (no row) or listed without records | P-08: they never become model rows; no rows are invented |
+| Duplicate (season, round, driver_id) rows and shared positions before 1965 | P-01 / P-02 |
+| 1994–2002 qualifying gaps | P-03 |
