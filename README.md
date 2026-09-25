@@ -113,6 +113,17 @@ python -m src.weather --start 2023 --end 2024 --output-prefix subset_   # small 
 - **Indianapolis 500 (P-11):** not requested and never model-usable; the 2000–2007 US GPs at the same circuit are included.
 - **Outputs:** `data/interim/weather_race.csv` (one row per race, prestart and race-window summaries), `data/interim/weather_hourly.csv` (hourly values −6…+6 h around the start), and reports `outputs/tables/weather_*.csv`. Log: `outputs/logs/weather_*.log`.
 
+## Data validation (Step 7)
+
+```powershell
+python -m src.validate_raw     # read-only; about 30 s; no API requests
+```
+
+- Validates races, results, qualifying, sprints, drivers, constructors, the approved policy columns (P-01…P-11, recomputed from raw data) and the weather data (P-12, recomputed start times and window summaries), plus 14 cross-table relationships.
+- Outputs in `outputs/tables/`: `raw_validation_summary.csv` (PASS/FAIL/INFO per check), `raw_missingness.csv` (every missing value classified), `raw_cross_table_validation.csv`, `raw_anomalies.csv` (`known_handled` vs `review`).
+- Nothing is changed: no rows removed, no values imputed or recoded, no targets or features. The run stops with an error if any input file changes.
+- **Limitation:** 1950–2004 weather windows use an **assumed 14:00 local** start, and historical reanalysis is **not** a pre-race forecast.
+
 ## Running tests
 
 ```powershell
@@ -153,7 +164,8 @@ F1-Race-Prediction/
 | 5.5 | Historical data policy analysis (`python -m src.policy_analysis`) | Complete |
 | 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED** |
 | 6 | Historical race weather (`python -m src.weather`) | Complete: 1,138/1,138 eligible races |
-| 6.1 | P-12: 2005–2006 start times read as local clock (APPROVED) | Complete, awaiting review: 1,138 races model-usable, 0 quality errors |
+| 6.1 | P-12: 2005–2006 start times read as local clock (APPROVED) | Complete: 1,138 races model-usable, 0 quality errors |
+| 7 | Raw data validation (`python -m src.validate_raw`) | Complete, awaiting review: 193 PASS, 7 INFO, 0 FAIL |
 
 ## Reproducibility
 

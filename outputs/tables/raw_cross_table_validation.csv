@@ -1,0 +1,15 @@
+relation,left,right,key,left_keys,right_keys,left_only,right_only,expected_left_only,expected_right_only,status,note
+races <-> results,races,results,"season, round",1149,1149,0,0,0,0,PASS,every race has results
+races <-> qualifying,races,qualifying,"season, round",1149,518,631,0,631,0,PASS,races without qualifying: 548 before 1994 + 83 in 1994-2002 (P-03)
+races <-> sprints,races,sprints,"season, round",1149,24,1125,0,1125,0,PASS,sprints exist only for 24 weekends 2021-2025
+races <-> weather_race,races,weather_race,race_id,1149,1149,0,0,0,0,PASS,one weather row per race
+eligible races <-> weather (ok),races (non-Indy 500),weather_race (ok),race_id,1138,1138,0,0,0,0,PASS,P-11
+weather_race (ok) <-> weather_hourly,weather_race (ok),weather_hourly,race_id,1138,1138,0,0,0,0,PASS,
+results <-> drivers (season lists),results,drivers,"season, driver_id",3106,3248,0,142,0,142,PASS,right-only = season-list drivers without any record (F-004)
+results <-> constructors (season lists),results,constructors,"season, constructor_id",1099,1121,0,22,0,,PASS,right-only = listed constructors without results
+qualifying <-> drivers,qualifying,drivers,"season, driver_id",789,3248,0,2459,0,,PASS,
+qualifying <-> constructors,qualifying,constructors,"season, constructor_id",347,1121,0,774,0,,PASS,
+sprints <-> drivers,sprints,drivers,"season, driver_id",107,3248,0,3141,0,,PASS,
+"qualifying <-> results (race, driver)",qualifying,results,"season, round, driver_id",10973,10992,7,26,7,26,PASS,left-only = failed to qualify (no result row); right-only = raced without a qualifying row (P-03)
+"sprints <-> results (race, driver)",sprints,results,"season, round, driver_id",480,480,0,0,0,,PASS,
+results <-> results_policy (rows),results,results_policy,"season, round, driver_id, driver_number",25873,25873,0,0,0,0,PASS,policy file covers every result row

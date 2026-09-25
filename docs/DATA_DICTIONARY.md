@@ -135,6 +135,19 @@ Coverage report columns (`weather_coverage_summary.csv`, `weather_coverage_by_se
 
 **Limitations:** reanalysis ≠ track conditions (grid cell, 2 m air temperature ≠ track temperature, convective showers are smoothed); **1950–2004 windows use an assumed 14:00 local start**; 2005–2006 starts rely on the P-12 interpretation of the API clock values; none of these values was available as a forecast before the race.
 
+### Step 7 validation outputs (`outputs/tables/`, written by `src/validate_raw.py`, read-only)
+
+| File | One row = | Columns |
+|---|---|---|
+| `raw_validation_summary.csv` | one check (200) | area, check, expected, observed, status (PASS / FAIL / INFO), policy, detail |
+| `raw_missingness.csv` | one table column with missing values | table, column, rows, missing, missing_pct, structurally_missing, historically_unavailable, legitimately_absent, unexpected_missing, rule |
+| `raw_cross_table_validation.csv` | one key relationship (14) | relation, left, right, key, left_keys, right_keys, left_only, right_only, expected_left_only, expected_right_only, status, note |
+| `raw_anomalies.csv` | one unusual record or entity (847) | area, anomaly, severity (`known_handled` = documented and covered by a policy; `review` = look at before/while modelling), policy, season, round, race_id, driver_id, detail |
+
+**Missing-value classes:** *structurally missing* = not applicable by design (weather of the excluded Indianapolis 500); *historically unavailable* = the source does not provide it for that era or driver (start times before 2005, fastest laps before 2004, Q2 before 2005, Q3 before 2006, driver code/permanent number); *legitimately absent* = follows from what happened (no race time for lapped or retired cars, no Q3 when knocked out, no Q1 time set); *unexpected* = none of these (286 values, listed in `raw_anomalies.csv`).
+
+Note (F-007): the official `position` of started drivers is **not always 1..k** within a race (45 model-population races) because of numbering gaps and the P-01/P-02 policies. The values are kept as they are.
+
 ### `data/interim/results_policy.csv` (Step 5.6, approved policies P-01…P-11)
 **All columns of `results.csv`, byte-for-byte the same values**, followed by these derived columns (written by `src/policies.py`; True/False flags unless stated). One row per result row (25,873), nothing removed.
 

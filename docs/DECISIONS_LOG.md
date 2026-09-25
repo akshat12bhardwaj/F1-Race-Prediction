@@ -190,6 +190,31 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 - Quality report: **0 errors, 0 warnings.** Info only: 720 imputed pre-2005 starts, 37 P-12 interpretations, 3 local-date differences (Las Vegas 2023–2025, correct).
 - **Usable weather: 1,138 of 1,138 eligible races** (1,149 − 11 Indianapolis 500). Start-time sources: 381 official UTC (2007–2025), 37 P-12 local clock (2005–2006), 731 imputed 14:00 local (1950–2004).
 
+### D-014 · 2026-09-25 · Step 7 · Raw validation design
+- **Decision:** Step 7 is implemented as the read-only validator `src/validate_raw.py` (`python -m src.validate_raw`). It imports no API client (0 requests) and fingerprints all inputs, including both API manifests, before and after. It:
+  (a) compares about 200 checks with the documented values from F-003 … F-006 and P-01 … P-12 (PASS/FAIL), or reports them as INFO;
+  (b) **recomputes** all 18 policy columns from the raw results with `src/policies.py`, and every weather start time and window summary with `src/weather.py`, and compares them field by field;
+  (c) checks 14 cross-table key relationships in both directions;
+  (d) classifies every missing value as structurally missing / historically unavailable / legitimately absent / unexpected;
+  (e) writes anomalies as `known_handled` (documented and covered by a policy) or `review`.
+- **No cleaning beyond the approved policies:** no row is removed, no value recoded or imputed, no target, feature or split created. The policy-annotated files (`results_policy.csv`, `races_policy.csv`) and the weather tables remain the cleaned-by-policy foundation for EDA.
+- **Reason:** Blueprint Step 7 (validation) + Step 8 (cleaning limited to approved rules), as instructed.
+
+### F-007 · 2026-09-25 · Step 7 · Validation results (read-only)
+- **200 checks: 193 PASS, 7 INFO, 0 FAIL.** 14/14 cross-table relations as expected. Two runs gave byte-identical outputs; 2,035 raw and interim files unchanged; no network used.
+- **Confirmed:** 1,149 races (11 Indianapolis 500, 1,138 eligible, the 8 US GPs at `indianapolis` kept); 25,873 result rows; 10,973 qualifying rows; 480 sprint rows (24 weekends 2021–2025, matching the calendar); **25,066 model-population rows**, one per driver per race, covering all 1,138 eligible races; all 18 policy columns reproduce exactly from raw data; weather 1,138/1,138 with 0 failures, 0 missing window values, starts reproducing from raw data (381 official UTC / 37 P-12 / 731 imputed), grid distance ≤ 8.9 km.
+- **New source properties (not repaired, listed in `raw_anomalies.csv` as `review`):**
+  - **Official position numbering skips positions in 24 races (1956–2002)**, mostly before withdrawn entries (entries not present in the data, e.g. non-qualifiers). In 7 of them one started driver (usually disqualified or not classified) comes after the gap.
+  - **45 model-population races do not have consecutive official positions 1..k**, because of numbering gaps, P-01 secondary entries, P-02 shared positions, or non-starters numbered between classified drivers (e.g. 2024 São Paulo).
+  - **Repeated qualifying_position in 5 races (12 rows, 2023–2025)**, e.g. 2024 Monaco (two drivers each at 14 and 15); 2 rows have Q2/Q3 times without Q1 (e.g. 2024 Dutch GP, albon). Source anomalies; values kept (P-03).
+  - **Unexpected missing values: 286** = modern fastest-lap fields for some classified cars (results: 20–47 per column), sprint fastest_lap_rank (98) and lap/time (2 each), one "Finished" row without race time, and 14 season-list drivers without date of birth/nationality.
+- **Missing data is otherwise fully explained:** race start time (before 2005), driver code / permanent number (driver-level attributes the API gives only for some drivers), race time (only cars finishing on the lead lap), fastest lap (from 2004), Q2/Q3 (session formats and knock-outs), weather (Indianapolis 500 not requested).
+
+### Open question for the later target/model-dataset step (not decided in Step 7)
+| Question | Evidence |
+|---|---|
+| Should the finishing-position target use the **official position** (may have gaps, F-007) or the **rank among model-population starters** (1..k)? | 45 model-population races with non-consecutive official positions; 24 races with numbering gaps |
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
