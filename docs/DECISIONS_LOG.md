@@ -42,6 +42,27 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 - **Headers:** no rate-limit or retry headers. `Cache-Control: max-age=600`, Cloudflare. Documented limits: 4 req/s burst, 500 req/h, HTTP 429 when exceeded, "will decrease" in future.
 - **Affects:** Step 3 client (check `total`, handle non-JSON errors, 429). The DNF, DSQ and non-starter rules need a decision at Step 7 (see below). **No blueprint rule has been changed.**
 
+### D-006 · 2026-09-25 · Step 3 · **needs approval**
+- **Decision:** The cache file path **mirrors the request URL**, with parameters sorted by name: `/{path}.json?limit=100&offset=0` → `data/raw/jolpica/{path}__limit-100__offset-0.json` (e.g. `data/raw/jolpica/2024/results__limit-100__offset-0.json`). The blueprint §15 example was `data/raw/jolpica/results/2024_0000.json`.
+- **Reason:** The cache key must depend on the complete request (path + all parameters). One rule then works for every endpoint (results, qualifying, sprint, standings, schedule) and stays deterministic and human-readable. The folder root (`data/raw/jolpica/`) and the manifest are unchanged.
+- **Affects:** §15 file patterns, §16 storage layout (naming only).
+
+### D-007 · 2026-09-25 · Step 3
+- **Decision:** API client rules:
+  (a) `limit` outside 1..100 or `offset` < 0 raises `ValueError` before any request, because the API would silently change these values (F-001).
+  (b) Retry only on HTTP 429/500/502/503/504, connection errors and timeouts: at most 5 retries (6 attempts), waits of 2, 4, 8, 16, 32 s from `config.yaml`. HTTP 400/404 and other errors are raised at once.
+  (c) Only valid JSON responses containing `MRData` are cached. Errors are never cached. A `total = 0` response **is** cached (it is a valid "no data" answer).
+  (d) Cache files hold the exact response bytes, written atomically (temp file + rename). Unreadable cache files are downloaded again.
+  (e) Pages are merged by (season, round). Exact duplicates are detected with the key (season, round, position, driverId); position is included so 1950s drivers with two cars in one race are not dropped. The number of unique records must equal `MRData.total`, otherwise `JolpicaAPIError` is raised.
+  (f) The client never converts data types.
+- **Reason:** Implements the verified Step 2 behaviour (F-001) with the simplest safe rules.
+- **Affects:** §11.3 client design.
+
+### D-008 · 2026-09-25 · Step 3
+- **Decision:** Test layout: `pytest.ini` (sets `pythonpath = .` so tests can `import src`, and registers a `live` marker). All API-client tests are mocked except one `live` test. The live smoke test is the script `tests/smoke_api_client.py` (not collected by pytest). `src/config.py` currently only loads `config.yaml`; seed-setting will be added when a later step needs it.
+- **Reason:** Tests must run without depending on the live API. The smoke test must be a deliberate, manual run.
+- **Affects:** §31 folder structure (adds `pytest.ini`).
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
