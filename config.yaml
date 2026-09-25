@@ -1,0 +1,85 @@
+# =============================================================
+# F1 Race Outcome Prediction - project configuration
+# Single source of truth for settings used by src/ and notebooks.
+# Values come from docs/MASTER_PROJECT_BLUEPRINT.md (section numbers
+# in brackets). Change a value only with an entry in DECISIONS_LOG.md.
+# =============================================================
+
+project:
+  name: "F1-Race-Prediction"
+  version: "1.0"
+
+# Used for every random operation (numpy, scikit-learn, bootstrap) [§26]
+random_seed: 42
+
+# ---------------- Historical period [§7, §15] ----------------
+seasons:
+  start: 1950
+  end: 2025                  # 2026 is NOT part of the training data [§15]
+  excluded_race_names:       # filter by race name, not circuitId [§12.2]
+    - "Indianapolis 500"
+
+# Coverage facts confirmed from the API on 2026-09-25 [Appendix A]
+data_coverage:
+  qualifying_first_season: 1994
+  race_start_time_first_season: 2005
+  sprint_first_season: 2021
+
+# ---------------- Temporal split [§27.3] ----------------
+# Provisional: confirmed or adjusted at Step 13.
+split:
+  train_start: 1950          # training-window start (E9 tests 1950/1981/1994/2006)
+  train_end: 2021
+  validation_years: [2022]
+  test_years: [2023, 2024, 2025]   # touched ONCE, in notebook 12 only
+  cv_validation_years: [2017, 2018, 2019, 2020, 2021]   # expanding-window season folds
+
+# ---------------- Paths (relative to project root) [§16, §31] ----------------
+paths:
+  data_raw: "data/raw"
+  data_raw_jolpica: "data/raw/jolpica"
+  data_raw_openmeteo: "data/raw/openmeteo"
+  raw_manifest: "data/raw/_manifest.csv"
+  failed_requests: "data/raw/_failed_requests.csv"
+  data_interim: "data/interim"
+  data_processed: "data/processed"
+  data_external: "data/external"
+  models: "models"
+  figures: "outputs/figures"
+  tables: "outputs/tables"
+  predictions: "outputs/predictions"
+  logs: "outputs/logs"
+
+# ---------------- API settings [§11] ----------------
+api:
+  user_agent: "F1-ML-course-project (CSE20232 student project)"
+  timeout_seconds: 30
+  max_retries: 5
+  backoff_base_seconds: 2      # waits 2, 4, 8, 16, 32 s on HTTP 429 / 5xx
+
+  jolpica:
+    base_url: "https://api.jolpi.ca/ergast/f1"
+    page_limit: 100              # API maximum [CONFIRMED]
+    min_seconds_between_requests: 1.0
+
+  openmeteo:
+    archive_url: "https://archive-api.open-meteo.com/v1/archive"
+    min_seconds_between_requests: 1.0
+    timezone: "auto"
+    hourly_variables:
+      - temperature_2m
+      - relative_humidity_2m
+      - precipitation
+      - rain
+      - cloud_cover
+      - wind_speed_10m
+      - wind_direction_10m
+      - weather_code
+
+# ---------------- Weather aggregation [§13.4, §19.6] (used from Step 6) ----------------
+weather:
+  assumed_local_start_hour_before_2005: 14
+  race_window_hours: [0, 2]        # [start, start + 2 h]
+  prestart_window_hours: [-3, -1]  # [start - 3 h, start - 1 h]
+  wet_precip_threshold_mm: 0.5     # provisional; finalised at Step 6
+  wet_weather_code_min: 51

@@ -1,0 +1,31 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ---------- Virtual environments (ours lives outside the project, but be safe) ----------
+.venv/
+venv/
+env/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- Data: raw and interim can be rebuilt by scripts [§16] ----------
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+
+# ---------- Trained models (large binary files) ----------
+models/*.joblib
+
+# ---------- Editors / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Office temp files ----------
+~$*
