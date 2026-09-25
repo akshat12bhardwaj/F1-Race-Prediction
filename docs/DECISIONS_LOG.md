@@ -63,6 +63,30 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 - **Reason:** Tests must run without depending on the live API. The smoke test must be a deliberate, manual run.
 - **Affects:** §31 folder structure (adds `pytest.ini`).
 
+### D-006 approval · 2026-09-25
+- D-006 (URL-mirrored cache naming) **approved** by the project owner after the Step 3 review. The cache naming system stays as implemented.
+
+### D-009 · 2026-09-25 · Step 4
+- **Decision:** Step 4 runs as a **2024 pilot** (blueprint "What we should do first", action 5) before the 1950–2025 collection. Details:
+  (a) Collection uses **season-level paginated endpoints** (`/{season}/results.json`, `/qualifying.json`, `/sprint.json`, `limit=100`), as blueprint §15 specifies, not one request per race. Pages are split back into races and reconciled race by race.
+  (b) Collection and flattening code lives in `src/collect.py` (blueprint §31) so the full collection can reuse it. Flattening keeps the **API's raw text values**; type conversion stays in Step 8.
+  (c) Pilot tables are saved as `data/interim/{season}_{table}.csv` (races, results, qualifying, sprints, drivers, constructors). Pilot check tables are saved as `outputs/tables/pilot_{season}_*.csv`.
+  (d) Two extra small season lists are collected (`/{season}/drivers.json`, `/{season}/constructors.json`, 1 request each) to reconcile driver and constructor information.
+  (e) **Official standings are not collected in the pilot.** Blueprint §15 and §20 use them only to validate our derived standings at Step 11, never as features.
+  (f) Primary key checked: `(season, round, driver_id)`. Duplicates are counted and reported, never dropped.
+- **Reason:** Proves the pipeline end-to-end on one season with a small request budget (15 requests) before scaling.
+- **Affects:** §15 (pilot first), §31 (`src/collect.py`, notebook name `02_pilot_collection_2024.ipynb`).
+
+### F-002 · 2026-09-25 · Step 4 · Verified 2024 pilot findings (`notebooks/02_pilot_collection_2024.ipynb`)
+- 24 races (rounds 1–24, no duplicates), `race_time` present for all. Sprint rounds 5, 6, 11, 19, 21, 23; calendar and sprint data agree.
+- Row counts equal `MRData.total`: results 479, qualifying 479, sprint 120, drivers 25, constructors 10. Season-level data is identical to the per-round Step 3 responses (R1 results, R1 qualifying, R5 sprint).
+- 0 duplicate `(season, round, driver_id)` keys; 0 missing race, driver or constructor IDs. The qualifying driver set equals the results driver set in every race.
+- **A non-participating driver has no row at all:** Australian GP (R3) has 19 results. `sargeant` is absent and Williams has one entry. Such drivers are not recorded as "W" rows.
+- **The season driver list includes a driver with no records:** `antonelli` is in `/2024/drivers.json` but has no race, qualifying or sprint row. The reason is not in the API data.
+- grid = 0 once (OCO, R20). Status × positionText (race): Finished/num 287, Lapped/num 138, Retired/R 43, Retired/num 6, Did not start/W 3, Disqualified/D 1, Disqualified/num 1. Sprint: Finished/num 116, Retired/R 3, Retired/num 1.
+- Re-running with a new client: 0 network requests, 15 cache hits, byte-identical CSVs. 0 existing raw files changed.
+- **No DNF/DSQ/non-starter rule was applied** (still pending for Step 7).
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
@@ -86,3 +110,4 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 | Does a *classified* retirement (status "Retired", numeric positionText) count as DNF? The blueprint §14 rule (positionText R/N) says no. | 6 such records in 2024 |
 | DSQ detection must also use `status`, because positionText can be numeric for a disqualification | Belgian GP 2024, RUS |
 | The non-starter filter must use status or positionText, not grid, because DNS records carry a grid value | GAS British GP, ALB/STR São Paulo GP 2024 |
+| Should drivers absent from a race entirely (no row), or listed in the season driver list without records, be handled explicitly? | R3 2024 `sargeant`; 2024 `antonelli` (F-002) |

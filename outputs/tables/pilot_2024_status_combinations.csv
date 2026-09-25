@@ -1,0 +1,11 @@
+source,status,position_text_type,records
+race,Finished,numeric,287
+race,Lapped,numeric,138
+race,Retired,R,43
+race,Retired,numeric,6
+race,Did not start,W,3
+race,Disqualified,D,1
+race,Disqualified,numeric,1
+sprint,Finished,numeric,116
+sprint,Retired,R,3
+sprint,Retired,numeric,1

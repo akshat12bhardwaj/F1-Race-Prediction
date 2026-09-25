@@ -101,8 +101,9 @@ F1-Race-Prediction/
 |---|---|---|
 | 1 | Environment and repository setup | Complete |
 | 2 | Jolpica API exploration (`notebooks/01_api_exploration.ipynb`) | Complete |
-| 3 | Cached API client (`src/api_client.py`) | Complete, awaiting review |
-| 4 | Collect schedules and results 1950–2025 | Not started |
+| 3 | Cached API client (`src/api_client.py`) | Complete |
+| 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete, awaiting review |
+| 4b | Full collection 1950–2025 | Not started (after pilot approval) |
 
 ## Reproducibility
 

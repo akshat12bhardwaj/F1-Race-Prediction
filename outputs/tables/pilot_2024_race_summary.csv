@@ -1,0 +1,25 @@
+season,round,race_id,race_name,number_of_results,number_of_qualifying_records,number_of_sprint_records,duplicate_result_keys,missing_driver_ids,missing_constructor_ids
+2024,1,2024_01,Bahrain Grand Prix,20,20,0,0,0,0
+2024,2,2024_02,Saudi Arabian Grand Prix,20,20,0,0,0,0
+2024,3,2024_03,Australian Grand Prix,19,19,0,0,0,0
+2024,4,2024_04,Japanese Grand Prix,20,20,0,0,0,0
+2024,5,2024_05,Chinese Grand Prix,20,20,20,0,0,0
+2024,6,2024_06,Miami Grand Prix,20,20,20,0,0,0
+2024,7,2024_07,Emilia Romagna Grand Prix,20,20,0,0,0,0
+2024,8,2024_08,Monaco Grand Prix,20,20,0,0,0,0
+2024,9,2024_09,Canadian Grand Prix,20,20,0,0,0,0
+2024,10,2024_10,Spanish Grand Prix,20,20,0,0,0,0
+2024,11,2024_11,Austrian Grand Prix,20,20,20,0,0,0
+2024,12,2024_12,British Grand Prix,20,20,0,0,0,0
+2024,13,2024_13,Hungarian Grand Prix,20,20,0,0,0,0
+2024,14,2024_14,Belgian Grand Prix,20,20,0,0,0,0
+2024,15,2024_15,Dutch Grand Prix,20,20,0,0,0,0
+2024,16,2024_16,Italian Grand Prix,20,20,0,0,0,0
+2024,17,2024_17,Azerbaijan Grand Prix,20,20,0,0,0,0
+2024,18,2024_18,Singapore Grand Prix,20,20,0,0,0,0
+2024,19,2024_19,United States Grand Prix,20,20,20,0,0,0
+2024,20,2024_20,Mexico City Grand Prix,20,20,0,0,0,0
+2024,21,2024_21,São Paulo Grand Prix,20,20,20,0,0,0
+2024,22,2024_22,Las Vegas Grand Prix,20,20,0,0,0,0
+2024,23,2024_23,Qatar Grand Prix,20,20,20,0,0,0
+2024,24,2024_24,Abu Dhabi Grand Prix,20,20,0,0,0,0
