@@ -1,0 +1,35 @@
+table,field,rows,missing,missing_pct,historically_unavailable,structurally_absent,legitimately_absent,unexpected_missing,rule
+results,grid,25873,0,0.0,0,0,0,0,
+results,position,25873,0,0.0,0,0,0,0,
+results,position_text,25873,0,0.0,0,0,0,0,
+results,status,25873,0,0.0,0,0,0,0,
+results,laps,25873,0,0.0,0,0,0,0,
+results,points,25873,0,0.0,0,0,0,0,
+results,time_millis,25873,17545,67.812,0,0,17544,1,race time only for cars finishing on the lead lap
+results,fastest_lap_rank,25873,17148,66.278,16748,0,380,20,fastest lap data only from 2004 (and not for every field/season); none if <= 1 lap
+results,fastest_lap_lap,25873,17148,66.278,16748,0,380,20,fastest lap data only from 2004 (and not for every field/season); none if <= 1 lap
+results,fastest_lap_time,25873,17148,66.278,16748,0,380,20,fastest lap data only from 2004 (and not for every field/season); none if <= 1 lap
+results,fastest_lap_avg_speed,25873,17635,68.16,17227,0,361,47,fastest lap data only from 2004 (and not for every field/season); none if <= 1 lap
+qualifying,qualifying_position,10973,0,0.0,0,0,0,0,
+qualifying,q1,10973,183,1.668,0,0,183,0,driver set no Q1 time
+qualifying,q2,10973,4788,43.634,2228,0,2560,0,q2 session exists only from 2005; afterwards absent when knocked out earlier
+qualifying,q3,10973,7117,64.859,2604,0,4513,0,q3 session exists only from 2006; afterwards absent when knocked out earlier
+weather_race,race_time,1149,731,63.621,731,0,0,0,no official start time before 2005
+weather_race,start_time_source,1149,0,0.0,0,0,0,0,
+weather_race,p12_local_clock_applied,1149,0,0.0,0,0,0,0,
+weather_race,wx_prestart_temp_mean_c,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_humidity_mean_pct,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_precip_sum_mm,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_rain_sum_mm,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_cloud_mean_pct,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_wind_speed_mean_kmh,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_wind_dir_mean_deg,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_prestart_weather_code_max,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_temp_mean_c,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_humidity_mean_pct,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_precip_sum_mm,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_rain_sum_mm,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_cloud_mean_pct,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_wind_speed_mean_kmh,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_wind_dir_mean_deg,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)
+weather_race,wx_race_weather_code_max,1149,11,0.957,0,11,0,0,not requested: Indianapolis 500 (P-11)

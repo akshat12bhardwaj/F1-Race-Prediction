@@ -1,0 +1,7 @@
+variable,races,mean_race_minus_prestart,median_diff,mean_abs_diff,spearman_prestart_vs_race,both_dry,prestart_wet_only,race_wet_only,both_wet
+temp_mean_c,1138,0.8245,1.0,1.3513,0.9622,,,,
+humidity_mean_pct,1138,-3.0015,-4.0,6.3946,0.8871,,,,
+precip_sum_mm,1138,0.0574,0.0,0.3249,0.6243,,,,
+cloud_mean_pct,1138,1.8761,0.0,14.3723,0.8311,,,,
+wind_speed_mean_kmh,1138,0.6004,0.6,2.3832,0.8787,,,,
+precip >= 0.1 mm (wet window),1138,,,,,719.0,98.0,98.0,223.0

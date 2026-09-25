@@ -1,0 +1,5 @@
+era,seasons,races,eligible_races,model_rows,mean_starters_per_race,drivers_per_season,constructors_per_season,"dnf_rate_pct (started, not classified)",disqualified_pct,non_starter_pct (of all result rows),grid_zero_rows,pit_lane_starts,multi_entry_rows (P-01),qualifying_race_coverage_pct,sprint_weekends,mean_leader_laps,mean_abs_position_change_classified,pole_win_rate_pct,weather_coverage_pct,race_temp_mean_c,races_with_race_precip_ge_0_1mm_pct,start_time_basis
+1950-1969,20,184,173,3356,19.399,46.75,12.3,45.381,0.417,4.255,143,0,172,0.0,0,68.052,4.66,40.698,100.0,19.94,28.902,imputed_local_14h
+1970-1989,20,300,300,7364,24.547,39.8,16.25,48.099,1.1,0.942,48,0,0,0.0,0,64.333,5.968,32.55,100.0,20.761,31.333,imputed_local_14h
+1990-2009,20,336,336,7476,22.25,28.35,12.1,37.681,0.615,0.757,20,0,0,56.25,0,63.161,4.248,46.707,100.0,22.121,28.571,"imputed_local_14h, official_utc, p12_local_clock"
+2010-2025,16,329,329,6870,20.881,23.125,10.562,14.949,0.291,0.593,56,48,0,100.0,24,59.875,3.068,52.439,100.0,22.802,24.62,official_utc

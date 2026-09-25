@@ -1,0 +1,14 @@
+metric,value
+drivers in model population,687.0
+drivers listed but never in any result,62.0
+drivers with result rows but never started,27.0
+median starts per driver,10.0
+drivers with 1 start,140.0
+drivers with >= 100 starts,82.0
+drivers with at least one win,105.0
+drivers with a multi-entry race (P-01),29.0
+drivers with shared-position rows (P-02),66.0
+new drivers first seen in 1950-1969,331.0
+new drivers first seen in 1970-1989,189.0
+new drivers first seen in 1990-2009,109.0
+new drivers first seen in 2010-2025,58.0

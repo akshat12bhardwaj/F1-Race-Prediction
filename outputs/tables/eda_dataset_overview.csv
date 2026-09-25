@@ -1,0 +1,16 @@
+metric,value,note
+seasons,76.0,1950-2025
+races,1149.0,all collected
+"Indianapolis 500 races (excluded, P-11)",11.0,1950-1960
+eligible races,1138.0,
+result rows (all entries),25873.0,
+model-population rows (P-08),25066.0,"started, primary entry, not Indy 500"
+qualifying rows,10973.0,"1994-2025, gaps 1994-2002"
+sprint rows,480.0,2021-2025
+drivers with results,817.0,
+drivers in model population,687.0,
+drivers listed but never in any result,62.0,season lists only
+"constructors (API ids, P-09)",203.0,not merged
+circuits,77.0,
+races with weather,1138.0,reanalysis
+weather coverage of eligible races (%),100.0,

@@ -214,6 +214,24 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 | Question | Evidence |
 |---|---|
 | Should the finishing-position target use the **official position** (may have gaps, F-007) or the **rank among model-population starters** (1..k)? | 45 model-population races with non-consecutive official positions; 24 races with numbering gaps |
+| Wet/dry threshold for race weather (not chosen in Step 8) | F-008: precipitation resolution 0.1 mm; era-stratified evidence in `eda_weather_wet_by_era.csv` |
+| Training window given strong drift across eras | F-008: DNF rate, pole conversion, grid–finish correlation and points systems all change by era |
+
+### D-015 · 2026-09-25 · Step 8 · EDA design
+- **Decision:** EDA is implemented in `src/eda.py` (`python -m src.eda`), read-only and deterministic, with `notebooks/03_eda.ipynb` presenting the results. Outputs: 31 tables `outputs/tables/eda_*.csv` and 19 figures `outputs/figures/eda/*.png` (every figure has a table twin). Eras: 1950–1969, 1970–1989, 1990–2009, 2010–2025. The descriptive population for outcomes is the P-08 model population; "all rows" is used for status and non-starter frequencies. Outcome statistics use the **official position** (no re-ranking). DNF is described with the P-06 definition, without creating a column.
+- **Leakage labelling:** `eda_variable_roles.csv` labels every column as pre-race / POST-RACE OUTCOME / DURING RACE (oracle proxy) / population filter / metadata. Correlations are labelled with the timing of both variables and are descriptive only.
+- **Charts:** reference palette from the dataviz method, validated with its script (categorical slots 1–5: all checks pass, contrast WARN relieved by legends and table twins; era ordinal blue ramp: pass). One axis per panel, no dual axes.
+- **Reason:** Understand the data before defining targets and features (blueprint §22), without creating either.
+
+### F-008 · 2026-09-25 · Step 8 · EDA findings (descriptive; no decisions)
+- **Scale:** 76 seasons, 1,149 races (1,138 eligible), 25,066 model rows, 687 drivers in the model population (817 with any result), 203 constructor ids, 77 circuits, weather 100%.
+- **Drift across eras (strong):** DNF rate among starters 45.4% / 48.1% / 37.7% / **14.9%**; pole win rate 40.7% / 32.6% / 46.7% / **52.4%**; podium from pole 51.7% / 50.7% / 69.8% / **80.5%**; grid vs position Spearman 0.42 / 0.33 / 0.45 / **0.63**; mean starters per race 19.4 / 24.5 / 22.3 / 20.9; drivers per season 46.8 → 23.1; points scales change (max 9–10 per race before 2010, 25+ after).
+- **Qualifying:** none before 1994, partial 1994–2002, complete 2003+. Q2 from 2005, Q3 from 2006. From 2003: grid == qualifying for 72.9% of starters, 1–3 places better 19.8% (penalties to others), worse 6.0%, pit lane 0.5%. Qualifying position vs grid ρ = 0.97.
+- **grid = 0:** 1950–1969 all non-starters (143); 2010–2025 mostly pit-lane starts (48 of 56).
+- **Position change:** classified finishers gain 2.9 places on average (mainly because retirements ahead of them move them up; not overtaking skill).
+- **Missing data:** all missingness explained by era, driver attribute, knock-out qualifying or outcome. **286 unexpected values = 258 post-race fastest-lap/time fields (no action) + 28 = 14 drivers (2025 list) without dob/nationality.**
+- **Weather:** precipitation resolution 0.1 mm (> 0 and ≥ 0.1 mm are identical: 321 races, 28%); ≥ 0.5 mm 158 races (13.9%); ≥ 2 mm 53 (4.7%). Pre-start vs race: temperature ρ 0.96, precipitation ρ 0.62 (98 races wet only before, 98 only during). **Within 1990–2025, wet races show higher DNF (e.g. 2010–25 ≥ 0.5 mm: 18.5% vs 14.4%) and lower pole-win rates (27–47% vs 48–53%). 1950–1989 shows no clear signal** (assumed 14:00 windows, small samples). Pooled weather–outcome correlations are weak (|ρ| ≤ 0.17) and confounded by era.
+- **Anomalies still needing a later decision:** position target (official vs rank among starters: 45 races, 24 numbering-gap races), repeated qualifying positions (5 races), driver dob (14), the wet/dry threshold, and the training window (drift).
 
 ---
 

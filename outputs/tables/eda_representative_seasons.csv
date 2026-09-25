@@ -1,0 +1,6 @@
+season,races,mean_starters_per_race,dnf_rate_pct,pole_win_rate_pct,mean_abs_position_change_classified,races_with_qualifying,races_with_race_precip_ge_0_1mm,constructors,drivers
+1955,7,19.5,43.59,37.5,4.47,0,1,8,46
+1975,14,24.07,41.54,30.77,5.9,0,8,19,50
+1995,17,24.24,48.54,29.41,4.79,17,5,13,35
+2015,19,19.53,18.06,63.16,2.95,19,6,10,21
+2024,24,19.83,9.03,45.83,2.57,24,6,10,24

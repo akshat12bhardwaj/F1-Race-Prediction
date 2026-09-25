@@ -1,0 +1,5 @@
+era,starters,scoring_share_pct,mean_points_per_start,max_points_single_race,median_laps_completed_ratio,mean_laps_ratio_finished,mean_laps_ratio_classified_not_running,mean_laps_ratio_started_not_classified,mean_laps_ratio_disqualified
+1950-1969,3356,29.738,1.256,9.0,0.875,0.957,0.817,0.358,0.582
+1970-1989,7364,24.348,1.011,9.0,0.906,0.98,0.933,0.385,0.562
+1990-2009,7476,30.23,1.376,10.0,0.972,0.987,0.932,0.387,0.738
+2010-2025,6870,47.889,4.861,50.0,1.0,0.992,0.924,0.371,0.747

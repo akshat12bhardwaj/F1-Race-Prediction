@@ -1,0 +1,16 @@
+anomaly,severity,policy,rows,races,seasons,possible_explanation,handle_later
+ambiguous_status,known_handled,P-07,24,19,1952-2023,"'Withdrew' after laps, or classified 'Withdrew'/'Not classified'",Handled by P-07
+constructor_id_reused_after_gap,known_handled,P-09,20,0,,brand IDs reused decades apart (e.g. mercedes 1954-55 / 2010+),Handled by P-09; use recent-window constructor history later
+disqualified_with_numeric_positionText,known_handled,P-05,3,2,2023-2024,DSQ recorded with a numeric position code,Handled by P-05 (status used)
+driver_without_dob_or_nationality,review,,14,0,2025-2025,little-known entrants without dob in the API,Only if driver age is used
+grid_zero_started_no_laps,known_handled,P-04,17,17,1981-2017,started category but 0 laps: start position unknown,Handled by P-04 (grid unknown)
+imputed_start_time_limitation,known_handled,,1,0,,no official start times before 2005,Limitation: 14:00 local assumed
+indianapolis_500_race,known_handled,P-11,11,11,1950-1960,Indianapolis 500 was a championship round 1950-1960,Handled by P-11 (excluded)
+laps_order_exception,known_handled,P-10,16,8,1951-1992,R rows with more laps placed below fewer laps (8 races),Handled by P-10 (official order kept)
+later_session_time_without_q1,review,P-03,2,2,2024-2024,Q2/Q3 time without Q1 (source gap),Low: only if qualifying times are used
+model_population_positions_not_consecutive,review,P-08/P-10,45,45,1950-2024,"gaps, secondary entries, shared positions, non-starters in between",YES: same target decision
+multi_entry_driver,known_handled,P-01,172,40,1950-1964,1950s shared drives: one driver credited in several cars,Handled by P-01 (primary entry)
+position_numbering_gap,review,P-10,24,24,1956-2002,official numbering skips positions (entries not in the data),YES: decide official position vs rank among starters when defining the target
+repeated_qualifying_position,review,P-03,12,5,2023-2025,source errors in 2023-2025 qualifying positions,"YES if qualifying position is used: keep, consider grid as primary"
+shared_position,known_handled,P-02,228,46,1950-1964,co-drivers of one car credited with one position,Handled by P-02; skip in winner metrics
+unexpected_missing_values,review,,258,28,1950-2025,see eda_unexpected_missing.csv,No for post-race fields; see that table

@@ -124,6 +124,14 @@ python -m src.validate_raw     # read-only; about 30 s; no API requests
 - Nothing is changed: no rows removed, no values imputed or recoded, no targets or features. The run stops with an error if any input file changes.
 - **Limitation:** 1950–2004 weather windows use an **assumed 14:00 local** start, and historical reanalysis is **not** a pre-race forecast.
 
+## Exploratory data analysis (Step 8)
+
+```powershell
+python -m src.eda              # read-only, deterministic; about 30 s
+```
+
+Open `notebooks/03_eda.ipynb` (kernel **Python 3.11 (f1-race-prediction)**) for the narrative. Outputs: `outputs/tables/eda_*.csv` (31) and `outputs/figures/eda/*.png` (19). The EDA is descriptive only: no targets, features, splits or imputation. Outcome variables are labelled POST-RACE in `eda_variable_roles.csv`. Weather is reanalysis, not a forecast (1950–2004 assumed 14:00 local start).
+
 ## Running tests
 
 ```powershell
@@ -165,7 +173,8 @@ F1-Race-Prediction/
 | 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED** |
 | 6 | Historical race weather (`python -m src.weather`) | Complete: 1,138/1,138 eligible races |
 | 6.1 | P-12: 2005–2006 start times read as local clock (APPROVED) | Complete: 1,138 races model-usable, 0 quality errors |
-| 7 | Raw data validation (`python -m src.validate_raw`) | Complete, awaiting review: 193 PASS, 7 INFO, 0 FAIL |
+| 7 | Raw data validation (`python -m src.validate_raw`) | Complete: 193 PASS, 7 INFO, 0 FAIL |
+| 8 | Exploratory data analysis (`python -m src.eda`, `notebooks/03_eda.ipynb`) | Complete, awaiting review: 31 tables, 19 figures |
 
 ## Reproducibility
 

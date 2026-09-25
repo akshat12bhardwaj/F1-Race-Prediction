@@ -1,0 +1,86 @@
+table,column,source_type,timing,note
+results,season,raw,pre-race (race metadata),known before the race
+results,round,raw,pre-race (race metadata),known before the race
+results,race_id,raw,pre-race (race metadata),known before the race
+results,race_name,raw,pre-race (race metadata),known before the race
+results,race_date,raw,pre-race (race metadata),known before the race
+results,circuit_id,raw,pre-race (race metadata),known before the race
+results,circuit_name,raw,pre-race (race metadata),known before the race
+results,locality,raw,pre-race (race metadata),known before the race
+results,country,raw,pre-race (race metadata),known before the race
+results,race_time,raw,pre-race (schedule),official start time; missing before 2005
+results,driver_id,raw,pre-race (entry/identity),known before the race
+results,driver_code,raw,pre-race (entry/identity),known before the race
+results,driver_first_name,raw,pre-race (entry/identity),known before the race
+results,driver_last_name,raw,pre-race (entry/identity),known before the race
+results,driver_dob,raw,pre-race (entry/identity),known before the race
+results,driver_nationality,raw,pre-race (entry/identity),known before the race
+results,constructor_id,raw,pre-race (entry/identity),known before the race
+results,constructor_name,raw,pre-race (entry/identity),known before the race
+results,constructor_nationality,raw,pre-race (entry/identity),known before the race
+results,driver_number,raw,pre-race (entry/identity),known before the race
+results,permanent_number,raw,not historical,driver's CURRENT number (F-001); do not use
+results,grid,raw,pre-race at T0,final starting grid is known at T0; 0 = see grid_status (P-04)
+results,position,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,position_text,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,points,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,laps,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,status,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,time_millis,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,time_text,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,fastest_lap_rank,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,fastest_lap_lap,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,fastest_lap_time,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,fastest_lap_avg_speed,raw,POST-RACE OUTCOME,never a prediction input for this race
+results,fastest_lap_speed_units,raw,POST-RACE OUTCOME,never a prediction input for this race
+results_policy,entry_count,policy-derived (P-01),pre-race (entries),entries are known before the race
+results_policy,multi_entry_driver,policy-derived (P-01),pre-race (entries),entries are known before the race
+results_policy,is_primary_entry,policy-derived (P-01),POST-RACE (uses position),"chooses best-placed entry: population filter only, never an input"
+results_policy,shared_position,policy-derived (P-02),POST-RACE OUTCOME,evaluation filter only
+results_policy,shared_position_count,policy-derived (P-02),POST-RACE OUTCOME,evaluation filter only
+results_policy,race_has_shared_win,policy-derived (P-02),POST-RACE OUTCOME,evaluation filter only
+results_policy,race_has_qualifying,policy-derived (P-03),pre-race at T0,qualifying availability
+results_policy,has_qualifying_row,policy-derived (P-03),pre-race at T0,qualifying availability
+results_policy,grid_status,policy-derived (P-04),"pre-race fact, derived with post-race laps",a pit-lane start is known at T0 but the flag is derived using laps; recheck before any feature use
+results_policy,pit_lane_start,policy-derived (P-04),"pre-race fact, derived with post-race laps",a pit-lane start is known at T0 but the flag is derived using laps; recheck before any feature use
+results_policy,result_category_detail,policy-derived (P-05/06/07),POST-RACE OUTCOME,outcome categories; DNF = started_not_classified
+results_policy,result_category,policy-derived (P-05/06/07),POST-RACE OUTCOME,outcome categories; DNF = started_not_classified
+results_policy,ambiguous_status,policy-derived (P-05/06/07),POST-RACE OUTCOME,outcome categories; DNF = started_not_classified
+results_policy,retired_while_classified,policy-derived (P-05/06/07),POST-RACE OUTCOME,outcome categories; DNF = started_not_classified
+results_policy,started,policy-derived (P-07/P-08),population filter (T0),"who took the start; defines the population, not an input"
+results_policy,laps_order_exception,policy-derived (P-10),POST-RACE OUTCOME,quality flag
+results_policy,is_indianapolis_500,policy-derived (P-08/P-11),population filter,row selection only
+results_policy,in_model_population,policy-derived (P-08/P-11),population filter,row selection only
+qualifying,qualifying_position,raw,pre-race at T0,qualifying happens before the race; missing = missing (P-03)
+qualifying,q1,raw,pre-race at T0,qualifying happens before the race; missing = missing (P-03)
+qualifying,q2,raw,pre-race at T0,qualifying happens before the race; missing = missing (P-03)
+qualifying,q3,raw,pre-race at T0,qualifying happens before the race; missing = missing (P-03)
+sprints,position,raw,pre-race at T0 for the Grand Prix,sprint is held before the GP (2021+); outcome of the sprint itself
+sprints,points,raw,pre-race at T0 for the Grand Prix,sprint is held before the GP (2021+); outcome of the sprint itself
+sprints,grid,raw,pre-race at T0 for the Grand Prix,sprint is held before the GP (2021+); outcome of the sprint itself
+sprints,status,raw,pre-race at T0 for the Grand Prix,sprint is held before the GP (2021+); outcome of the sprint itself
+sprints,laps,raw,pre-race at T0 for the Grand Prix,sprint is held before the GP (2021+); outcome of the sprint itself
+weather_race,wx_prestart_temp_mean_c,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_humidity_mean_pct,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_precip_sum_mm,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_rain_sum_mm,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_cloud_mean_pct,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_wind_speed_mean_kmh,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_wind_dir_mean_deg,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_prestart_weather_code_max,raw-aligned (Step 6),"observed before T0 (reanalysis, not a forecast)",1950-2004 at an assumed 14:00 local start
+weather_race,wx_race_temp_mean_c,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_humidity_mean_pct,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_precip_sum_mm,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_rain_sum_mm,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_cloud_mean_pct,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_wind_speed_mean_kmh,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_wind_dir_mean_deg,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,wx_race_weather_code_max,raw-aligned (Step 6),DURING RACE (oracle-forecast proxy),not available at T0; only as a perfect-forecast proxy (blueprint 19.6)
+weather_race,start_time_source,raw-aligned / policy (P-12),metadata,data-quality context
+weather_race,p12_local_clock_applied,raw-aligned / policy (P-12),metadata,data-quality context
+weather_race,timezone,raw-aligned / policy (P-12),metadata,data-quality context
+weather_race,grid_distance_km,raw-aligned / policy (P-12),metadata,data-quality context
+eda (this step),era,descriptive EDA variable (in memory only),pre-race,season bucket for description
+eda (this step),race_max_laps,descriptive EDA variable (in memory only),POST-RACE OUTCOME,laps of the leader; used only to describe laps completed
+eda (this step),position_change (grid - position),descriptive EDA variable (in memory only),POST-RACE OUTCOME,description only
+eda (this step),laps_completed_ratio,descriptive EDA variable (in memory only),POST-RACE OUTCOME,description only

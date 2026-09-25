@@ -1,0 +1,8 @@
+grid_minus_qualifying_position,rows,share_pct
+grid 4+ better,119,1.271
+grid 1-3 better,1855,19.812
+grid == qualifying,6829,72.936
+grid 1-3 worse,260,2.777
+grid 4-10 worse,277,2.958
+grid 11+ worse,23,0.246
+pit-lane start (grid 0),48,0.513

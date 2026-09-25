@@ -1,0 +1,23 @@
+pair,population,n,spearman,pearson,timing_of_variables
+grid vs official position,"model population, grid > 0",25001,0.464,0.4525,pre-race vs POST-RACE
+grid vs official position (1950-1969),"model population, grid > 0",3356,0.4223,0.437,pre-race vs POST-RACE
+grid vs official position (1970-1989),"model population, grid > 0",7354,0.3258,0.323,pre-race vs POST-RACE
+grid vs official position (1990-2009),"model population, grid > 0",7470,0.4542,0.4462,pre-race vs POST-RACE
+grid vs official position (2010-2025),"model population, grid > 0",6821,0.6328,0.625,pre-race vs POST-RACE
+qualifying position vs official position (2003-2025),"model population, has qualifying",9363,0.6211,0.6169,pre-race vs POST-RACE
+qualifying position vs grid (2003-2025),"has qualifying, grid > 0",9315,0.9685,0.9676,pre-race vs pre-race
+laps vs points,model population,25066,0.4007,0.2741,POST-RACE vs POST-RACE
+laps vs official position,model population,25066,-0.6355,-0.6793,POST-RACE vs POST-RACE
+laps completed ratio vs official position,model population,25066,-0.827,-0.7602,POST-RACE vs POST-RACE
+wx_race_precip_sum_mm vs race DNF rate,race level,1138,0.0588,0.0526,during race (oracle proxy) vs POST-RACE
+wx_race_precip_sum_mm vs mean |position change|,race level,1138,0.0876,0.0195,during race (oracle proxy) vs POST-RACE
+wx_prestart_precip_sum_mm vs race DNF rate,race level,1138,0.0182,0.0006,before T0 (reanalysis) vs POST-RACE
+wx_prestart_precip_sum_mm vs mean |position change|,race level,1138,0.0528,0.0102,before T0 (reanalysis) vs POST-RACE
+wx_race_temp_mean_c vs race DNF rate,race level,1138,-0.1695,-0.159,during race (oracle proxy) vs POST-RACE
+wx_race_temp_mean_c vs mean |position change|,race level,1138,-0.1581,-0.1167,during race (oracle proxy) vs POST-RACE
+wx_race_humidity_mean_pct vs race DNF rate,race level,1138,0.0133,0.0174,during race (oracle proxy) vs POST-RACE
+wx_race_humidity_mean_pct vs mean |position change|,race level,1138,0.0356,-0.0045,during race (oracle proxy) vs POST-RACE
+wx_race_wind_speed_mean_kmh vs race DNF rate,race level,1138,-0.0338,-0.0333,during race (oracle proxy) vs POST-RACE
+wx_race_wind_speed_mean_kmh vs mean |position change|,race level,1138,-0.0179,-0.0309,during race (oracle proxy) vs POST-RACE
+wx_race_cloud_mean_pct vs race DNF rate,race level,1138,0.0511,0.0605,during race (oracle proxy) vs POST-RACE
+wx_race_cloud_mean_pct vs mean |position change|,race level,1138,0.076,0.0617,during race (oracle proxy) vs POST-RACE

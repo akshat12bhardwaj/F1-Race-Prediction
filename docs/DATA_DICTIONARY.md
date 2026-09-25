@@ -135,6 +135,26 @@ Coverage report columns (`weather_coverage_summary.csv`, `weather_coverage_by_se
 
 **Limitations:** reanalysis ≠ track conditions (grid cell, 2 m air temperature ≠ track temperature, convective showers are smoothed); **1950–2004 windows use an assumed 14:00 local start**; 2005–2006 starts rely on the P-12 interpretation of the API clock values; none of these values was available as a forecast before the race.
 
+### Step 8 EDA outputs (`src/eda.py`, read-only; notebook `notebooks/03_eda.ipynb`)
+
+31 tables in `outputs/tables/` (all descriptive; no targets, features or imputed values) and 19 figures in `outputs/figures/eda/`:
+
+| Table | Content |
+|---|---|
+| eda_variable_roles | every column: source_type (raw / policy-derived / descriptive EDA) and **timing** (pre-race at T0, POST-RACE OUTCOME, DURING RACE oracle proxy, population filter, metadata) |
+| eda_dataset_overview, eda_season_counts, eda_era_summary, eda_representative_seasons | counts by season and era (1950–69, 1970–89, 1990–2009, 2010–25; seasons 1955, 1975, 1995, 2015, 2024) |
+| eda_missingness, eda_missingness_by_era, eda_unexpected_missing | missing values by class (historically unavailable / structurally absent / legitimately absent / unexpected) and the 286 unexpected values |
+| eda_status_categories, eda_status_top_by_era, eda_dnf_by_season | result categories, raw statuses, DNF (P-06) by season |
+| eda_finish_position_distribution, eda_position_change, eda_points_laps | outcome distributions (POST-RACE) |
+| eda_grid_distribution, eda_grid_zero, eda_grid_vs_finish | grid values (raw), grid = 0 by P-04 status, outcomes by grid slot |
+| eda_qualifying_coverage, eda_qualifying_vs_grid, eda_qualifying_position_outcomes | qualifying availability 1990–2025, grid minus qualifying position, outcomes by qualifying position (2003+) |
+| eda_weather_distribution, eda_weather_prestart_vs_race, eda_weather_wet_evidence, eda_weather_wet_by_era, eda_weather_hourly_profile | weather by era and start-time basis, pre-start vs race window, threshold evidence (not a decision) |
+| eda_correlations, eda_correlation_matrix | Spearman/Pearson, descriptive, with the timing of both variables |
+| eda_driver_stats, eda_driver_summary, eda_constructor_stats | per driver / per constructor_id (not merged) |
+| eda_anomaly_summary | Step 7 anomalies with possible explanation and whether they need handling later |
+
+Descriptive variables created **in memory only** (not saved as data): era, race_max_laps (leader's laps), position change (grid − position), laps-completed ratio. The last three are POST-RACE.
+
 ### Step 7 validation outputs (`outputs/tables/`, written by `src/validate_raw.py`, read-only)
 
 | File | One row = | Columns |
