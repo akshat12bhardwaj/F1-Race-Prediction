@@ -1,0 +1,16 @@
+season,round,race_id,race_name,race_date,race_time,sprint_scheduled,result_count,qualifying_count,sprint_count,duplicate_keys,missing_ids,grid_zero,non_numeric_position_text,season_median_result_count,flags
+1950,1,1950_01,British Grand Prix,1950-05-13,,False,23,0,0,0,0,0,11,21.0,result_count_differs_from_season_median;missing_race_time
+1950,2,1950_02,Monaco Grand Prix,1950-05-21,,False,21,0,0,0,0,0,14,21.0,missing_race_time
+1950,3,1950_03,Indianapolis 500,1950-05-30,,False,35,0,0,2,0,0,10,21.0,result_count_differs_from_season_median;missing_race_time;duplicate_keys;indianapolis_500
+1950,4,1950_04,Swiss Grand Prix,1950-06-04,,False,18,0,0,0,0,0,7,21.0,result_count_differs_from_season_median;missing_race_time
+1950,5,1950_05,Belgian Grand Prix,1950-06-18,,False,14,0,0,0,0,0,4,21.0,result_count_differs_from_season_median;missing_race_time
+1950,6,1950_06,French Grand Prix,1950-07-02,,False,20,0,0,2,0,0,10,21.0,result_count_differs_from_season_median;missing_race_time;duplicate_keys
+1950,7,1950_07,Italian Grand Prix,1950-09-03,,False,29,0,0,4,0,0,21,21.0,result_count_differs_from_season_median;missing_race_time;duplicate_keys
+1951,1,1951_01,Swiss Grand Prix,1951-05-27,,False,21,0,0,0,0,0,7,21.5,result_count_differs_from_season_median;missing_race_time
+1951,2,1951_02,Indianapolis 500,1951-05-30,,False,34,0,0,0,0,0,25,21.5,result_count_differs_from_season_median;missing_race_time;indianapolis_500
+1951,3,1951_03,Belgian Grand Prix,1951-06-17,,False,13,0,0,0,0,0,4,21.5,result_count_differs_from_season_median;missing_race_time
+1951,4,1951_04,French Grand Prix,1951-07-01,,False,26,0,0,6,0,0,12,21.5,result_count_differs_from_season_median;missing_race_time;duplicate_keys
+1951,5,1951_05,British Grand Prix,1951-07-14,,False,20,0,0,0,0,0,7,21.5,result_count_differs_from_season_median;missing_race_time
+1951,6,1951_06,German Grand Prix,1951-07-29,,False,22,0,0,0,0,0,11,21.5,result_count_differs_from_season_median;missing_race_time
+1951,7,1951_07,Italian Grand Prix,1951-09-16,,False,23,0,0,2,0,0,13,21.5,result_count_differs_from_season_median;missing_race_time;duplicate_keys
+1951,8,1951_08,Spanish Grand Prix,1951-10-28,,False,20,0,0,0,0,0,10,21.5,result_count_differs_from_season_median;missing_race_time

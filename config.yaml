@@ -60,7 +60,9 @@ api:
   jolpica:
     base_url: "https://api.jolpi.ca/ergast/f1"
     page_limit: 100              # API maximum [CONFIRMED]
-    min_seconds_between_requests: 1.0
+    # 7.5 s = 480 requests/hour, just under the documented 500/hour sustained limit
+    # (burst limit 4/s). Only affects network requests; cache hits are instant. [D-010]
+    min_seconds_between_requests: 7.5
 
   openmeteo:
     archive_url: "https://archive-api.open-meteo.com/v1/archive"

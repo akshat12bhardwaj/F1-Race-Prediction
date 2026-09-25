@@ -1,0 +1,4 @@
+finished_at_utc,seasons,output_prefix,stat_cache_hits,stat_network_requests,stat_retries,runtime_seconds,rows_races,rows_results,rows_qualifying,rows_sprints,rows_drivers,rows_constructors
+2026-09-25T14:24:32Z,1950-1951,subset_,12,14,0,98.1,15,339,0,0,165,48
+2026-09-25T16:02:48Z,1950-2025,,485,749,3,5675.9,1149,25873,10973,480,3248,1121
+2026-09-25T16:03:28Z,1950-2025,,1232,0,0,2.0,1149,25873,10973,480,3248,1121

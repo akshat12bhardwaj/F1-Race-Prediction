@@ -1,0 +1,55 @@
+source,status,position_text_type,records,first_season,last_season
+race,Engine,R,47,1950,1951
+race,Finished,numeric,46,1950,1951
+race,+2 Laps,numeric,23,1950,1951
+race,+3 Laps,numeric,21,1950,1951
+race,Accident,R,20,1950,1951
+race,+6 Laps,numeric,15,1950,1951
+race,+1 Lap,numeric,13,1950,1951
+race,+5 Laps,numeric,10,1950,1951
+race,Gearbox,R,10,1950,1951
+race,Transmission,R,10,1950,1951
+race,Overheating,R,9,1950,1951
+race,+7 Laps,numeric,8,1950,1951
+race,+8 Laps,numeric,8,1950,1951
+race,+4 Laps,numeric,7,1950,1951
+race,Oil pressure,R,7,1950,1951
+race,Ignition,R,6,1951,1951
+race,Oil leak,R,6,1950,1951
+race,+10 Laps,numeric,5,1950,1951
+race,Magneto,R,5,1951,1951
+race,Clutch,R,4,1950,1951
+race,Oil pipe,R,4,1950,1951
+race,+11 Laps,numeric,3,1950,1951
+race,Axle,R,3,1950,1951
+race,Oil pump,R,3,1950,1951
+race,Radiator,R,3,1950,1951
+race,Retired,R,3,1950,1951
+race,Supercharger,R,3,1950,1951
+race,Withdrew,W,3,1950,1951
+race,+12 Laps,numeric,2,1950,1950
+race,+13 Laps,numeric,2,1950,1951
+race,+22 Laps,numeric,2,1951,1951
+race,Brakes,R,2,1950,1951
+race,Engine,W,2,1950,1951
+race,Heat shield fire,R,2,1951,1951
+race,Not classified,R,2,1950,1951
+race,Spun off,numeric,2,1950,1950
+race,+15 Laps,numeric,1,1950,1950
+race,+16 Laps,numeric,1,1950,1950
+race,+19 Laps,numeric,1,1951,1951
+race,+20 Laps,numeric,1,1951,1951
+race,+9 Laps,numeric,1,1951,1951
+race,Accident,W,1,1950,1950
+race,Collision,R,1,1950,1950
+race,Fuel leak,R,1,1951,1951
+race,Fuel pump,numeric,1,1950,1950
+race,Fuel system,R,1,1951,1951
+race,Oil line,R,1,1950,1950
+race,Out of fuel,R,1,1950,1950
+race,Spun off,R,1,1951,1951
+race,Stalled,R,1,1950,1950
+race,Suspension,R,1,1950,1950
+race,Water pipe,R,1,1950,1950
+race,Wheel,R,1,1951,1951
+race,Wheel bearing,R,1,1950,1950

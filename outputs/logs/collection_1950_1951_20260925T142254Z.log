@@ -1,0 +1,10 @@
+2026-09-25 19:52:54,439 INFO    __main__: Collecting seasons 1950-1951 | spacing 7.5 s between network requests
+2026-09-25 19:53:39,997 INFO    __main__: Season 1950: races=7 results=160 qualifying=0 sprints=0 | new requests=7 | 46 s
+2026-09-25 19:54:32,501 INFO    __main__: Season 1951: races=8 results=179 qualifying=0 sprints=0 | new requests=7 | 53 s
+2026-09-25 19:54:32,578 INFO    __main__: Collection stats: {'cache_hits': 12, 'network_requests': 14, 'retries': 0} | runtime 1.6 min
+2026-09-25 19:54:32,578 INFO    __main__:   races             15 rows
+2026-09-25 19:54:32,578 INFO    __main__:   results          339 rows
+2026-09-25 19:54:32,579 INFO    __main__:   qualifying         0 rows
+2026-09-25 19:54:32,579 INFO    __main__:   sprints            0 rows
+2026-09-25 19:54:32,579 INFO    __main__:   drivers          165 rows
+2026-09-25 19:54:32,579 INFO    __main__:   constructors      48 rows

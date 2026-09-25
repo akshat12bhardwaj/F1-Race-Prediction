@@ -21,10 +21,18 @@ Category codes (blueprint §13): **A** = directly from source · **B** = derived
 | `data/interim/2024_constructors.csv` | Interim (pilot) | 4 | 10 | **Created** |
 | `outputs/tables/pilot_2024_race_summary.csv` | Output table | 4 | 24 | **Created** |
 | `outputs/tables/pilot_2024_status_combinations.csv` | Output table | 4 | 10 | **Created** |
-| `data/interim/races.csv` | Interim | 5 | about 1,149 | Not created |
-| `data/interim/results.csv` | Interim | 8 | about 25,873 | Not created |
-| `data/interim/qualifying.csv` | Interim | 8 | — | Not created |
-| `data/interim/sprint.csv` | Interim | 8 | — | Not created |
+| `data/interim/races.csv` | Interim (raw text) | 5 (historical collection) | 1,149 | **Created** 1950–2025 |
+| `data/interim/results.csv` | Interim (raw text) | 5 | 25,873 | **Created** |
+| `data/interim/qualifying.csv` | Interim (raw text) | 5 | 10,973 | **Created** (1994–2025 only, gaps 1996–2002) |
+| `data/interim/sprints.csv` | Interim (raw text) | 5 | 480 | **Created** (2021–2025) |
+| `data/interim/drivers.csv` | Interim (raw text) | 5 | 3,248 (season × driver) | **Created** |
+| `data/interim/constructors.csv` | Interim (raw text) | 5 | 1,121 (season × constructor) | **Created** |
+| `outputs/tables/historical_collection_summary.csv` | Report | 5 | 76 | **Created** |
+| `outputs/tables/historical_race_validation.csv` | Report | 5 | 1,149 | **Created** |
+| `outputs/tables/historical_edge_cases.csv` | Report | 5 | 3,017 | **Created** |
+| `outputs/tables/historical_status_vocabulary.csv` | Report | 5 | 245 | **Created** |
+| `outputs/tables/historical_field_coverage.csv` | Report | 5 | per season × endpoint × field | **Created** |
+| `outputs/tables/subset_*.csv`, `data/interim/subset_*.csv` | Resume-test evidence | 5 | 1950–1951 | **Created** |
 | `data/interim/weather_race.csv` | Interim | 6 | about 1,149 | Not created |
 | `data/interim/master_base.csv` | Interim | 9 | about 25,873 | Not created |
 | `data/processed/master_features.csv` | Processed | 11 | — | Not created |
@@ -47,6 +55,63 @@ One row = `<what one row represents>` · Primary key: `<columns>`
 ---
 
 ## Tables
+
+### Historical tables 1950–2025 (`data/interim/races.csv`, `results.csv`, `qualifying.csv`, `sprints.csv`, `drivers.csv`, `constructors.csv`)
+
+**The columns are identical to the 2024 pilot tables described below** (same code: `src/collect.py`), with all seasons stacked in season order and API order within a season. `drivers.csv` / `constructors.csv` have one row per **season × driver/constructor** (the season lists). Same conventions: raw API text, and an empty cell means the API did not send the field.
+
+Observed coverage across 1950–2025 (from `historical_field_coverage.csv` and `historical_collection_summary.csv`):
+
+| Column(s) | Coverage 1950–2025 |
+|---|---|
+| race_time | **Empty for every race 1950–2004** (731 races); present for every race 2005–2025 |
+| fastest_lap_* | Only from **2004** onward |
+| time_millis / time_text | All seasons, finishers only |
+| driver_code | Present in 35 seasons, partly (e.g. 1.4% of records in some early seasons) |
+| permanent_number | Present in 26 seasons, partly; it is the driver's current number anyway (F-001) |
+| qualifying (whole table) | **None before 1994.** 1994–2002 only for some races (e.g. 2001: 1 of 17). Every race from 2003 |
+| sprints | 2021–2025 only (480 rows) |
+| position_text codes | Numbers, **R** (9,121), **W** (358), **D** (159). E, F and N never occur |
+| status | 136 distinct values in race results |
+
+Keys: `(season, round, driver_id)` is **not unique** in 1950–1964 (172 rows in 40 races: shared drives). `(season, round, position)` is not unique in 46 races up to 1964 (shared cars). Both are kept and reported; see `historical_edge_cases.csv`.
+
+### `outputs/tables/historical_collection_summary.csv`
+One row per season: races, races_missing_race_time, result_rows, qualifying_rows, sprint_rows, unique_drivers, unique_constructors (in results), drivers_in_season_list, constructors_in_season_list, duplicate_result_keys / duplicate_qualifying_keys / duplicate_sprint_keys (rows involved), missing_race_ids / missing_driver_ids / missing_constructor_ids, **api_total_*** (`MRData.total` of each endpoint), **matches_api_totals** (True when every count equals the API total).
+
+### `outputs/tables/historical_race_validation.csv`
+One row per race: season, round, race_id, race_name, race_date, race_time, sprint_scheduled, result_count, qualifying_count, sprint_count, duplicate_keys, missing_ids, grid_zero, non_numeric_position_text, repeated_position_rows, season_median_result_count, and **flags** (`;`-separated). Flags: no_results, result_count_differs_from_season_median, no_qualifying_in_qualifying_season, qualifying_count_differs_from_results, sprint_scheduled_but_no_sprint_results, sprint_results_but_not_scheduled, missing_race_time, duplicate_keys, missing_ids, grid_zero, repeated_position, indianapolis_500.
+
+### `outputs/tables/historical_edge_cases.csv`
+One row per unusual observation: category, season, round, race_id, driver_id, constructor_id, detail. Nothing was removed from the data. Categories:
+
+| Category | Level | Meaning |
+|---|---|---|
+| result_count_differs_from_season_median | race | Number of result rows differs from the season's median |
+| indianapolis_500 | race | Indianapolis 500 round (1950–1960) |
+| race_without_qualifying | race | Season has qualifying data but this race has none |
+| qualifying_count_differs_from_results | race | Qualifying and result row counts differ |
+| season_without_qualifying | season | No qualifying data in the whole season |
+| missing_race_time | season | Races without a start time |
+| position_text_code | season | Count of each non-numeric positionText code |
+| classified_but_not_finished | season | Numeric positionText with a status other than Finished/Lapped/+N Laps |
+| grid_zero | record | grid = "0" |
+| non_starter | record | Status Did not start / Withdrew / Did not qualify / Did not prequalify, or positionText W/F |
+| disqualified_or_excluded | record | Status contains "Disqualified"/"Excluded", or positionText D/E |
+| duplicate_result_key, duplicate_qualifying_key, duplicate_sprint_key | record | Rows sharing (season, round, driver_id) |
+| repeated_position | record | Rows sharing a position within one race |
+| absent_between_appearances | record | Driver raced in rounds r−1 and r+1 of a season but has no row in round r |
+| in_qualifying_not_in_results / in_results_not_in_qualifying | record | Driver sets differ between the two sources for one race |
+| season_list_driver_without_records | record | In the season driver list, no race/qualifying/sprint row |
+| result_driver_not_in_season_list | record | In results, not in the season driver list |
+| constructor_id_with_multiple_names, constructor_name_with_multiple_ids, driver_id_with_multiple_identities, same_person_multiple_driver_ids | entity | Identity changes (none found) |
+| unexpected_field | season | JSON field not seen in Step 2 (none found) |
+
+### `outputs/tables/historical_status_vocabulary.csv`
+Every (source, status, position_text_type) combination: records, first_season, last_season. position_text_type = "numeric" or the letter code. Input for the Step 7 DNF/DSQ/non-starter decision.
+
+### `outputs/tables/historical_field_coverage.csv`
+For each endpoint (results, qualifying, sprint), season and level (record, Driver, Constructor): records, records_with_field, share, known_field (seen in Step 2).
 
 ### Conventions for the Step 4 pilot tables (`data/interim/{season}_*.csv`)
 

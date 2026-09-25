@@ -1,0 +1,246 @@
+source,status,position_text_type,records,first_season,last_season
+race,Finished,numeric,8004,1950,2025
+race,+1 Lap,numeric,3849,1950,2022
+race,Engine,R,1855,1950,2022
+race,+2 Laps,numeric,1592,1950,2022
+race,Accident,R,947,1950,2023
+race,Collision,R,785,1950,2022
+race,Gearbox,R,763,1950,2022
+race,Spun off,R,750,1951,2022
+race,+3 Laps,numeric,730,1950,2021
+race,Suspension,R,406,1950,2022
+race,+4 Laps,numeric,404,1950,2016
+race,Transmission,R,309,1950,2020
+race,Lapped,numeric,297,2023,2025
+race,Electrical,R,295,1952,2021
+race,Withdrew,W,243,1950,2023
+race,Brakes,R,230,1950,2021
+race,+5 Laps,numeric,221,1950,2020
+race,Retired,R,215,1950,2025
+race,Clutch,R,200,1950,2014
+race,Not classified,R,171,1950,2004
+race,+6 Laps,numeric,152,1950,2022
+race,Disqualified,D,150,1952,2025
+race,Turbo,R,142,1952,2022
+race,Engine,numeric,138,1953,2022
+race,Fuel system,R,137,1951,2003
+race,Hydraulics,R,129,1987,2022
+race,Overheating,R,127,1950,2020
+race,Oil leak,R,122,1950,2022
+race,Ignition,R,118,1951,1994
+race,Throttle,R,105,1953,2015
+race,+7 Laps,numeric,96,1950,2005
+race,Halfshaft,R,96,1952,2001
+race,Wheel,R,82,1951,2020
+race,Out of fuel,numeric,79,1964,2005
+race,Oil pressure,R,77,1950,2017
+race,Accident,numeric,71,1953,2021
+race,Fuel pump,R,60,1953,2022
+race,Differential,R,56,1952,2022
+race,Handling,R,54,1958,2004
+race,Tyre,R,51,1956,2018
+race,+8 Laps,numeric,49,1950,2014
+race,Fuel leak,R,49,1951,2022
+race,Steering,R,45,1954,2018
+race,Collision,numeric,44,1972,2022
+race,Radiator,R,42,1950,2020
+race,Collision damage,R,41,2012,2023
+race,Spun off,numeric,41,1950,2009
+race,Puncture,R,36,1962,2021
+race,+9 Laps,numeric,35,1951,1980
+race,Gearbox,numeric,35,1955,2021
+race,Power Unit,R,34,2014,2022
+race,Wheel bearing,R,34,1950,1999
+race,Injection,R,33,1954,1991
+race,Retired,numeric,32,2012,2025
+race,Water leak,R,32,1957,2022
+race,+10 Laps,numeric,30,1950,1969
+race,Physical,R,30,1953,1999
+race,Accident,W,29,1950,1995
+race,Chassis,R,29,1956,2002
+race,Fuel pressure,R,29,1955,2020
+race,Exhaust,R,27,1952,2019
+race,Mechanical,R,27,1982,2022
+race,Alternator,R,26,1965,2013
+race,Suspension,numeric,24,1963,2020
+race,Driveshaft,R,23,1987,2017
+race,Magneto,R,21,1951,1961
+race,Out of fuel,R,21,1950,2019
+race,Brakes,numeric,19,1960,2019
+race,Axle,R,18,1950,1970
+race,Electrical,numeric,18,1966,2010
+race,Engine,W,18,1950,2016
+race,Heat shield fire,R,18,1951,2011
+race,Battery,R,15,1962,2018
+race,Fuel system,numeric,15,1960,1993
+race,Oil pump,R,14,1950,1996
+race,+11 Laps,numeric,13,1950,1965
+race,+13 Laps,numeric,13,1950,1960
+race,Clutch,numeric,13,1954,2014
+race,Power loss,R,13,2002,2022
+race,Distributor,R,12,1957,1990
+race,+14 Laps,numeric,11,1952,1965
+race,Oil pipe,R,11,1950,1971
+race,Transmission,numeric,11,1960,2015
+race,+12 Laps,numeric,10,1950,1965
+race,Broken wing,R,10,1968,2006
+race,Electronics,R,10,2002,2020
+race,Oil pressure,numeric,10,1961,1993
+race,+15 Laps,numeric,9,1950,1965
+race,Did not start,W,9,2023,2025
+race,Driver unwell,R,9,1964,1988
+race,Excluded,D,8,1987,2015
+race,Ignition,numeric,8,1962,1984
+race,Injury,W,8,1966,2011
+race,Rear wing,R,8,1999,2021
+race,Wheel nut,R,8,2011,2021
+race,+16 Laps,numeric,7,1950,1964
+race,Gearbox,W,7,1995,2015
+race,Hydraulics,numeric,7,1998,2022
+race,Vibrations,R,7,1960,2017
+race,Water pump,R,7,1957,2022
+race,+17 Laps,numeric,6,1953,1965
+race,Collision damage,numeric,6,2017,2023
+race,Fuel pressure,numeric,6,1970,2022
+race,Injured,W,6,1988,2009
+race,Wheel,numeric,6,1977,2018
+race,Alternator,numeric,5,1965,2012
+race,Differential,numeric,5,1962,2009
+race,Fuel pump,numeric,5,1950,2010
+race,Magneto,numeric,5,1953,1960
+race,Puncture,numeric,5,1974,2018
+race,Supercharger,R,5,1950,1952
+race,Throttle,numeric,5,1975,1996
+race,Water pressure,R,5,2014,2022
+race,+11 Laps,R,4,1978,2012
+race,+18 Laps,numeric,4,1952,1965
+race,+19 Laps,numeric,4,1951,1963
+race,+22 Laps,numeric,4,1951,1964
+race,+24 Laps,numeric,4,1953,1964
+race,Axle,numeric,4,1953,1960
+race,Collision,W,4,1998,1998
+race,Front wing,R,4,2007,2017
+race,Fuel,R,4,1997,2003
+race,Injury,R,4,1982,2002
+race,Pneumatics,R,4,2004,2013
+race,Power Unit,numeric,4,2015,2022
+race,Turbo,numeric,4,1984,1986
+race,Tyre,numeric,4,1990,2015
+race,+25 Laps,numeric,3,1963,1965
+race,+7 Laps,R,3,1978,1978
+race,+8 Laps,R,3,1978,2014
+race,+9 Laps,R,3,1980,2011
+race,Disqualified,numeric,3,2023,2024
+race,ERS,R,3,2014,2015
+race,Fuel system,W,3,1960,2015
+race,Halfshaft,numeric,3,1969,1976
+race,Injection,numeric,3,1961,1982
+race,Overheating,numeric,3,1964,1984
+race,Power Unit,W,3,2014,2020
+race,Spark plugs,R,3,1982,2017
+race,Technical,R,3,2006,2014
+race,Undertray,R,3,2022,2023
+race,Vibrations,numeric,3,2012,2022
+race,Water pipe,R,3,1950,1970
+race,Water pressure,numeric,3,2007,2017
+race,Wheel bearing,numeric,3,1977,1980
+race,Withdrew,numeric,3,1996,2020
+race,+10 Laps,R,2,2010,2011
+race,+12 Laps,R,2,1978,2005
+race,Battery,numeric,2,1964,2016
+race,Damage,R,2,2019,2021
+race,Distributor,numeric,2,1981,1983
+race,Drivetrain,R,2,2002,2014
+race,Electrical,W,2,1995,2005
+race,Exhaust,numeric,2,1985,2012
+race,Fatal accident,R,2,1974,1982
+race,Fire,R,2,1989,2004
+race,Fuel pipe,R,2,1970,1976
+race,Fuel rig,R,2,2001,2003
+race,Hydraulics,W,2,2010,2016
+race,Ignition,W,2,1975,2002
+race,Oil line,R,2,1950,2003
+race,Safety,W,2,2002,2002
+race,Safety concerns,W,2,2000,2000
+race,Stalled,R,2,1950,2001
+race,Steering,numeric,2,1952,2006
+race,Wheel rim,numeric,2,2002,2005
+race,+1 Lap,R,1,2005,2005
+race,+14 Laps,R,1,2011,2011
+race,+17 Laps,R,1,2006,2006
+race,+2 Laps,R,1,2005,2005
+race,+20 Laps,numeric,1,1951,1951
+race,+21 Laps,numeric,1,1962,1962
+race,+23 Laps,numeric,1,1963,1963
+race,+26 Laps,R,1,2005,2005
+race,+29 Laps,numeric,1,1964,1964
+race,+3 Laps,R,1,1967,1967
+race,+30 Laps,numeric,1,1960,1960
+race,+4 Laps,R,1,1980,1980
+race,+42 Laps,R,1,2011,2011
+race,+44 Laps,numeric,1,1960,1960
+race,+46 Laps,numeric,1,1954,1954
+race,+6 Laps,R,1,1956,1956
+race,Brake duct,R,1,2015,2015
+race,Brakes,W,1,2021,2021
+race,Broken wing,numeric,1,1986,1986
+race,CV joint,R,1,1985,1985
+race,Clutch,W,1,2003,2003
+race,Cooling system,R,1,2022,2022
+race,Crankshaft,R,1,2001,2001
+race,Debris,R,1,2020,2020
+race,Driver Seat,R,1,2008,2008
+race,Driver unwell,W,1,1985,1985
+race,Driveshaft,W,1,2021,2021
+race,Driveshaft,numeric,1,2007,2007
+race,ERS,W,1,2015,2015
+race,ERS,numeric,1,2014,2014
+race,Electronics,numeric,1,2020,2020
+race,Engine fire,R,1,2005,2005
+race,Engine misfire,R,1,2011,2011
+race,Exhaust,W,1,2020,2020
+race,Eye injury,R,1,1972,1972
+race,Fatal accident,W,1,1970,1970
+race,Fire,W,1,1999,1999
+race,Front wing,numeric,1,2022,2022
+race,Fuel leak,numeric,1,1969,1969
+race,Fuel pipe,numeric,1,1978,1978
+race,Fuel pump,W,1,1990,1990
+race,Heat shield fire,numeric,1,1983,1983
+race,Illness,R,1,2020,2020
+race,Illness,W,1,2021,2021
+race,Injured,R,1,1977,1977
+race,Injury,numeric,1,1998,1998
+race,Launch control,R,1,2003,2003
+race,Mechanical,numeric,1,2013,2013
+race,Not classified,numeric,1,1972,1972
+race,Not restarted,W,1,2000,2000
+race,Oil leak,numeric,1,1987,1987
+race,Oil pipe,numeric,1,1964,1964
+race,Physical,W,1,1975,1975
+race,Power loss,W,1,2015,2015
+race,Rear wing,numeric,1,2010,2010
+race,Refuelling,R,1,2007,2007
+race,Retired,W,1,2016,2016
+race,Safety belt,R,1,1996,1996
+race,Seat,R,1,2017,2017
+race,Spun off,W,1,1991,1991
+race,Suspension,W,1,1987,1987
+race,Technical,numeric,1,2007,2007
+race,Throttle,W,1,1997,1997
+race,Track rod,R,1,2010,2010
+race,Track rod,numeric,1,2006,2006
+race,Transmission,W,1,1975,1975
+race,Tyre puncture,numeric,1,2005,2005
+race,Underweight,D,1,1997,1997
+race,Wheel nut,numeric,1,2005,2005
+race,Wheel rim,R,1,2006,2006
+sprint,Finished,numeric,448,2021,2025
+sprint,Retired,R,21,2022,2025
+sprint,Accident,R,3,2021,2023
+sprint,Collision damage,R,2,2023,2023
+sprint,Retired,numeric,2,2024,2025
+sprint,Brakes,R,1,2023,2023
+sprint,Collision damage,numeric,1,2022,2022
+sprint,Electrical,R,1,2022,2022
+sprint,Vibrations,R,1,2021,2021

@@ -12,7 +12,19 @@ Collection uses season-level endpoints with pagination (limit=100), as in
 blueprint section 15: e.g. /2024/results.json pages 0, 100, 200, ...
 """
 
+import argparse
+import logging
+import time
+from datetime import datetime, timezone
+
 import pandas as pd
+
+logger = logging.getLogger(__name__)
+
+TABLE_NAMES = ["races", "results", "qualifying", "sprints", "drivers", "constructors"]
+# Season-level endpoint behind each table (used to read MRData.total for reconciliation)
+TABLE_ENDPOINTS = {"races": "races", "results": "results", "qualifying": "qualifying",
+                   "sprints": "sprint", "drivers": "drivers", "constructors": "constructors"}
 
 # Column order of each table (also documented in docs/DATA_DICTIONARY.md)
 RACE_COLUMNS = ["season", "round", "race_id", "race_name", "race_date", "race_time",
@@ -183,3 +195,96 @@ def race_summary(tables):
     count_columns = [c for c in summary.columns if c not in ["season", "round", "race_id", "race_name"]]
     summary[count_columns] = summary[count_columns].fillna(0).astype(int)
     return summary.sort_values("round", key=lambda s: s.astype(int)).reset_index(drop=True)
+
+
+# ----------------------------------------------------------------------
+# Step 5: many seasons
+# ----------------------------------------------------------------------
+def api_totals(client, season):
+    """MRData.total of each season-level endpoint, read from the first cached page (no new request)."""
+    return {name: int(client.get_json(f"/{int(season)}/{endpoint}.json",
+                                      {"limit": client.page_limit, "offset": 0})["MRData"]["total"])
+            for name, endpoint in TABLE_ENDPOINTS.items()}
+
+
+def collect_history(client, seasons):
+    """
+    Collect every season in `seasons` (e.g. range(1950, 2026)) with collect_season().
+
+    Returns (tables, api_totals_df):
+      tables        : dict of combined DataFrames (seasons in order, API order inside a season)
+      api_totals_df : one row per season with MRData.total of every endpoint
+
+    Resumable: every response goes through the disk cache, so after an
+    interruption a re-run only downloads what is still missing.
+    """
+    parts = {name: [] for name in TABLE_NAMES}
+    totals = []
+    for season in seasons:
+        start = time.monotonic()
+        before = dict(client.stats)
+        season_tables = collect_season(client, season)
+        for name in TABLE_NAMES:
+            parts[name].append(season_tables[name])
+        totals.append({"season": str(season), **{f"api_total_{k}": v for k, v in api_totals(client, season).items()}})
+        new_requests = client.stats["network_requests"] - before["network_requests"]
+        logger.info("Season %s: races=%d results=%d qualifying=%d sprints=%d | new requests=%d | %.0f s",
+                    season, len(season_tables["races"]), len(season_tables["results"]),
+                    len(season_tables["qualifying"]), len(season_tables["sprints"]),
+                    new_requests, time.monotonic() - start)
+    tables = {name: pd.concat(frames, ignore_index=True) for name, frames in parts.items()}
+    return tables, pd.DataFrame(totals)
+
+
+def main(argv=None):
+    """Command line: python -m src.collect --start 1950 --end 2025"""
+    from src.api_client import JolpicaClient
+    from src.collection_checks import write_reports
+    from src.config import PROJECT_ROOT, load_config
+
+    parser = argparse.ArgumentParser(description="Collect F1 seasons from the Jolpica API (cached).")
+    parser.add_argument("--start", type=int, required=True)
+    parser.add_argument("--end", type=int, required=True)
+    parser.add_argument("--output-prefix", default="",
+                        help="optional file-name prefix, e.g. 'subset_' for a test run")
+    args = parser.parse_args(argv)
+
+    config = load_config()
+    interim_dir = PROJECT_ROOT / config["paths"]["data_interim"]
+    tables_dir = PROJECT_ROOT / config["paths"]["tables"]
+    logs_dir = PROJECT_ROOT / config["paths"]["logs"]
+    for folder in (interim_dir, tables_dir, logs_dir):
+        folder.mkdir(parents=True, exist_ok=True)
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    log_file = logs_dir / f"collection_{args.start}_{args.end}_{stamp}.log"
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(name)s: %(message)s",
+                        handlers=[logging.StreamHandler(), logging.FileHandler(log_file, encoding="utf-8")])
+    logging.getLogger("src.api_client").setLevel(logging.WARNING)  # keep retries/errors, hide per-file messages
+
+    client = JolpicaClient(config=config)
+    logger.info("Collecting seasons %d-%d | spacing %.1f s between network requests",
+                args.start, args.end, client.min_interval)
+    start = time.monotonic()
+    tables, totals = collect_history(client, range(args.start, args.end + 1))
+    collection_stats = dict(client.stats)
+
+    for name, df in tables.items():
+        df.to_csv(interim_dir / f"{args.output_prefix}{name}.csv", index=False, encoding="utf-8")
+    write_reports(client, tables, totals, tables_dir, prefix=args.output_prefix)
+
+    runtime = time.monotonic() - start
+    logger.info("Collection stats: %s | runtime %.1f min", collection_stats, runtime / 60)
+    for name, df in tables.items():
+        logger.info("  %-13s %6d rows", name, len(df))
+    run_log = logs_dir / "collection_runs.csv"
+    pd.DataFrame([{"finished_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                   "seasons": f"{args.start}-{args.end}", "output_prefix": args.output_prefix,
+                   **{f"stat_{k}": v for k, v in collection_stats.items()},
+                   "runtime_seconds": round(runtime, 1), **{f"rows_{k}": len(v) for k, v in tables.items()}}]
+                 ).to_csv(run_log, mode="a", header=not run_log.exists(), index=False)
+    return tables
+
+
+if __name__ == "__main__":
+    main()

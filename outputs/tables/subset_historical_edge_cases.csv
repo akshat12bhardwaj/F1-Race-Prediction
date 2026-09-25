@@ -1,0 +1,84 @@
+category,season,round,race_id,driver_id,constructor_id,detail
+result_count_differs_from_season_median,1950,1,1950_01,,,23 results vs season median 21
+result_count_differs_from_season_median,1950,3,1950_03,,,35 results vs season median 21
+result_count_differs_from_season_median,1950,4,1950_04,,,18 results vs season median 21
+result_count_differs_from_season_median,1950,5,1950_05,,,14 results vs season median 21
+result_count_differs_from_season_median,1950,6,1950_06,,,20 results vs season median 21
+result_count_differs_from_season_median,1950,7,1950_07,,,29 results vs season median 21
+result_count_differs_from_season_median,1951,1,1951_01,,,21 results vs season median 21.5
+result_count_differs_from_season_median,1951,2,1951_02,,,34 results vs season median 21.5
+result_count_differs_from_season_median,1951,3,1951_03,,,13 results vs season median 21.5
+result_count_differs_from_season_median,1951,4,1951_04,,,26 results vs season median 21.5
+result_count_differs_from_season_median,1951,5,1951_05,,,20 results vs season median 21.5
+result_count_differs_from_season_median,1951,6,1951_06,,,22 results vs season median 21.5
+result_count_differs_from_season_median,1951,7,1951_07,,,23 results vs season median 21.5
+result_count_differs_from_season_median,1951,8,1951_08,,,20 results vs season median 21.5
+indianapolis_500,1950,3,1950_03,,,Indianapolis 500: 35 results
+indianapolis_500,1951,2,1951_02,,,Indianapolis 500: 34 results
+season_without_qualifying,1950,,,,,0 qualifying records
+missing_race_time,1950,,,,,7 of 7 races
+position_text_code,1950,,,,,code='R' records=74
+position_text_code,1950,,,,,code='W' records=3
+classified_but_not_finished,1950,,,,,3 records with numeric positionText and status not Finished/Lapped/+N Laps (e.g. 'Spun off')
+season_without_qualifying,1951,,,,,0 qualifying records
+missing_race_time,1951,,,,,8 of 8 races
+position_text_code,1951,,,,,code='R' records=86
+position_text_code,1951,,,,,code='W' records=3
+non_starter,1950,2,1950_02,whitehead,ferrari,"status 'Engine', positionText 'W', grid 21, laps 0"
+non_starter,1950,2,1950_02,pian,maserati,"status 'Accident', positionText 'W', grid 18, laps 0"
+non_starter,1950,7,1950_07,bonetto,milano,"status 'Withdrew', positionText 'W', grid 23, laps 0"
+non_starter,1951,7,1951_07,reg_parnell,brm,"status 'Withdrew', positionText 'W', grid 8, laps 0"
+non_starter,1951,7,1951_07,richardson,brm,"status 'Withdrew', positionText 'W', grid 10, laps 0"
+non_starter,1951,8,1951_08,jover,maserati,"status 'Engine', positionText 'W', grid 18, laps 0"
+duplicate_result_key,1950,3,1950_03,bettenhausen,kurtis_kraft,"car 17, position 5 (5), status +2 Laps, points 1"
+duplicate_result_key,1950,3,1950_03,bettenhausen,deidt,"car 14, position 31 (R), status Wheel bearing, points 0"
+duplicate_result_key,1950,6,1950_06,rosier,lago,"car 26, position 6 (6), status +8 Laps, points 0"
+duplicate_result_key,1950,6,1950_06,rosier,lago,"car 20, position 12 (R), status Overheating, points 0"
+duplicate_result_key,1950,7,1950_07,ascari,ferrari,"car 48, position 2 (2), status Finished, points 3"
+duplicate_result_key,1950,7,1950_07,fangio,alfa,"car 60, position 13 (R), status Engine, points 0"
+duplicate_result_key,1950,7,1950_07,fangio,alfa,"car 18, position 15 (R), status Gearbox, points 1"
+duplicate_result_key,1950,7,1950_07,ascari,ferrari,"car 16, position 17 (R), status Engine, points 0"
+duplicate_result_key,1951,4,1951_04,fangio,alfa,"car 8, position 1 (1), status Finished, points 5"
+duplicate_result_key,1951,4,1951_04,fagioli,alfa,"car 8, position 1 (1), status Finished, points 4"
+duplicate_result_key,1951,4,1951_04,ascari,ferrari,"car 14, position 2 (2), status Finished, points 3"
+duplicate_result_key,1951,4,1951_04,fagioli,alfa,"car 24, position 11 (11), status +22 Laps, points 0"
+duplicate_result_key,1951,4,1951_04,fangio,alfa,"car 24, position 11 (11), status +22 Laps, points 0"
+duplicate_result_key,1951,4,1951_04,ascari,ferrari,"car 12, position 18 (R), status Gearbox, points 0"
+duplicate_result_key,1951,7,1951_07,farina,alfa,"car 40, position 3 (3), status +1 Lap, points 3"
+duplicate_result_key,1951,7,1951_07,farina,alfa,"car 34, position 16 (R), status Engine, points 0"
+absent_between_appearances,1950,3,1950_03,ascari,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,bira,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,chiron,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,claes,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,etancelin,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,fagioli,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,fangio,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,farina,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,graffenried,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,rosier,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,schell,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,sommer,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,3,1950_03,villoresi,,raced in rounds 2 and 4 but has no record in round 3
+absent_between_appearances,1950,5,1950_05,bonetto,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1950,5,1950_05,chiron,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1950,6,1950_06,ascari,,raced in rounds 5 and 7 but has no record in round 6
+absent_between_appearances,1951,2,1951_02,ascari,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,cabantous,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,chiron,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,claes,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,etancelin,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,fangio,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,farina,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,rosier,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,sanesi,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,taruffi,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,2,1951_02,villoresi,,raced in rounds 1 and 3 but has no record in round 2
+absent_between_appearances,1951,5,1951_05,cabantous,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,5,1951_05,etancelin,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,5,1951_05,graffenried,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,5,1951_05,manzon,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,5,1951_05,simon,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,5,1951_05,trintignant,,raced in rounds 4 and 6 but has no record in round 5
+absent_between_appearances,1951,6,1951_06,reg_parnell,,raced in rounds 5 and 7 but has no record in round 6
+absent_between_appearances,1951,6,1951_06,whitehead,,raced in rounds 5 and 7 but has no record in round 6
+absent_between_appearances,1951,7,1951_07,etancelin,,raced in rounds 6 and 8 but has no record in round 7

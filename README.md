@@ -67,6 +67,26 @@ Each download is logged in `data/raw/_manifest.csv`; permanent failures go to `d
 **Bypass the cache** for one request: `client.get_race_results(2024, 1, refresh=True)` (downloads again and overwrites the file).
 **Clear the cache:** delete the folder `data/raw/jolpica/` (or one file inside it). The next request downloads it again.
 
+## Historical collection 1950–2025 (Step 5)
+
+```powershell
+python -m src.collect --start 1950 --end 2025
+# small test run into separate files:
+python -m src.collect --start 1950 --end 1951 --output-prefix subset_
+```
+
+- **Runtime:** first run ≈ 100 minutes (≈ 800 requests, 7.5 s apart to stay under Jolpica's 500 requests/hour). Afterwards everything comes from the cache and a full re-run takes about 1 minute with **0** requests.
+- **Resume:** if the run stops (network, laptop sleep, Ctrl+C), just run the same command again. Every response already downloaded is read from `data/raw/jolpica/`; only missing ones are downloaded.
+- **Outputs:**
+  - `data/interim/races.csv`, `results.csv`, `qualifying.csv`, `sprints.csv`, `drivers.csv`, `constructors.csv` (raw API text values, all seasons)
+  - `outputs/tables/historical_collection_summary.csv`: one row per season, compared with the API's `MRData.total`
+  - `outputs/tables/historical_race_validation.csv`: one row per race, with counts and flags
+  - `outputs/tables/historical_edge_cases.csv`: unusual observations (one row each)
+  - `outputs/tables/historical_status_vocabulary.csv` and `historical_field_coverage.csv`
+  - `outputs/logs/collection_*.log` (per run) and `outputs/logs/collection_runs.csv` (request counts, runtime)
+- **Validate:** `python -m pytest tests/ -v`. The season summary's `matches_api_totals` column must be `True` for every season.
+- Nothing is removed or recoded at this stage; duplicates and odd records are **flagged** in the reports.
+
 ## Running tests
 
 ```powershell
@@ -102,8 +122,9 @@ F1-Race-Prediction/
 | 1 | Environment and repository setup | Complete |
 | 2 | Jolpica API exploration (`notebooks/01_api_exploration.ipynb`) | Complete |
 | 3 | Cached API client (`src/api_client.py`) | Complete |
-| 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete, awaiting review |
-| 4b | Full collection 1950–2025 | Not started (after pilot approval) |
+| 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete |
+| 5 | Historical collection 1950–2025 (`python -m src.collect`, `src/collection_checks.py`) | Complete, awaiting review: 1,149 races, 25,873 results |
+| 6 | Weather collection | Not started |
 
 ## Reproducibility
 

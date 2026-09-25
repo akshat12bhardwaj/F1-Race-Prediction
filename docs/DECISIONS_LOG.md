@@ -87,6 +87,34 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 - Re-running with a new client: 0 network requests, 15 cache hits, byte-identical CSVs. 0 existing raw files changed.
 - **No DNF/DSQ/non-starter rule was applied** (still pending for Step 7).
 
+### D-009 approval · 2026-09-25
+- D-009 (2024 pilot approach) **approved** by the project owner after the Step 4 review.
+
+### D-010 · 2026-09-25 · Step 5
+- **Decision:** `api.jolpica.min_seconds_between_requests` raised from **1.0 to 7.5 s** in `config.yaml`.
+- **Reason:** The full collection needs about 800 requests. At 1 s spacing that is up to 3,600/hour, far above Jolpica's documented **500/hour** sustained limit (F-001), so HTTP 429 would be triggered. 7.5 s = 480/hour. Cache hits are not affected.
+- **Affects:** §11.1 (rate limits). Cost: about 95 minutes for the first full collection.
+
+### D-011 · 2026-09-25 · Step 5
+- **Decision:** Historical collection runs as a command-line script, `python -m src.collect --start 1950 --end 2025` (also `--output-prefix` for test runs), not a notebook. Reports are built by a new module, `src/collection_checks.py`. Outputs use the blueprint §16 names `data/interim/{races,results,qualifying,sprints,drivers,constructors}.csv`. The 2024 pilot files (`2024_*.csv`) are kept unchanged.
+- **Reason:** A 95-minute run is safer as a resumable script with a log file (`outputs/logs/`) than as a notebook cell. The report logic is kept separate from collection so it can be tested offline.
+- **Affects:** §31 (adds `src/collection_checks.py`; blueprint notebook `02_collect_f1_data` is replaced by the script).
+
+### F-003 · 2026-09-25 · Step 5 · Verified historical collection findings (1950–2025)
+- **Completeness:** 76 seasons, **1,149 races, 25,873 results, 10,973 qualifying, 480 sprint rows**, 3,248 season-driver and 1,121 season-constructor rows. **Every season matches every `MRData.total`.** 817 unique drivers, 203 unique constructors, 77 circuits. 0 missing race, driver or constructor IDs.
+- **Run:** 749 new downloads, 485 cache hits (1950–1951 subset + 2024 pilot + total reads), **3 retries, all recovered** (one read timeout, two HTTP 500 on `/2004/qualifying.json`), runtime 94.6 min. Re-running from the cache: **0 requests**, 2.7 s, 17 output files byte-identical, 779 raw files and 780 manifest lines unchanged.
+- **Duplicate keys:** `(season, round, driver_id)` repeats in **172 rows / 40 races, all 1950–1964** (shared drives: one driver credited in two cars). Positions repeat in 46 races up to 1964 (shared cars, e.g. 1951 French GP: fangio and fagioli both P1 in car 8). **Kept and reported, not dropped.** Qualifying and sprint keys are unique.
+- **Qualifying coverage:** none before 1994. **1994–2002 incomplete** (races with qualifying: 1994 15/16, 1995 17/17, 1996 7/16, 1997 10/17, 1998 7/16, 1999 3/16, 2000 4/17, 2001 1/17, 2002 2/17). Complete for every race 2003–2025.
+- **Race start time:** missing for **all** races 1950–2004 (731), present for all 2005–2025.
+- **FastestLap** only from 2004.
+- **positionText codes in the API: only R (9,121), W (358), D (159).** E, F and N never occur. Drivers who failed to qualify have **no result row**.
+- **grid = 0: 267 rows**, mostly non-starters (202 with positionText W, 219 with 0 laps, most often status "Withdrew"). Only 40 are classified finishers.
+- **Non-starters** carry many statuses (Withdrew 246, Accident 29, Engine 18, Did not start 9, Injury 8, ...). **Disqualified/Excluded:** Disqualified 153, Excluded 8, Underweight 1.
+- **136 distinct race status values**, 245 (source, status, code) combinations.
+- **Indianapolis 500:** 11 races (1950–1960). **circuitId `indianapolis` is also used for the United States GP 2000–2007**, so the blueprint's filter by race name is required.
+- **Identity:** no constructorId has more than one name, no name has more than one ID, and no driverId has more than one identity (the API supplies one current name per ID). No unexpected JSON fields.
+- **Other flags:** 793 absent-between-appearances (mostly before 1990), 142 season-list drivers without records, 363 races whose result count differs from the season median.
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
@@ -95,12 +123,13 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 |---|---|---|
 | Jolpica rate limit ≈ 4 req/s burst, 500 req/h | Step 2 | **Confirmed from official docs** (F-001); no rate-limit headers are sent |
 | Open-Meteo free limits ≈ 600/min, 5,000/h, 10,000/day | Step 6 | Open |
-| `grid = 0` means pit-lane start | Step 7 | **Partly:** one 2024 case is consistent with it; check full history at Step 7 |
-| `positionText` codes D, E, F, N meanings | Step 7 | **Partly:** R, D, W seen in 2024 (W = "Did not start"); E, F, N not yet seen |
-| `position` orders retirees by laps completed | Step 7 | **Confirmed for 2024** (24/24 races); check older eras at Step 7 |
-| circuitId `indianapolis` reused for 2000–2007 US GP | Step 7 | Open |
-| 1950s shared drives appear as separate rows | Step 7 | Open |
-| Constructor renames produce different constructorIds | Step 11 | **Confirmed for 2023→2024** (alfa→sauber, alphatauri→rb); earlier renames open |
+| `grid = 0` means pit-lane start | Step 7 | **Mostly false historically** (F-003): of 267 rows, 202 are non-starters (W). Only 40 classified finishers could be pit-lane starts. Meaning must be decided with status/positionText at Step 7 |
+| `positionText` codes D, E, F, N meanings | Step 7 | **Resolved (F-003):** only R, W, D exist in 1950–2025. E, F, N never occur. W covers several non-start statuses |
+| `position` orders retirees by laps completed | Step 7 | **Confirmed for 2024** (24/24 races); older eras still to check at Step 7 |
+| circuitId `indianapolis` reused for 2000–2007 US GP | Step 7 | **Confirmed (F-003):** US GP 2000–2007 uses it. Filter the Indy 500 by race name |
+| 1950s shared drives appear as separate rows | Step 7 | **Confirmed (F-003):** separate rows; driver_id repeats within a race (172 rows, 1950–1964) |
+| Qualifying available from 1994 (blueprint §11.1, §13.2) | Step 7 | **Only partly (F-003):** 1994–2002 has qualifying for only some races; complete from 2003 |
+| Constructor renames produce different constructorIds | Step 11 | **Confirmed for 2023→2024** (alfa→sauber, alphatauri→rb); earlier renames open. No ID ever has two names in the API |
 | Open-Meteo Historical Forecast API exists (Future Work only) | — | Open |
 
 ## Decisions pending (raised by Step 2, to be decided at Step 7, not yet changed)
@@ -110,4 +139,6 @@ Format: **ID · Date · Step · Decision · Reason · Blueprint section affected
 | Does a *classified* retirement (status "Retired", numeric positionText) count as DNF? The blueprint §14 rule (positionText R/N) says no. | 6 such records in 2024 |
 | DSQ detection must also use `status`, because positionText can be numeric for a disqualification | Belgian GP 2024, RUS |
 | The non-starter filter must use status or positionText, not grid, because DNS records carry a grid value | GAS British GP, ALB/STR São Paulo GP 2024 |
-| Should drivers absent from a race entirely (no row), or listed in the season driver list without records, be handled explicitly? | R3 2024 `sargeant`; 2024 `antonelli` (F-002) |
+| Should drivers absent from a race entirely (no row), or listed in the season driver list without records, be handled explicitly? | R3 2024 `sargeant`; 2024 `antonelli` (F-002); 793 absences, 142 list-only drivers across history (F-003) |
+| How should duplicate (season, round, driver_id) rows (1950s shared drives) and shared positions be represented? The blueprint key and "one winner per race" assumption do not hold before 1965 | F-003: 172 rows / 40 races; shared positions in 46 races |
+| How should the 1994–2002 qualifying gaps affect `qualifying_position` features and the missing-value rule (§13.2 assumed 1994+)? | F-003 coverage table |
