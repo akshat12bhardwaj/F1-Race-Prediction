@@ -28,7 +28,12 @@ python -m pip install -r requirements.txt
 
 # 4. Verify the environment
 python -m pytest tests/test_environment.py -v
+
+# 5. Register the environment as a Jupyter kernel (once per machine)
+python -m ipykernel install --user --name f1-race-prediction --display-name "Python 3.11 (f1-race-prediction)"
 ```
+
+In VS Code, open a notebook and choose the kernel **Python 3.11 (f1-race-prediction)**.
 
 If PowerShell blocks the activation script, run once:
 `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
@@ -56,8 +61,9 @@ F1-Race-Prediction/
 
 | Step | Description | Status |
 |---|---|---|
-| 1 | Environment and repository setup | In progress |
-| 2 | Jolpica API exploration | Not started |
+| 1 | Environment and repository setup | Complete |
+| 2 | Jolpica API exploration (`notebooks/01_api_exploration.ipynb`) | Complete, awaiting review |
+| 3 | Cached API client | Not started |
 
 ## Reproducibility
 
