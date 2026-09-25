@@ -66,8 +66,12 @@ api:
 
   openmeteo:
     archive_url: "https://archive-api.open-meteo.com/v1/archive"
-    min_seconds_between_requests: 1.0
-    timezone: "auto"
+    min_seconds_between_requests: 1.0   # documented free limits: 600/min, 5,000/h, 10,000/day
+    # Weather is requested in UTC. Open-Meteo's "auto" local time applies ONE fixed
+    # (current) UTC offset to every date, which is wrong across daylight-saving
+    # changes (verified in Step 6, D-013). "auto" is used only to look up each
+    # circuit's IANA timezone name; local times are computed in Python.
+    timezone: "GMT"
     hourly_variables:
       - temperature_2m
       - relative_humidity_2m
@@ -80,8 +84,15 @@ api:
 
 # ---------------- Weather aggregation [§13.4, §19.6] (used from Step 6) ----------------
 weather:
-  assumed_local_start_hour_before_2005: 14
-  race_window_hours: [0, 2]        # [start, start + 2 h]
-  prestart_window_hours: [-3, -1]  # [start - 3 h, start - 1 h]
-  wet_precip_threshold_mm: 0.5     # provisional; finalised at Step 6
+  assumed_local_start_hour_before_2005: 14   # no official start times before 2005 (F-003)
+  # Hour offsets relative to the race start rounded DOWN to the full hour (H0).
+  # Instantaneous variables use the hourly values at H0+a ... H0+b.
+  # Accumulated variables (precipitation, rain = total of the PRECEDING hour)
+  # use the values at H0+a+1 ... H0+b, i.e. the amount that fell between H0+a and H0+b.
+  race_window_hours: [0, 2]        # start -> start + 2 h
+  prestart_window_hours: [-3, -1]  # start - 3 h -> start - 1 h
+  hourly_table_offsets: [-6, 6]    # hours kept in data/interim/weather_hourly.csv
+  request_days_before_after: 1     # request UTC dates (start date - 1 ... start date + 1)
+  max_grid_distance_km: 25         # flag if the weather grid cell is farther from the circuit
+  wet_precip_threshold_mm: 0.5     # provisional; NOT applied yet (no wet flag created in Step 6)
   wet_weather_code_min: 51

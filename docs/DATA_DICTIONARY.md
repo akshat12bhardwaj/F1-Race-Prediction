@@ -11,7 +11,9 @@ Category codes (blueprint §13): **A** = directly from source · **B** = derived
 | File | Stage | Created at step | Rows (approx.) | Status |
 |---|---|---|---|---|
 | `data/raw/jolpica/**.json` | Raw | 3–4 | about 550 files | **Created** (2024 pilot + Step 3 smoke test: 18 files) |
-| `data/raw/openmeteo/*.json` | Raw | 6 | about 1,149 files | Not created |
+| `data/raw/openmeteo/{weather,timezones}/*.json` | Raw weather cache | 6 | 1,138 races + 77 circuits | **Created** |
+| `data/interim/weather_race.csv` | Interim (aligned weather, one row per race) | 6 | 1,149 | **Created** |
+| `data/interim/weather_hourly.csv` | Interim (hourly observations around the start) | 6 | 1,138 × 13 | **Created** |
 | `data/raw/_manifest.csv` | Raw log | 3 | one per request | **Created** (18 rows) |
 | `data/interim/2024_races.csv` | Interim (pilot) | 4 | 24 | **Created** |
 | `data/interim/2024_results.csv` | Interim (pilot) | 4 | 479 | **Created** |
@@ -36,7 +38,6 @@ Category codes (blueprint §13): **A** = directly from source · **B** = derived
 | `data/interim/results_policy.csv` | Interim + approved policy flags | 5.6 | 25,873 | **Created** |
 | `data/interim/races_policy.csv` | Interim + approved policy flags | 5.6 | 1,149 | **Created** |
 | `outputs/tables/policy_application_summary.csv` | Report | 5.6 | 27 | **Created** |
-| `data/interim/weather_race.csv` | Interim | 6 | about 1,149 | Not created |
 | `data/interim/master_base.csv` | Interim | 9 | about 25,873 | Not created |
 | `data/processed/master_features.csv` | Processed | 11 | — | Not created |
 | `data/processed/train.csv`, `val.csv`, `test.csv` | Processed | 13 | — | Not created |
@@ -78,6 +79,55 @@ Observed coverage across 1950–2025 (from `historical_field_coverage.csv` and `
 | status | 136 distinct values in race results |
 
 Keys: `(season, round, driver_id)` is **not unique** in 1950–1964 (172 rows in 40 races: shared drives). `(season, round, position)` is not unique in 46 races up to 1964 (shared cars). Both are kept and reported; see `historical_edge_cases.csv`.
+
+### Weather (Step 6): `src/weather.py`, source Open-Meteo Historical Weather API (archive, CC-BY 4.0)
+
+**What the data is:** hourly **historical reanalysis** (ERA5-based model reconstruction, grid about 9–25 km), **not** track measurements and **not** a forecast available before the race. Race-window values are an "oracle-forecast proxy" (blueprint §19.6).
+
+**Raw cache:** `data/raw/openmeteo/weather/{race_id}__{hash}.json` (one per race; 72 UTC hours: start date −1 … +1) and `data/raw/openmeteo/timezones/{circuit_id}__{hash}.json` (one per circuit, used only for the IANA timezone name). The hash is the first 10 hex characters of SHA-1 over all sorted request parameters, so any parameter change gives a new file. Logs: `data/raw/openmeteo/_manifest.csv` (fetched_at_utc, kind, name, params, status, n_bytes, cache_file) and `_failed_requests.csv`.
+
+**Hourly variables requested (units as returned by the API):**
+
+| Variable | Unit | Meaning |
+|---|---|---|
+| temperature_2m | °C | Air temperature 2 m above ground (not track temperature) |
+| relative_humidity_2m | % | Relative humidity at 2 m |
+| precipitation | mm | Total precipitation (rain + showers + snow) of the **preceding hour** |
+| rain | mm | Rain of the **preceding hour** |
+| cloud_cover | % | Total cloud cover |
+| wind_speed_10m | km/h | Wind speed 10 m above ground |
+| wind_direction_10m | ° | Direction the wind comes from (0/360 = north) |
+| weather_code | WMO code | 0 clear … 51–67 drizzle/rain … 80–82 showers … 95–99 thunderstorm |
+
+Surface and soil variables are **not** collected: they have no clear link to race conditions that the air variables do not already cover.
+
+**Time alignment:** start_utc = race_date + race_time (official UTC, **2005–2025**). **1950–2004 has no official start time**, so 14:00 local is **assumed** (`start_time_source = imputed_local_14h`). H0 = start rounded down to the full hour. hour_offset = hours after H0. Windows: prestart = offsets −3…−1, race = 0…2. Accumulated variables use offsets a+1…b (the amount that fell inside the window).
+
+#### `data/interim/weather_hourly.csv`
+One row = one race × one UTC hour, offsets −6…+6 around H0 (raw API values, unchanged). Columns: season, round, race_id, time_utc (`YYYY-MM-DDTHH:MMZ`), time_local (ISO with the historical UTC offset), hour_offset (int), in_prestart_window, in_race_window (bool), then the 8 variables above. Indianapolis 500 races have no rows.
+
+#### `data/interim/weather_race.csv`
+One row = one race (all 1,149, including excluded ones).
+
+| Column(s) | Meaning |
+|---|---|
+| season, round, race_id, race_name, race_date, race_time, circuit_id, circuit_lat, circuit_lon, country, is_indianapolis_500 | From `races_policy.csv` (race_time empty before 2005) |
+| timezone | IANA timezone of the circuit |
+| start_time_source | `official_utc` (2005+) or `imputed_local_14h` (1950–2004) |
+| start_utc, start_local, utc_offset_hours | Start used for alignment; local time uses historical daylight-saving rules |
+| weather_status | `ok`, `ok_with_errors` (a sanity check with severity error), `failed` (request failed), `excluded_indianapolis_500` (not requested, P-11) |
+| failure_reason | Error text for failed requests |
+| model_use_allowed | True only if weather_status == ok (never for the Indianapolis 500) |
+| race_time_suspected_local | True for official times in seasons whose values look like local clock times (2005–2006, 37 races, P-12 pending); these are `ok_with_errors` and not model-usable |
+| grid_lat, grid_lon, grid_distance_km, grid_elevation_m | Weather grid cell returned by Open-Meteo and its distance to the circuit |
+| wx_prestart_* / wx_race_* | For each window: temp_mean_c, temp_min_c, temp_max_c, humidity_mean_pct, precip_sum_mm, precip_max_hour_mm, rain_sum_mm, cloud_mean_pct, wind_speed_mean_kmh, wind_speed_max_kmh, wind_dir_mean_deg (circular mean), weather_code_max, hours_expected, hours_found, missing_values |
+
+No wet/dry flag and no thresholds are applied yet (`wet_precip_threshold_mm` in config is **not used**).
+
+#### Weather reports (`outputs/tables/`)
+`weather_coverage_summary.csv` (overall + per era), `weather_coverage_by_season.csv`, `weather_missing_variables.csv`, `weather_quality_report.csv` (race_id, check, severity info/warning/error, detail), `weather_circuit_timezones.csv` (circuit → timezone, for review), `weather_wet_race_check.csv` (reanalysis precipitation for races widely reported as wet; reference list from general knowledge, **not verified**), `weather_start_time_check.csv` (per season: official_races, R_local_if_utc, R_clock_values, suspected_local_clock; R = how tightly start hours cluster on a 24-h circle).
+
+**Limitations:** reanalysis ≠ track conditions (grid cell, 2 m air temperature ≠ track temperature, convective showers are smoothed); **1950–2004 windows use an assumed 14:00 local start**; 2005–2006 official times are suspected local clock times (P-12); none of these values was available as a forecast before the race.
 
 ### `data/interim/results_policy.csv` (Step 5.6, approved policies P-01…P-11)
 **All columns of `results.csv`, byte-for-byte the same values**, followed by these derived columns (written by `src/policies.py`; True/False flags unless stated). One row per result row (25,873), nothing removed.

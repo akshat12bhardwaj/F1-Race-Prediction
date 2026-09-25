@@ -99,6 +99,20 @@ python -m src.policies          # apply the APPROVED policies P-01…P-11 (Step 
 - `in_model_population = True` marks the 25,066 rows that the later model dataset will use (drivers who started, primary entry, not the Indianapolis 500).
 - Counts: `outputs/tables/policy_application_summary.csv`.
 
+## Historical race weather (Step 6)
+
+```powershell
+python -m src.weather                                   # all races 1950-2025
+python -m src.weather --start 2023 --end 2024 --output-prefix subset_   # small test run
+```
+
+- **Source:** Open-Meteo Historical Weather API (archive, ERA5-based **reanalysis**, CC-BY 4.0). These are reconstructed historical conditions, **not** a forecast that was available before the race.
+- **Runtime:** first run ≈ 20 minutes (≈ 1,215 requests at 1 per second; free limits 600/min, 5,000/h). Re-runs use the cache (`data/raw/openmeteo/`) and make 0 requests. An interrupted run is resumed by running the same command.
+- **Start times:** official UTC start for 2005–2025; **1950–2004 has no official start time, so 14:00 local is assumed** and flagged (`start_time_source`).
+- **Local times** use Python's timezone database (historical daylight-saving rules). Open-Meteo's own local-time option applies one fixed offset to all dates, so it is not used (D-013).
+- **Indianapolis 500 (P-11):** not requested and never model-usable; the 2000–2007 US GPs at the same circuit are included.
+- **Outputs:** `data/interim/weather_race.csv` (one row per race, prestart and race-window summaries), `data/interim/weather_hourly.csv` (hourly values −6…+6 h around the start), and reports `outputs/tables/weather_*.csv`. Log: `outputs/logs/weather_*.log`.
+
 ## Running tests
 
 ```powershell
@@ -137,8 +151,8 @@ F1-Race-Prediction/
 | 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete |
 | 5 | Historical collection 1950–2025 (`python -m src.collect`, `src/collection_checks.py`) | Complete: 1,149 races, 25,873 results |
 | 5.5 | Historical data policy analysis (`python -m src.policy_analysis`) | Complete |
-| 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED**; awaiting review |
-| 6 | Weather collection | Not started |
+| 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED** |
+| 6 | Historical race weather (`python -m src.weather`) | Complete, awaiting review: 1,138/1,138 eligible races; P-12 (2005–2006 start times) **pending** |
 
 ## Reproducibility
 

@@ -1,0 +1,3 @@
+group,races,excluded_indianapolis_500,eligible_races,races_with_weather,races_without_weather,failed_requests,races_with_quality_errors,model_use_allowed,coverage_pct,official_start_times,imputed_start_times
+all 1950-2025,46.0,0.0,46.0,46.0,0.0,0.0,0.0,46.0,100.0,46.0,0.0
+2010-2025,46.0,0.0,46.0,46.0,0.0,0.0,0.0,46.0,100.0,46.0,0.0

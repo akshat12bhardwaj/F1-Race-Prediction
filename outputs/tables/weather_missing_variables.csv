@@ -1,0 +1,9 @@
+variable,hourly_values,missing_hourly_values,races_with_missing_in_window
+temperature_2m,14794,0,0
+relative_humidity_2m,14794,0,0
+precipitation,14794,0,0
+rain,14794,0,0
+cloud_cover,14794,0,0
+wind_speed_10m,14794,0,0
+wind_direction_10m,14794,0,0
+weather_code,14794,0,0

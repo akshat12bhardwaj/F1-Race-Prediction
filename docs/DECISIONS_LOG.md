@@ -150,6 +150,39 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 | P-10 | Use the official API position order; flag the 8 ordering exceptions; never re-sort. | `laps_order_exception` (both rows of each inverted pair); race level `race_has_laps_order_exception` | Order follows laps in 7,990 of 7,998 adjacent pairs | 16 rows / 8 races flagged; positions unchanged |
 | P-11 | Exclude races with `race_name == "Indianapolis 500"` (exact); never by circuit_id. | `is_indianapolis_500` (row and race level); used in `in_model_population` | circuit_id `indianapolis` is also used by the 2000–2007 US GPs | 11 races / 405 rows outside the model population; the 8 US GPs stay. History features must also skip these rows |
 
+### D-012 · 2026-09-25 · Step 6 · Weather collection design
+- **Decision:**
+  (a) Source: Open-Meteo Historical Weather (archive) API, hourly: temperature_2m, relative_humidity_2m, precipitation, rain, cloud_cover, wind_speed_10m, wind_direction_10m, weather_code. No soil/surface variables (no clear link to race conditions).
+  (b) New module `src/weather.py` with its own small cached client (same behaviour as the Jolpica client: deterministic cache, 1 s spacing, retries on 429/5xx/timeouts). Cache: `data/raw/openmeteo/{weather,timezones}/{name}__{hash}.json`, where the hash is SHA-1 of the sorted request parameters. Separate logs `data/raw/openmeteo/_manifest.csv` and `_failed_requests.csv`, so no existing Jolpica cache or manifest file is touched.
+  (c) One request per race: 72 UTC hours (start date −1 … +1).
+  (d) Start time: official UTC for 2005+; **1950–2004 assumed 14:00 local** (no official times, F-003), flagged `imputed_local_14h`.
+  (e) Windows relative to H0 (start rounded down): prestart −3…−1 h, race 0…2 h. Accumulated variables use the following-hour values (a+1…b).
+  (f) Outputs keep raw observations (`weather_hourly.csv`, −6…+6 h, unchanged values) separate from simple window summaries (`weather_race.csv`: mean/min/max/sum, circular mean for wind direction). **No wet flag, no thresholds** (deferred).
+  (g) **Indianapolis 500 (P-11): not requested**, weather_status `excluded_indianapolis_500`, never model-usable; the US GP 2000–2007 is included.
+  (h) Sanity checks only flag (severity info/warning/error); `model_use_allowed` = no error-level flag.
+- **Reason:** Blueprint §11.2, §13.4, §19.6. The design keeps raw and derived data separate and makes collection resumable and reproducible.
+- **Affects:** §11.2 (single `_manifest.csv` → separate Open-Meteo manifest), §13.4.
+
+### D-013 · 2026-09-25 · Step 6 · Weather requested in UTC; local time from zoneinfo
+- **Decision:** Request weather with `timezone=GMT` (UTC timestamps). Use Open-Meteo `timezone=auto` **only** to look up each circuit's IANA timezone name (77 cached requests). Compute local times with Python `zoneinfo` (historical daylight-saving rules).
+- **Reason (verified):** Open-Meteo's `auto` mode applies **one fixed, current UTC offset to every date**. Las Vegas on 18 Nov 2023 returned `utc_offset_seconds = -25200` (UTC−7), but the correct offset is UTC−8 (DST ended 5 Nov). Its "local" hours matched UTC hours shifted by exactly 7 (65/65), not 8. Trusting it would misalign about half of all races by one hour.
+- **Affects:** config `api.openmeteo.timezone` changed from "auto" to "GMT".
+
+### F-005 · 2026-09-25 · Step 6 · Verified weather collection results
+- **Requests:** 1,145 network requests + 70 cache hits (the 2023–2024 subset) on the first full run, **0 retries, 0 failures**, 19.4 min. Re-runs: 0 requests, 1,215 cache hits, 9 output files byte-identical. 1,215 raw files (1,138 races + 77 circuit timezones). 800 pre-existing Jolpica raw/manifest/interim files verified unchanged.
+- **Coverage:** 1,149 races; 11 Indianapolis 500 excluded; **1,138 / 1,138 eligible races have weather (100%)** in every era. 0 missing hourly values (14,794 hourly rows, 8 variables).
+- **Sanity:** no implausible temperature, humidity, precipitation, wind, cloud or weather-code values; no duplicate or irregular timestamps; no missing window hours; all units as expected. Weather grid cell 0.7–8.9 km from the circuit (median 4.2). Race-window ranges: temperature 6.6–36.9 °C, precipitation 0–16.9 mm (321 races > 0 mm, 157 ≥ 0.5 mm), max wind 1.1–41.8 km/h.
+- **Start times:** 418 official (2005–2025), 731 imputed (1950–2004). **2005–2006 official `race_time` values are local clock times labelled as UTC** (see P-12). Almost all are "14:00:00Z" across Melbourne, Tokyo, Europe and Montréal, which as UTC gives local starts of 01:00, 23:00, 16:00 and 09:00. The local starts are spread out (R = 0.545 and 0.530) while every season 2007–2025 has R ≥ 0.833. **All 37 races flagged (error), `model_use_allowed = False`, values not changed.**
+- Local date differs from the API date in 5 races: Las Vegas 2023–2025 (correct: the API date is the UTC date) and 2005/2006 Australia (a symptom of the clock issue).
+- **Wet-race plausibility:** all 9 reference wet races (general-knowledge list, not verified) show precipitation in the reanalysis. Example: 2024 São Paulo, 3.2 mm in the race window.
+- **Model-usable weather:** 1,101 races (all 329 races 2010–2025).
+
+## Proposed decision from Step 6: **PENDING REVIEW (not applied)**
+
+| ID | Issue | Proposal (PENDING REVIEW) |
+|---|---|---|
+| P-12 | 2005–2006 `race_time` values are local clock times labelled "Z" (37 races, F-005) | Interpret 2005–2006 `race_time` as **local** time at the circuit (`start_time_source = api_local_clock_2005_2006`), re-align those 37 races, and clear their error flag. Alternative: treat them like pre-2005 (imputed 14:00 local). Until decided they stay aligned as UTC, flagged, and not model-usable. |
+
 ---
 
 ## Open assumptions to verify (from the blueprint)
@@ -157,7 +190,8 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 | Assumption | Verify at | Status |
 |---|---|---|
 | Jolpica rate limit ≈ 4 req/s burst, 500 req/h | Step 2 | **Confirmed from official docs** (F-001); no rate-limit headers are sent |
-| Open-Meteo free limits ≈ 600/min, 5,000/h, 10,000/day | Step 6 | Open |
+| Open-Meteo free limits ≈ 600/min, 5,000/h, 10,000/day | Step 6 | **Confirmed** from the Open-Meteo terms (also 300,000/month; data CC-BY 4.0) |
+| Official `race_time` is UTC from 2005 (Appendix A) | Step 6 | **Only from 2007 (F-005):** 2005–2006 values are local clock times labelled "Z" (P-12 pending) |
 | `grid = 0` means pit-lane start | Step 7 | **Resolved by P-04:** pit-lane start only when the driver started and completed laps (48 rows); otherwise unknown or non-starter |
 | `positionText` codes D, E, F, N meanings | Step 7 | **Resolved (F-003):** only R, W, D exist in 1950–2025. E, F, N never occur. W covers several non-start statuses |
 | `position` orders retirees by laps completed | Step 7 | **Confirmed for 1950–2025 (F-004):** 8 inversions in 7,998 adjacent pairs, none after 2009 |

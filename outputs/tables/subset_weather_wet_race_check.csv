@@ -1,0 +1,10 @@
+season,race_name,race_id,start_time_source,start_local,wx_prestart_precip_sum_mm,wx_race_precip_sum_mm,wx_race_precip_max_hour_mm,wx_race_weather_code_max,weather_status,reanalysis_shows_precipitation
+1996,Spanish Grand Prix,,,,,,,,,False
+1998,Belgian Grand Prix,,,,,,,,,False
+2007,Japanese Grand Prix,,,,,,,,,False
+2008,British Grand Prix,,,,,,,,,False
+2008,Monaco Grand Prix,,,,,,,,,False
+2011,Canadian Grand Prix,,,,,,,,,False
+2016,Brazilian Grand Prix,,,,,,,,,False
+2021,Belgian Grand Prix,,,,,,,,,False
+2024,São Paulo Grand Prix,2024_21,official_utc,2024-11-03T14:00:00-03:00,2.6,3.2,2.0,63.0,ok,True
