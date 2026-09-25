@@ -64,7 +64,8 @@ def races_frame():
         ("2023", "21", "Las Vegas Grand Prix", "2023-11-19", "06:00:00Z", "vegas", "36.1147", "-115.173", "USA", "False"),
         ("2004", "11", "British Grand Prix", "2004-07-11", "", "silverstone", "52.0786", "-1.01694", "UK", "False"),
         ("1955", "3", "Indianapolis 500", "1955-05-30", "", "indianapolis", "39.795", "-86.2347", "USA", "True"),
-        ("2005", "9", "United States Grand Prix", "2005-06-19", "18:00:00Z", "indianapolis", "39.795", "-86.2347",
+        # 2005: API value "14:00:00Z" is really the LOCAL clock time (P-12)
+        ("2005", "9", "United States Grand Prix", "2005-06-19", "14:00:00Z", "indianapolis", "39.795", "-86.2347",
          "USA", "False"),
         ("2012", "13", "Italian Grand Prix", "2012-09-09", "12:00:00Z", "monza", "45.6156", "9.28111", "Italy", "False"),
     ]
@@ -240,6 +241,46 @@ def test_local_clock_values_labelled_utc_are_flagged_not_changed():
     assert wr.loc[wr["season"] == "2008", "model_use_allowed"].all()
     assert (wr["race_time"].str.endswith("Z")).all()          # original values unchanged
     assert set(flags["race_id"]) == {"2005_01", "2005_02", "2005_03", "2005_04"}
+
+
+def test_p12_local_clock_is_converted_to_utc_with_historical_rules():
+    # Melbourne 6 Mar 2005: daylight saving still on (UTC+11) -> 14:00 local = 03:00 UTC
+    start_utc, start_local, source = race_start("2005-03-06", "14:00:00Z", "Australia/Melbourne", 14, local_clock=True)
+    assert source == "p12_local_clock"
+    assert start_local.strftime("%H:%M") == "14:00" and start_local.utcoffset() == pd.Timedelta(hours=11)
+    assert start_utc == pd.Timestamp("2005-03-06 03:00", tz="UTC")
+    # Montreal 12 Jun 2005: 13:00 EDT (UTC-4) = 17:00 UTC
+    start_utc, _, _ = race_start("2005-06-12", "13:00:00Z", "America/Toronto", 14, local_clock=True)
+    assert start_utc == pd.Timestamp("2005-06-12 17:00", tz="UTC")
+
+
+def test_p12_applied_in_pipeline_and_original_value_kept(config, tmp_path):
+    _, out, _, _ = run_all(config, tmp_path, FakeSession())
+    wr = out["weather_race.csv"].set_index("race_id")
+    us = wr.loc["2005_09"]
+    assert us["race_time"] == "14:00:00Z"                      # source value unchanged
+    assert us["start_time_source"] == "p12_local_clock" and us["p12_local_clock_applied"]
+    # Indiana had no daylight saving in 2005: 14:00 local = UTC-5 -> 19:00 UTC
+    assert us["start_utc"] == "2005-06-19T19:00:00+00:00"
+    assert us["wx_race_temp_mean_c"] == 20.0                   # temps at 19, 20, 21 UTC
+    assert us["weather_status"] == "ok" and us["model_use_allowed"]
+    assert not us["race_time_suspected_local"]
+    assert not wr.loc["2012_13", "p12_local_clock_applied"]    # later seasons untouched
+    q = out["weather_quality_report.csv"]
+    assert ((q["race_id"] == "2005_09") & (q["check"] == "p12_local_clock_interpretation")).any()
+
+
+def test_detector_no_longer_flags_season_after_p12():
+    from src.weather import apply_start_time_check
+    rows = []
+    for i, (tz, t) in enumerate([("Australia/Melbourne", "14:00:00Z"), ("Asia/Tokyo", "14:00:00Z"),
+                                 ("America/Toronto", "13:00:00Z"), ("Europe/Rome", "14:00:00Z")], 1):
+        _, local, source = race_start(f"2005-06-0{i}", t, tz, 14, local_clock=True)
+        rows.append({"season": "2005", "race_id": f"2005_0{i}", "race_time": t, "start_local": local.isoformat(),
+                     "start_time_source": source, "weather_status": "ok", "model_use_allowed": True})
+    wr, flags, check = apply_start_time_check(pd.DataFrame(rows), pd.DataFrame(columns=["race_id", "check", "severity", "detail"]))
+    assert not check["suspected_local_clock"].any()
+    assert wr["model_use_allowed"].all() and flags.empty
 
 
 def test_hourly_frame_keeps_values_unchanged():

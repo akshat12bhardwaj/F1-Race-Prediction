@@ -101,7 +101,10 @@ Keys: `(season, round, driver_id)` is **not unique** in 1950–1964 (172 rows in
 
 Surface and soil variables are **not** collected: they have no clear link to race conditions that the air variables do not already cover.
 
-**Time alignment:** start_utc = race_date + race_time (official UTC, **2005–2025**). **1950–2004 has no official start time**, so 14:00 local is **assumed** (`start_time_source = imputed_local_14h`). H0 = start rounded down to the full hour. hour_offset = hours after H0. Windows: prestart = offsets −3…−1, race = 0…2. Accumulated variables use offsets a+1…b (the amount that fell inside the window).
+**Time alignment:** three cases, recorded in `start_time_source`:
+- **2007–2025** `official_utc`: start_utc = race_date + race_time (UTC).
+- **2005–2006** `p12_local_clock` (P-12, approved): Jolpica's race_time (e.g. "14:00:00Z") is really the LOCAL clock time. It is localised to the circuit's timezone and converted to UTC. The raw `race_time` is kept unchanged.
+- **1950–2004** `imputed_local_14h`: no official start time exists, so 14:00 local is **assumed**. H0 = start rounded down to the full hour. hour_offset = hours after H0. Windows: prestart = offsets −3…−1, race = 0…2. Accumulated variables use offsets a+1…b (the amount that fell inside the window).
 
 #### `data/interim/weather_hourly.csv`
 One row = one race × one UTC hour, offsets −6…+6 around H0 (raw API values, unchanged). Columns: season, round, race_id, time_utc (`YYYY-MM-DDTHH:MMZ`), time_local (ISO with the historical UTC offset), hour_offset (int), in_prestart_window, in_race_window (bool), then the 8 variables above. Indianapolis 500 races have no rows.
@@ -113,12 +116,13 @@ One row = one race (all 1,149, including excluded ones).
 |---|---|
 | season, round, race_id, race_name, race_date, race_time, circuit_id, circuit_lat, circuit_lon, country, is_indianapolis_500 | From `races_policy.csv` (race_time empty before 2005) |
 | timezone | IANA timezone of the circuit |
-| start_time_source | `official_utc` (2005+) or `imputed_local_14h` (1950–2004) |
+| start_time_source | `official_utc` (2007–2025, 381), `p12_local_clock` (2005–2006, 37), `imputed_local_14h` (1950–2004, 731) |
+| p12_local_clock_applied | True for the 37 races whose race_time was read as local clock time (P-12) |
 | start_utc, start_local, utc_offset_hours | Start used for alignment; local time uses historical daylight-saving rules |
 | weather_status | `ok`, `ok_with_errors` (a sanity check with severity error), `failed` (request failed), `excluded_indianapolis_500` (not requested, P-11) |
 | failure_reason | Error text for failed requests |
 | model_use_allowed | True only if weather_status == ok (never for the Indianapolis 500) |
-| race_time_suspected_local | True for official times in seasons whose values look like local clock times (2005–2006, 37 races, P-12 pending); these are `ok_with_errors` and not model-usable |
+| race_time_suspected_local | Result of the season-level clock check on the start actually used. True would mark a season whose local starts are implausibly scattered (error, not model-usable). **After P-12: False for all races** |
 | grid_lat, grid_lon, grid_distance_km, grid_elevation_m | Weather grid cell returned by Open-Meteo and its distance to the circuit |
 | wx_prestart_* / wx_race_* | For each window: temp_mean_c, temp_min_c, temp_max_c, humidity_mean_pct, precip_sum_mm, precip_max_hour_mm, rain_sum_mm, cloud_mean_pct, wind_speed_mean_kmh, wind_speed_max_kmh, wind_dir_mean_deg (circular mean), weather_code_max, hours_expected, hours_found, missing_values |
 
@@ -127,7 +131,9 @@ No wet/dry flag and no thresholds are applied yet (`wet_precip_threshold_mm` in 
 #### Weather reports (`outputs/tables/`)
 `weather_coverage_summary.csv` (overall + per era), `weather_coverage_by_season.csv`, `weather_missing_variables.csv`, `weather_quality_report.csv` (race_id, check, severity info/warning/error, detail), `weather_circuit_timezones.csv` (circuit → timezone, for review), `weather_wet_race_check.csv` (reanalysis precipitation for races widely reported as wet; reference list from general knowledge, **not verified**), `weather_start_time_check.csv` (per season: official_races, R_local_if_utc, R_clock_values, suspected_local_clock; R = how tightly start hours cluster on a 24-h circle).
 
-**Limitations:** reanalysis ≠ track conditions (grid cell, 2 m air temperature ≠ track temperature, convective showers are smoothed); **1950–2004 windows use an assumed 14:00 local start**; 2005–2006 official times are suspected local clock times (P-12); none of these values was available as a forecast before the race.
+Coverage report columns (`weather_coverage_summary.csv`, `weather_coverage_by_season.csv`): races, excluded_indianapolis_500, eligible_races, races_with_weather, races_without_weather, failed_requests, races_with_quality_errors, model_use_allowed, coverage_pct, official_utc_start_times, p12_local_clock_start_times, imputed_start_times.
+
+**Limitations:** reanalysis ≠ track conditions (grid cell, 2 m air temperature ≠ track temperature, convective showers are smoothed); **1950–2004 windows use an assumed 14:00 local start**; 2005–2006 starts rely on the P-12 interpretation of the API clock values; none of these values was available as a forecast before the race.
 
 ### `data/interim/results_policy.csv` (Step 5.6, approved policies P-01…P-11)
 **All columns of `results.csv`, byte-for-byte the same values**, followed by these derived columns (written by `src/policies.py`; True/False flags unless stated). One row per result row (25,873), nothing removed.

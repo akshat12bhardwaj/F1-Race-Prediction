@@ -1,3 +1,3 @@
 race_id,check,severity,detail
-2023_21,local_date_differs_from_api_date,info,"API date 2023-11-19 (UTC), local start 2023-11-18 22:00"
-2024_22,local_date_differs_from_api_date,info,"API date 2024-11-23 (UTC), local start 2024-11-22 22:00"
+2023_21,local_date_differs_from_api_date,info,"API date 2023-11-19, local start 2023-11-18 22:00"
+2024_22,local_date_differs_from_api_date,info,"API date 2024-11-23, local start 2024-11-22 22:00"

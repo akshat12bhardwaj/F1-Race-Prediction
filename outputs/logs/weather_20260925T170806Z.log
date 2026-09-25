@@ -1,0 +1,12 @@
+2026-09-25 22:38:08,138 INFO    __main__: 100/1149 races | {'cache_hits': 166, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:09,826 INFO    __main__: 200/1149 races | {'cache_hits': 266, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:11,486 INFO    __main__: 300/1149 races | {'cache_hits': 366, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:13,175 INFO    __main__: 400/1149 races | {'cache_hits': 466, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:14,938 INFO    __main__: 500/1149 races | {'cache_hits': 566, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:16,755 INFO    __main__: 600/1149 races | {'cache_hits': 666, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:18,771 INFO    __main__: 700/1149 races | {'cache_hits': 766, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:20,365 INFO    __main__: 800/1149 races | {'cache_hits': 866, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:22,114 INFO    __main__: 900/1149 races | {'cache_hits': 966, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:24,011 INFO    __main__: 1000/1149 races | {'cache_hits': 1066, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:25,929 INFO    __main__: 1100/1149 races | {'cache_hits': 1166, 'network_requests': 0, 'retries': 0, 'failures': 0}
+2026-09-25 22:38:26,916 INFO    __main__: Weather stats: {'cache_hits': 1215, 'network_requests': 0, 'retries': 0, 'failures': 0} | runtime 0.3 min

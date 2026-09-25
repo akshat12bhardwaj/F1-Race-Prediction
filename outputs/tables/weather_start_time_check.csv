@@ -1,6 +1,6 @@
 season,official_races,R_local_if_utc,R_clock_values,suspected_local_clock
-2005,19,0.545,0.994,True
-2006,18,0.53,0.986,True
+2005,19,0.994,0.994,False
+2006,18,0.986,0.986,False
 2007,17,0.989,0.601,False
 2008,18,0.934,0.69,False
 2009,17,0.916,0.795,False

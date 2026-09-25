@@ -719,50 +719,43 @@ race_id,check,severity,detail
 2004_16,imputed_start_time,info,no official start time before 2005; 14:00 local assumed
 2004_17,imputed_start_time,info,no official start time before 2005; 14:00 local assumed
 2004_18,imputed_start_time,info,no official start time before 2005; 14:00 local assumed
-2005_01,unusual_local_start_hour,warning,official start at 01:00 local
-2005_01,local_date_differs_from_api_date,info,"API date 2005-03-06 (UTC), local start 2005-03-07 01:00"
-2005_08,unusual_local_start_hour,warning,official start at 09:00 local
-2005_09,unusual_local_start_hour,warning,official start at 09:00 local
-2006_03,unusual_local_start_hour,warning,official start at 00:00 local
-2006_03,local_date_differs_from_api_date,info,"API date 2006-04-02 (UTC), local start 2006-04-03 00:00"
-2006_09,unusual_local_start_hour,warning,official start at 09:00 local
-2023_21,local_date_differs_from_api_date,info,"API date 2023-11-19 (UTC), local start 2023-11-18 22:00"
-2024_22,local_date_differs_from_api_date,info,"API date 2024-11-23 (UTC), local start 2024-11-22 22:00"
-2025_22,local_date_differs_from_api_date,info,"API date 2025-11-23 (UTC), local start 2025-11-22 20:00"
-2005_01,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 01:00; season 2005 values look like local clock times
-2005_02,race_time_suspected_local_clock,error,race_time 15:00:00Z treated as UTC gives local start 23:00; season 2005 values look like local clock times
-2005_03,race_time_suspected_local_clock,error,race_time 14:30:00Z treated as UTC gives local start 17:30; season 2005 values look like local clock times
-2005_04,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_05,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_06,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_07,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_08,race_time_suspected_local_clock,error,race_time 13:00:00Z treated as UTC gives local start 09:00; season 2005 values look like local clock times
-2005_09,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 09:00; season 2005 values look like local clock times
-2005_10,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_11,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 15:00; season 2005 values look like local clock times
-2005_12,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_13,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_14,race_time_suspected_local_clock,error,race_time 15:00:00Z treated as UTC gives local start 18:00; season 2005 values look like local clock times
-2005_15,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_16,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2005 values look like local clock times
-2005_17,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 11:00; season 2005 values look like local clock times
-2005_18,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 23:00; season 2005 values look like local clock times
-2005_19,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 22:00; season 2005 values look like local clock times
-2006_01,race_time_suspected_local_clock,error,race_time 14:30:00Z treated as UTC gives local start 17:30; season 2006 values look like local clock times
-2006_02,race_time_suspected_local_clock,error,race_time 15:00:00Z treated as UTC gives local start 23:00; season 2006 values look like local clock times
-2006_03,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 00:00; season 2006 values look like local clock times
-2006_04,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_05,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_06,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_07,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_08,race_time_suspected_local_clock,error,race_time 12:00:00Z treated as UTC gives local start 13:00; season 2006 values look like local clock times
-2006_09,race_time_suspected_local_clock,error,race_time 13:00:00Z treated as UTC gives local start 09:00; season 2006 values look like local clock times
-2006_10,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 10:00; season 2006 values look like local clock times
-2006_11,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_12,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_13,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_14,race_time_suspected_local_clock,error,race_time 15:00:00Z treated as UTC gives local start 18:00; season 2006 values look like local clock times
-2006_15,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 16:00; season 2006 values look like local clock times
-2006_16,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 22:00; season 2006 values look like local clock times
-2006_17,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 23:00; season 2006 values look like local clock times
-2006_18,race_time_suspected_local_clock,error,race_time 14:00:00Z treated as UTC gives local start 11:00; season 2006 values look like local clock times
+2005_01,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-03-06 14:00 AEDT
+2005_02,p12_local_clock_interpretation,info,race_time 15:00:00Z read as local time (P-12) -> start 2005-03-20 15:00 +08
+2005_03,p12_local_clock_interpretation,info,race_time 14:30:00Z read as local time (P-12) -> start 2005-04-03 14:30 +03
+2005_04,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-04-24 14:00 CEST
+2005_05,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-05-08 14:00 CEST
+2005_06,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-05-22 14:00 CEST
+2005_07,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-05-29 14:00 CEST
+2005_08,p12_local_clock_interpretation,info,race_time 13:00:00Z read as local time (P-12) -> start 2005-06-12 13:00 EDT
+2005_09,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-06-19 14:00 EST
+2005_10,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-07-03 14:00 CEST
+2005_11,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-07-10 14:00 BST
+2005_12,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-07-24 14:00 CEST
+2005_13,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-07-31 14:00 CEST
+2005_14,p12_local_clock_interpretation,info,race_time 15:00:00Z read as local time (P-12) -> start 2005-08-21 15:00 EEST
+2005_15,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-09-04 14:00 CEST
+2005_16,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-09-11 14:00 CEST
+2005_17,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-09-25 14:00 -03
+2005_18,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-10-09 14:00 JST
+2005_19,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2005-10-16 14:00 CST
+2006_01,p12_local_clock_interpretation,info,race_time 14:30:00Z read as local time (P-12) -> start 2006-03-12 14:30 +03
+2006_02,p12_local_clock_interpretation,info,race_time 15:00:00Z read as local time (P-12) -> start 2006-03-19 15:00 +08
+2006_03,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-04-02 14:00 AEST
+2006_04,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-04-23 14:00 CEST
+2006_05,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-05-07 14:00 CEST
+2006_06,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-05-14 14:00 CEST
+2006_07,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-05-28 14:00 CEST
+2006_08,p12_local_clock_interpretation,info,race_time 12:00:00Z read as local time (P-12) -> start 2006-06-11 12:00 BST
+2006_09,p12_local_clock_interpretation,info,race_time 13:00:00Z read as local time (P-12) -> start 2006-06-25 13:00 EDT
+2006_10,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-07-02 14:00 EDT
+2006_11,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-07-16 14:00 CEST
+2006_12,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-07-30 14:00 CEST
+2006_13,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-08-06 14:00 CEST
+2006_14,p12_local_clock_interpretation,info,race_time 15:00:00Z read as local time (P-12) -> start 2006-08-27 15:00 EEST
+2006_15,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-09-10 14:00 CEST
+2006_16,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-10-01 14:00 CST
+2006_17,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-10-08 14:00 JST
+2006_18,p12_local_clock_interpretation,info,race_time 14:00:00Z read as local time (P-12) -> start 2006-10-22 14:00 -03
+2023_21,local_date_differs_from_api_date,info,"API date 2023-11-19, local start 2023-11-18 22:00"
+2024_22,local_date_differs_from_api_date,info,"API date 2024-11-23, local start 2024-11-22 22:00"
+2025_22,local_date_differs_from_api_date,info,"API date 2025-11-23, local start 2025-11-22 20:00"

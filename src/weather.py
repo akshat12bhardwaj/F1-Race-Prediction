@@ -186,13 +186,20 @@ def circuit_timezone(client, circuit_id, lat, lon):
     return client.get_json("timezones", circuit_id, params)["timezone"]
 
 
-def race_start(race_date, race_time, tz_name, assumed_local_hour):
+def race_start(race_date, race_time, tz_name, assumed_local_hour, local_clock=False):
     """
     Return (start_utc, start_local, start_time_source).
-    Official: race_date + race_time is a UTC moment (e.g. Las Vegas 2023: 2023-11-19 06:00Z
-    = 22:00 local on 18 Nov). Before 2005 there is no time: assume assumed_local_hour local.
+    - official_utc: race_date + race_time is a UTC moment (e.g. Las Vegas 2023: 2023-11-19 06:00Z
+      = 22:00 local on 18 Nov).
+    - p12_local_clock (local_clock=True, seasons 2005-2006, P-12): the same clock value is really
+      the LOCAL start time; it is localised to tz_name and converted to UTC.
+    - imputed_local_{h}h: no time before 2005; assume assumed_local_hour local.
+    The race_time text itself is never modified.
     """
-    if isinstance(race_time, str) and race_time:
+    if isinstance(race_time, str) and race_time and local_clock:
+        start_utc = pd.Timestamp(f"{race_date} {race_time.rstrip('Z')}").tz_localize(tz_name).tz_convert("UTC")
+        source = "p12_local_clock"
+    elif isinstance(race_time, str) and race_time:
         start_utc = pd.Timestamp(f"{race_date}T{race_time.rstrip('Z')}", tz="UTC")
         source = "official_utc"
     else:
@@ -319,13 +326,16 @@ def quality_flags(race, response, hourly, aligned, config, grid_km):
     nulls = {v: int(in_window[v].isna().sum()) for v in EXPECTED_UNITS if in_window[v].isna().any()}
     if nulls:
         add("missing_values_in_window", "error", str(nulls))
-    if race["start_time_source"] == "official_utc":
+    if race["start_time_source"] == "p12_local_clock":
+        add("p12_local_clock_interpretation", "info",
+            f"race_time {race['race_time']} read as local time (P-12) -> start {race['start_local']:%Y-%m-%d %H:%M %Z}")
+    if race["start_time_source"] in ("official_utc", "p12_local_clock"):
         local_hour = race["start_local"].hour
         if not 10 <= local_hour <= 23:
             add("unusual_local_start_hour", "warning", f"official start at {race['start_local']:%H:%M} local")
         if race["start_local"].strftime("%Y-%m-%d") != race["race_date"]:
             add("local_date_differs_from_api_date", "info",
-                f"API date {race['race_date']} (UTC), local start {race['start_local']:%Y-%m-%d %H:%M}")
+                f"API date {race['race_date']}, local start {race['start_local']:%Y-%m-%d %H:%M}")
     else:
         add("imputed_start_time", "info", "no official start time before 2005; 14:00 local assumed")
     if grid_km > w["max_grid_distance_km"]:
@@ -351,9 +361,11 @@ def process_race(race, tz_name, client, config):
     if not (-90 <= lat <= 90 and -180 <= lon <= 180) or (lat == 0 and lon == 0):
         flags.append({"race_id": race["race_id"], "check": "invalid_circuit_coordinates", "severity": "error",
                       "detail": f"{lat}, {lon}"})
+    local_clock = int(race["season"]) in set(w.get("race_time_local_clock_seasons", []))   # P-12
     start_utc, start_local, source = race_start(race["race_date"], race["race_time"], tz_name,
-                                                w["assumed_local_start_hour_before_2005"])
-    row.update({"start_time_source": source, "start_utc": start_utc.isoformat(),
+                                                w["assumed_local_start_hour_before_2005"], local_clock)
+    row.update({"start_time_source": source, "p12_local_clock_applied": source == "p12_local_clock",
+                "start_utc": start_utc.isoformat(),
                 "start_local": start_local.isoformat(), "utc_offset_hours": start_local.utcoffset().total_seconds() / 3600})
     if race["is_indianapolis_500"] == "True":
         row.update({"weather_status": "excluded_indianapolis_500", "model_use_allowed": False})
@@ -410,8 +422,12 @@ LOCAL_CLOCK_R_THRESHOLD = 0.75
 
 
 def start_time_consistency(weather_race):
-    """Season-level check of the official race_time values (flags only; times are not changed)."""
-    official = weather_race[weather_race["start_time_source"] == "official_utc"]
+    """
+    Season-level check of every race that has an API race_time (official_utc or P-12),
+    using the start_local actually used for alignment. Flags only; times are not changed.
+    After P-12 the 2005-2006 local starts cluster, so these seasons must no longer be flagged.
+    """
+    official = weather_race[weather_race["start_time_source"].isin(["official_utc", "p12_local_clock"])]
     rows = []
     for season, g in official.groupby("season", sort=False):
         r_local = _resultant_length(_clock_hours(g["start_local"].str[11:16]))
@@ -427,7 +443,8 @@ def apply_start_time_check(weather_race, flags):
     """Flag races of suspected seasons (error severity -> not model-usable). Values are not changed."""
     check = start_time_consistency(weather_race)
     suspect = set(check.loc[check["suspected_local_clock"], "season"])
-    mask = weather_race["season"].isin(suspect) & (weather_race["start_time_source"] == "official_utc")
+    mask = weather_race["season"].isin(suspect) & \
+        weather_race["start_time_source"].isin(["official_utc", "p12_local_clock"])
     weather_race["race_time_suspected_local"] = mask
     extra = [{"race_id": r["race_id"], "check": "race_time_suspected_local_clock", "severity": "error",
               "detail": f"race_time {r['race_time']} treated as UTC gives local start {r['start_local'][11:16]}; "
@@ -495,8 +512,9 @@ def coverage_reports(weather_race, weather_hourly, variables):
             "races_with_quality_errors": int((eligible["weather_status"] == "ok_with_errors").sum()),
             "model_use_allowed": int(eligible["model_use_allowed"].astype(bool).sum()),
             "coverage_pct": round(100 * eligible["has_weather"].mean(), 2) if len(eligible) else np.nan,
-            "official_start_times": int((g["start_time_source"] == "official_utc").sum()),
-            "imputed_start_times": int((g["start_time_source"] != "official_utc").sum()),
+            "official_utc_start_times": int((g["start_time_source"] == "official_utc").sum()),
+            "p12_local_clock_start_times": int((g["start_time_source"] == "p12_local_clock").sum()),
+            "imputed_start_times": int(g["start_time_source"].str.startswith("imputed").sum()),
         })
     by_season = wr.groupby("season", sort=False).apply(summarise, include_groups=False).reset_index()
     by_era = wr.groupby("era").apply(summarise, include_groups=False).reset_index().rename(columns={"era": "group"})

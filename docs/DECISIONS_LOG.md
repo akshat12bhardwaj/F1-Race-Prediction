@@ -177,11 +177,18 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 - **Wet-race plausibility:** all 9 reference wet races (general-knowledge list, not verified) show precipitation in the reanalysis. Example: 2024 São Paulo, 3.2 mm in the race window.
 - **Model-usable weather:** 1,101 races (all 329 races 2010–2025).
 
-## Proposed decision from Step 6: **PENDING REVIEW (not applied)**
+## P-12 · 2005–2006 start times: **APPROVED** (2026-09-25, Step 6.1)
 
-| ID | Issue | Proposal (PENDING REVIEW) |
-|---|---|---|
-| P-12 | 2005–2006 `race_time` values are local clock times labelled "Z" (37 races, F-005) | Interpret 2005–2006 `race_time` as **local** time at the circuit (`start_time_source = api_local_clock_2005_2006`), re-align those 37 races, and clear their error flag. Alternative: treat them like pre-2005 (imputed 14:00 local). Until decided they stay aligned as UTC, flagged, and not model-usable. |
+| ID | Approved policy | Implemented as | Rationale | Consequence |
+|---|---|---|---|---|
+| P-12 | The 2005–2006 Jolpica `race_time` values (e.g. "14:00:00Z") are **local clock times**, not UTC. They are read as local time at the circuit and converted to UTC with the IANA timezone database before weather alignment. The original value is never changed. | config `weather.race_time_local_clock_seasons: [2005, 2006]`; `race_start(..., local_clock=True)`; `start_time_source = "p12_local_clock"`; flag `p12_local_clock_applied`; info check `p12_local_clock_interpretation` | F-005: the same "14:00:00Z" across Melbourne, Tokyo, Europe and Montréal gives impossible UTC-based local starts (01:00, 23:00, 16:00, 09:00); local-start clustering R = 0.545/0.530 vs ≥ 0.833 in all other seasons | 37 races re-aligned; detector R after P-12 = 0.994 (2005) and 0.986 (2006), so no longer flagged; all 37 model-usable |
+
+### F-006 · 2026-09-25 · Step 6.1 · P-12 applied and verified
+- Re-run from cache: **0 network requests** (1,215 cache hits; the corrected UTC starts fall on the same request dates). 2,031 raw and interim files (Jolpica raw + manifest, Open-Meteo cache + logs, all non-weather interim CSVs) verified unchanged by SHA-256.
+- **Only the 37 P-12 races changed.** The other 1,112 race rows are identical in every pre-existing column (one new column, `p12_local_clock_applied`), and their 14,313 hourly rows are identical. 481 hourly rows re-aligned.
+- Corrected local starts: 14:00 for most races, Bahrain 14:30, Malaysia/Turkey 15:00, Canada 13:00, 2006 British GP 12:00 (World Cup schedule). Historical DST is handled correctly: Melbourne 6 Mar 2005 UTC+11 (DST) vs 2 Apr 2006 UTC+10 (DST already ended), Indiana 2005 UTC−5 (no DST observed) vs 2006 UTC−4.
+- Quality report: **0 errors, 0 warnings.** Info only: 720 imputed pre-2005 starts, 37 P-12 interpretations, 3 local-date differences (Las Vegas 2023–2025, correct).
+- **Usable weather: 1,138 of 1,138 eligible races** (1,149 − 11 Indianapolis 500). Start-time sources: 381 official UTC (2007–2025), 37 P-12 local clock (2005–2006), 731 imputed 14:00 local (1950–2004).
 
 ---
 
@@ -191,7 +198,7 @@ Proposed in Step 5.5 (F-004), **approved by the project owner** and applied in S
 |---|---|---|
 | Jolpica rate limit ≈ 4 req/s burst, 500 req/h | Step 2 | **Confirmed from official docs** (F-001); no rate-limit headers are sent |
 | Open-Meteo free limits ≈ 600/min, 5,000/h, 10,000/day | Step 6 | **Confirmed** from the Open-Meteo terms (also 300,000/month; data CC-BY 4.0) |
-| Official `race_time` is UTC from 2005 (Appendix A) | Step 6 | **Only from 2007 (F-005):** 2005–2006 values are local clock times labelled "Z" (P-12 pending) |
+| Official `race_time` is UTC from 2005 (Appendix A) | Step 6 | **Resolved by P-12 (APPROVED):** UTC from 2007; 2005–2006 values are local clock times, converted with the timezone database |
 | `grid = 0` means pit-lane start | Step 7 | **Resolved by P-04:** pit-lane start only when the driver started and completed laps (48 rows); otherwise unknown or non-starter |
 | `positionText` codes D, E, F, N meanings | Step 7 | **Resolved (F-003):** only R, W, D exist in 1950–2025. E, F, N never occur. W covers several non-start statuses |
 | `position` orders retirees by laps completed | Step 7 | **Confirmed for 1950–2025 (F-004):** 8 inversions in 7,998 adjacent pairs, none after 2009 |

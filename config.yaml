@@ -85,6 +85,10 @@ api:
 # ---------------- Weather aggregation [§13.4, §19.6] (used from Step 6) ----------------
 weather:
   assumed_local_start_hour_before_2005: 14   # no official start times before 2005 (F-003)
+  # P-12 (APPROVED): in these seasons Jolpica's race_time (e.g. "14:00:00Z") is a LOCAL
+  # clock time wrongly labelled UTC. It is read as local circuit time and converted to UTC.
+  # The original race_time value is never changed.
+  race_time_local_clock_seasons: [2005, 2006]
   # Hour offsets relative to the race start rounded DOWN to the full hour (H0).
   # Instantaneous variables use the hourly values at H0+a ... H0+b.
   # Accumulated variables (precipitation, rain = total of the PRECEDING hour)
