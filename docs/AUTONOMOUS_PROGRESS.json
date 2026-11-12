@@ -1,0 +1,170 @@
+{
+  "updated": "2026-11-07",
+  "overall_status": "COMPLETE: simulator with interactive comparison of 18 course algorithms, full-grid prime-form/any-car experience, historical replay, model comparison",
+  "phases": {
+    "v1_phases_1_10": "verified (see docs/PROGRESS.md)",
+    "S1_scenario_features": {
+      "status": "verified",
+      "outputs": [
+        "src/features.py SCENARIO_EXTRA (v1 features unchanged)"
+      ],
+      "tests": [
+        "tests/test_leakage.py incl. new columns"
+      ]
+    },
+    "S2_snapshots": {
+      "status": "verified",
+      "outputs": [
+        "src/snapshots.py",
+        "data/processed/driver_snapshots.csv (2,668)",
+        "data/processed/constructor_snapshots.csv (948)",
+        "data/processed/circuits.csv (77)"
+      ]
+    },
+    "S3_ranking_model": {
+      "status": "verified",
+      "outputs": [
+        "src/ranking.py",
+        "src/train_scenario.py",
+        "models/scenario/ranker_v1.joblib",
+        "models/scenario/metadata.json"
+      ],
+      "tests": [
+        "tests/test_ranking.py (7)"
+      ]
+    },
+    "S4_simulation_engine": {
+      "status": "verified",
+      "outputs": [
+        "src/simulate.py"
+      ],
+      "tests": [
+        "tests/test_simulate.py (23)"
+      ]
+    },
+    "S5_api": {
+      "status": "verified",
+      "endpoints": [
+        "/api/circuits",
+        "/api/available-drivers",
+        "/api/driver-performance-periods",
+        "/api/constructors",
+        "/api/simulate-custom-race",
+        "/api/simulator-model"
+      ]
+    },
+    "S6_frontend": {
+      "status": "verified",
+      "outputs": [
+        "frontend/src/components/{Simulator,SimSetup,SimResults,ScenarioLab,Replay}.jsx"
+      ]
+    },
+    "S7_e2e": {
+      "status": "verified",
+      "tests": [
+        "npm run e2e: 28 replay + 29 simulator checks passed (headless Edge)"
+      ]
+    },
+    "S8_full_grid_v2": {
+      "status": "verified",
+      "outputs": [
+        "src/driver_ratings.py",
+        "src/train_simulator.py",
+        "src/simulate.py (v2)",
+        "models/scenario/simulator_v2.joblib",
+        "models/scenario/metadata_v2.json",
+        "data/processed/driver_primes.csv",
+        "data/processed/circuit_grid_capacity.csv",
+        "data/processed/driver_network_ratings.csv"
+      ],
+      "tests": [
+        "tests/test_simulate.py (v2, 21)",
+        "tests/test_driver_ratings.py (3)",
+        "frontend/e2e/simulator.mjs (28 checks)"
+      ]
+    },
+    "S9_algorithm_comparison": {
+      "status": "verified",
+      "outputs": [
+        "src/algorithms.py",
+        "src/train_algorithms.py",
+        "src/multi_sim.py",
+        "src/unsupervised.py",
+        "models/algorithms/*.joblib (18 + density)",
+        "outputs/tables/algorithm_comparison.csv",
+        "outputs/tables/algorithm_permutation_importance.csv",
+        "outputs/tables/car_clusters.csv"
+      ],
+      "tests": [
+        "tests/test_algorithms.py (21)",
+        "frontend/e2e/algorithms.mjs (25 checks)"
+      ]
+    }
+  },
+  "tests": {
+    "pytest_offline": "193 passed",
+    "browser": "81 passed (28 replay + 28 simulator + 25 algorithms)"
+  },
+  "results": {
+    "scenario_dev_2017_2022": {
+      "model": "pl_linear_from1981_hl8_top1",
+      "winner_logloss": 1.325,
+      "winner_top1": 0.52,
+      "podium_overlap": 0.688,
+      "rank_mae": 3.5,
+      "v1_winner_logloss": 1.362
+    },
+    "subset_experiment": {
+      "pl_top1": 0.899,
+      "v1_renormalised": 1.067,
+      "metric": "6-driver subset winner log-loss"
+    },
+    "test_2023_2025": {
+      "v1_clean_holdout": {
+        "winner_top1": 0.643,
+        "winner_logloss": 1.106
+      },
+      "scenario_post_hoc": {
+        "winner_top1": 0.657,
+        "winner_logloss": 1.07
+      }
+    },
+    "simulator_v2_dev_2017_2022": {
+      "race_model_real_grid": {
+        "winner_logloss": 1.352,
+        "winner_top1": 0.496,
+        "rank_mae": 3.501
+      },
+      "two_stage_grid_predicted": {
+        "winner_logloss": 1.815,
+        "winner_top1": 0.463,
+        "podium_overlap": 0.585,
+        "rank_mae": 3.817
+      },
+      "quali_grid_spearman": 0.7227
+    },
+    "algorithms_2020_2022": {
+      "best_validated": "plackett_luce",
+      "winner_logloss": {
+        "plackett_luce": 1.37,
+        "logistic_regression": 1.421,
+        "knn": 1.43,
+        "ridge": 1.444,
+        "random_forest": 1.449,
+        "grid_baseline": 1.705
+      }
+    }
+  },
+  "known_limitations": [
+    "IIA assumption",
+    "cross-era scenarios unverifiable",
+    "scenario 2023-2025 numbers post-hoc",
+    "collinear coefficients not causal",
+    "weather only via grid interaction",
+    "teammate-based ratings underrate drivers with strong teammates (e.g. Hamilton)",
+    "car strength relative to own season, not absolute pace",
+    "1950s customer cars share works constructor ids"
+  ],
+  "blockers": [],
+  "next_subgoal": "none (optional: git commit when the owner approves)"
+}

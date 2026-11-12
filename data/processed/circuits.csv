@@ -1,0 +1,78 @@
+circuit_id,circuit_name,country,race_name,races,first_season,last_season,circuit_pole_win_rate
+adelaide,Adelaide Street Circuit,Australia,Australian Grand Prix,11,1985,1995,0.45454545454545453
+ain-diab,Ain Diab,Morocco,Moroccan Grand Prix,1,1958,1958,0.0
+aintree,Aintree,UK,British Grand Prix,5,1955,1962,0.75
+albert_park,Albert Park Grand Prix Circuit,Australia,Australian Grand Prix,28,1996,2025,0.42857142857142855
+americas,Circuit of the Americas,USA,United States Grand Prix,13,2012,2025,0.46153846153846156
+anderstorp,Scandinavian Raceway,Sweden,Swedish Grand Prix,6,1973,1978,0.16666666666666666
+avus,AVUS,Germany,German Grand Prix,1,1959,1959,1.0
+bahrain,Bahrain International Circuit,Bahrain,Bahrain Grand Prix,22,2004,2025,0.5
+baku,Baku City Circuit,Azerbaijan,Azerbaijan Grand Prix,9,2016,2025,0.3333333333333333
+boavista,Circuito da Boavista,Portugal,Portuguese Grand Prix,2,1958,1960,0.5
+brands_hatch,Brands Hatch,UK,British Grand Prix,14,1964,1986,0.2857142857142857
+bremgarten,Circuit Bremgarten,Switzerland,Swiss Grand Prix,5,1950,1954,0.25
+buddh,Buddh International Circuit,India,Indian Grand Prix,3,2011,2013,1.0
+catalunya,Circuit de Barcelona-Catalunya,Spain,Spanish Grand Prix,35,1991,2025,0.7142857142857143
+charade,Charade Circuit,France,French Grand Prix,4,1965,1972,0.5
+dallas,Fair Park,USA,Dallas Grand Prix,1,1984,1984,0.0
+detroit,Detroit Street Circuit,USA,Detroit Grand Prix,7,1982,1988,0.42857142857142855
+dijon,Dijon-Prenois,France,French Grand Prix,6,1974,1984,0.3333333333333333
+donington,Donington Park,UK,European Grand Prix,1,1993,1993,0.0
+essarts,Rouen-Les-Essarts,France,French Grand Prix,5,1952,1968,0.4
+estoril,Autódromo do Estoril,Portugal,Portuguese Grand Prix,13,1984,1996,0.46153846153846156
+fuji,Fuji Speedway,Japan,Japanese Grand Prix,4,1976,2008,0.5
+galvez,Autódromo Juan y Oscar Gálvez,Argentina,Argentine Grand Prix,20,1953,1998,0.4117647058823529
+george,Prince George Circuit,South Africa,South African Grand Prix,3,1962,1965,0.6666666666666666
+hockenheimring,Hockenheimring,Germany,German Grand Prix,37,1970,2019,0.5
+hungaroring,Hungaroring,Hungary,Hungarian Grand Prix,40,1986,2025,0.4
+imola,Autodromo Enzo e Dino Ferrari,Italy,Emilia Romagna Grand Prix,32,1980,2025,0.34375
+indianapolis,Indianapolis Motor Speedway,USA,United States Grand Prix,8,2000,2007,0.42857142857142855
+interlagos,Autódromo José Carlos Pace,Brazil,São Paulo Grand Prix,42,1973,2025,0.4523809523809524
+istanbul,Istanbul Park,Turkey,Turkish Grand Prix,9,2005,2021,0.6666666666666666
+jacarepagua,Autódromo Internacional Nelson Piquet,Brazil,Brazilian Grand Prix,10,1978,1989,0.1
+jarama,Jarama,Spain,Spanish Grand Prix,9,1968,1981,0.4444444444444444
+jeddah,Jeddah Corniche Circuit,Saudi Arabia,Saudi Arabian Grand Prix,5,2021,2025,0.6
+jerez,Circuito de Jerez,Spain,European Grand Prix,7,1986,1997,0.42857142857142855
+kyalami,Kyalami,South Africa,South African Grand Prix,20,1967,1993,0.2
+las_vegas,Las Vegas Street Circuit,USA,Caesars Palace Grand Prix,2,1981,1982,0.0
+lemans,Le Mans,France,French Grand Prix,1,1967,1967,0.0
+long_beach,Long Beach,USA,United States Grand Prix West,8,1976,1983,0.5
+losail,Lusail International Circuit,Qatar,Qatar Grand Prix,4,2021,2025,0.5
+magny_cours,Circuit de Nevers Magny-Cours,France,French Grand Prix,18,1991,2008,0.29411764705882354
+marina_bay,Marina Bay Street Circuit,Singapore,Singapore Grand Prix,16,2008,2025,0.6875
+miami,Miami International Autodrome,USA,Miami Grand Prix,4,2022,2025,0.0
+monaco,Circuit de Monaco,Monaco,Monaco Grand Prix,71,1950,2025,0.4714285714285714
+monsanto,Monsanto Park Circuit,Portugal,Portuguese Grand Prix,1,1959,1959,1.0
+montjuic,Montjuïc,Spain,Spanish Grand Prix,4,1969,1975,0.0
+monza,Autodromo Nazionale di Monza,Italy,Italian Grand Prix,75,1950,2025,0.35135135135135137
+mosport,Mosport International Raceway,Canada,Canadian Grand Prix,8,1967,1977,0.5
+mugello,Autodromo Internazionale del Mugello,Italy,Tuscan Grand Prix,1,2020,2020,1.0
+nivelles,Nivelles-Baulers,Belgium,Belgian Grand Prix,2,1972,1974,0.5
+nurburgring,Nürburgring,Germany,Eifel Grand Prix,41,1951,2020,0.36585365853658536
+okayama,Okayama International Circuit,Japan,Pacific Grand Prix,2,1994,1995,0.0
+pedralbes,Circuit de Pedralbes,Spain,Spanish Grand Prix,2,1951,1954,0.0
+pescara,Pescara Circuit,Italy,Pescara Grand Prix,1,1957,1957,0.0
+phoenix,Phoenix street circuit,USA,United States Grand Prix,3,1989,1991,0.3333333333333333
+portimao,Autódromo Internacional do Algarve,Portugal,Portuguese Grand Prix,2,2020,2021,0.5
+red_bull_ring,Red Bull Ring,Austria,Austrian Grand Prix,39,1970,2025,0.38461538461538464
+reims,Reims-Gueux,France,French Grand Prix,11,1950,1966,0.6
+ricard,Circuit Paul Ricard,France,French Grand Prix,18,1971,2022,0.6111111111111112
+riverside,Riverside International Raceway,USA,United States Grand Prix,1,1960,1960,1.0
+rodriguez,Autódromo Hermanos Rodríguez,Mexico,Mexico City Grand Prix,25,1963,2025,0.48
+sebring,Sebring International Raceway,USA,United States Grand Prix,1,1959,1959,0.0
+sepang,Sepang International Circuit,Malaysia,Malaysian Grand Prix,19,1999,2017,0.47368421052631576
+shanghai,Shanghai International Circuit,China,Chinese Grand Prix,18,2004,2025,0.6111111111111112
+silverstone,Silverstone Circuit,UK,British Grand Prix,60,1950,2025,0.36666666666666664
+sochi,Sochi Autodrom,Russia,Russian Grand Prix,8,2014,2021,0.25
+spa,Circuit de Spa-Francorchamps,Belgium,Belgian Grand Prix,58,1950,2025,0.3684210526315789
+suzuka,Suzuka Circuit,Japan,Japanese Grand Prix,35,1987,2025,0.5428571428571428
+tremblant,Circuit Mont-Tremblant,Canada,Canadian Grand Prix,2,1968,1970,0.0
+valencia,Valencia Street Circuit,Spain,European Grand Prix,5,2008,2012,0.6
+vegas,Las Vegas Strip Street Circuit,USA,Las Vegas Grand Prix,3,2023,2025,0.3333333333333333
+villeneuve,Circuit Gilles Villeneuve,Canada,Canadian Grand Prix,44,1978,2025,0.5
+watkins_glen,Watkins Glen,USA,United States Grand Prix,20,1961,1980,0.5
+yas_marina,Yas Marina Circuit,UAE,Abu Dhabi Grand Prix,17,2009,2025,0.7058823529411765
+yeongam,Korean International Circuit,Korea,Korean Grand Prix,4,2010,2013,0.25
+zandvoort,Circuit Park Zandvoort,Netherlands,Dutch Grand Prix,35,1952,2025,0.4857142857142857
+zeltweg,Zeltweg,Austria,Austrian Grand Prix,1,1964,1964,0.0
+zolder,Zolder,Belgium,Belgian Grand Prix,10,1973,1984,0.5

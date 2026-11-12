@@ -1,0 +1,122 @@
+{
+  "features": [
+    "grid_position",
+    "grid_pct",
+    "front_row",
+    "pit_lane_start",
+    "field_size",
+    "qualifying_position",
+    "quali_gap_to_pole_pct",
+    "quali_missing",
+    "teammate_grid_diff",
+    "sprint_position",
+    "has_sprint",
+    "driver_prev_finish",
+    "driver_last3_avg_finish",
+    "driver_last5_avg_finish",
+    "driver_last10_avg_finish",
+    "driver_last10_avg_finish_pct",
+    "driver_avg_positions_gained_last10",
+    "driver_career_starts",
+    "driver_career_avg_finish",
+    "driver_win_rate",
+    "driver_podium_rate",
+    "driver_dnf_rate_last10",
+    "driver_age_years",
+    "is_rookie",
+    "driver_points_share_before_race",
+    "driver_champ_pos_before_race",
+    "driver_wins_season_before_race",
+    "constructor_points_share_before_race",
+    "constructor_champ_pos_before_race",
+    "constructor_last5_avg_finish",
+    "constructor_win_rate_last20",
+    "constructor_podium_rate_last20",
+    "constructor_dnf_rate_last10",
+    "constructor_prev_season_rank",
+    "driver_circuit_starts",
+    "driver_circuit_avg_finish",
+    "constructor_circuit_avg_finish",
+    "circuit_pole_win_rate",
+    "circuit_dnf_rate",
+    "wx_prestart_temp_mean_c",
+    "wx_prestart_humidity_mean_pct",
+    "wx_prestart_precip_sum_mm",
+    "wx_prestart_cloud_mean_pct",
+    "wx_prestart_wind_speed_mean_kmh",
+    "wx_prestart_weather_code_max",
+    "wx_time_imputed"
+  ],
+  "groups": {
+    "grid_quali": [
+      "grid_position",
+      "grid_pct",
+      "front_row",
+      "pit_lane_start",
+      "field_size",
+      "qualifying_position",
+      "quali_gap_to_pole_pct",
+      "quali_missing",
+      "teammate_grid_diff"
+    ],
+    "sprint": [
+      "sprint_position",
+      "has_sprint"
+    ],
+    "driver_form": [
+      "driver_prev_finish",
+      "driver_last3_avg_finish",
+      "driver_last5_avg_finish",
+      "driver_last10_avg_finish",
+      "driver_last10_avg_finish_pct",
+      "driver_avg_positions_gained_last10"
+    ],
+    "driver_career": [
+      "driver_career_starts",
+      "driver_career_avg_finish",
+      "driver_win_rate",
+      "driver_podium_rate",
+      "driver_dnf_rate_last10",
+      "driver_age_years",
+      "is_rookie"
+    ],
+    "championship": [
+      "driver_points_share_before_race",
+      "driver_champ_pos_before_race",
+      "driver_wins_season_before_race",
+      "constructor_points_share_before_race",
+      "constructor_champ_pos_before_race"
+    ],
+    "constructor": [
+      "constructor_last5_avg_finish",
+      "constructor_win_rate_last20",
+      "constructor_podium_rate_last20",
+      "constructor_dnf_rate_last10",
+      "constructor_prev_season_rank"
+    ],
+    "circuit": [
+      "driver_circuit_starts",
+      "driver_circuit_avg_finish",
+      "constructor_circuit_avg_finish",
+      "circuit_pole_win_rate",
+      "circuit_dnf_rate"
+    ],
+    "weather_prestart": [
+      "wx_prestart_temp_mean_c",
+      "wx_prestart_humidity_mean_pct",
+      "wx_prestart_precip_sum_mm",
+      "wx_prestart_cloud_mean_pct",
+      "wx_prestart_wind_speed_mean_kmh",
+      "wx_prestart_weather_code_max",
+      "wx_time_imputed"
+    ]
+  },
+  "oracle_weather_ablation_only": [
+    "wx_race_temp_mean_c",
+    "wx_race_humidity_mean_pct",
+    "wx_race_precip_sum_mm",
+    "wx_race_cloud_mean_pct",
+    "wx_race_wind_speed_mean_kmh",
+    "wx_race_weather_code_max"
+  ]
+}

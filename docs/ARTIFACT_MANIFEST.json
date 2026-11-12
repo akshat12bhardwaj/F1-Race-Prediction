@@ -1,0 +1,2050 @@
+{
+  "format": 1,
+  "artifacts": [
+    {
+      "path": "data/external/f1-circuits/LICENSE",
+      "bytes": 1066,
+      "sha256": "f093960027c8ebcc3220000b8316ec29cc6f9149b7625ebad02524bf44ebf2f3"
+    },
+    {
+      "path": "data/external/f1-circuits/SOURCE.md",
+      "bytes": 1445,
+      "sha256": "3e47f862bf365092b54319231ffd12509de53864da73555e9fb6784abda4b265"
+    },
+    {
+      "path": "data/external/f1-circuits/f1-circuits.geojson",
+      "bytes": 116166,
+      "sha256": "7dcd3b9a5fe25b46c7ea276ea513475854a4187cebcf4384f9cd9a3465deee55"
+    },
+    {
+      "path": "data/interim/constructors.csv",
+      "bytes": 34670,
+      "sha256": "01bab22cda3fa5983484275625feaf6dd0b40534fc388aba51cd35df4777f1ee"
+    },
+    {
+      "path": "data/interim/drivers.csv",
+      "bytes": 165539,
+      "sha256": "34c4626b88e7fb4029f7d7664ce0f0632108d03c0af10e4856bee0095792b189"
+    },
+    {
+      "path": "data/interim/qualifying.csv",
+      "bytes": 2226473,
+      "sha256": "11a626e33098e832b246ffe7581d2a36da190c8b75b75f545a11ee32b9719d04"
+    },
+    {
+      "path": "data/interim/races.csv",
+      "bytes": 140137,
+      "sha256": "18f8c279217f568b9510345b15cf4dbbd6469f07904669f15ee0803c6b772c73"
+    },
+    {
+      "path": "data/interim/races_policy.csv",
+      "bytes": 187971,
+      "sha256": "af8fb0d84233d41936ae6cb9b38fe232f83852944751a7d7fa4a6bf2569a933e"
+    },
+    {
+      "path": "data/interim/results.csv",
+      "bytes": 5519135,
+      "sha256": "4c6f3c157261a6000f07fce4a6ca9808bdb4e65c53e7fe064e83f1ba3399b17f"
+    },
+    {
+      "path": "data/interim/results_policy.csv",
+      "bytes": 8444336,
+      "sha256": "2a981a273c0c062b2182907ae956f51e38d36f051025b182bf9881f8239768a1"
+    },
+    {
+      "path": "data/interim/sprints.csv",
+      "bytes": 114216,
+      "sha256": "a83753723cca538acc1b5f557cb3cd050d68c360426c2fcd2843d2dcbcb630cf"
+    },
+    {
+      "path": "data/interim/subset_weather_race.csv",
+      "bytes": 17660,
+      "sha256": "7b8add6b8cd065a74f34997d9b1de7853ec68b9cd883e83adc678906236c2e95"
+    },
+    {
+      "path": "data/interim/weather_hourly.csv",
+      "bytes": 1536400,
+      "sha256": "a595c4f837a9dd7a39696c9d4fcceca79c5bc5de3b1741b7e869b20e78a1842f"
+    },
+    {
+      "path": "data/interim/weather_race.csv",
+      "bytes": 430340,
+      "sha256": "ebfc8fa0a6a3171a42c43ca8e57df4e46616b7e4ec3875140514e12ad2e6dbed"
+    },
+    {
+      "path": "data/processed/circuit_grid_capacity.csv",
+      "bytes": 3412,
+      "sha256": "5d9d87d7767940c2870a5201e0569c297131f843cdf4457eca72e6cc5f93c40c"
+    },
+    {
+      "path": "data/processed/circuits.csv",
+      "bytes": 6354,
+      "sha256": "da0b94a83be705d0b00ba7e6c64287b14afa9929eea89ee40dcdf94bad587224"
+    },
+    {
+      "path": "data/processed/constructor_snapshots.csv",
+      "bytes": 148228,
+      "sha256": "58c26a97cebdd41115189ec9e7d2357538e85caa15916947794bc69e933ef0a0"
+    },
+    {
+      "path": "data/processed/driver_network_ratings.csv",
+      "bytes": 1876152,
+      "sha256": "cd73925daeb080aafe280e87b1fa2e3da73481988ee2f52fa2674d4a1d6e0513"
+    },
+    {
+      "path": "data/processed/driver_primes.csv",
+      "bytes": 59183,
+      "sha256": "fbb4b8f45ae23fdecc4e8755986e5b286b707e10f69fa970435f231df2872f85"
+    },
+    {
+      "path": "data/processed/driver_snapshots.csv",
+      "bytes": 556828,
+      "sha256": "a8e91b7d44ae37e5db9ad571bd5c9ff5a982405818ac720659e3a7d40a148fca"
+    },
+    {
+      "path": "data/processed/feature_list_v1.json",
+      "bytes": 3453,
+      "sha256": "fa5cac6fd2a10af2775da15ec25947e1975b5a6450c2e464f0152695d7327670"
+    },
+    {
+      "path": "data/processed/master_base.csv",
+      "bytes": 14891114,
+      "sha256": "18bc1071e67eb1f197dc7e763ba5c0957b32374b16952193d55d9b605441d19a"
+    },
+    {
+      "path": "data/processed/master_features.csv",
+      "bytes": 18848325,
+      "sha256": "0010449836b2c350a6112132da9dc38a72eb9985e8f89a19e7b4e9cdc2ea60d6"
+    },
+    {
+      "path": "frontend/public/circuits.json",
+      "bytes": 522072,
+      "sha256": "812b2488175da31c1f39aef46adc1c328de4383cd623a148f93f8d6a04b6ee6b"
+    },
+    {
+      "path": "frontend/public/constructors/ags.png",
+      "bytes": 41406,
+      "sha256": "967c277464af105088a48e7ebd17724f60751d5c197ef5f121cad00ee72a852f"
+    },
+    {
+      "path": "frontend/public/constructors/alfa-p0.png",
+      "bytes": 11899,
+      "sha256": "3a6d78904cc01adb58786c4fdc314f740f046f852a6d44cceb7c456783709a8e"
+    },
+    {
+      "path": "frontend/public/constructors/alpine-0.png",
+      "bytes": 8843,
+      "sha256": "a8583b6e38b295ca35f8d61e725466665028f2f7ae80dbc80c74bbcccc421981"
+    },
+    {
+      "path": "frontend/public/constructors/alpine.png",
+      "bytes": 18378,
+      "sha256": "36d51a6042417ac52cca79cba64a153f951034a9f1162185c484839a56d94be8"
+    },
+    {
+      "path": "frontend/public/constructors/arrows.png",
+      "bytes": 29999,
+      "sha256": "404b242899fba445a698874633e4b48a3b1c5ded5f379053490638186cca12e3"
+    },
+    {
+      "path": "frontend/public/constructors/aston_martin-p0.png",
+      "bytes": 13669,
+      "sha256": "b8e97fd432dee8f9447c9e7bcc29e0d97eed0489fc53c6805ac9edbbd3210dee"
+    },
+    {
+      "path": "frontend/public/constructors/ats-0.png",
+      "bytes": 4064,
+      "sha256": "d63967f04fe0f95a6144c7fe5170fb525b1b63f97773251fb4398805c788f467"
+    },
+    {
+      "path": "frontend/public/constructors/benetton-p0.png",
+      "bytes": 11252,
+      "sha256": "23ac1688cd9a8b6d6bc6415b5fcb44399deb2e59656a16e482d7e0541759d309"
+    },
+    {
+      "path": "frontend/public/constructors/benetton-p1.png",
+      "bytes": 12446,
+      "sha256": "79a3bdd5ece73cbed4d12886ce885cf3897dbe48e6a8d78705f2bdb983a4e76a"
+    },
+    {
+      "path": "frontend/public/constructors/bmw_sauber-p0.png",
+      "bytes": 10696,
+      "sha256": "df9a4df6c5a96a0718ee8ed58e85bcaccdf81b23161b0944274416ea38c102af"
+    },
+    {
+      "path": "frontend/public/constructors/brawn-p0.png",
+      "bytes": 5292,
+      "sha256": "96a07108c74fd06b1c1cff2807daa0c078e393cbb33733f0a7838addac2b69db"
+    },
+    {
+      "path": "frontend/public/constructors/caterham-0.png",
+      "bytes": 7564,
+      "sha256": "a7dae79a09539e05aba71384c3f90f5a1ae5cbf305072264582fc0ad52cc99a9"
+    },
+    {
+      "path": "frontend/public/constructors/coloni-p0.png",
+      "bytes": 13412,
+      "sha256": "256c664bd68540f28a998dead9e2a25b65e189906c382a21a6ab3c6812734895"
+    },
+    {
+      "path": "frontend/public/constructors/dallara-0.png",
+      "bytes": 4387,
+      "sha256": "1272988ca8aef82366b8ea82b39d14eef60def7635a4d0206694b8c77c37eeba"
+    },
+    {
+      "path": "frontend/public/constructors/ferrari-p0.png",
+      "bytes": 4965,
+      "sha256": "08501dba31894a487aaaecfab570d5c25d1771f33f678744eacfd783c2f3c8ab"
+    },
+    {
+      "path": "frontend/public/constructors/fondmetal-p0.png",
+      "bytes": 6173,
+      "sha256": "6bed7c2520933587de43a4e30e9979487033b3eee221be6f7360eedbdb028e7f"
+    },
+    {
+      "path": "frontend/public/constructors/force_india-p0.png",
+      "bytes": 14452,
+      "sha256": "6fd849a9e70a185b010057b114363f8e42e898148e3ea46364c9fdd750422579"
+    },
+    {
+      "path": "frontend/public/constructors/haas-0.png",
+      "bytes": 8600,
+      "sha256": "e3b7861fc8a8b749de3222ea743cdd1ac5fd249ff94e87950d23089239e16dae"
+    },
+    {
+      "path": "frontend/public/constructors/haas-1.png",
+      "bytes": 9484,
+      "sha256": "91a99dbfb0aee1887191df7ad2b30b4a5d3ca62eb78afd44dda64d98ef1aca85"
+    },
+    {
+      "path": "frontend/public/constructors/haas-2.png",
+      "bytes": 15181,
+      "sha256": "2381c88765be88f273beed9aebf4b23968a615f1c5878a1badc213a381987719"
+    },
+    {
+      "path": "frontend/public/constructors/haas-3.png",
+      "bytes": 10526,
+      "sha256": "f048c102cbe54dc1d9d8dd3e95411e06ca408de99aed923885fa450fc6eca421"
+    },
+    {
+      "path": "frontend/public/constructors/haas-4.png",
+      "bytes": 8385,
+      "sha256": "834cb72e68c55c2f7dca71323d324b2b8f905b4095447069c9ac68e77f339609"
+    },
+    {
+      "path": "frontend/public/constructors/honda-p0.png",
+      "bytes": 13800,
+      "sha256": "503e44146d2b85a6379eb17bc7a3eb121254030a03dee754b1a3660fb74ef0e9"
+    },
+    {
+      "path": "frontend/public/constructors/hrt.png",
+      "bytes": 11081,
+      "sha256": "8db1416afa9f3c9996f2b93b39b851621c7931d11fbcb00f0450fc7d5be8f3bf"
+    },
+    {
+      "path": "frontend/public/constructors/lambo-p0.png",
+      "bytes": 12327,
+      "sha256": "fc25ae735c5f82ffbcad141cdba3548de7d88d00d6b8d052f3f6ecddd5a8d52f"
+    },
+    {
+      "path": "frontend/public/constructors/ligier-0.png",
+      "bytes": 14446,
+      "sha256": "bd8e73b90ac25fa6744da327e9bf987062b6182a0c09625ceb87613cb770d1ee"
+    },
+    {
+      "path": "frontend/public/constructors/ligier-1.png",
+      "bytes": 13588,
+      "sha256": "fb68ebfca22a119196102b00d176d9dac240cda56961bb9f13187aeb3e7fc3a2"
+    },
+    {
+      "path": "frontend/public/constructors/ligier.png",
+      "bytes": 15918,
+      "sha256": "57897a2e7895008971a8f613d4bd0838ed94fe70cd986736083f98912939dc6c"
+    },
+    {
+      "path": "frontend/public/constructors/lola-p0.png",
+      "bytes": 11262,
+      "sha256": "181918b05f6f56e5161dd28632ca64d09b0807f7b329fb704702c0cd3d1abcab"
+    },
+    {
+      "path": "frontend/public/constructors/lotus_f1-0.png",
+      "bytes": 30353,
+      "sha256": "824cf3341f7b8b461a8a5ab8c12cf0d4a56e12506622f1353462791cb6a27346"
+    },
+    {
+      "path": "frontend/public/constructors/lotus_racing-p0.png",
+      "bytes": 29108,
+      "sha256": "282281cc867092848199218f3a0fe22f4e4e8622e429664cb531ffd2d8a20577"
+    },
+    {
+      "path": "frontend/public/constructors/manor-p0.png",
+      "bytes": 10084,
+      "sha256": "b7b3833b39351c2ed9c48f208ea4d6c046a84a340f651280fe9cc5db06137101"
+    },
+    {
+      "path": "frontend/public/constructors/manor-p1.png",
+      "bytes": 30348,
+      "sha256": "e1ae0e986849e8e9af0ae9084b532069628be6d0fb2fab396829a8eee4293e04"
+    },
+    {
+      "path": "frontend/public/constructors/mclaren-0.png",
+      "bytes": 3763,
+      "sha256": "873d9228a01d0737c22e9742bbdd3c3276917908aa00e0d89b0d1d760447459f"
+    },
+    {
+      "path": "frontend/public/constructors/mercedes-p0.png",
+      "bytes": 18032,
+      "sha256": "b365bfe09c70f4c57c515b11045b55dedc9736a86e0ce0fe2affb15ccbd65767"
+    },
+    {
+      "path": "frontend/public/constructors/mercedes-p1.png",
+      "bytes": 17176,
+      "sha256": "04683f406e323cc2633673caa652e81a8a1859a103aed643bfb1808d0a22b5f8"
+    },
+    {
+      "path": "frontend/public/constructors/minardi-p0.png",
+      "bytes": 8120,
+      "sha256": "85985ef02a647e1d37069454793bce849fd7f34d3a638a5fa7ffa4c549509f17"
+    },
+    {
+      "path": "frontend/public/constructors/minardi-p1.png",
+      "bytes": 9241,
+      "sha256": "19f58d726c4fc32d28b767749126a0026d6f0ad76c93eee7b770348d209228c6"
+    },
+    {
+      "path": "frontend/public/constructors/osella-0.png",
+      "bytes": 9858,
+      "sha256": "4e001cc59c58fe52d353d82c0a91056807c227800db6ea216d71ff126dc5da48"
+    },
+    {
+      "path": "frontend/public/constructors/osella.png",
+      "bytes": 15154,
+      "sha256": "69000c00092620d134b88141f23d21684e7c03f536cbfbfa42dd879d623d0d38"
+    },
+    {
+      "path": "frontend/public/constructors/pacific-p0.png",
+      "bytes": 19425,
+      "sha256": "fe75b28ef0224785a866adff896495d703d21aece5cfc00ad45bc3444f91b337"
+    },
+    {
+      "path": "frontend/public/constructors/prost-0.png",
+      "bytes": 16138,
+      "sha256": "e6baf67755412d2a44e03edb3aeb816d04fd8f999c525e117e94c9ba27cb23ba"
+    },
+    {
+      "path": "frontend/public/constructors/prost.png",
+      "bytes": 19862,
+      "sha256": "9d8e4580ccd20a61e1948eb6c5901858c814830399c5815002277376b5883539"
+    },
+    {
+      "path": "frontend/public/constructors/racing_point-0.png",
+      "bytes": 12880,
+      "sha256": "400c4b4e86634b41f8744b339de7618b9d43b2f7dc0decc2a8f8e26f3eb2741f"
+    },
+    {
+      "path": "frontend/public/constructors/racing_point.png",
+      "bytes": 11189,
+      "sha256": "bf4f5252ae1207d41441a6f6bc6d196ea44f690727f91ee7a0fbbeb77d3ad7da"
+    },
+    {
+      "path": "frontend/public/constructors/red_bull-p0.png",
+      "bytes": 10777,
+      "sha256": "3e796112fc18577f27e0a951c32ba435653b8489341968d65d756dd17ba09605"
+    },
+    {
+      "path": "frontend/public/constructors/renault-p0.png",
+      "bytes": 14892,
+      "sha256": "3211755aa0ba6222de2cdb0fcab75f959a748ba11bb8614066bfe8bec23d2dd4"
+    },
+    {
+      "path": "frontend/public/constructors/renault-p1.png",
+      "bytes": 20091,
+      "sha256": "c8407478c857b02589ed4c46c0a01b536258f1aaad325a072903995baaa520c9"
+    },
+    {
+      "path": "frontend/public/constructors/renault-p2.png",
+      "bytes": 13222,
+      "sha256": "a082a7bd75803c6e0ba15616dcde88ceb7e1eaea07ef3670d3a295ca1b70181c"
+    },
+    {
+      "path": "frontend/public/constructors/rial-p0.png",
+      "bytes": 16039,
+      "sha256": "0807d27ce7f90fb03f501fb369938d85ac0e63f39fb4b6ef6f6cc738b7096337"
+    },
+    {
+      "path": "frontend/public/constructors/sauber-0.png",
+      "bytes": 13314,
+      "sha256": "d9b4d02ebb5a305ee6085c0814f653d18a991e3f48e73a61837e25a7000f79b6"
+    },
+    {
+      "path": "frontend/public/constructors/sauber-p0.png",
+      "bytes": 13381,
+      "sha256": "3717a9701cd1c4fe6e683483e12f262dc7696252d137c48e9a9cd54fbf2988c7"
+    },
+    {
+      "path": "frontend/public/constructors/sauber.jpg",
+      "bytes": 4509,
+      "sha256": "32b17e6e1e61f6364d74a72d682190ca6946d4ffd01febdf6babcb1e50b36077"
+    },
+    {
+      "path": "frontend/public/constructors/simtek.png",
+      "bytes": 29160,
+      "sha256": "8fd65db3e5a52bc530e88723ad482c975ed765609ed1bf2d9e72b2e500f6db76"
+    },
+    {
+      "path": "frontend/public/constructors/spyker-p0.png",
+      "bytes": 3090,
+      "sha256": "b63fa6743ec65b2eba0d59479b95957450d77e9158302a47b8080b9987c28e52"
+    },
+    {
+      "path": "frontend/public/constructors/stewart-0.png",
+      "bytes": 33675,
+      "sha256": "00ece78ad04cf270d8ed3b41bc4302b04facc195b5b208a8429d4ee0adc8ab9b"
+    },
+    {
+      "path": "frontend/public/constructors/super_aguri-p0.png",
+      "bytes": 14798,
+      "sha256": "591852d5e5475b099af451a15504e39a5cabf7aa4658011e37e131052cc780b8"
+    },
+    {
+      "path": "frontend/public/constructors/team_lotus-0.png",
+      "bytes": 15418,
+      "sha256": "fa8ce1e185701e913659a1ef0de342a0749693a7552f06b9aea823f85a7200f7"
+    },
+    {
+      "path": "frontend/public/constructors/theodore-p0.png",
+      "bytes": 22793,
+      "sha256": "a4971f4f14adf4c9eac2e42e65291e8a9ebabc9819b5ca3d970306bc2f1c24f1"
+    },
+    {
+      "path": "frontend/public/constructors/toleman-p0.png",
+      "bytes": 18671,
+      "sha256": "1eeb07810214418819776fe92f1bebab44f1d6eab913a06b169313059b97269c"
+    },
+    {
+      "path": "frontend/public/constructors/toyota-p0.png",
+      "bytes": 11759,
+      "sha256": "10428adc3bedb29e726c89ba76225dd3eed7bebacc7726291403a1c249dc16f3"
+    },
+    {
+      "path": "frontend/public/constructors/tyrrell-p0.png",
+      "bytes": 10152,
+      "sha256": "46b437fc2ac4ec493c75f59fe26f6f151f486615c80dcacc3440a5bcb65541d6"
+    },
+    {
+      "path": "frontend/public/constructors/virgin-p0.png",
+      "bytes": 14220,
+      "sha256": "02f707803c79bfb8df29bd1dd3158325848c32bd8a520e6c39aa4e77e06bbe71"
+    },
+    {
+      "path": "frontend/public/constructors/williams-0.png",
+      "bytes": 9934,
+      "sha256": "62e3dcee33e41ba022be56be5852dc75cbec4180c95bb8ed87f4917f21a275c8"
+    },
+    {
+      "path": "frontend/public/constructors/williams-p0.png",
+      "bytes": 15666,
+      "sha256": "b94b9b34a165fb43d380c46ddc03319bb931c9303613bcdc387b502cb5b8bea8"
+    },
+    {
+      "path": "frontend/public/constructors/williams-p1.png",
+      "bytes": 19378,
+      "sha256": "7aae6bb71a83b786ee9c820ce0ff95cbe6e530a06f6c0f32cefb4a24c8bf0daa"
+    },
+    {
+      "path": "frontend/public/constructors/williams.png",
+      "bytes": 8340,
+      "sha256": "eabe6fa4afa5f3d1f2c9fa4de708f2884917793ff2ee247f132317a577b22ba9"
+    },
+    {
+      "path": "frontend/public/credits.html",
+      "bytes": 50311,
+      "sha256": "4e3b6510eb63b90756192a7d8aed7df125af01820fc0ce95d56246da01028d60"
+    },
+    {
+      "path": "frontend/public/drivers/albers.jpg",
+      "bytes": 17118,
+      "sha256": "eaf3f1e1ba520e5b9539499cbda0c3bebdecabf63e2b799e202f0da134e296a1"
+    },
+    {
+      "path": "frontend/public/drivers/albon.jpg",
+      "bytes": 15872,
+      "sha256": "88d73ec50a47f6d92c9de6c70989f1d31e85706aa7268944f9db1f91fa49acbe"
+    },
+    {
+      "path": "frontend/public/drivers/alboreto.jpg",
+      "bytes": 13675,
+      "sha256": "71126ef5d293e13c886eb92f9256e607adfd51dcde4a06fcdb0b10e1723236aa"
+    },
+    {
+      "path": "frontend/public/drivers/alesi.jpg",
+      "bytes": 14309,
+      "sha256": "e3919509a9fd7fd912b4067e425f5123d3e8daf7df3fe16d44a72df57b17466f"
+    },
+    {
+      "path": "frontend/public/drivers/alguersuari.jpg",
+      "bytes": 13387,
+      "sha256": "c6642590bbeb2e3ea7ca1172db4140e0195676f3df913455c94312ff66b1500d"
+    },
+    {
+      "path": "frontend/public/drivers/alliot.jpg",
+      "bytes": 19273,
+      "sha256": "76ae20ce68d4a90f2ac205a05f3ba0030f38551c1fc75627d1d2fc5ea1477548"
+    },
+    {
+      "path": "frontend/public/drivers/alonso.jpg",
+      "bytes": 15015,
+      "sha256": "332f118856df0c0a936dbeda832a2d7426cf05221efa1d096481abcf84049e48"
+    },
+    {
+      "path": "frontend/public/drivers/ambrosio.jpg",
+      "bytes": 14815,
+      "sha256": "7148e6ebb28f6f18e9868a55a5fa6315eaeaf4352a93b558c58928a65e88b0b1"
+    },
+    {
+      "path": "frontend/public/drivers/andretti.jpg",
+      "bytes": 18146,
+      "sha256": "1d2b55e7cb4b864bb92cdbe96d9534208a303eaf6353f8a4e53ab244bafaa068"
+    },
+    {
+      "path": "frontend/public/drivers/angelis.jpg",
+      "bytes": 15068,
+      "sha256": "06e3d73cdbafda0dd4aecc51e1a0ee8f43f47287774f8025c11dd5bbca256092"
+    },
+    {
+      "path": "frontend/public/drivers/antonelli.jpg",
+      "bytes": 21424,
+      "sha256": "a181ed8ed5d756d6c0b74b5a14cc73b0d141d6d3daf8d2527c3ba13a5bf88c2e"
+    },
+    {
+      "path": "frontend/public/drivers/arnoux.jpg",
+      "bytes": 17569,
+      "sha256": "ebb56223b45bc783bfd7e40c2700361c4ee235d44cd5e82f829b39b08d3c3635"
+    },
+    {
+      "path": "frontend/public/drivers/badoer.jpg",
+      "bytes": 19938,
+      "sha256": "edf59752056b658a5861eac5d23e73ca4ca29adc7f734476f6a02befb7dcfb20"
+    },
+    {
+      "path": "frontend/public/drivers/baldi.jpg",
+      "bytes": 18299,
+      "sha256": "aff2d91ca3c3bdcc7fb440123187b5d4ca7651a35d30c73065df792cf421361c"
+    },
+    {
+      "path": "frontend/public/drivers/barrichello.jpg",
+      "bytes": 20115,
+      "sha256": "8a3d4ce40859d0d88b324ca459380d8fc3fc888a6b9466d7c89b1123d68b48b5"
+    },
+    {
+      "path": "frontend/public/drivers/bearman.jpg",
+      "bytes": 18851,
+      "sha256": "e5c9bd8126d550974d47cf8763cf5cbcd32b3e857ae0db712c2e42b5719b9f2c"
+    },
+    {
+      "path": "frontend/public/drivers/bellof.jpg",
+      "bytes": 16228,
+      "sha256": "221bdc5efda97958eac40e45a9a3b90f280342372cdd2652cf2e0757b234da9c"
+    },
+    {
+      "path": "frontend/public/drivers/beretta.jpg",
+      "bytes": 14189,
+      "sha256": "012f47992cdd3cdb97069bf58dc2b701bf87674c205d1906420358e2636324e0"
+    },
+    {
+      "path": "frontend/public/drivers/berger.jpg",
+      "bytes": 16072,
+      "sha256": "523ec43ca27c3efe5bab601f6088321ea42dc771f0e84a3e9e1c83bc4ffb941c"
+    },
+    {
+      "path": "frontend/public/drivers/bernoldi.jpg",
+      "bytes": 26770,
+      "sha256": "c5d8a7ccf1b93f153fb512f79997fe9f4dba757126d4af2fc434abfc59a11126"
+    },
+    {
+      "path": "frontend/public/drivers/blundell.jpg",
+      "bytes": 17482,
+      "sha256": "b37cb1da4bccb7b92ecc02efedc01f0f3c0e2ef395f36ee214be12736aa52c4c"
+    },
+    {
+      "path": "frontend/public/drivers/boesel.jpg",
+      "bytes": 14683,
+      "sha256": "5903590f1357136ae53072bec4f180549c6f2e9a20c70e94228559dbbd8caefa"
+    },
+    {
+      "path": "frontend/public/drivers/bortoleto.jpg",
+      "bytes": 17386,
+      "sha256": "3c936f751094bfe6bd9e05db102812aae99320c5a4ffc193282c3de1b1d34557"
+    },
+    {
+      "path": "frontend/public/drivers/bottas.jpg",
+      "bytes": 11265,
+      "sha256": "82fdada6cbdf5dd4c50405f10611bed82419a6e903294a2d8eabb6b493f2dd27"
+    },
+    {
+      "path": "frontend/public/drivers/boullion.jpg",
+      "bytes": 15397,
+      "sha256": "01aecf8516bfe4cfc33446b2bc436136d333ee62c680d42247063770fe56f898"
+    },
+    {
+      "path": "frontend/public/drivers/bourdais.jpg",
+      "bytes": 15813,
+      "sha256": "25d85bc1cf1bddbda7fb922b0c475cc328a921aae795feb824496c874fbcd916"
+    },
+    {
+      "path": "frontend/public/drivers/boutsen.jpg",
+      "bytes": 16174,
+      "sha256": "8e94f7f38117bb4d8386dc3a61ceb26aaff61e72a30f8b800c8bb7c7b013e142"
+    },
+    {
+      "path": "frontend/public/drivers/brabham.jpg",
+      "bytes": 13967,
+      "sha256": "e61fb77018f8ea265536c1e9d6087b767262203ff1f18428f8f6f60374a4dcf9"
+    },
+    {
+      "path": "frontend/public/drivers/brendon_hartley.jpg",
+      "bytes": 16649,
+      "sha256": "9a94058b14f0dd5f4e27757aa606a4bf5f08ac80985f4ce9a21c17b24dc62e29"
+    },
+    {
+      "path": "frontend/public/drivers/brundle.jpg",
+      "bytes": 12782,
+      "sha256": "a4dd5d7002e68e52ea56d30859bfa3c0797c1a9e5c658e8de60a77b63bbbb77c"
+    },
+    {
+      "path": "frontend/public/drivers/bruni.jpg",
+      "bytes": 19048,
+      "sha256": "06a9661fa58c3d9ab5cd21680a96c5c1e29480de176c968afe17b8e87981271d"
+    },
+    {
+      "path": "frontend/public/drivers/bruno_senna.jpg",
+      "bytes": 14087,
+      "sha256": "ab9e4861eda8a72de57ad7c6bf89da157986f8785361fee6a38eeb2f1fa0e2f4"
+    },
+    {
+      "path": "frontend/public/drivers/buemi.jpg",
+      "bytes": 21470,
+      "sha256": "6ec948f8a8cac68e13a6637e87f4d08d3498a6e95d2143be80953a53a7d86f21"
+    },
+    {
+      "path": "frontend/public/drivers/burti.jpg",
+      "bytes": 13372,
+      "sha256": "c1cb5d7d167885eb5d6b84e59d44ec87945b9a889ecc0bc872b1a68d8ac39768"
+    },
+    {
+      "path": "frontend/public/drivers/button.jpg",
+      "bytes": 20295,
+      "sha256": "d7b0701eb8ef8e433612f2fd7dd616341f6b96c04749e48723eb6167a9fbe41d"
+    },
+    {
+      "path": "frontend/public/drivers/capelli.jpg",
+      "bytes": 18260,
+      "sha256": "45956281a4409c2c56392fc0b535be205f8c6700a7b3e38c72036ad290de0e8a"
+    },
+    {
+      "path": "frontend/public/drivers/cecotto.jpg",
+      "bytes": 26482,
+      "sha256": "8c4872a97985b315e9e5ff65ce241224a7f5e768280339a8c2c2910692833d38"
+    },
+    {
+      "path": "frontend/public/drivers/cesaris.jpg",
+      "bytes": 21137,
+      "sha256": "9637cb3ad58526bab0f8d81397d0e9ca2904d38e916d22f9fd13a95f85600502"
+    },
+    {
+      "path": "frontend/public/drivers/chandhok.jpg",
+      "bytes": 20832,
+      "sha256": "d919b235d67844e0cdb090df08d42145f666648aed0304b3c4c92b9d1639a4fe"
+    },
+    {
+      "path": "frontend/public/drivers/cheever.jpg",
+      "bytes": 19574,
+      "sha256": "c4d905436e928fd57d8cb656fbc71d9656de0b6d50a2bf5b9feb69e5171fc5e9"
+    },
+    {
+      "path": "frontend/public/drivers/chilton.jpg",
+      "bytes": 15342,
+      "sha256": "d38f16a34c1545640edb668deefaab5d3ff3673f444267df6d5569f44b4f4633"
+    },
+    {
+      "path": "frontend/public/drivers/colapinto.jpg",
+      "bytes": 15091,
+      "sha256": "d3685decda84a829450f7c7144b395c15c131c181ca7135a35a78e12404e9d71"
+    },
+    {
+      "path": "frontend/public/drivers/comas.jpg",
+      "bytes": 21002,
+      "sha256": "9dc28bf096b021f5c9bfa26fcd33c53c6582a5518b4b441723faf58bf1a296ca"
+    },
+    {
+      "path": "frontend/public/drivers/coulthard.jpg",
+      "bytes": 15977,
+      "sha256": "adfc4816f4ea17f027efc0ceae6e71e3ce882a0b17f09cbd34517ba0883a2416"
+    },
+    {
+      "path": "frontend/public/drivers/dalmas.jpg",
+      "bytes": 16766,
+      "sha256": "38c54e38bb2590c07d78857027f2041156039098c512a7fc3e6c4f2e4c1ecb68"
+    },
+    {
+      "path": "frontend/public/drivers/daly.jpg",
+      "bytes": 18649,
+      "sha256": "f403b8557b1c02fa5a875c48f26eec2f7e07f5c1abab99e9d476b77517866068"
+    },
+    {
+      "path": "frontend/public/drivers/damon_hill.jpg",
+      "bytes": 13867,
+      "sha256": "abc7c491092aeeb4fa2fe03b9f97e39e741d60ca26ee0db8d4b7600e9c5e16d0"
+    },
+    {
+      "path": "frontend/public/drivers/danner.jpg",
+      "bytes": 22858,
+      "sha256": "2032ae68426b6e4936d256a9bd1a94bcd1a5571f14897699acaade8be72d1a8c"
+    },
+    {
+      "path": "frontend/public/drivers/davidson.jpg",
+      "bytes": 20470,
+      "sha256": "c00446ce3c42f11c65e3d1ef944509e0e3bce42dcf8d952fc29f400a5f08517f"
+    },
+    {
+      "path": "frontend/public/drivers/de_vries.jpg",
+      "bytes": 15254,
+      "sha256": "80e9c9f0031d74c3e41c933b0422d6b4cf7a1e46420f62abf1d981233b8b3ccd"
+    },
+    {
+      "path": "frontend/public/drivers/diniz.jpg",
+      "bytes": 15029,
+      "sha256": "3becb70f8005c79379872e43d164d148578874d0312b49666617bdc73586d8b9"
+    },
+    {
+      "path": "frontend/public/drivers/donnelly.jpg",
+      "bytes": 17252,
+      "sha256": "166df323207de6ba6b3811b18c1b719daacbc6826de4eb063c313292949810fb"
+    },
+    {
+      "path": "frontend/public/drivers/ericsson.jpg",
+      "bytes": 12697,
+      "sha256": "14e8897a782dfbb15b7db810a09551ace05738f173ebc84ddea05ea8e1716a54"
+    },
+    {
+      "path": "frontend/public/drivers/firman.jpg",
+      "bytes": 16114,
+      "sha256": "b6a3ea7f2f9ea5fce0a6ffdbaac6729c2a815def31b9cd856ec2f960691eb39a"
+    },
+    {
+      "path": "frontend/public/drivers/fisichella.jpg",
+      "bytes": 17670,
+      "sha256": "bd959e319b1cd343020c5f52cd8b13e21db1d545b650e60cbff0602cf2e03cd7"
+    },
+    {
+      "path": "frontend/public/drivers/fittipaldi.jpg",
+      "bytes": 19791,
+      "sha256": "aa250515f1767d20e4a5a771c6b02fdb252e114b9ec852b2baf84d108bcf12bb"
+    },
+    {
+      "path": "frontend/public/drivers/frentzen.jpg",
+      "bytes": 15886,
+      "sha256": "53b667447c4dc6d6d48c20ff3a3cb5e9afcd4a50a6f735f7c13824e2c0b7b2e0"
+    },
+    {
+      "path": "frontend/public/drivers/friesacher.jpg",
+      "bytes": 18828,
+      "sha256": "a11e1d70befb4f7ccc701593091801783b51252b8002fffdbd157b7c7fc5ce5f"
+    },
+    {
+      "path": "frontend/public/drivers/gachot.jpg",
+      "bytes": 20961,
+      "sha256": "5b77f883ec4802ff910af06b8a91af588d6981351c0cc45b1aa52dc1d35c7a59"
+    },
+    {
+      "path": "frontend/public/drivers/garde.jpg",
+      "bytes": 17102,
+      "sha256": "97dc54a65bd5036ceaf73b4b1ca4c80b981cfbfa1458ed19a75175c69d85a1be"
+    },
+    {
+      "path": "frontend/public/drivers/gasly.jpg",
+      "bytes": 18429,
+      "sha256": "6ecc52a8333f71acacb6306fe014a2fc6aa472391acae27098e369d366cf5d80"
+    },
+    {
+      "path": "frontend/public/drivers/gene.jpg",
+      "bytes": 12580,
+      "sha256": "bde37741ec0222ac8a11f715b8d2f84170b7fc82ddc8c16aa40fa22ad244c85f"
+    },
+    {
+      "path": "frontend/public/drivers/giacomelli.jpg",
+      "bytes": 16461,
+      "sha256": "7110c8ada7aa520b60a4181731cef18d00d514df62a1973f4b470894f69e6bc5"
+    },
+    {
+      "path": "frontend/public/drivers/gilles_villeneuve.jpg",
+      "bytes": 12939,
+      "sha256": "c7ca588d93fbacc075cd51c1d05f8e36fb85c2c181e0cb59e4305cde89f7cd89"
+    },
+    {
+      "path": "frontend/public/drivers/giovinazzi.jpg",
+      "bytes": 16776,
+      "sha256": "65fd6775fceff4107900c42c734c39737d8482b669087b9115ec1e70100b4a74"
+    },
+    {
+      "path": "frontend/public/drivers/glock.jpg",
+      "bytes": 16311,
+      "sha256": "6fee33a783cfa10fbf839e8f6cd206589616e3c85cd4454f29c2f1e5fdab7237"
+    },
+    {
+      "path": "frontend/public/drivers/grassi.jpg",
+      "bytes": 16284,
+      "sha256": "3895399d63920e8e5ec2f31703f3417ab44ce7adc2a903e44559f3dc4a72d1d0"
+    },
+    {
+      "path": "frontend/public/drivers/grosjean.jpg",
+      "bytes": 18848,
+      "sha256": "2e214d902ccb171849dc0e5bd084f41dc596fbe11d5bf3966e5bc26eb282bc75"
+    },
+    {
+      "path": "frontend/public/drivers/grouillard.jpg",
+      "bytes": 29315,
+      "sha256": "6c48a575486d4b75fde52edec4c7a9fc1315400b35e8bbc0b9f3b3889d7d4407"
+    },
+    {
+      "path": "frontend/public/drivers/guerrero.jpg",
+      "bytes": 12122,
+      "sha256": "4252f7886cfe98fc90c6c5bdf24daa1c5f24cb10668d362b9965175a02c2a293"
+    },
+    {
+      "path": "frontend/public/drivers/gutierrez.jpg",
+      "bytes": 18003,
+      "sha256": "9fb3d5cf282ea0d223b6f365a232a83f589d68ef4a0e34dce4361da23dc3d5e5"
+    },
+    {
+      "path": "frontend/public/drivers/hadjar.jpg",
+      "bytes": 17074,
+      "sha256": "5a675b927b208e5af9a0c511e6993573841f73785fb5b2ac419756fae0b80638"
+    },
+    {
+      "path": "frontend/public/drivers/hakkinen.jpg",
+      "bytes": 13460,
+      "sha256": "03faec1019505e728f6d266bede0f1bf1686c11f3f76abecf5223077a197763f"
+    },
+    {
+      "path": "frontend/public/drivers/hamilton.jpg",
+      "bytes": 13407,
+      "sha256": "f91a12ede7009b1ae25db22bdf6483d6de78ca728649fc1b62deaf1b306a52aa"
+    },
+    {
+      "path": "frontend/public/drivers/haryanto.jpg",
+      "bytes": 12956,
+      "sha256": "6455121aa2c2a71132ca40be57bb11d3ea14c1957461531a291b30b3c0bbe0b5"
+    },
+    {
+      "path": "frontend/public/drivers/heidfeld.jpg",
+      "bytes": 30644,
+      "sha256": "0ea97700af28145245ee8680c1f3fae7a39f7544b480394b43c24a43929e9772"
+    },
+    {
+      "path": "frontend/public/drivers/henton.jpg",
+      "bytes": 13914,
+      "sha256": "8fec986747befe25a04f7bbe8fc30e758e6ed0edecc47600bda6b1da58f52a0e"
+    },
+    {
+      "path": "frontend/public/drivers/herbert.jpg",
+      "bytes": 18747,
+      "sha256": "46c7a681961e5e679a06d9696d0ae32a262e8c85c417f9c6b45d3366a20d163e"
+    },
+    {
+      "path": "frontend/public/drivers/hulkenberg.jpg",
+      "bytes": 16283,
+      "sha256": "59e8d4d69cae7f2e6c9eaea6bd14529c287a5d350cbf99924d0dd504f497942c"
+    },
+    {
+      "path": "frontend/public/drivers/irvine.jpg",
+      "bytes": 17338,
+      "sha256": "92f5ae0d223d59f552c7f4ea7cfb5ac6b80cbb6565bf42c0a1602ff64d70139a"
+    },
+    {
+      "path": "frontend/public/drivers/jarier.jpg",
+      "bytes": 12597,
+      "sha256": "e0068465fc10c98d613ca5a8be126f6a248559902eea3f563c8a958885d7741c"
+    },
+    {
+      "path": "frontend/public/drivers/johansson.jpg",
+      "bytes": 17305,
+      "sha256": "5e4fa3c1a2acd4e930471729e88ce2303eb2ac562acc6ce809ab85e5c077c0b2"
+    },
+    {
+      "path": "frontend/public/drivers/jolyon_palmer.jpg",
+      "bytes": 12629,
+      "sha256": "5d339f3c93a434ae6e91fae8bafcd0d627bdf40ca46e622aaa54dba1936b10a5"
+    },
+    {
+      "path": "frontend/public/drivers/jones.jpg",
+      "bytes": 19202,
+      "sha256": "5c9f994b3ec9dff5a2be878c028dfef35b483c671ab37fb27eb05f8d03405108"
+    },
+    {
+      "path": "frontend/public/drivers/jules_bianchi.jpg",
+      "bytes": 17949,
+      "sha256": "9038ceb3d0d8c996ba732028c8b4fd0ac72531965f66256012ad903efdca6f36"
+    },
+    {
+      "path": "frontend/public/drivers/karthikeyan.jpg",
+      "bytes": 15307,
+      "sha256": "fb4a2ce93e6b5a659f2f7f950e94b89a2f850ad38a31c3efb8c60a7e2edfe9d8"
+    },
+    {
+      "path": "frontend/public/drivers/katayama.jpg",
+      "bytes": 17198,
+      "sha256": "e79941e04d2fc471a56760644d93cddb961297b56f888e8b605605278db31f39"
+    },
+    {
+      "path": "frontend/public/drivers/keke_rosberg.jpg",
+      "bytes": 20153,
+      "sha256": "b01c08c84d6883b4ad70838fd7d0a7f5816f1c1d14888c75cd1afedb7a5b14be"
+    },
+    {
+      "path": "frontend/public/drivers/kevin_magnussen.jpg",
+      "bytes": 15269,
+      "sha256": "ec5b97bd00861241de3c23617f6c5205d5c32a116e09c17c2e868524e0c4df3a"
+    },
+    {
+      "path": "frontend/public/drivers/klien.jpg",
+      "bytes": 19608,
+      "sha256": "e61357082c4593f400ba398c3e28ef981bc068bf2505ce79b98160c88bfcb6c8"
+    },
+    {
+      "path": "frontend/public/drivers/kobayashi.jpg",
+      "bytes": 18151,
+      "sha256": "677446643f2fadb270bb83a1cc1eaa9030a0472bd328f9c106e105ff899f8af4"
+    },
+    {
+      "path": "frontend/public/drivers/kovalainen.jpg",
+      "bytes": 17797,
+      "sha256": "35cabccbd697c1ed548df0051d6ccc93bc9bd24ab8ec36be1a499f0e465f2299"
+    },
+    {
+      "path": "frontend/public/drivers/kubica.jpg",
+      "bytes": 19952,
+      "sha256": "6df99e7fe93efc65750f41182f9fb7d3c5373be6273873de2b7c8676ab4ea937"
+    },
+    {
+      "path": "frontend/public/drivers/kvyat.jpg",
+      "bytes": 13384,
+      "sha256": "bc38193f52f433c11f31a742a8bf9e0c73a859f36327b67efa29539c7402ac17"
+    },
+    {
+      "path": "frontend/public/drivers/laffite.jpg",
+      "bytes": 18718,
+      "sha256": "52151118e26f053f4f2a07e423b58fa48edd08fdf7043ea7985151e04d6538b0"
+    },
+    {
+      "path": "frontend/public/drivers/lamy.jpg",
+      "bytes": 14458,
+      "sha256": "a83c263699c075f72395c3bbe47501b3076a1d3d96e92bc774a81f9ad7d23c74"
+    },
+    {
+      "path": "frontend/public/drivers/larini.jpg",
+      "bytes": 17726,
+      "sha256": "54562c8641c8e853e19a2c7721ee06b6ef3545d800927fb1dd7b4007ea616795"
+    },
+    {
+      "path": "frontend/public/drivers/latifi.jpg",
+      "bytes": 15617,
+      "sha256": "4d3cd344a255c749f2f2636f8b561b452065ffcd0f15ab50d3d3f286acca0070"
+    },
+    {
+      "path": "frontend/public/drivers/lauda.jpg",
+      "bytes": 15797,
+      "sha256": "033192948be538693a662fc26d07326c7b5918b54c77ee606954adec5f9ff886"
+    },
+    {
+      "path": "frontend/public/drivers/lawson.jpg",
+      "bytes": 21674,
+      "sha256": "8f1a7955781200e21787dd6a0c008c0d83f898de80acc2e2a53d37a4baf617d2"
+    },
+    {
+      "path": "frontend/public/drivers/leclerc.jpg",
+      "bytes": 15548,
+      "sha256": "78a6774ad52523680f58a1a137b661bb55c66be1e5d2cd8891d4bd46898dd19c"
+    },
+    {
+      "path": "frontend/public/drivers/lehto.jpg",
+      "bytes": 23374,
+      "sha256": "003112dc2309ae961927e56c9ad89661c4aaafa5653ca2a803108ed783b84054"
+    },
+    {
+      "path": "frontend/public/drivers/liuzzi.jpg",
+      "bytes": 14909,
+      "sha256": "ba24a0834ee4f4aea52bc8894037574f4e563fd1608b71d005f344b1ec3e8c40"
+    },
+    {
+      "path": "frontend/public/drivers/magnussen.jpg",
+      "bytes": 16886,
+      "sha256": "f049261202dfe6b28abf004518bb7d5152347689f892becd8c71ad175dbde982"
+    },
+    {
+      "path": "frontend/public/drivers/maldonado.jpg",
+      "bytes": 20732,
+      "sha256": "5fb01fb0ffd7913301209ff79cd683a76df0b2c7777d7247b56aee4eb5c155a1"
+    },
+    {
+      "path": "frontend/public/drivers/mansell.jpg",
+      "bytes": 15012,
+      "sha256": "9fad3eac6faf3a031d8406e06f166fd1544c76b6a9e42d8a18f83f4f34d1c7bf"
+    },
+    {
+      "path": "frontend/public/drivers/mario_andretti.jpg",
+      "bytes": 16790,
+      "sha256": "382ea2f59ea322b62d13cf4b942814870523860e37035c5af1678a3a1d09d22c"
+    },
+    {
+      "path": "frontend/public/drivers/marques.jpg",
+      "bytes": 13253,
+      "sha256": "0dcdc8f9b882df91ed1590b734dfcbeee879d07120f7eebde2803272dbad1f40"
+    },
+    {
+      "path": "frontend/public/drivers/martini.jpg",
+      "bytes": 19046,
+      "sha256": "44ca78be85167806d7fad3df49320719c31e311ee0269d194b4132a636c6253e"
+    },
+    {
+      "path": "frontend/public/drivers/mass.jpg",
+      "bytes": 18149,
+      "sha256": "b0fd6313a7955ebb377010281d60fb40752300007aa006add46172c195b3a855"
+    },
+    {
+      "path": "frontend/public/drivers/massa.jpg",
+      "bytes": 17222,
+      "sha256": "8909f9ad8101c0341273270fd61f2611d60c8ece1a88d61fe0620f77dedd7a10"
+    },
+    {
+      "path": "frontend/public/drivers/matta.jpg",
+      "bytes": 15312,
+      "sha256": "423c797e3140efe4bd5efeca066f43efe43582281b6eacbf6f1f183304b63d6b"
+    },
+    {
+      "path": "frontend/public/drivers/max_verstappen.jpg",
+      "bytes": 19886,
+      "sha256": "f169dcc5c88040c81599eaa7d00d084ee2c868ea364ee2eab91da6b2248fc318"
+    },
+    {
+      "path": "frontend/public/drivers/mazepin.jpg",
+      "bytes": 10149,
+      "sha256": "b6850f44086cbefe50f4d1091ad615e38081202dae707b536733b0125d6d0417"
+    },
+    {
+      "path": "frontend/public/drivers/mazzacane.jpg",
+      "bytes": 13627,
+      "sha256": "674c1289d7aa0f50110553a16ea94a19befe0a052429e5bb29c6d04745e2778a"
+    },
+    {
+      "path": "frontend/public/drivers/mcnish.jpg",
+      "bytes": 15185,
+      "sha256": "cded7b7821a87cb440256b6125e636c4520111575b5d6259609715bc3216d171"
+    },
+    {
+      "path": "frontend/public/drivers/merhi.jpg",
+      "bytes": 18637,
+      "sha256": "833d522166c47593c9fe493f9a13bd95366cc0bbfab7cb1026f8a8504f4fc109"
+    },
+    {
+      "path": "frontend/public/drivers/michael_schumacher.jpg",
+      "bytes": 11324,
+      "sha256": "677d20d6d24e20f8cd88cf6b64de5348a8514a830fce3cc04979a7bc9f1b0ba4"
+    },
+    {
+      "path": "frontend/public/drivers/mick_schumacher.jpg",
+      "bytes": 14177,
+      "sha256": "f7a220f36758a4234727936ec5119300dfb5626339a75903597e25bb352537a3"
+    },
+    {
+      "path": "frontend/public/drivers/monteiro.jpg",
+      "bytes": 15073,
+      "sha256": "5b10c299724dcc4c43bf7ca610c31b6c6f2d29c646d6e7a9b4d6156eaf594ddf"
+    },
+    {
+      "path": "frontend/public/drivers/montermini.jpg",
+      "bytes": 16079,
+      "sha256": "8fd6116042c55685891d960130fe05bb48924adc46a322effd57fd4b74adf14d"
+    },
+    {
+      "path": "frontend/public/drivers/montoya.jpg",
+      "bytes": 18827,
+      "sha256": "2f95e6afc260ccb1668da33af6434f3920bc49c1a06f2a542369322450e0b76e"
+    },
+    {
+      "path": "frontend/public/drivers/morbidelli.jpg",
+      "bytes": 15944,
+      "sha256": "cf7218648786cb965ca899e1d78685940ae382167d9e11bd43f4f5ff45307e36"
+    },
+    {
+      "path": "frontend/public/drivers/moreno.jpg",
+      "bytes": 19833,
+      "sha256": "c812ed5f189ed108f107d3d761e952b2d763be0df51eee690ec040a201a50861"
+    },
+    {
+      "path": "frontend/public/drivers/nakajima.jpg",
+      "bytes": 15418,
+      "sha256": "7fe87ac8e348450f159527e3846b12194c2772abbe4b14551c85249c39891ae8"
+    },
+    {
+      "path": "frontend/public/drivers/nakano.jpg",
+      "bytes": 11176,
+      "sha256": "b269c68d23a4ca6dcbb337660eb5afed166c4f2bde0df71cb990053998919b55"
+    },
+    {
+      "path": "frontend/public/drivers/nasr.jpg",
+      "bytes": 11455,
+      "sha256": "3a980cedba82794f27a35c707c118b62656c2e3429c9982daf0cbe00021fc382"
+    },
+    {
+      "path": "frontend/public/drivers/norris.jpg",
+      "bytes": 20610,
+      "sha256": "35ad8510d344ea3c1cb41f69abcfa0107ae141ebd1ddce144692f61c8006df39"
+    },
+    {
+      "path": "frontend/public/drivers/ocon.jpg",
+      "bytes": 18200,
+      "sha256": "8467737c5f635658872a328019ad9d39ac6d1f9ccaaf48f5a67ebde7047634c5"
+    },
+    {
+      "path": "frontend/public/drivers/palmer.jpg",
+      "bytes": 14342,
+      "sha256": "03075794cce31804855cb750204bb2cfff37c1a465a5642da50cbcd7c38634d9"
+    },
+    {
+      "path": "frontend/public/drivers/panis.jpg",
+      "bytes": 15966,
+      "sha256": "dc208323b09bd0625ec3652bb9cf562bdfa4f4a7ad0baa4fe957ddeee3eac893"
+    },
+    {
+      "path": "frontend/public/drivers/pantano.jpg",
+      "bytes": 16270,
+      "sha256": "214826b68e2bd00bb1c9bc4440a51e76ffab7dde60d80cf1cf03320bec705e2f"
+    },
+    {
+      "path": "frontend/public/drivers/patrese.jpg",
+      "bytes": 22610,
+      "sha256": "3abf0401f22fd113ab32354372ffc472339caad5f39e880170d4cb5d321c4cf8"
+    },
+    {
+      "path": "frontend/public/drivers/perez.jpg",
+      "bytes": 18056,
+      "sha256": "a9f03217d4ac14a111c39919fb41fed12cb7cdd5ce8614552858ecbf12e14411"
+    },
+    {
+      "path": "frontend/public/drivers/petrov.jpg",
+      "bytes": 16401,
+      "sha256": "560624072ee26426659456ed1b85e7b415e5bc9421976afdf7b5ab0c7ee29062"
+    },
+    {
+      "path": "frontend/public/drivers/piastri.jpg",
+      "bytes": 18208,
+      "sha256": "bf27195690d4221e73625a5af3696030b039ec54a592649946c976a9af0f998a"
+    },
+    {
+      "path": "frontend/public/drivers/pic.jpg",
+      "bytes": 16051,
+      "sha256": "3e222516869e7ea16e87a3a873e1ad39126cbc187e47cd0114384dd42c5b8b5d"
+    },
+    {
+      "path": "frontend/public/drivers/piquet.jpg",
+      "bytes": 16571,
+      "sha256": "532959e5bbcbf81fbac235710bed8dddcd849e92082409dcef7eb49dae881c09"
+    },
+    {
+      "path": "frontend/public/drivers/piquet_jr.jpg",
+      "bytes": 15770,
+      "sha256": "28764ec5628460327c59ac6220abd4d97db31b9da19b47c86429212eaf6572a3"
+    },
+    {
+      "path": "frontend/public/drivers/pironi.jpg",
+      "bytes": 23016,
+      "sha256": "d7cd8a206b4adec72210a8cd92f6c12dad5c6e94412e92120dcf233a8b65eff6"
+    },
+    {
+      "path": "frontend/public/drivers/pirro.jpg",
+      "bytes": 13959,
+      "sha256": "967d24b8030efe960b366f027bccdc2a6ccb43b076fd3154442fc59abfea85de"
+    },
+    {
+      "path": "frontend/public/drivers/pizzonia.jpg",
+      "bytes": 15029,
+      "sha256": "4c95313ab6270f751c2ea78379f56ebb65245290a0503b9d14bdb8fa9d225e3f"
+    },
+    {
+      "path": "frontend/public/drivers/prost.jpg",
+      "bytes": 16425,
+      "sha256": "28245cb3c995108782a33d4dfcaab891eafa98f82b558940247203683d955aaf"
+    },
+    {
+      "path": "frontend/public/drivers/raikkonen.jpg",
+      "bytes": 18257,
+      "sha256": "e982d3ffa1e29ec7d99ce3b86fc67848a6177fc9e63da2e7e591f0c81d95014f"
+    },
+    {
+      "path": "frontend/public/drivers/ralf_schumacher.jpg",
+      "bytes": 12285,
+      "sha256": "52749c99c2c3873ae425900fae84298d9eb7926e9d1ef267b96fa8d2b265cb60"
+    },
+    {
+      "path": "frontend/public/drivers/rebaque.jpg",
+      "bytes": 19816,
+      "sha256": "793c12cdc44ce0d7974b3990320b5a36929a0bac3fdde058b15fdac22b3903cb"
+    },
+    {
+      "path": "frontend/public/drivers/resta.jpg",
+      "bytes": 13976,
+      "sha256": "3efe689d0dcd8508a1c2096eca8915eae613010477e0d45ebd81e92629cb54c9"
+    },
+    {
+      "path": "frontend/public/drivers/reutemann.jpg",
+      "bytes": 21286,
+      "sha256": "cb02fe3aee641afc2502575f69020178e00e4fc28c395edd55ac49a307017bbc"
+    },
+    {
+      "path": "frontend/public/drivers/ricciardo.jpg",
+      "bytes": 16354,
+      "sha256": "1c543c3888b5e1620867bdea4a9d4c92d35dd0c33358709c90fb0fa47816fa0a"
+    },
+    {
+      "path": "frontend/public/drivers/rosa.jpg",
+      "bytes": 13712,
+      "sha256": "7c601d1a06592f12ed609591a53ded4c9090e6b4750211dc6b0405e23bbcae00"
+    },
+    {
+      "path": "frontend/public/drivers/rosberg.jpg",
+      "bytes": 15139,
+      "sha256": "8c6d079cb0410b6689e4eafe1a4933ad92a56f5aa92544a98098411b8b9b48f4"
+    },
+    {
+      "path": "frontend/public/drivers/rosset.jpg",
+      "bytes": 16429,
+      "sha256": "608ad999dc93e944a3bb6b5c9fd97cea1795515a0ea041c24007bf4b14291ec0"
+    },
+    {
+      "path": "frontend/public/drivers/rothengatter.jpg",
+      "bytes": 16616,
+      "sha256": "d614016ee8bbbfca0ef04a734dd7c97a8e2723829fb2d196b0090a80980af4b4"
+    },
+    {
+      "path": "frontend/public/drivers/russell.jpg",
+      "bytes": 14646,
+      "sha256": "033e1609c22f8864ca0c879ffd64aacc5cc1d4912542677b618e81eb65cdb009"
+    },
+    {
+      "path": "frontend/public/drivers/sainz.jpg",
+      "bytes": 13069,
+      "sha256": "af0a597cd3a3e74049b4dfca9c880df3131191690238fe7d7fd03838900b91c9"
+    },
+    {
+      "path": "frontend/public/drivers/salazar.jpg",
+      "bytes": 18943,
+      "sha256": "ed6a1d4453fe77855c6ce3c7d3e6c18b37d09b71d989f2b5484ec00c63b5590f"
+    },
+    {
+      "path": "frontend/public/drivers/salo.jpg",
+      "bytes": 16925,
+      "sha256": "1473f26c8ce11eec9b791f403419b8f661c01e340bc03d5821d88815ca80e4bd"
+    },
+    {
+      "path": "frontend/public/drivers/sargeant.jpg",
+      "bytes": 21590,
+      "sha256": "1f0905bf6ebfe90c0a269c21253039e6cd9e4b1e6947feff2e2f65858287bdd6"
+    },
+    {
+      "path": "frontend/public/drivers/sato.jpg",
+      "bytes": 16197,
+      "sha256": "326df5d96b3f4f9ee88d00de98981e5fe903c60ea44bc0e1da1bb28ef5fb6e38"
+    },
+    {
+      "path": "frontend/public/drivers/satoru_nakajima.jpg",
+      "bytes": 15040,
+      "sha256": "8b32d5ff49470f33296048e9581dc41661b9badc62878b545d7344b7caf16cca"
+    },
+    {
+      "path": "frontend/public/drivers/senna.jpg",
+      "bytes": 15685,
+      "sha256": "c8385258380947f1c585a11cbfbec11ed01b59690bb203e6064172109ddf9cf7"
+    },
+    {
+      "path": "frontend/public/drivers/serra.jpg",
+      "bytes": 17473,
+      "sha256": "618a4173b67a027f8233f456db2ff5171714e3f885ae18471d8723e6e360ea48"
+    },
+    {
+      "path": "frontend/public/drivers/sirotkin.jpg",
+      "bytes": 12964,
+      "sha256": "2002ad6c0fcae61ffe0e32f5b8b1123926741c3e75be05bae306b927b67d8542"
+    },
+    {
+      "path": "frontend/public/drivers/speed.jpg",
+      "bytes": 17357,
+      "sha256": "bdabf3b271de5a9831e55e53561e327948cc0a3c7a49ccaef8d98d04907f34ab"
+    },
+    {
+      "path": "frontend/public/drivers/stevens.jpg",
+      "bytes": 17499,
+      "sha256": "4eeba49f2e84c3a1055eedc2fe5255778f4527a888dfbd91341d7089f3d630b8"
+    },
+    {
+      "path": "frontend/public/drivers/streiff.jpg",
+      "bytes": 14144,
+      "sha256": "d20c640e580c70cbcecc51c8ad98dad1e62bcc01ff45a2ef706e456336b9dc43"
+    },
+    {
+      "path": "frontend/public/drivers/stroll.jpg",
+      "bytes": 16220,
+      "sha256": "7e70fc0a146bb16dafe01dd743c48edf58acdf7f4a56ea89a45e8ca76c81d19f"
+    },
+    {
+      "path": "frontend/public/drivers/sullivan.jpg",
+      "bytes": 16929,
+      "sha256": "b6fd4bcab81006a73f76279afb956d42d9f6727dd762a9d130ce393ea974a69e"
+    },
+    {
+      "path": "frontend/public/drivers/surer.jpg",
+      "bytes": 18699,
+      "sha256": "4a574a0d7483784adf50387caf99e536fea0e8a8c0b35a6e4172fd9e6ea44866"
+    },
+    {
+      "path": "frontend/public/drivers/sutil.jpg",
+      "bytes": 16577,
+      "sha256": "b1c2655aad1490ac53dc9b019419c2587ebf11c872746720452056d97006ae26"
+    },
+    {
+      "path": "frontend/public/drivers/suzuki.jpg",
+      "bytes": 16755,
+      "sha256": "ef2e787c06ea0b793f1b1c58bf9a256fdb92ccefedf9493048703f4dc2073dd8"
+    },
+    {
+      "path": "frontend/public/drivers/takagi.jpg",
+      "bytes": 17666,
+      "sha256": "3ba23a84583b3cbbb2e9d95c92cf1b4c30a8893994cb3954f9b510439b4a6512"
+    },
+    {
+      "path": "frontend/public/drivers/tambay.jpg",
+      "bytes": 19288,
+      "sha256": "23314fd2548afbcb0de7bf1b3032b49649755758754648e9d20e4e98303a87b6"
+    },
+    {
+      "path": "frontend/public/drivers/tarquini.jpg",
+      "bytes": 14909,
+      "sha256": "6eb5f625e14de23cc63d35622ccc8e857a4de6b1024d5695f2181ee181fe0058"
+    },
+    {
+      "path": "frontend/public/drivers/trulli.jpg",
+      "bytes": 21837,
+      "sha256": "3c78bbf72d546cbb4869b134181b73ec8dbf1ae3d1ce5e47c173eee99868aa21"
+    },
+    {
+      "path": "frontend/public/drivers/tsunoda.jpg",
+      "bytes": 14475,
+      "sha256": "a52cf90b34273503a5ae314071c288c04c0b4f655769f0042e87a1c7fc68276a"
+    },
+    {
+      "path": "frontend/public/drivers/tuero.jpg",
+      "bytes": 17730,
+      "sha256": "7b3557f358350bdf087c645bcbffee72652439e55573f5e50d01ef209645d401"
+    },
+    {
+      "path": "frontend/public/drivers/vandoorne.jpg",
+      "bytes": 17352,
+      "sha256": "d4e3244f312f4862e7e9b9238197652a865c99e9c9f9bfc95c5e452b68a9d676"
+    },
+    {
+      "path": "frontend/public/drivers/vergne.jpg",
+      "bytes": 16970,
+      "sha256": "bdbdd907c48fb986d7cdabb9d99ccff12c3c1548e7597f1af99ad7437070364a"
+    },
+    {
+      "path": "frontend/public/drivers/verstappen.jpg",
+      "bytes": 17382,
+      "sha256": "52a8fb2b14e511d134422826ce1321bf50a473ae21716f36b90cf08f848366b2"
+    },
+    {
+      "path": "frontend/public/drivers/vettel.jpg",
+      "bytes": 19604,
+      "sha256": "edde3ac337cba96ae56303f29513a630d7ad1a01d3ff5e581320bfb9ad0beea1"
+    },
+    {
+      "path": "frontend/public/drivers/villeneuve.jpg",
+      "bytes": 14654,
+      "sha256": "4bf976b19cb2662b196bfd0d155448ef1a7a9e1744124eef2153809741f2764f"
+    },
+    {
+      "path": "frontend/public/drivers/warwick.jpg",
+      "bytes": 23703,
+      "sha256": "27197575854b77e3309098bf0d0091ec9724039615a6d10be86cd288fbea3ee9"
+    },
+    {
+      "path": "frontend/public/drivers/watson.jpg",
+      "bytes": 17042,
+      "sha256": "3b00da90abbb4f800940c76fd1fb70adc6776b557f6cc8fb22c052ff69df8a29"
+    },
+    {
+      "path": "frontend/public/drivers/webber.jpg",
+      "bytes": 15383,
+      "sha256": "dee7805d2d493dffc6964693ae35902402cdbc6fd03c6b960c9f3f1553423286"
+    },
+    {
+      "path": "frontend/public/drivers/wehrlein.jpg",
+      "bytes": 14830,
+      "sha256": "d75a050937284ca6df470987643650808bee03deec56b7cc785f341f31aee427"
+    },
+    {
+      "path": "frontend/public/drivers/wendlinger.jpg",
+      "bytes": 20276,
+      "sha256": "021d63f8252bd7b32ffcfa9e6eb3e39d014387f4673a612c4a7d5460ebad8786"
+    },
+    {
+      "path": "frontend/public/drivers/wilson.jpg",
+      "bytes": 18401,
+      "sha256": "3b53f63844b90968c69dead69b2a881a4cbbe4d400d5e1d513df1512e9729cf4"
+    },
+    {
+      "path": "frontend/public/drivers/wurz.jpg",
+      "bytes": 13502,
+      "sha256": "de4a903ac671103f23278c6e20e8127ddcf8a4794cf72edce88eceefdfedbe13"
+    },
+    {
+      "path": "frontend/public/drivers/yamamoto.jpg",
+      "bytes": 10188,
+      "sha256": "af04b9ad55bfbade350989c6a3c0510a14d4cb163b91ee0dd8c83ed5dcf7105e"
+    },
+    {
+      "path": "frontend/public/drivers/yoong.jpg",
+      "bytes": 12567,
+      "sha256": "36873202fec673c0e8ca6b79d80ecd0bcfe9e693116fcf7831201d4890cf6748"
+    },
+    {
+      "path": "frontend/public/drivers/zanardi.jpg",
+      "bytes": 14846,
+      "sha256": "96c1e8403d2a528d5527b7ef5150d7d347e0612313e340077cc4031c6d620533"
+    },
+    {
+      "path": "frontend/public/drivers/zhou.jpg",
+      "bytes": 15104,
+      "sha256": "6618ea89faf2c0d215adf0c20d4d6756b3a83f20b603908b85e3c37fdc1e88b1"
+    },
+    {
+      "path": "frontend/public/drivers/zonta.jpg",
+      "bytes": 18097,
+      "sha256": "6d0e6f25c91f3573b01dd7cf3669b58ceb860890d16fe434d3056d366607cde7"
+    },
+    {
+      "path": "frontend/public/models/ATTRIBUTION.html",
+      "bytes": 2977,
+      "sha256": "57cc40eddf81effb40073d29c09edd5ac0aa6d6c3bbe2c0ca5d822733bf946d0"
+    },
+    {
+      "path": "frontend/public/models/CC-BY-4.0.txt",
+      "bytes": 19053,
+      "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973"
+    },
+    {
+      "path": "frontend/public/models/formula-2022-source.json",
+      "bytes": 10672,
+      "sha256": "b527c3ba163393ddfabd64eda663e8e69e11c2e6cd9b67c1a9bb65212c541059"
+    },
+    {
+      "path": "frontend/public/models/formula-2022.glb",
+      "bytes": 446632,
+      "sha256": "d2c1885aa5da1151abbddc486be5126c99733d2f5c6981d340a982816942a6ab"
+    },
+    {
+      "path": "frontend/public/models/historical/15173.glb",
+      "bytes": 386912,
+      "sha256": "9b5f65710ccde8bb35257c9c9a5d374ceab5855a7c1a991b1e49ee9aaa78890d"
+    },
+    {
+      "path": "frontend/public/models/historical/15173.webp",
+      "bytes": 46302,
+      "sha256": "d711741ed62b237517a23d45124910262256f2f0ece5d03f35b93620dd334d24"
+    },
+    {
+      "path": "frontend/public/models/historical/15176.glb",
+      "bytes": 386940,
+      "sha256": "affd81de29e3dc5fecb47c1bcc5bc40b14022918878d7144e661b54ee4f3e4a0"
+    },
+    {
+      "path": "frontend/public/models/historical/15176.webp",
+      "bytes": 46234,
+      "sha256": "3de1f7ad6ac3838fdbf8187a226c91951e7dfa2f44e7de07c7903e6416d56515"
+    },
+    {
+      "path": "frontend/public/models/historical/15177.glb",
+      "bytes": 375312,
+      "sha256": "23fa71d68d9a104a30124e7d83605c0557ad6a0efbd2fbd6e84124eb98695692"
+    },
+    {
+      "path": "frontend/public/models/historical/15177.webp",
+      "bytes": 44474,
+      "sha256": "b66b4be296c5b7c49a516cc06f021fb2cb9cad85b17baf3bcb9f09e5f1e5b6f9"
+    },
+    {
+      "path": "frontend/public/models/historical/18685-source.json",
+      "bytes": 5600,
+      "sha256": "3b28111db67cc804c36808aaafbe67c2c972c99754f25e603c996b8d5cec9bc4"
+    },
+    {
+      "path": "frontend/public/models/historical/18685.glb",
+      "bytes": 357144,
+      "sha256": "a4bad78982ab13d752e0988282cc5066a710993cfa0cc869e3bb56c03a89838c"
+    },
+    {
+      "path": "frontend/public/models/historical/18685.webp",
+      "bytes": 46966,
+      "sha256": "2ce710db134673717abc7e095c686fa50a46a072755bb33e733125e83be7f1b7"
+    },
+    {
+      "path": "frontend/public/models/historical/CC0-1.0.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "frontend/public/models/historical/README.md",
+      "bytes": 3793,
+      "sha256": "a07fa2a9615fa65125291abcc02852cec5c270016e58c39548b1a595537d8279"
+    },
+    {
+      "path": "frontend/public/models/historical/checksums.json",
+      "bytes": 909,
+      "sha256": "7622a9dacd9745f4cfc00608685517b481b82a695e53e3decda20f1da6f71d3e"
+    },
+    {
+      "path": "frontend/public/models/historical/source-manifest.json",
+      "bytes": 15799,
+      "sha256": "c9883882261a6dd0bd80e24864fa08df644d27421f7fe3a65b98a0efc9631cbc"
+    },
+    {
+      "path": "models/algorithms/adaboost.joblib",
+      "bytes": 74821,
+      "sha256": "5c2d10c0c25184fb47a8ed2320bfe3d8961d35d1f1f86fa752ed9441a41f8b0c"
+    },
+    {
+      "path": "models/algorithms/bagging.joblib",
+      "bytes": 1249146,
+      "sha256": "84e3af2a3b10ae27e12d332aab9d3f008e1cf8f42814f36256e8164d5cfd55e7"
+    },
+    {
+      "path": "models/algorithms/decision_tree.joblib",
+      "bytes": 5757,
+      "sha256": "b6c0e9061e57d96b0ef7ee80d43b87149698776bc14de07d238114a0ff651e23"
+    },
+    {
+      "path": "models/algorithms/decision_tree_regression.joblib",
+      "bytes": 9914,
+      "sha256": "a6acb53dc7351d1d132302559c9a59eef9590f2e66125ce99c50ac3897b8a2a6"
+    },
+    {
+      "path": "models/algorithms/density.joblib",
+      "bytes": 44679,
+      "sha256": "3f70256510648bea7271afbdcebb64599868e86dc134b5ab7f696c3c18208f42"
+    },
+    {
+      "path": "models/algorithms/gradient_boosting.joblib",
+      "bytes": 125603,
+      "sha256": "c8e78572d190c7a8661da176d27e32d1a88d2befe59208871aba8f0f67737123"
+    },
+    {
+      "path": "models/algorithms/gradient_boosting_regression.joblib",
+      "bytes": 93058,
+      "sha256": "a794e57327fc62365e8e963f7c81b01f035668b08cc612c7d4cc60fc5d7df0e1"
+    },
+    {
+      "path": "models/algorithms/grid_baseline.joblib",
+      "bytes": 1456,
+      "sha256": "5e11db51cf772b2ad0d5f80c8dd53b54d0d7ec7083a8addfa4c6e99f39e232c3"
+    },
+    {
+      "path": "models/algorithms/knn.joblib",
+      "bytes": 1533806,
+      "sha256": "0dfed5a74d09c971ef475f40cc46c00b448a30b84f7ff42563edd790d940b6a3"
+    },
+    {
+      "path": "models/algorithms/lasso.joblib",
+      "bytes": 3392,
+      "sha256": "b477989987e53a4431fe34d3fe9a3a3e4b98947620c5c3522b2d7b5bced4a4f1"
+    },
+    {
+      "path": "models/algorithms/linear_regression.joblib",
+      "bytes": 3689,
+      "sha256": "1f14ed0bc8d2aa9b4abb73054fd4d256463dfcb1ceaf4e6ea4b8ad04fcbd65e1"
+    },
+    {
+      "path": "models/algorithms/logistic_regression.joblib",
+      "bytes": 3423,
+      "sha256": "51a3dff53936b24f1e586f41dcf2ae08e7d32302d30c0e5903066eb4847b96c7"
+    },
+    {
+      "path": "models/algorithms/metadata.json",
+      "bytes": 35315,
+      "sha256": "d697aa4f1c03e75fe544b03d03fd98acc8ef0ecb32cee66aaaacb3ceab54feba"
+    },
+    {
+      "path": "models/algorithms/naive_bayes.joblib",
+      "bytes": 4401,
+      "sha256": "eb241cbde8949aec3e6d52d616c70823d27ab9605859a918f4bcc4037230d962"
+    },
+    {
+      "path": "models/algorithms/neural_network.joblib",
+      "bytes": 53595,
+      "sha256": "6d60c44c4e2fc47c57e0aa21944c7542b5194449ad9cd21e0d18ab79da9ada41"
+    },
+    {
+      "path": "models/algorithms/plackett_luce.joblib",
+      "bytes": 2672,
+      "sha256": "de7b5dd03950976e0f65b65740c9ccf37799fbad0e24393bfcae002eb7089e3e"
+    },
+    {
+      "path": "models/algorithms/random_forest.joblib",
+      "bytes": 3941103,
+      "sha256": "1bcada2d7b0ecbc0853b95a356e1b1630c8d0ec6af9be07c5cc5de8bbfef1f2c"
+    },
+    {
+      "path": "models/algorithms/random_forest_regression.joblib",
+      "bytes": 2895823,
+      "sha256": "0421d54df2cbe5da389cd301c9cb65555010e05e079c6d7d013d8dd33c597046"
+    },
+    {
+      "path": "models/algorithms/ridge.joblib",
+      "bytes": 3321,
+      "sha256": "945752c4b69b6cdb026c18a5c7a0dc7a6d840d5684816f272ad23462275b3d12"
+    },
+    {
+      "path": "models/algorithms/svm.joblib",
+      "bytes": 328307,
+      "sha256": "cc3e40d3bde0a7ad3e079fbd1878e0e32b066a61dffb0845e2547353a335365f"
+    },
+    {
+      "path": "models/algorithms_d023_backup/adaboost.joblib",
+      "bytes": 74750,
+      "sha256": "aadb270138e974dedc0c0457b22e20bf9f51aa0e0d6ac19804d319d17e0caef3"
+    },
+    {
+      "path": "models/algorithms_d023_backup/bagging.joblib",
+      "bytes": 1249078,
+      "sha256": "df9c27b5179c6e4b12578903e4f218ce69f4384eddb7cb6bcf1f54639080f596"
+    },
+    {
+      "path": "models/algorithms_d023_backup/decision_tree.joblib",
+      "bytes": 2975,
+      "sha256": "a16be5e2e6ed2bec7cfb17d772e02a0ca7b58071705d2cfbe3679fccd20f0bb7"
+    },
+    {
+      "path": "models/algorithms_d023_backup/decision_tree_regression.joblib",
+      "bytes": 9845,
+      "sha256": "94c457eab2096d0a7e8cc16a0fd57f4b317dee15a59eeba7aeb2c4e257a4e71d"
+    },
+    {
+      "path": "models/algorithms_d023_backup/density.joblib",
+      "bytes": 44679,
+      "sha256": "3f70256510648bea7271afbdcebb64599868e86dc134b5ab7f696c3c18208f42"
+    },
+    {
+      "path": "models/algorithms_d023_backup/gradient_boosting.joblib",
+      "bytes": 99800,
+      "sha256": "f221fde826414da1d504eae9717a1f634fbd1a06bbdcb557762fe69d2d03c082"
+    },
+    {
+      "path": "models/algorithms_d023_backup/gradient_boosting_regression.joblib",
+      "bytes": 92995,
+      "sha256": "d5cc9c7f5e40be398ee2e39057a73a92fc89a6f404f35e622b3df0828856834f"
+    },
+    {
+      "path": "models/algorithms_d023_backup/grid_baseline.joblib",
+      "bytes": 1446,
+      "sha256": "27cf9d57c0f3b21d63241487b392abc50cd32473ed51373318ebbbe6a4719690"
+    },
+    {
+      "path": "models/algorithms_d023_backup/knn.joblib",
+      "bytes": 1533712,
+      "sha256": "04af18d587f91ea9c9c351e7d99ded3f1a18fba99d06ebcbd3955b010d0f0907"
+    },
+    {
+      "path": "models/algorithms_d023_backup/lasso.joblib",
+      "bytes": 2770,
+      "sha256": "a43836aee4c4a6083adffe556360ac41582bcc3d212cbbcebc28adc3c44a0f9f"
+    },
+    {
+      "path": "models/algorithms_d023_backup/linear_regression.joblib",
+      "bytes": 3084,
+      "sha256": "8512e07fa2b068800152858efffe572ba126a93c9d1aac644e7286e17456b21c"
+    },
+    {
+      "path": "models/algorithms_d023_backup/logistic_regression.joblib",
+      "bytes": 2915,
+      "sha256": "b7461bf26506e5584096fa01cc8d33ebfbf7ea1f4c06430860ad05423582c1f7"
+    },
+    {
+      "path": "models/algorithms_d023_backup/metadata.json",
+      "bytes": 19124,
+      "sha256": "fb33c6e9f1df4d5ef2e7fcbe48bc784801cd08ddef9df47dd703cf86583c9113"
+    },
+    {
+      "path": "models/algorithms_d023_backup/naive_bayes.joblib",
+      "bytes": 3659,
+      "sha256": "3f2821312ec047784fcb47517825d2fac55e2e4201890deefa4635c25964fd13"
+    },
+    {
+      "path": "models/algorithms_d023_backup/neural_network.joblib",
+      "bytes": 53528,
+      "sha256": "67adcc97343802f0c1d4edc6ff7a7bcb9fc8813915de4dd457afa2272cd9c4b4"
+    },
+    {
+      "path": "models/algorithms_d023_backup/plackett_luce.joblib",
+      "bytes": 2657,
+      "sha256": "d3e1d8eb7322a6058787641ee7a14dda07df7cd8d7f2a304a0d479ef322f3e8a"
+    },
+    {
+      "path": "models/algorithms_d023_backup/random_forest.joblib",
+      "bytes": 3941031,
+      "sha256": "3ad57478b8d517a5a590fbb0033f2f3fa7cbd607c88736578f538c183ab15b6e"
+    },
+    {
+      "path": "models/algorithms_d023_backup/random_forest_regression.joblib",
+      "bytes": 2895752,
+      "sha256": "093ab2df30c4755a7ca11ddcab2f9c4ca73c426db97c1cdc4a706a0b15e1c130"
+    },
+    {
+      "path": "models/algorithms_d023_backup/ridge.joblib",
+      "bytes": 2801,
+      "sha256": "8299b3df98dada80110deeb5298605b2ba109beeb1153f369a76582ab38e495b"
+    },
+    {
+      "path": "models/algorithms_d023_backup/svm.joblib",
+      "bytes": 328233,
+      "sha256": "f742ba34fc2fd649a3bddd44b8dd2938c8cafcaf0348d1a5e60074362dadb24b"
+    },
+    {
+      "path": "models/algorithms_wx/v1/adaboost.joblib",
+      "bytes": 74821,
+      "sha256": "5c2d10c0c25184fb47a8ed2320bfe3d8961d35d1f1f86fa752ed9441a41f8b0c"
+    },
+    {
+      "path": "models/algorithms_wx/v1/algorithm_comparison.csv",
+      "bytes": 13211,
+      "sha256": "7140eabb0f92aa3498f37a749f260f68cbb2185213522fb494f1bdade90572c4"
+    },
+    {
+      "path": "models/algorithms_wx/v1/algorithm_permutation_importance.csv",
+      "bytes": 30412,
+      "sha256": "e333929cc8d6a9e6b9771691bebe80b2d4e3d4ce2f44b9c2a7ea7fd97eafd48f"
+    },
+    {
+      "path": "models/algorithms_wx/v1/bagging.joblib",
+      "bytes": 1249146,
+      "sha256": "84e3af2a3b10ae27e12d332aab9d3f008e1cf8f42814f36256e8164d5cfd55e7"
+    },
+    {
+      "path": "models/algorithms_wx/v1/decision_tree.joblib",
+      "bytes": 3038,
+      "sha256": "7fb6de9e3439405a56a86608f4b5b418708deb485a5999f0c6e72e34627f3161"
+    },
+    {
+      "path": "models/algorithms_wx/v1/decision_tree_regression.joblib",
+      "bytes": 9914,
+      "sha256": "a6acb53dc7351d1d132302559c9a59eef9590f2e66125ce99c50ac3897b8a2a6"
+    },
+    {
+      "path": "models/algorithms_wx/v1/gradient_boosting.joblib",
+      "bytes": 99864,
+      "sha256": "8abab64f1109bcfe991ec7306845714ebb589780fd27794cb89a7bb170f19e39"
+    },
+    {
+      "path": "models/algorithms_wx/v1/gradient_boosting_regression.joblib",
+      "bytes": 93058,
+      "sha256": "a794e57327fc62365e8e963f7c81b01f035668b08cc612c7d4cc60fc5d7df0e1"
+    },
+    {
+      "path": "models/algorithms_wx/v1/grid_baseline.joblib",
+      "bytes": 1456,
+      "sha256": "5e11db51cf772b2ad0d5f80c8dd53b54d0d7ec7083a8addfa4c6e99f39e232c3"
+    },
+    {
+      "path": "models/algorithms_wx/v1/knn.joblib",
+      "bytes": 1533806,
+      "sha256": "0dfed5a74d09c971ef475f40cc46c00b448a30b84f7ff42563edd790d940b6a3"
+    },
+    {
+      "path": "models/algorithms_wx/v1/lasso.joblib",
+      "bytes": 2833,
+      "sha256": "af2091e34058ca66847a7500f585c22d7240106cccd2006286d6814b14460a64"
+    },
+    {
+      "path": "models/algorithms_wx/v1/linear_regression.joblib",
+      "bytes": 3145,
+      "sha256": "902bc432f2503c97ca79d968164e693e8e7d4d02807011f2769391a045bbd69a"
+    },
+    {
+      "path": "models/algorithms_wx/v1/logistic_regression.joblib",
+      "bytes": 2974,
+      "sha256": "96bc4d2a3e345637e5c3c9dbc7f38231ecec609a69a35666844aa32ccc3269f0"
+    },
+    {
+      "path": "models/algorithms_wx/v1/metadata.json",
+      "bytes": 33514,
+      "sha256": "b69f6ffb19303b35e95deb9d7befdf37ae832018cf917800b6b9bbf8932f195c"
+    },
+    {
+      "path": "models/algorithms_wx/v1/naive_bayes.joblib",
+      "bytes": 3722,
+      "sha256": "05dd930d4c774d5ca32c60bbd8decad288d3dfbf30295282475bdf10169c3412"
+    },
+    {
+      "path": "models/algorithms_wx/v1/neural_network.joblib",
+      "bytes": 53595,
+      "sha256": "6d60c44c4e2fc47c57e0aa21944c7542b5194449ad9cd21e0d18ab79da9ada41"
+    },
+    {
+      "path": "models/algorithms_wx/v1/plackett_luce.joblib",
+      "bytes": 2672,
+      "sha256": "de7b5dd03950976e0f65b65740c9ccf37799fbad0e24393bfcae002eb7089e3e"
+    },
+    {
+      "path": "models/algorithms_wx/v1/random_forest.joblib",
+      "bytes": 3941103,
+      "sha256": "1bcada2d7b0ecbc0853b95a356e1b1630c8d0ec6af9be07c5cc5de8bbfef1f2c"
+    },
+    {
+      "path": "models/algorithms_wx/v1/random_forest_regression.joblib",
+      "bytes": 2895823,
+      "sha256": "0421d54df2cbe5da389cd301c9cb65555010e05e079c6d7d013d8dd33c597046"
+    },
+    {
+      "path": "models/algorithms_wx/v1/ridge.joblib",
+      "bytes": 2864,
+      "sha256": "f4739b7e953a571501034bde4b30309432ad77cda39dbce38069dfec5e2ab0a7"
+    },
+    {
+      "path": "models/algorithms_wx/v1/svm.joblib",
+      "bytes": 328307,
+      "sha256": "cc3e40d3bde0a7ad3e079fbd1878e0e32b066a61dffb0845e2547353a335365f"
+    },
+    {
+      "path": "models/algorithms_wx/v2/adaboost.joblib",
+      "bytes": 75014,
+      "sha256": "38ce45c90770102be89f8872a1bb11ccef01c5287fba7b4077ba2f43e97a31e1"
+    },
+    {
+      "path": "models/algorithms_wx/v2/algorithm_comparison.csv",
+      "bytes": 12562,
+      "sha256": "89be4ef39b5f51410474e43724abe614d78c7c21db8d7cf7158cffb6a19d38b7"
+    },
+    {
+      "path": "models/algorithms_wx/v2/algorithm_permutation_importance.csv",
+      "bytes": 39925,
+      "sha256": "dab1def06b8a1a5f857224dcbfb77c1240f2d7f84cc9033d0b21e8856fe10916"
+    },
+    {
+      "path": "models/algorithms_wx/v2/bagging.joblib",
+      "bytes": 2207935,
+      "sha256": "89072d6e3359914240e38de6ab9276bb0e8a9d6866bb6f23f138b1ebc6d7c2fe"
+    },
+    {
+      "path": "models/algorithms_wx/v2/decision_tree.joblib",
+      "bytes": 5757,
+      "sha256": "b6c0e9061e57d96b0ef7ee80d43b87149698776bc14de07d238114a0ff651e23"
+    },
+    {
+      "path": "models/algorithms_wx/v2/decision_tree_regression.joblib",
+      "bytes": 2884,
+      "sha256": "7228433a3d992adf5c86e1ca02aa789617faf378683db8cf195ea19f12399d5d"
+    },
+    {
+      "path": "models/algorithms_wx/v2/gradient_boosting.joblib",
+      "bytes": 125603,
+      "sha256": "c8e78572d190c7a8661da176d27e32d1a88d2befe59208871aba8f0f67737123"
+    },
+    {
+      "path": "models/algorithms_wx/v2/gradient_boosting_regression.joblib",
+      "bytes": 103897,
+      "sha256": "158f0e36afcc103e412dc11832456c7e3c939ebc63b3ef646acb5cb8b9936294"
+    },
+    {
+      "path": "models/algorithms_wx/v2/knn.joblib",
+      "bytes": 1856118,
+      "sha256": "c85ad921d90da2b4f4c4aaa0e835d75c5757cb481b08df014207d9664366f0aa"
+    },
+    {
+      "path": "models/algorithms_wx/v2/lasso.joblib",
+      "bytes": 3392,
+      "sha256": "b477989987e53a4431fe34d3fe9a3a3e4b98947620c5c3522b2d7b5bced4a4f1"
+    },
+    {
+      "path": "models/algorithms_wx/v2/linear_regression.joblib",
+      "bytes": 3689,
+      "sha256": "1f14ed0bc8d2aa9b4abb73054fd4d256463dfcb1ceaf4e6ea4b8ad04fcbd65e1"
+    },
+    {
+      "path": "models/algorithms_wx/v2/logistic_regression.joblib",
+      "bytes": 3423,
+      "sha256": "51a3dff53936b24f1e586f41dcf2ae08e7d32302d30c0e5903066eb4847b96c7"
+    },
+    {
+      "path": "models/algorithms_wx/v2/metadata.json",
+      "bytes": 32112,
+      "sha256": "37db93297ad73b70337b132475f304882878f66e259f32db2fc6fa239630f8a5"
+    },
+    {
+      "path": "models/algorithms_wx/v2/naive_bayes.joblib",
+      "bytes": 4401,
+      "sha256": "eb241cbde8949aec3e6d52d616c70823d27ab9605859a918f4bcc4037230d962"
+    },
+    {
+      "path": "models/algorithms_wx/v2/neural_network.joblib",
+      "bytes": 64279,
+      "sha256": "7b80682cbb45a9ef432fa633c485bab9f5fb84e4ed04f36ca275a9640f944baa"
+    },
+    {
+      "path": "models/algorithms_wx/v2/random_forest.joblib",
+      "bytes": 2156886,
+      "sha256": "b6c6448f15ba6bc0a21a3c22927e6da170e15320a98f50e6fc1cf97fc1699117"
+    },
+    {
+      "path": "models/algorithms_wx/v2/random_forest_regression.joblib",
+      "bytes": 7259475,
+      "sha256": "b222a87d03bd1b365696ff00d86958f0e6a508d5a2301c3dae7dca3f6b5e666d"
+    },
+    {
+      "path": "models/algorithms_wx/v2/ridge.joblib",
+      "bytes": 3321,
+      "sha256": "945752c4b69b6cdb026c18a5c7a0dc7a6d840d5684816f272ad23462275b3d12"
+    },
+    {
+      "path": "models/algorithms_wx/v2/svm.joblib",
+      "bytes": 443738,
+      "sha256": "459dbe1d45ee7f55a23ba5a381b996a0fce4c969e509d6a4721c18c99603ca2e"
+    },
+    {
+      "path": "models/final/podium.joblib",
+      "bytes": 152200,
+      "sha256": "b798cba2fc0386ad696678dd0e66fcd46124065e37ab393afc5bcfd56770c235"
+    },
+    {
+      "path": "models/final/position.joblib",
+      "bytes": 4241,
+      "sha256": "6eb62d8c600b32d2874d07f460564b416c61fcf11729c5c1b59c2382fc4ea393"
+    },
+    {
+      "path": "models/final/winner.joblib",
+      "bytes": 1869213,
+      "sha256": "94ff3108d31fb90b75866c8dbdcbe924a08a2e5eb222eba51fc5b6f78cde9d78"
+    },
+    {
+      "path": "models/metadata_v1.json",
+      "bytes": 4979,
+      "sha256": "849976bde94f0c5b7a7289c707d87a7a1c57d2a4026ceb98b0d99d9c5ab5e005"
+    },
+    {
+      "path": "models/scenario/metadata.json",
+      "bytes": 5230,
+      "sha256": "9b30ab491c76ca067700d9ad0717eed400bb9d109a71c50e49880157883e32c5"
+    },
+    {
+      "path": "models/scenario/metadata_v2.json",
+      "bytes": 10902,
+      "sha256": "c223bc9006586233f4694e8a671ea329479abf797849e9b8c4aa053b4cfb9764"
+    },
+    {
+      "path": "models/scenario/ranker_v1.joblib",
+      "bytes": 2357,
+      "sha256": "91951db7f20e9bafc1e8828b8bcd1001849274be2c926deaf28927d75ed5e254"
+    },
+    {
+      "path": "models/scenario/simulator_v2.joblib",
+      "bytes": 3537,
+      "sha256": "70532b42555ecd181e36e938de52625fc29caf3f7ff2700da1d82216fa008dd2"
+    },
+    {
+      "path": "models/walkforward/2017/podium.joblib",
+      "bytes": 150361,
+      "sha256": "6d86db6f31bab72eb8a1343204500f223749e82edb4105082970bafe0737fe96"
+    },
+    {
+      "path": "models/walkforward/2017/position.joblib",
+      "bytes": 4159,
+      "sha256": "8fe7d885fbc1e5f4df91723ad4d59f8415c8400e66ffc14189372e437712a1cc"
+    },
+    {
+      "path": "models/walkforward/2017/winner.joblib",
+      "bytes": 1699559,
+      "sha256": "3182a2e5d42b6f55a7b83439384bef96e536f13691a32ac2275b0836072dc780"
+    },
+    {
+      "path": "models/walkforward/2018/podium.joblib",
+      "bytes": 170297,
+      "sha256": "6ef0b5a81c1b36e07334d5b215ccdcc0a970e47d2b2b9ddfe8684d7329b3ca7b"
+    },
+    {
+      "path": "models/walkforward/2018/position.joblib",
+      "bytes": 4155,
+      "sha256": "6538b5613d73359a3960b4feacab44b383b5960ad6a0cd4af0ba580f5a040334"
+    },
+    {
+      "path": "models/walkforward/2018/winner.joblib",
+      "bytes": 1723827,
+      "sha256": "b7633c50663d85c59e6fac014e6bddc2362eff2fbc762c2194dc4ed0cdcc8e5d"
+    },
+    {
+      "path": "models/walkforward/2019/podium.joblib",
+      "bytes": 150267,
+      "sha256": "b65a05f0b61c5268dcebab8fa69f6e8b0c00c1b7ff9a44ceb075f0b4442c5639"
+    },
+    {
+      "path": "models/walkforward/2019/position.joblib",
+      "bytes": 4161,
+      "sha256": "08e32036caf23dd04ab3cbc860b66adb84bbc03bd245be25c29745ecca5ee9ba"
+    },
+    {
+      "path": "models/walkforward/2019/winner.joblib",
+      "bytes": 1749705,
+      "sha256": "4584ac9eda5d2f05f2fa78b958e27a6aeb2c3e8adfc49372661a55e237201bcb"
+    },
+    {
+      "path": "models/walkforward/2020/podium.joblib",
+      "bytes": 159298,
+      "sha256": "5bc9ab450dedf5785bbf403d1dd9c815bca3f2658cf9a8edda14fdba87305348"
+    },
+    {
+      "path": "models/walkforward/2020/position.joblib",
+      "bytes": 4166,
+      "sha256": "30956f461fb216280d23d8eb9672135757d976910bb777c883eada1f1ac8ed8d"
+    },
+    {
+      "path": "models/walkforward/2020/winner.joblib",
+      "bytes": 1771547,
+      "sha256": "2c526e079a0b3983e3b082962fc584b74c91dc1230b45c985f44b41cc4c916d0"
+    },
+    {
+      "path": "models/walkforward/2021/podium.joblib",
+      "bytes": 159439,
+      "sha256": "7178aeaf7706896fbe7581721452cc74f8fd83d6da0bc6df38f1d4c931d1c0ef"
+    },
+    {
+      "path": "models/walkforward/2021/position.joblib",
+      "bytes": 4196,
+      "sha256": "72153d4ebcb5ac7a93e2561b3d5166b1a6b06500e1e276e351c41dfd9062796a"
+    },
+    {
+      "path": "models/walkforward/2021/winner.joblib",
+      "bytes": 1803232,
+      "sha256": "cf7188d42eca09442e223f8831493563a4806ee1db5b85791071eda60332f0b0"
+    },
+    {
+      "path": "models/walkforward/2022/podium.joblib",
+      "bytes": 126148,
+      "sha256": "32da4934e3fbf9c14a166b6488541839d006e982f7c4daaa659fb22927514610"
+    },
+    {
+      "path": "models/walkforward/2022/position.joblib",
+      "bytes": 4248,
+      "sha256": "5dd9d3a351e4d8a5ce52bed3d4cf7f6632c0406953a89d0d36ef46b90c19d8d5"
+    },
+    {
+      "path": "models/walkforward/2022/winner.joblib",
+      "bytes": 1844535,
+      "sha256": "0e09db4a2d564bf3fdf0db51bbe230e647200d98dcfe9678a84e4e3a019a37ee"
+    }
+  ]
+}

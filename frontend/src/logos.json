@@ -1,0 +1,970 @@
+{
+ "ags": {
+  "article": "Automobiles Gonfaronnaises Sportives",
+  "file": "Automobiles_Gonfaronnaises_Sportives_(France)_1986-1981.png",
+  "author": "CLRiviera",
+  "licence": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Automobiles_Gonfaronnaises_Sportives_(France)_1986-1981.png",
+  "path": "/constructors/ags.png"
+ },
+ "alfa": {
+  "variants": [
+   {
+    "article": "Alfa Romeo in Formula One",
+    "file": "Alfa Romeo F1 Team Stake Logo.svg",
+    "author": "Alfa Romeo - Sauber Group",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Alfa_Romeo_F1_Team_Stake_Logo.svg",
+    "path": "/constructors/alfa-p0.png",
+    "seasons": [
+     2023,
+     2023
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "alpine": {
+  "variants": [
+   {
+    "article": "Alpine F1 Team",
+    "file": "Alpine F1 Team Logo.svg",
+    "author": "Alpine F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Alpine_F1_Team_Logo.svg",
+    "path": "/constructors/alpine-0.png",
+    "seasons": [
+     2021,
+     2025
+    ]
+   },
+   {
+    "article": "Alpine F1 Team",
+    "file": "BWT_Alpine_F1_Team_Logo.png",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BWT_Alpine_F1_Team_Logo.png",
+    "path": "/constructors/alpine.png",
+    "seasons": [
+     2022,
+     2025
+    ]
+   }
+  ]
+ },
+ "arrows": {
+  "article": "Arrows Grand Prix International",
+  "file": "Arrows_Grand_Prix_logo.png",
+  "author": "Arrows Grand Prix International",
+  "licence": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Arrows_Grand_Prix_logo.png",
+  "path": "/constructors/arrows.png"
+ },
+ "aston_martin": {
+  "variants": [
+   {
+    "article": "Aston Martin in Formula One",
+    "file": "Aston Martin F1 Team logo 2024.jpg",
+    "author": "Unknown authorUnknown author",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aston_Martin_F1_Team_logo_2024.jpg",
+    "path": "/constructors/aston_martin-p0.png",
+    "seasons": [
+     2024,
+     2025
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "ats": {
+  "variants": [
+   {
+    "article": "ATS Wheels",
+    "file": "Ats logo 2009.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ats_logo_2009.svg",
+    "path": "/constructors/ats-0.png",
+    "seasons": [
+     1977,
+     1984
+    ]
+   }
+  ]
+ },
+ "benetton": {
+  "variants": [
+   {
+    "article": "Benetton Formula",
+    "file": "United Colors of Benetton - logo (Italy, 1989-1996).svg",
+    "author": "Bruno Sutter (Eldorado Agency)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_Colors_of_Benetton_-_logo_(Italy,_1989-1996).svg",
+    "path": "/constructors/benetton-p0.png",
+    "seasons": [
+     1989,
+     1995
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Benetton Formula",
+    "file": "United Colors of Benetton - logo (Italy, 1996-2011).svg",
+    "author": "Massimo Vignelli",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_Colors_of_Benetton_-_logo_(Italy,_1996-2011).svg",
+    "path": "/constructors/benetton-p1.png",
+    "seasons": [
+     1996,
+     2001
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "bmw_sauber": {
+  "variants": [
+   {
+    "article": "BMW in Formula One",
+    "file": "BMW Sauber F1 Team logo.png",
+    "author": "BMW / Sauber Motorsport",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_F1_Team_logo.png",
+    "path": "/constructors/bmw_sauber-p0.png",
+    "seasons": [
+     2006,
+     2009
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "brawn": {
+  "variants": [
+   {
+    "article": "Brawn GP",
+    "file": "Brawn GP logo.svg",
+    "author": "Brawn GP",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Brawn_GP_logo.svg",
+    "path": "/constructors/brawn-p0.png",
+    "seasons": [
+     2009,
+     2009
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "caterham": {
+  "variants": [
+   {
+    "article": "Caterham F1",
+    "file": "Caterham F1 Team logo (2014).svg",
+    "author": "Caterham F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_logo_(2014).svg",
+    "path": "/constructors/caterham-0.png",
+    "seasons": [
+     2012,
+     2014
+    ]
+   }
+  ]
+ },
+ "coloni": {
+  "variants": [
+   {
+    "article": "Scuderia Coloni",
+    "file": "Enzo coloni racing logo.svg",
+    "author": "Scuderia Coloni",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Enzo_coloni_racing_logo.svg",
+    "path": "/constructors/coloni-p0.png",
+    "seasons": [
+     1987,
+     1991
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "dallara": {
+  "variants": [
+   {
+    "article": "Dallara",
+    "file": "Dallara logo.svg",
+    "author": "™/®Dallara Automobili S.p.A.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dallara_logo.svg",
+    "path": "/constructors/dallara-0.png",
+    "seasons": [
+     1988,
+     1992
+    ]
+   }
+  ]
+ },
+ "ferrari": {
+  "variants": [
+   {
+    "article": "Scuderia Ferrari",
+    "file": "Ferrari wordmark.svg",
+    "author": "Ferrari",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ferrari_wordmark.svg",
+    "path": "/constructors/ferrari-p0.png",
+    "seasons": [
+     1950,
+     2100
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "fondmetal": {
+  "variants": [
+   {
+    "article": "Fondmetal",
+    "file": "Fondmetal Logo.png",
+    "author": "Fondmetal S.p.A.",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fondmetal_Logo.png",
+    "path": "/constructors/fondmetal-p0.png",
+    "seasons": [
+     1991,
+     1992
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "force_india": {
+  "variants": [
+   {
+    "article": "Racing Point Force India",
+    "file": "Force India.svg",
+    "author": "Robertay2536",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Force_India.svg",
+    "path": "/constructors/force_india-p0.png",
+    "seasons": [
+     2011,
+     2018
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "haas": {
+  "variants": [
+   {
+    "article": "Haas F1 Team",
+    "file": "TGR Haas F1 Team Logo (2026).svg",
+    "author": "Haas F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:TGR_Haas_F1_Team_Logo_(2026).svg",
+    "path": "/constructors/haas-0.png",
+    "seasons": [
+     2026,
+     2100
+    ]
+   },
+   {
+    "article": "Haas F1 Team",
+    "file": "Haas F1 Team Logo.svg",
+    "author": "Haas F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Haas_F1_Team_Logo.svg",
+    "path": "/constructors/haas-1.png",
+    "seasons": [
+     2016,
+     2025
+    ]
+   },
+   {
+    "article": "Haas F1 Team",
+    "file": "Rich Energy Haas F1 Team Logo.svg",
+    "author": "Haas F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rich_Energy_Haas_F1_Team_Logo.svg",
+    "path": "/constructors/haas-2.png",
+    "seasons": [
+     2019,
+     2019
+    ]
+   },
+   {
+    "article": "Haas F1 Team",
+    "file": "Uralkali Haas F1 Team Logo.svg",
+    "author": "Haas F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Uralkali_Haas_F1_Team_Logo.svg",
+    "path": "/constructors/haas-3.png",
+    "seasons": [
+     2021,
+     2022
+    ]
+   },
+   {
+    "article": "Haas F1 Team",
+    "file": "MoneyGram Haas F1 Team Logo.svg",
+    "author": "Haas F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:MoneyGram_Haas_F1_Team_Logo.svg",
+    "path": "/constructors/haas-4.png",
+    "seasons": [
+     2023,
+     2025
+    ]
+   }
+  ]
+ },
+ "honda": {
+  "variants": [
+   {
+    "article": "Honda in Formula One",
+    "file": "Logo Honda F1 Racing.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Honda_F1_Racing.svg",
+    "path": "/constructors/honda-p0.png",
+    "seasons": [
+     2006,
+     2008
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "hrt": {
+  "article": "HRT Formula 1 Team",
+  "file": "HRT_F1_TEAM_2012.svg",
+  "author": "Unknown authorUnknown author",
+  "licence": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:HRT_F1_TEAM_2012.svg",
+  "path": "/constructors/hrt.png"
+ },
+ "lambo": {
+  "variants": [
+   {
+    "article": "Modena (racing team)",
+    "file": "Lamborghini - logo wordmark (italy, 1963-).svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lamborghini_-_logo_wordmark_(italy,_1963-).svg",
+    "path": "/constructors/lambo-p0.png",
+    "seasons": [
+     1991,
+     1991
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "ligier": {
+  "variants": [
+   {
+    "article": "Ligier",
+    "file": "Ligier2017.png",
+    "author": "ROMAINDDBG85",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ligier2017.png",
+    "path": "/constructors/ligier-0.png",
+    "seasons": [
+     2017,
+     2100
+    ]
+   },
+   {
+    "article": "Ligier",
+    "file": "Ligier-logo-1920x1080.png",
+    "author": "carlogos",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ligier-logo-1920x1080.png",
+    "path": "/constructors/ligier-1.png",
+    "seasons": [
+     1998,
+     2017
+    ]
+   }
+  ]
+ },
+ "lola": {
+  "variants": [
+   {
+    "article": "MasterCard Lola",
+    "file": "Lola Cars logo.png",
+    "author": "Lola Cars Ltd",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lola_Cars_logo.png",
+    "path": "/constructors/lola-p0.png",
+    "seasons": [
+     1950,
+     2100
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "lotus_f1": {
+  "variants": [
+   {
+    "article": "Lotus F1",
+    "file": "Lotus F1 Team logo.jpg",
+    "author": "Matthias v.d. Elbe",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Team_logo.jpg",
+    "path": "/constructors/lotus_f1-0.png",
+    "seasons": [
+     2012,
+     2015
+    ]
+   }
+  ]
+ },
+ "lotus_racing": {
+  "variants": [
+   {
+    "article": "Lotus Racing",
+    "file": "Lotus F1 Racing Logo.jpg",
+    "author": "Mcemj",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg",
+    "path": "/constructors/lotus_racing-p0.png",
+    "seasons": [
+     2010,
+     2010
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "manor": {
+  "variants": [
+   {
+    "article": "Manor Motorsport",
+    "file": "Manor F1 Team logo.png",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manor_F1_Team_logo.png",
+    "path": "/constructors/manor-p0.png",
+    "seasons": [
+     2015,
+     2015
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Manor Motorsport",
+    "file": "Manor Racing MRT.jpg",
+    "author": "Manor Racing",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Manor_Racing_MRT.jpg",
+    "path": "/constructors/manor-p1.png",
+    "seasons": [
+     2016,
+     2016
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "mclaren": {
+  "variants": [
+   {
+    "article": "McLaren",
+    "file": "McLaren Racing logo.png",
+    "author": "https://www.mclaren.com/",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:McLaren_Racing_logo.png",
+    "path": "/constructors/mclaren-0.png",
+    "seasons": [
+     2017,
+     2025
+    ]
+   }
+  ]
+ },
+ "mercedes": {
+  "variants": [
+   {
+    "article": "Mercedes-Benz in Formula One",
+    "file": "Logo Mercedes GP Petronas 2011.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Mercedes_GP_Petronas_2011.svg",
+    "path": "/constructors/mercedes-p0.png",
+    "seasons": [
+     2010,
+     2011
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Mercedes-Benz in Formula One",
+    "file": "Mercedes AMG Petronas F1 Logo.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_F1_Logo.svg",
+    "path": "/constructors/mercedes-p1.png",
+    "seasons": [
+     2012,
+     2025
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "minardi": {
+  "variants": [
+   {
+    "article": "Minardi",
+    "file": "MinardiF1(1994) logo ico.gif",
+    "author": "Logical consequences",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MinardiF1(1994)_logo_ico.gif",
+    "path": "/constructors/minardi-p0.png",
+    "seasons": [
+     1994,
+     1994
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Minardi",
+    "file": "Minardi F1 Team.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Minardi_F1_Team.svg",
+    "path": "/constructors/minardi-p1.png",
+    "seasons": [
+     2001,
+     2005
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "osella": {
+  "variants": [
+   {
+    "article": "Osella",
+    "file": "Osella.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Osella.svg",
+    "path": "/constructors/osella-0.png",
+    "seasons": [
+     1950,
+     2100
+    ]
+   }
+  ]
+ },
+ "pacific": {
+  "variants": [
+   {
+    "article": "Pacific Racing",
+    "file": "Logo Pacific Grand Prix.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Pacific_Grand_Prix.svg",
+    "path": "/constructors/pacific-p0.png",
+    "seasons": [
+     1994,
+     1995
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "prost": {
+  "variants": [
+   {
+    "article": "Prost Grand Prix",
+    "file": "Prost Grand Prix Formula One Logo.png",
+    "author": "https://www.freepng.es/",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Prost_Grand_Prix_Formula_One_Logo.png",
+    "path": "/constructors/prost-0.png",
+    "seasons": [
+     1950,
+     2100
+    ]
+   },
+   {
+    "article": "Prost Grand Prix",
+    "file": "Prost_Grand_Prix_Formula_One_Logo.png",
+    "author": "https://www.freepng.es/",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Prost_Grand_Prix_Formula_One_Logo.png",
+    "path": "/constructors/prost.png"
+   }
+  ]
+ },
+ "racing_point": {
+  "variants": [
+   {
+    "article": "Racing Point F1 Team",
+    "file": "BWT Racing Point Logo.svg",
+    "author": "Racing Point UK Limited",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BWT_Racing_Point_Logo.svg",
+    "path": "/constructors/racing_point-0.png",
+    "seasons": [
+     2019,
+     2020
+    ]
+   },
+   {
+    "article": "Racing Point F1 Team",
+    "file": "BWT_Racing_Point_Logo.svg",
+    "author": "Racing Point UK Limited",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BWT_Racing_Point_Logo.svg",
+    "path": "/constructors/racing_point.png",
+    "seasons": [
+     2019,
+     2020
+    ]
+   }
+  ]
+ },
+ "red_bull": {
+  "variants": [
+   {
+    "article": "Red Bull Racing",
+    "file": "Red Bull Racing - 2005 Logo.png",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_-_2005_Logo.png",
+    "path": "/constructors/red_bull-p0.png",
+    "seasons": [
+     2005,
+     2012
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "renault": {
+  "variants": [
+   {
+    "article": "Renault in Formula One",
+    "file": "Renault Vasarely 1981-1992 Logo.png",
+    "author": "MercedesEgea",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_Vasarely_1981-1992_Logo.png",
+    "path": "/constructors/renault-p0.png",
+    "seasons": [
+     1981,
+     1985
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Renault in Formula One",
+    "file": "Renault Sport F1 logo as of 2016.png",
+    "author": "Groupe Renault",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_Sport_F1_logo_as_of_2016.png",
+    "path": "/constructors/renault-p1.png",
+    "seasons": [
+     2016,
+     2018
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Renault in Formula One",
+    "file": "Renault F1 Team logo 2019.png",
+    "author": "Renault F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_F1_Team_logo_2019.png",
+    "path": "/constructors/renault-p2.png",
+    "seasons": [
+     2019,
+     2020
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "rial": {
+  "variants": [
+   {
+    "article": "Rial Racing",
+    "file": "Logo Rial.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Rial.svg",
+    "path": "/constructors/rial-p0.png",
+    "seasons": [
+     1988,
+     1989
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "sauber": {
+  "variants": [
+   {
+    "article": "Sauber Motorsport",
+    "file": "Logo Sauber F1.png",
+    "author": "Juanchocarbonero",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Sauber_F1.png",
+    "path": "/constructors/sauber-0.png",
+    "seasons": [
+     2016,
+     2018
+    ]
+   },
+   {
+    "article": "Sauber Motorsport",
+    "file": "Logo_sauber_2023.jpg",
+    "author": "Unknown",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_sauber_2023.jpg",
+    "path": "/constructors/sauber.jpg",
+    "seasons": [
+     2023,
+     2025
+    ]
+   },
+   {
+    "article": "Sauber Motorsport",
+    "file": "Logo of Stake F1 Team Kick Sauber.png",
+    "author": "KarlMarx1889",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Stake_F1_Team_Kick_Sauber.png",
+    "path": "/constructors/sauber-p0.png",
+    "seasons": [
+     2024,
+     2025
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "simtek": {
+  "article": "Simtek",
+  "file": "Simtek_logo.svg",
+  "author": "This W3C-unspecified vector image was created with Inkscape by Lispir, dg and Masur as substantive assistance) .",
+  "licence": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Simtek_logo.svg",
+  "path": "/constructors/simtek.png",
+  "seasons": [
+   1994,
+   1995
+  ]
+ },
+ "spyker": {
+  "variants": [
+   {
+    "article": "Spyker F1",
+    "file": "Logo Spyker.svg",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Spyker.svg",
+    "path": "/constructors/spyker-p0.png",
+    "seasons": [
+     2007,
+     2007
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "stewart": {
+  "variants": [
+   {
+    "article": "Stewart Grand Prix",
+    "file": "Stewart-logo.jpg",
+    "author": "Stewart gp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Stewart-logo.jpg",
+    "path": "/constructors/stewart-0.png",
+    "seasons": [
+     1997,
+     1999
+    ]
+   }
+  ]
+ },
+ "super_aguri": {
+  "variants": [
+   {
+    "article": "Super Aguri F1",
+    "file": "Super Aguri logo.svg",
+    "author": "Flyz1",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Super_Aguri_logo.svg",
+    "path": "/constructors/super_aguri-p0.png",
+    "seasons": [
+     2006,
+     2007
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "team_lotus": {
+  "variants": [
+   {
+    "article": "Team Lotus",
+    "file": "TeamLotus.jpg",
+    "author": "IKnowLotus",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TeamLotus.jpg",
+    "path": "/constructors/team_lotus-0.png",
+    "seasons": [
+     1950,
+     2100
+    ]
+   }
+  ]
+ },
+ "theodore": {
+  "variants": [
+   {
+    "article": "Theodore Racing",
+    "file": "Theodore logo.png",
+    "author": "Cassio96",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Theodore_logo.png",
+    "path": "/constructors/theodore-p0.png",
+    "seasons": [
+     1981,
+     1983
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "toleman": {
+  "variants": [
+   {
+    "article": "Toleman",
+    "file": "Toleman badge, Race Retro Stoneleigh 2018.jpg",
+    "author": "In Vitrio",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Toleman_badge,_Race_Retro_Stoneleigh_2018.jpg",
+    "path": "/constructors/toleman-p0.png",
+    "seasons": [
+     1981,
+     1985
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "toyota": {
+  "variants": [
+   {
+    "article": "Toyota Racing",
+    "file": "Panasonic Toyota Racing logo.svg",
+    "author": "Panasonic Toyota Racing",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Panasonic_Toyota_Racing_logo.svg",
+    "path": "/constructors/toyota-p0.png",
+    "seasons": [
+     2002,
+     2009
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "tyrrell": {
+  "variants": [
+   {
+    "article": "Tyrrell Racing",
+    "file": "Tyrrell.svg",
+    "author": "Original: Unknown Author\nSVG: DraftSaturn15",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tyrrell.svg",
+    "path": "/constructors/tyrrell-p0.png",
+    "seasons": [
+     1970,
+     1998
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "virgin": {
+  "variants": [
+   {
+    "article": "Virgin Racing",
+    "file": "Virginracing.png",
+    "author": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Virginracing.png",
+    "path": "/constructors/virgin-p0.png",
+    "seasons": [
+     2010,
+     2011
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ },
+ "williams": {
+  "variants": [
+   {
+    "article": "Williams Racing",
+    "file": "Atlassian Williams F1 Team logo.svg",
+    "author": "Atlassian Williams F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_logo.svg",
+    "path": "/constructors/williams-0.png",
+    "seasons": [
+     2025,
+     2025
+    ]
+   },
+   {
+    "article": "Williams Racing",
+    "file": "Atlassian_Williams_F1_Team_logo.svg",
+    "author": "Atlassian Williams F1 Team",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_logo.svg",
+    "path": "/constructors/williams.png",
+    "seasons": [
+     2025,
+     2025
+    ]
+   },
+   {
+    "article": "Williams Racing",
+    "file": "Williams Racing Logo 2020.webp",
+    "author": "Williams Grand Prix Engineering Limited",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_Logo_2020.webp",
+    "path": "/constructors/williams-p0.png",
+    "seasons": [
+     2020,
+     2023
+    ],
+    "via": "commons search, chosen by eye"
+   },
+   {
+    "article": "Williams Racing",
+    "file": "Williams Racing Logo 2024.webp",
+    "author": "Williams Grand Prix Engineering Limited",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Williams_Racing_Logo_2024.webp",
+    "path": "/constructors/williams-p1.png",
+    "seasons": [
+     2024,
+     2024
+    ],
+    "via": "commons search, chosen by eye"
+   }
+  ]
+ }
+}

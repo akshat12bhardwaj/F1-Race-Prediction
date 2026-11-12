@@ -1,0 +1,272 @@
+[
+  {
+    "id": "15176",
+    "slug": "grand-prix-circuit-and-open-wheel-turbo-flat-bottom-7e7ade37",
+    "title": "1980s turbo flat-bottom racer (Formula Race Cars and Grand Prix Circuit)",
+    "summary": "1980s turbo flat-bottom racer in an original generic circuit family.",
+    "description": "1980s turbo flat-bottom racer. Bounds 2.062 x 1.160 x 5.415 metres X/Y/Z. +Y up, nose +Z, axles X. Wheel pivots are named where present. Static geometry; no rig, collision or navigation data. Modular track ports document 12 m-wide road centerline interfaces; all signs are generic blanks.",
+    "status": "published",
+    "url": "https://3dassets.dev/assets/grand-prix-circuit-and-open-wheel-turbo-flat-bottom-7e7ade37",
+    "cdnUrl": "https://cdn.3dassets.dev/assets/15176/v1/model.glb",
+    "downloadUrl": "https://3dassets.dev/download/grand-prix-circuit-and-open-wheel-turbo-flat-bottom-7e7ade37",
+    "thumbnailUrl": "https://cdn.3dassets.dev/assets/15176/v1/thumb.webp",
+    "posterUrl": "https://cdn.3dassets.dev/assets/15176/v1/poster.webp",
+    "blurhash": "U44{VTozD4V@aeIBR*xu00WU*Js;ax%gxuNa",
+    "category": {
+      "slug": "vehicles",
+      "title": "Vehicles"
+    },
+    "tags": [
+      {
+        "slug": "modern",
+        "title": "Modern"
+      },
+      {
+        "slug": "realistic",
+        "title": "Realistic"
+      },
+      {
+        "slug": "exterior",
+        "title": "Exterior"
+      }
+    ],
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "contributor": {
+      "username": "3dassets",
+      "name": "3D Assets",
+      "url": "https://3dassets.dev/u/3dassets"
+    },
+    "stats": {
+      "fileSize": 386940,
+      "triangles": 8864,
+      "vertices": 26592,
+      "meshes": 21,
+      "materials": 8,
+      "textures": 0,
+      "animations": [
+        "wheel-roll"
+      ],
+      "boundingBox": {
+        "min": [
+          -1.0309999620498442,
+          -1.4305114759416426E-08,
+          -2.6649999618530273
+        ],
+        "max": [
+          1.0309999620498442,
+          1.1598162588963228,
+          2.75
+        ]
+      },
+      "sizeMeters": [
+        2.062,
+        1.16,
+        5.415
+      ],
+      "hasDraco": false,
+      "hasMeshopt": false,
+      "hasKTX2": false,
+      "extensionsUsed": [
+        "KHR_mesh_quantization"
+      ]
+    },
+    "aiGenerated": true,
+    "aiModel": "Claude Fable 5.1",
+    "downloads": 25,
+    "publishedAt": "2026-09-07T16:01:27.208Z",
+    "updatedAt": "2026-11-10T01:08:11.72Z",
+    "usage": {
+      "threejs": "import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'\nimport { AnimationMixer } from 'three'\n\nlet mixer\n\nconst loader = new GLTFLoader()\nloader.load('https://cdn.3dassets.dev/assets/15176/v1/model.glb', (gltf) => {\n  scene.add(gltf.scene)\n  mixer = new AnimationMixer(gltf.scene)\n  mixer.clipAction(gltf.animations[0]).play()\n})\n\n// Call from your render loop; deltaSeconds is time since the previous frame.\nfunction updateAssetAnimation(deltaSeconds) {\n  mixer?.update(deltaSeconds)\n}",
+      "r3f": "import { useGLTF, useAnimations } from '@react-three/drei'\nimport { useEffect } from 'react'\n\nexport function Model1980sTurboFlatBottomRacerFormulaRaceCarsAndGrandPrixCircuit(props) {\n  const { scene, animations } = useGLTF('https://cdn.3dassets.dev/assets/15176/v1/model.glb')\n  const { actions, names } = useAnimations(animations, scene)\n  useEffect(() => {\n    const action = actions[names[0]]\n    action?.reset().play()\n    return () => { action?.stop() }\n  }, [actions, names])\n  return <primitive object={scene} {...props} />\n}\nuseGLTF.preload('https://cdn.3dassets.dev/assets/15176/v1/model.glb')",
+      "modelViewer": "<model-viewer src=\"https://cdn.3dassets.dev/assets/15176/v1/model.glb\" alt=\"1980s turbo flat-bottom racer (Formula Race Cars and Grand Prix Circuit)\" camera-controls auto-rotate autoplay></model-viewer>",
+      "blender": "# Blender 4.x: File > Import > glTF 2.0, or from the Python console after downloading the file.\nimport bpy\nbpy.ops.import_scene.gltf(filepath='model.glb')  # from https://cdn.3dassets.dev/assets/15176/v1/model.glb\n# Metres and +Y up are converted to Blender's Z-up scene automatically.\n# Clips arrive as actions; play them from the Dope Sheet > Action Editor.",
+      "godot": "# Godot 4: copy model.glb into res://models/ and the editor imports it as a scene.\nvar packed := load(\"res://models/model.glb\") as PackedScene\nvar model := packed.instantiate()\nadd_child(model)\nvar player := model.find_child(\"AnimationPlayer\", true, false) as AnimationPlayer\nplayer.play(player.get_animation_list()[0])",
+      "unity": "// Unity: import model.glb with glTFast (Package Manager: com.unity.cloud.gltfast) and drag the prefab in,\n// or load it at runtime straight from the CDN:\nusing GLTFast;\nvar gltf = new GltfImport();\nif (await gltf.Load(\"https://cdn.3dassets.dev/assets/15176/v1/model.glb\")) await gltf.InstantiateMainSceneAsync(transform);\n// Clips import as legacy AnimationClips on the root; GetComponent<Animation>().Play() starts the first."
+    }
+  },
+  {
+    "id": "15173",
+    "slug": "grand-prix-circuit-and-open-wheel-high-nose-racer-bbddbadd",
+    "title": "1990s high-nose racer (Formula Race Cars and Grand Prix Circuit)",
+    "summary": "1990s high-nose racer in an original generic circuit family.",
+    "description": "1990s high-nose racer. Bounds 2.062 x 1.160 x 5.415 metres X/Y/Z. +Y up, nose +Z, axles X. Wheel pivots are named where present. Static geometry; no rig, collision or navigation data. Modular track ports document 12 m-wide road centerline interfaces; all signs are generic blanks.",
+    "status": "published",
+    "url": "https://3dassets.dev/assets/grand-prix-circuit-and-open-wheel-high-nose-racer-bbddbadd",
+    "cdnUrl": "https://cdn.3dassets.dev/assets/15173/v1/model.glb",
+    "downloadUrl": "https://3dassets.dev/download/grand-prix-circuit-and-open-wheel-high-nose-racer-bbddbadd",
+    "thumbnailUrl": "https://cdn.3dassets.dev/assets/15173/v1/thumb.webp",
+    "posterUrl": "https://cdn.3dassets.dev/assets/15173/v1/poster.webp",
+    "blurhash": "U34yJ?VsD4SgWVIAkWx]00oe.mnjoz%#nPMx",
+    "category": {
+      "slug": "vehicles",
+      "title": "Vehicles"
+    },
+    "tags": [
+      {
+        "slug": "modern",
+        "title": "Modern"
+      },
+      {
+        "slug": "realistic",
+        "title": "Realistic"
+      },
+      {
+        "slug": "exterior",
+        "title": "Exterior"
+      }
+    ],
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "contributor": {
+      "username": "3dassets",
+      "name": "3D Assets",
+      "url": "https://3dassets.dev/u/3dassets"
+    },
+    "stats": {
+      "fileSize": 386912,
+      "triangles": 8864,
+      "vertices": 26592,
+      "meshes": 21,
+      "materials": 8,
+      "textures": 0,
+      "animations": [
+        "wheel-roll"
+      ],
+      "boundingBox": {
+        "min": [
+          -1.0309999620498442,
+          -1.4305114759416426E-08,
+          -2.6649999618530273
+        ],
+        "max": [
+          1.0309999620498442,
+          1.1598162588963228,
+          2.75
+        ]
+      },
+      "sizeMeters": [
+        2.062,
+        1.16,
+        5.415
+      ],
+      "hasDraco": false,
+      "hasMeshopt": false,
+      "hasKTX2": false,
+      "extensionsUsed": [
+        "KHR_mesh_quantization"
+      ]
+    },
+    "aiGenerated": true,
+    "aiModel": "Claude Fable 5.1",
+    "downloads": 17,
+    "publishedAt": "2026-09-07T16:01:26.922Z",
+    "updatedAt": "2026-11-10T01:59:58.428Z",
+    "usage": {
+      "threejs": "import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'\nimport { AnimationMixer } from 'three'\n\nlet mixer\n\nconst loader = new GLTFLoader()\nloader.load('https://cdn.3dassets.dev/assets/15173/v1/model.glb', (gltf) => {\n  scene.add(gltf.scene)\n  mixer = new AnimationMixer(gltf.scene)\n  mixer.clipAction(gltf.animations[0]).play()\n})\n\n// Call from your render loop; deltaSeconds is time since the previous frame.\nfunction updateAssetAnimation(deltaSeconds) {\n  mixer?.update(deltaSeconds)\n}",
+      "r3f": "import { useGLTF, useAnimations } from '@react-three/drei'\nimport { useEffect } from 'react'\n\nexport function Model1990sHighNoseRacerFormulaRaceCarsAndGrandPrixCircuit(props) {\n  const { scene, animations } = useGLTF('https://cdn.3dassets.dev/assets/15173/v1/model.glb')\n  const { actions, names } = useAnimations(animations, scene)\n  useEffect(() => {\n    const action = actions[names[0]]\n    action?.reset().play()\n    return () => { action?.stop() }\n  }, [actions, names])\n  return <primitive object={scene} {...props} />\n}\nuseGLTF.preload('https://cdn.3dassets.dev/assets/15173/v1/model.glb')",
+      "modelViewer": "<model-viewer src=\"https://cdn.3dassets.dev/assets/15173/v1/model.glb\" alt=\"1990s high-nose racer (Formula Race Cars and Grand Prix Circuit)\" camera-controls auto-rotate autoplay></model-viewer>",
+      "blender": "# Blender 4.x: File > Import > glTF 2.0, or from the Python console after downloading the file.\nimport bpy\nbpy.ops.import_scene.gltf(filepath='model.glb')  # from https://cdn.3dassets.dev/assets/15173/v1/model.glb\n# Metres and +Y up are converted to Blender's Z-up scene automatically.\n# Clips arrive as actions; play them from the Dope Sheet > Action Editor.",
+      "godot": "# Godot 4: copy model.glb into res://models/ and the editor imports it as a scene.\nvar packed := load(\"res://models/model.glb\") as PackedScene\nvar model := packed.instantiate()\nadd_child(model)\nvar player := model.find_child(\"AnimationPlayer\", true, false) as AnimationPlayer\nplayer.play(player.get_animation_list()[0])",
+      "unity": "// Unity: import model.glb with glTFast (Package Manager: com.unity.cloud.gltfast) and drag the prefab in,\n// or load it at runtime straight from the CDN:\nusing GLTFast;\nvar gltf = new GltfImport();\nif (await gltf.Load(\"https://cdn.3dassets.dev/assets/15173/v1/model.glb\")) await gltf.InstantiateMainSceneAsync(transform);\n// Clips import as legacy AnimationClips on the root; GetComponent<Animation>().Play() starts the first."
+    }
+  },
+  {
+    "id": "15177",
+    "slug": "grand-prix-circuit-and-open-wheel-narrow-track-racer-565b5129",
+    "title": "2000s narrow-track racer (Formula Race Cars and Grand Prix Circuit)",
+    "summary": "2000s narrow-track racer in an original generic circuit family.",
+    "description": "2000s narrow-track racer. Bounds 1.950 x 1.163 x 5.415 metres X/Y/Z. +Y up, nose +Z, axles X. Wheel pivots are named where present. Static geometry; no rig, collision or navigation data. Modular track ports document 12 m-wide road centerline interfaces; all signs are generic blanks.",
+    "status": "published",
+    "url": "https://3dassets.dev/assets/grand-prix-circuit-and-open-wheel-narrow-track-racer-565b5129",
+    "cdnUrl": "https://cdn.3dassets.dev/assets/15177/v1/model.glb",
+    "downloadUrl": "https://3dassets.dev/download/grand-prix-circuit-and-open-wheel-narrow-track-racer-565b5129",
+    "thumbnailUrl": "https://cdn.3dassets.dev/assets/15177/v1/thumb.webp",
+    "posterUrl": "https://cdn.3dassets.dev/assets/15177/v1/poster.webp",
+    "blurhash": "U35FLDr@4TX7S#IAV@x]00j@.mo3rr%#x]R6",
+    "category": {
+      "slug": "vehicles",
+      "title": "Vehicles"
+    },
+    "tags": [
+      {
+        "slug": "modern",
+        "title": "Modern"
+      },
+      {
+        "slug": "realistic",
+        "title": "Realistic"
+      },
+      {
+        "slug": "exterior",
+        "title": "Exterior"
+      }
+    ],
+    "license": {
+      "slug": "cc0-1.0",
+      "name": "CC0 1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false
+    },
+    "contributor": {
+      "username": "3dassets",
+      "name": "3D Assets",
+      "url": "https://3dassets.dev/u/3dassets"
+    },
+    "stats": {
+      "fileSize": 375312,
+      "triangles": 9728,
+      "vertices": 29184,
+      "meshes": 25,
+      "materials": 8,
+      "textures": 0,
+      "animations": [
+        "wheel-roll"
+      ],
+      "boundingBox": {
+        "min": [
+          -0.9751032219890068,
+          -5.4836273299940785E-09,
+          -2.6649999618530273
+        ],
+        "max": [
+          0.9751032219890068,
+          1.1628162687012868,
+          2.75
+        ]
+      },
+      "sizeMeters": [
+        1.95,
+        1.163,
+        5.415
+      ],
+      "hasDraco": false,
+      "hasMeshopt": false,
+      "hasKTX2": false,
+      "extensionsUsed": [
+        "KHR_mesh_quantization"
+      ]
+    },
+    "aiGenerated": true,
+    "aiModel": "Claude Fable 5.1",
+    "downloads": 23,
+    "publishedAt": "2026-09-07T16:01:27.271Z",
+    "updatedAt": "2026-11-07T17:23:52.284Z",
+    "usage": {
+      "threejs": "import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'\nimport { AnimationMixer } from 'three'\n\nlet mixer\n\nconst loader = new GLTFLoader()\nloader.load('https://cdn.3dassets.dev/assets/15177/v1/model.glb', (gltf) => {\n  scene.add(gltf.scene)\n  mixer = new AnimationMixer(gltf.scene)\n  mixer.clipAction(gltf.animations[0]).play()\n})\n\n// Call from your render loop; deltaSeconds is time since the previous frame.\nfunction updateAssetAnimation(deltaSeconds) {\n  mixer?.update(deltaSeconds)\n}",
+      "r3f": "import { useGLTF, useAnimations } from '@react-three/drei'\nimport { useEffect } from 'react'\n\nexport function Model2000sNarrowTrackRacerFormulaRaceCarsAndGrandPrixCircuit(props) {\n  const { scene, animations } = useGLTF('https://cdn.3dassets.dev/assets/15177/v1/model.glb')\n  const { actions, names } = useAnimations(animations, scene)\n  useEffect(() => {\n    const action = actions[names[0]]\n    action?.reset().play()\n    return () => { action?.stop() }\n  }, [actions, names])\n  return <primitive object={scene} {...props} />\n}\nuseGLTF.preload('https://cdn.3dassets.dev/assets/15177/v1/model.glb')",
+      "modelViewer": "<model-viewer src=\"https://cdn.3dassets.dev/assets/15177/v1/model.glb\" alt=\"2000s narrow-track racer (Formula Race Cars and Grand Prix Circuit)\" camera-controls auto-rotate autoplay></model-viewer>",
+      "blender": "# Blender 4.x: File > Import > glTF 2.0, or from the Python console after downloading the file.\nimport bpy\nbpy.ops.import_scene.gltf(filepath='model.glb')  # from https://cdn.3dassets.dev/assets/15177/v1/model.glb\n# Metres and +Y up are converted to Blender's Z-up scene automatically.\n# Clips arrive as actions; play them from the Dope Sheet > Action Editor.",
+      "godot": "# Godot 4: copy model.glb into res://models/ and the editor imports it as a scene.\nvar packed := load(\"res://models/model.glb\") as PackedScene\nvar model := packed.instantiate()\nadd_child(model)\nvar player := model.find_child(\"AnimationPlayer\", true, false) as AnimationPlayer\nplayer.play(player.get_animation_list()[0])",
+      "unity": "// Unity: import model.glb with glTFast (Package Manager: com.unity.cloud.gltfast) and drag the prefab in,\n// or load it at runtime straight from the CDN:\nusing GLTFast;\nvar gltf = new GltfImport();\nif (await gltf.Load(\"https://cdn.3dassets.dev/assets/15177/v1/model.glb\")) await gltf.InstantiateMainSceneAsync(transform);\n// Clips import as legacy AnimationClips on the root; GetComponent<Animation>().Play() starts the first."
+    }
+  }
+]

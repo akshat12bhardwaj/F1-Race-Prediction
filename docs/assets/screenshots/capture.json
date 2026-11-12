@@ -1,0 +1,40 @@
+{
+  "viewport": "1600x960",
+  "captures": [
+    "dashboard",
+    "lineup-editor",
+    "driver-selection",
+    "constructor-selection",
+    "environment",
+    "race-overview",
+    "race-follow",
+    "race-onboard",
+    "prediction-results"
+  ],
+  "errors": [],
+  "source": "Real local APEX UI; seeded model prediction; no mock responses",
+  "standings": [
+    "prost",
+    "michael_schumacher",
+    "senna",
+    "barrichello",
+    "hamilton",
+    "rosberg",
+    "vettel",
+    "webber",
+    "alonso",
+    "fisichella",
+    "piquet",
+    "patrese",
+    "heidfeld",
+    "raikkonen",
+    "kubica",
+    "button",
+    "grosjean",
+    "sato",
+    "laffite",
+    "trulli",
+    "ralf_schumacher",
+    "arnoux"
+  ]
+}

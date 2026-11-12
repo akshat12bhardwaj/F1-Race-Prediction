@@ -3,22 +3,18 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# ---------- Virtual environments (ours lives outside the project, but be safe) ----------
-.venv/
+# ---------- Local environments ----------
 venv/
 env/
 
 # ---------- Jupyter ----------
 .ipynb_checkpoints/
 
-# ---------- Data: raw and interim can be rebuilt by scripts [§16] ----------
+# ---------- Data: raw downloads are cached locally; frozen interim/processed snapshots are committed ----------
 data/raw/*
 !data/raw/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
 
-# ---------- Trained models (large binary files) ----------
-models/*.joblib
+# Trained bundles are intentionally committed: a clone must predict without retraining.
 
 # ---------- Editors / OS ----------
 .vscode/
@@ -29,3 +25,44 @@ desktop.ini
 
 # ---------- Office temp files ----------
 ~$*
+
+# ---------- Frontend ----------
+frontend/node_modules/
+frontend/dist/
+
+# ---------- Local artifact backups ----------
+backups/
+
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local environments and generated verification output
+.venv*/
+outputs/logs/*
+!outputs/logs/.gitkeep
+outputs/figures/ui/
+
+# Legacy rollback archive (not used by production or current tests)
+models/algorithms_v1_backup/
+
+# Reviewed publication exclusions; reasons and sizes in docs/CLEANUP_MANIFEST.csv
+/data/interim/2024_constructors.csv
+/data/interim/2024_drivers.csv
+/data/interim/2024_qualifying.csv
+/data/interim/2024_races.csv
+/data/interim/2024_results.csv
+/data/interim/2024_sprints.csv
+/data/interim/subset_constructors.csv
+/data/interim/subset_drivers.csv
+/data/interim/subset_qualifying.csv
+/data/interim/subset_races.csv
+/data/interim/subset_results.csv
+/data/interim/subset_sprints.csv
+/data/interim/subset_weather_hourly.csv
+outputs/asset_review/
+docs/assets/screenshots/*.png

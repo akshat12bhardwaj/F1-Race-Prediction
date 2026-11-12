@@ -1,0 +1,688 @@
+driver_id,driver_first_name,driver_last_name,driver_code,prime_season,prime_constructor_id,prime_constructor_name,season_starts,driver_career_starts,driver_skill_score,prime_low_evidence,greats_eligible,prime_rank
+max_verstappen,Max,Verstappen,VER,2025,red_bull,Red Bull,24,233,2.9542825412559965,False,True,1
+fangio,Juan,Fangio,,1954,mercedes,Mercedes,8,29,2.708582047218028,False,True,2
+stewart,Jackie,Stewart,,1972,tyrrell,Tyrrell,11,85,2.447934614905944,False,True,3
+clark,Jim,Clark,,1963,lotus-climax,Lotus-Climax,10,33,2.409644561960693,False,True,4
+frentzen,Heinz-Harald,Frentzen,,1995,sauber,Sauber,17,32,2.3927020714070686,False,True,5
+michael_schumacher,Michael,Schumacher,MSC,1996,ferrari,Ferrari,15,84,2.3757942449078846,False,True,6
+hill,Graham,Hill,,1965,brm,BRM,10,71,2.155922400428723,False,True,7
+alonso,Fernando,Alonso,ALO,2012,ferrari,Ferrari,20,197,2.146208963816448,False,True,8
+massa,Felipe,Massa,MAS,2009,ferrari,Ferrari,9,114,2.1071328589443037,False,True,9
+rindt,Jochen,Rindt,,1969,lotus-ford,Lotus-Ford,10,51,2.0792015005432,False,True,10
+prost,Alain,Prost,,1985,mclaren,McLaren,16,89,2.0612833646538204,False,True,11
+raikkonen,Kimi,Räikkönen,RAI,2009,ferrari,Ferrari,17,156,2.0479569963827844,False,True,12
+jack_brabham,Jack,Brabham,,1960,cooper-climax,Cooper-Climax,8,32,1.9793704838368722,False,True,13
+martini,Pierluigi,Martini,,1990,minardi,Minardi,15,54,1.8637707861800112,False,True,14
+trulli,Jarno,Trulli,TRU,2001,jordan,Jordan,17,78,1.8215235474230205,False,True,15
+senna,Ayrton,Senna,,1988,mclaren,McLaren,16,78,1.8121523465835272,False,True,16
+barrichello,Rubens,Barrichello,BAR,1993,jordan,Jordan,16,16,1.7808647569119043,False,True,17
+moss,Stirling,Moss,,1961,lotus-climax,Lotus-Climax,8,66,1.7771393353896818,False,True,18
+peterson,Ronnie,Peterson,,1974,team_lotus,Team Lotus,15,62,1.7380838949579793,False,True,19
+gonzalez,José Froilán,González,,1954,ferrari,Ferrari,7,21,1.7318654629758976,True,False,20
+ascari,Alberto,Ascari,,1953,ferrari,Ferrari,8,25,1.728699147193034,False,False,21
+galvez,Oscar,Gálvez,,1953,maserati,Maserati,1,1,1.7017224518559735,True,False,22
+hawthorn,Mike,Hawthorn,,1958,ferrari,Ferrari,10,45,1.6780703655758225,False,False,23
+scheckter,Jody,Scheckter,,1977,wolf,Wolf,17,68,1.6523895426061472,False,True,24
+brise,Tony,Brise,,1975,hill,Embassy Hill,10,10,1.6414151176661567,False,False,25
+gurney,Dan,Gurney,,1965,brabham-climax,Brabham-Climax,9,55,1.621448164425159,False,True,26
+leclerc,Charles,Leclerc,LEC,2024,ferrari,Ferrari,24,147,1.5834870094514026,False,True,27
+hunt,James,Hunt,,1974,hesketh,Hesketh,15,22,1.5768859895493788,False,True,28
+rosier,Louis,Rosier,,1951,lago,Talbot-Lago,7,13,1.5759907314398194,True,False,29
+hulme,Denny,Hulme,,1970,mclaren-ford,McLaren-Ford,11,60,1.5676138419987788,False,True,30
+regazzoni,Clay,Regazzoni,,1970,ferrari,Ferrari,8,8,1.5476772439435147,False,True,31
+rosberg,Nico,Rosberg,ROS,2011,mercedes,Mercedes,19,108,1.5442482580639376,False,True,32
+keke_rosberg,Keke,Rosberg,,1984,williams,Williams,16,82,1.5344025892689537,False,True,33
+alboreto,Michele,Alboreto,,1982,tyrrell,Tyrrell,16,26,1.5330245603579444,False,True,34
+cheever,Eddie,Cheever,,1982,ligier,Ligier,14,39,1.5211029967414111,False,True,35
+emerson_fittipaldi,Emerson,Fittipaldi,,1971,lotus-ford,Lotus-Ford,10,15,1.5187052942362973,False,True,36
+irvine,Eddie,Irvine,,1999,ferrari,Ferrari,16,97,1.5047903829650837,False,True,37
+depailler,Patrick,Depailler,,1977,tyrrell,Tyrrell,17,64,1.489952875487621,False,True,38
+norris,Lando,Norris,NOR,2022,mclaren,McLaren,22,82,1.4798394708727736,False,True,39
+ickx,Jacky,Ickx,,1970,ferrari,Ferrari,13,36,1.4465702931772846,False,True,40
+laffite,Jacques,Laffite,,1981,ligier,Ligier,15,108,1.38962720632925,False,True,41
+mclaren,Bruce,McLaren,,1962,cooper-climax,Cooper-Climax,9,34,1.3670763751590158,False,True,42
+sainz,Carlos,Sainz,SAI,2024,ferrari,Ferrari,23,206,1.3609458890398545,False,True,43
+gilles_villeneuve,Gilles,Villeneuve,,1981,ferrari,Ferrari,15,63,1.3529520519515512,False,True,44
+hakkinen,Mika,Häkkinen,,1994,mclaren,McLaren,15,48,1.3529235134584752,False,True,45
+amon,Chris,Amon,,1972,matra,Matra,11,78,1.3427715333170371,False,True,46
+reutemann,Carlos,Reutemann,,1973,brabham,Brabham,15,25,1.335796384820367,False,True,47
+hamilton,Lewis,Hamilton,HAM,2020,mercedes,Mercedes,16,266,1.3296184286905763,False,True,48
+brown,Warwick,Brown,,1976,wolf,Wolf,1,1,1.3200497905258397,True,False,49
+piquet,Nelson,Piquet,,1984,brabham,Brabham,16,94,1.3198599368009827,False,True,50
+palm,Torsten,Palm,,1975,hesketh,Hesketh,1,1,1.2941010842839549,True,False,51
+villeneuve,Jacques,Villeneuve,VIL,1997,williams,Williams,17,33,1.2902873417592975,False,True,52
+cevert,François,Cevert,,1973,tyrrell,Tyrrell,14,46,1.280534418508129,False,False,53
+herbert,Johnny,Herbert,,1996,sauber,Sauber,16,96,1.273279567665109,False,True,54
+farina,Nino,Farina,,1953,ferrari,Ferrari,8,28,1.2614450522591545,False,False,55
+russell,George,Russell,RUS,2019,williams,Williams,21,21,1.25994719395701,False,True,56
+alesi,Jean,Alesi,,1998,sauber,Sauber,16,151,1.2565073316027124,False,True,57
+manzon,Robert,Manzon,,1952,gordini,Gordini,7,14,1.2563737615737662,True,False,58
+damon_hill,Damon,Hill,,1994,williams,Williams,16,34,1.2435149749477303,False,True,59
+rodriguez,Pedro,Rodríguez,,1968,brm,BRM,12,28,1.236205834381766,False,True,60
+bottas,Valtteri,Bottas,BOT,2014,williams,Williams,19,38,1.2160221981304964,False,True,61
+pace,Carlos,Pace,,1976,brabham-alfa_romeo,Brabham-Alfa Romeo,16,69,1.2145126232021908,False,True,62
+hahne,Hubert,Hahne,,1967,lola,Lola,1,1,1.2137212147129504,True,False,63
+webber,Mark,Webber,WEB,2008,red_bull,Red Bull,18,121,1.2080872828257812,False,True,64
+scherrer,Albert,Scherrer,,1953,hwm,HWM,1,1,1.2064677524832301,True,False,65
+jones,Alan,Jones,,1980,williams,Williams,14,81,1.2046844247821897,False,True,66
+patrese,Riccardo,Patrese,,1986,brabham,Brabham,16,144,1.2023954063597921,False,True,67
+cabantous,Yves,Cabantous,,1951,lago,Talbot-Lago,6,10,1.1971416856483574,True,False,68
+vandoorne,Stoffel,Vandoorne,VAN,2017,mclaren,McLaren,20,21,1.180307151310414,False,False,69
+trintignant,Maurice,Trintignant,,1954,ferrari,Ferrari,8,27,1.1797733716803969,False,True,70
+ginther,Richie,Ginther,,1965,honda,Honda,8,47,1.1721194822962127,False,True,71
+ricciardo,Daniel,Ricciardo,RIC,2016,red_bull,Red Bull,21,109,1.1663423870741099,False,True,72
+surtees,John,Surtees,,1966,cooper-maserati,Cooper-Maserati,9,58,1.1631227258181522,False,True,73
+button,Jenson,Button,BUT,2015,mclaren,McLaren,18,284,1.158312587055681,False,True,74
+gerard,Bob,Gerard,,1950,era,ERA,2,2,1.1528079726077496,True,False,75
+perdisa,Cesare,Perdisa,,1956,maserati,Maserati,4,6,1.1514076385948724,True,False,76
+grouillard,Olivier,Grouillard,,1989,ligier,Ligier,12,12,1.1493958667396669,False,False,77
+wisell,Reine,Wisell,,1971,lotus-ford,Lotus-Ford,10,12,1.128656254556768,False,False,78
+mansell,Nigel,Mansell,,1990,ferrari,Ferrari,16,149,1.1244935746400102,False,True,79
+hobbs,David,Hobbs,,1967,brm,BRM,3,3,1.121206879485659,True,False,80
+warwick,Derek,Warwick,,1989,arrows,Arrows,15,115,1.1059083422938198,False,True,81
+villoresi,Luigi,Villoresi,,1953,ferrari,Ferrari,8,20,1.0947208886438706,False,False,82
+siffert,Jo,Siffert,,1971,brm,BRM,11,96,1.0936399433006412,False,True,83
+spence,Mike,Spence,,1967,brm,BRM,11,35,1.0910374834175203,False,False,84
+lauda,Niki,Lauda,,1976,ferrari,Ferrari,14,70,1.0859078870911052,False,True,85
+beltoise,Jean-Pierre,Beltoise,,1974,brm,BRM,14,85,1.063130670022809,False,True,86
+behra,Jean,Behra,,1958,brm,BRM,10,49,1.0437129734807336,False,True,87
+angelis,Elio,de Angelis,,1985,team_lotus,Team Lotus,16,104,1.0434795402192916,False,True,88
+brooks,Tony,Brooks,,1959,ferrari,Ferrari,8,23,1.0425771717342505,False,False,89
+giacomelli,Bruno,Giacomelli,,1980,alfa,Alfa Romeo,14,24,1.0281649711617673,False,True,90
+taruffi,Piero,Taruffi,,1952,ferrari,Ferrari,6,12,1.026706170528835,True,False,91
+brambilla,Vittorio,Brambilla,,1977,surtees,Surtees,17,58,1.0251433464638389,False,True,92
+cesaris,Andrea,de Cesaris,,1992,tyrrell,Tyrrell,16,181,1.0250381532369275,False,True,93
+ratzenberger,Roland,Ratzenberger,,1994,simtek,Simtek,1,1,0.9966114481178527,True,False,94
+castellotti,Eugenio,Castellotti,,1956,ferrari,Ferrari,7,13,0.9917907827433284,True,False,95
+caffi,Alex,Caffi,,1987,osella,Osella,14,15,0.989068460978892,False,True,96
+pironi,Didier,Pironi,,1979,tyrrell,Tyrrell,15,31,0.9824088726279422,False,True,97
+grosjean,Romain,Grosjean,GRO,2014,lotus_f1,Lotus F1,19,64,0.9783009263113819,False,True,98
+etancelin,Philippe,Étancelin,,1950,lago,Talbot-Lago,6,6,0.9665981924207643,True,False,99
+watson,John,Watson,,1980,mclaren,McLaren,13,107,0.9616647091069208,False,True,100
+collins,Peter,Collins,,1956,ferrari,Ferrari,7,19,0.9609240531881582,True,False,101
+schell,Harry,Schell,,1958,brm,BRM,10,47,0.9537465040734068,False,True,102
+frere,Paul,Frère,,1952,simca,Simca,3,3,0.9519909663156996,True,False,103
+kling,Karl,Kling,,1954,mercedes,Mercedes,6,6,0.950414337240381,True,False,104
+perez,Sergio,Pérez,PER,2022,red_bull,Red Bull,22,235,0.9472011191828585,False,True,105
+heidfeld,Nick,Heidfeld,HEI,2002,sauber,Sauber,17,50,0.938641787509017,False,True,106
+vettel,Sebastian,Vettel,VET,2015,ferrari,Ferrari,19,158,0.9309984849645638,False,True,107
+boutsen,Thierry,Boutsen,,1984,arrows,Arrows,15,25,0.9293244511520148,False,True,108
+musso,Luigi,Musso,,1955,maserati,Maserati,6,9,0.9269761400915306,True,False,109
+gasly,Pierre,Gasly,GAS,2018,toro_rosso,Toro Rosso,21,26,0.9234980724521175,False,True,110
+modena,Stefano,Modena,,1992,jordan,Jordan,12,73,0.9188414043519506,False,True,111
+keizan,Eddie,Keizan,,1973,tyrrell,Tyrrell,1,1,0.9008783768436701,True,False,112
+berger,Gerhard,Berger,,1995,ferrari,Ferrari,17,180,0.8966710613546742,False,True,113
+jarier,Jean-Pierre,Jarier,,1981,osella,Osella,9,107,0.8639650135303232,False,True,114
+herrmann,Hans,Herrmann,,1954,mercedes,Mercedes,5,6,0.8557552961524032,True,False,115
+panis,Olivier,Panis,,1997,prost,Prost,10,59,0.8476382893199917,False,True,116
+larrousse,Gérard,Larrousse,,1974,brabham,Brabham,1,1,0.8468294955841952,True,False,117
+phil_hill,Phil,Hill,,1960,cooper-climax,Cooper-Climax,9,20,0.8446157769458593,False,False,118
+apicella,Marco,Apicella,,1993,jordan,Jordan,1,1,0.8361605288874872,True,False,119
+hailwood,Mike,Hailwood,,1972,surtees,Surtees,10,24,0.8294215193406234,False,True,120
+parkes,Mike,Parkes,,1966,ferrari,Ferrari,4,4,0.8281990538687949,True,False,121
+gordini,Aldo,Gordini,,1951,simca,Simca,1,1,0.8238627952456035,True,False,122
+kubica,Robert,Kubica,KUB,2019,williams,Williams,21,97,0.8223644166653717,False,True,123
+mario_andretti,Mario,Andretti,,1978,team_lotus,Team Lotus,16,81,0.8188245557493647,False,True,124
+serafini,Dorino,Serafini,,1950,ferrari,Ferrari,1,1,0.8122593615573472,True,False,125
+coulthard,David,Coulthard,COU,2002,mclaren,McLaren,17,141,0.8036246932030521,False,True,126
+tambay,Patrick,Tambay,,1978,mclaren,McLaren,15,22,0.8022119171095459,False,True,127
+fisichella,Giancarlo,Fisichella,FIS,2002,jordan,Jordan,17,108,0.7853493486270517,False,True,128
+fagioli,Luigi,Fagioli,,1950,alfa,Alfa Romeo,6,6,0.7758528326016132,True,False,129
+reg_parnell,Reg,Parnell,,1950,maserati,Maserati,2,2,0.7726233866529344,True,False,130
+piastri,Oscar,Piastri,PIA,2025,mclaren,McLaren,24,70,0.7715763780351905,False,True,131
+boullion,Jean-Christophe,Boullion,,1995,sauber,Sauber,11,11,0.7671762594314263,False,False,132
+chaboud,Eugène,Chaboud,,1950,lago,Talbot-Lago,2,2,0.7313852007945097,True,False,133
+stommelen,Rolf,Stommelen,,1970,brabham,Brabham,10,10,0.7271639735929428,False,True,134
+alliot,Philippe,Alliot,,1990,ligier,Ligier,15,94,0.7234503305722562,False,True,135
+kovalainen,Heikki,Kovalainen,KOV,2010,lotus_racing,Lotus,18,70,0.7100611676692508,False,True,136
+mantovani,Sergio,Mantovani,,1954,maserati,Maserati,5,6,0.7047417678361219,True,False,137
+elford,Vic,Elford,,1968,cooper-brm,Cooper-BRM,7,7,0.689983855756679,True,False,138
+maggs,Tony,Maggs,,1963,cooper-climax,Cooper-Climax,10,21,0.6866205261084606,False,False,139
+bonnier,Jo,Bonnier,,1963,cooper-climax,Cooper-Climax,10,54,0.6832799175475351,False,True,140
+albers,Christijan,Albers,ALB,2006,spyker_mf1,Spyker MF1,18,37,0.6808988832688226,False,False,141
+rossi,Alexander,Rossi,RSS,2015,manor,Manor Marussia,5,5,0.6781142511050703,True,False,142
+brundle,Martin,Brundle,,1986,tyrrell,Tyrrell,16,38,0.6746456720098558,False,True,143
+albon,Alexander,Albon,ALB,2025,williams,Williams,24,128,0.6673041144364287,False,True,144
+courage,Piers,Courage,,1968,brm,BRM,11,13,0.6663459823462674,False,False,145
+lederle,Neville,Lederle,,1962,lotus-climax,Lotus-Climax,1,1,0.6631122649072478,True,False,146
+bonetto,Felice,Bonetto,,1953,maserati,Maserati,7,15,0.6616274211450113,True,False,147
+hulkenberg,Nico,Hülkenberg,HUL,2014,force_india,Force India,19,76,0.6601852981280196,False,True,148
+giovinazzi,Antonio,Giovinazzi,GIO,2021,alfa,Alfa Romeo,22,62,0.6548680451099481,False,True,149
+takahashi,Kunimitsu,Takahashi,,1977,tyrrell,Tyrrell,1,1,0.6519045834914323,True,False,150
+larini,Nicola,Larini,,1989,osella,Osella,8,20,0.6518766303743787,False,True,151
+beauman,Don,Beauman,,1954,connaught,Connaught,1,1,0.6497148684176327,True,False,152
+salvadori,Roy,Salvadori,,1958,cooper,Cooper,9,25,0.6446533486823685,False,False,153
+gregory,Masten,Gregory,,1959,cooper-climax,Cooper-Climax,6,14,0.6294109896368586,True,False,154
+monteiro,Tiago,Monteiro,TMO,2006,spyker_mf1,Spyker MF1,18,37,0.6292568696969437,False,False,155
+chiron,Louis,Chiron,,1951,lago,Talbot-Lago,7,12,0.6250675825005308,True,False,156
+ganley,Howden,Ganley,,1972,brm,BRM,10,20,0.620636971570552,False,False,157
+trips,Wolfgang,von Trips,,1960,cooper-maserati,Cooper-Maserati,9,20,0.6203089318993055,False,False,158
+forini,Franco,Forini,,1987,osella,Osella,2,2,0.6173165456723801,True,False,159
+surer,Marc,Surer,,1983,arrows,Arrows,15,50,0.6140506067034835,False,True,160
+morbidelli,Gianni,Morbidelli,,1991,ferrari,Ferrari,16,19,0.6121148921915371,False,True,161
+iglesias,Jesús,Iglesias,,1955,gordini,Gordini,1,1,0.6009733528997434,True,False,162
+tsunoda,Yuki,Tsunoda,TSU,2024,rb,RB F1 Team,24,88,0.5993690638473683,False,True,163
+ralf_schumacher,Ralf,Schumacher,SCH,2001,williams,Williams,17,83,0.5869937144417141,False,True,164
+lewis-evans,Stuart,Lewis-Evans,,1958,vanwall,Vanwall,8,14,0.584219213671499,False,False,165
+gugelmin,Maurício,Gugelmin,,1992,jordan,Jordan,16,74,0.5833504388827038,False,True,166
+ocon,Esteban,Ocon,OCO,2023,alpine,Alpine F1 Team,22,133,0.5727763934326853,False,True,167
+rol,Franco,Rol,,1950,maserati,Maserati,3,3,0.5615001830269876,True,False,168
+montoya,Juan,Pablo Montoya,MON,2004,williams,Williams,18,68,0.5455218463687472,False,True,169
+ryan,Peter,Ryan,,1961,lotus-climax,Lotus-Climax,1,1,0.5454662249997483,True,False,170
+menditeguy,Carlos,Menditeguy,,1957,maserati,Maserati,4,8,0.545189304915719,True,False,171
+irwin,Chris,Irwin,,1967,brm,BRM,9,10,0.5426428391824403,False,False,172
+arnoux,René,Arnoux,,1984,ferrari,Ferrari,16,95,0.5397911346410279,False,True,173
+kvyat,Daniil,Kvyat,KVY,2015,red_bull,Red Bull,18,37,0.5299045545556976,False,True,174
+bellof,Stefan,Bellof,,1985,tyrrell,Tyrrell,9,21,0.5150930075532832,False,False,175
+fitzau,Theo,Fitzau,,1953,afm,AFM,1,1,0.5088173157354872,True,False,176
+harrison,Cuth,Harrison,,1950,era,ERA,3,3,0.5070945988277573,True,False,177
+corrado_fabi,Corrado,Fabi,,1983,osella,Osella,9,9,0.5047542492910843,False,False,178
+bandini,Lorenzo,Bandini,,1965,ferrari,Ferrari,10,34,0.5044610143438985,False,False,179
+wehrlein,Pascal,Wehrlein,WEH,2017,sauber,Sauber,18,39,0.5016339156529785,False,False,180
+gendebien,Olivier,Gendebien,,1960,cooper-climax,Cooper-Climax,5,12,0.5011537352018125,True,False,181
+bira,Prince,Bira,,1954,maserati,Maserati,6,19,0.49941849602916,True,False,182
+glock,Timo,Glock,GLO,2009,toyota,Toyota,14,36,0.48615847706301507,False,True,183
+sparken,Mike,Sparken,,1955,gordini,Gordini,1,1,0.47892775004127563,True,False,184
+shelby,Carroll,Shelby,,1958,maserati,Maserati,4,4,0.4763668108511932,True,False,185
+kevin_magnussen,Kevin,Magnussen,MAG,2016,renault,Renault,21,40,0.4730815996923185,False,True,186
+johansson,Stefan,Johansson,,1987,mclaren,McLaren,16,60,0.4691523688520636,False,True,187
+mass,Jochen,Mass,,1977,mclaren,McLaren,17,62,0.4605308333123682,False,True,188
+manfred_winkelhock,Manfred,Winkelhock,,1983,ats,ATS,14,27,0.4519567744669395,False,False,189
+bearman,Oliver,Bearman,BEA,2025,haas,Haas F1 Team,24,27,0.45168739568713967,False,False,190
+scarlatti,Giorgio,Scarlatti,,1957,maserati,Maserati,4,5,0.449766113517584,True,False,191
+pantano,Giorgio,Pantano,,2004,jordan,Jordan,14,14,0.4497064192824417,False,False,192
+sala,Luis,Pérez-Sala,,1988,minardi,Minardi,14,14,0.4496906835074938,False,False,193
+stuck,Hans-Joachim,Stuck,,1974,march,March,12,12,0.443192889759054,False,True,194
+maldonado,Pastor,Maldonado,MAL,2014,lotus_f1,Lotus F1,18,76,0.4416581661933887,False,True,195
+bayol,Élie,Bayol,,1953,osca,OSCA,2,3,0.424262051594654,True,False,196
+sullivan,Danny,Sullivan,,1983,tyrrell,Tyrrell,15,15,0.41176680328331905,False,False,197
+marko,Helmut,Marko,,1972,brm,BRM,5,9,0.40976339698616193,True,False,198
+ireland,Innes,Ireland,,1960,team_lotus,Team Lotus,8,14,0.4064919897690273,False,True,199
+salo,Mika,Salo,,2000,sauber,Sauber,16,92,0.4048303232397303,False,True,200
+bernard,Éric,Bernard,,1991,lola,Lola,13,31,0.40174268760072185,False,False,201
+attwood,Richard,Attwood,,1965,lotus-brm,Lotus-BRM,8,8,0.400022273839038,False,False,202
+rees,Alan,Rees,,1967,brabham-ford,Brabham-Ford,2,2,0.3998016154764203,True,False,203
+marimon,Onofre,Marimón,,1953,maserati,Maserati,6,7,0.3842885318473489,True,False,204
+pryce,Tom,Pryce,,1976,shadow,Shadow,16,39,0.3818703711596857,False,False,205
+palmer,Jonathan,Palmer,,1984,ram,RAM,14,15,0.3681789667990343,False,True,206
+lehto,Jyrki,Järvilehto,,1992,dallara,Dallara,15,38,0.36771755268666584,False,True,207
+pescarolo,Henri,Pescarolo,,1970,matra,Matra,13,15,0.358452688550614,False,True,208
+schneider,Bernd,Schneider,,1988,zakspeed,Zakspeed,6,6,0.358358333035783,True,False,209
+miles,John,Miles,,1970,team_lotus,Team Lotus,7,12,0.3576995567589183,True,False,210
+badoer,Luca,Badoer,BAD,1993,lola,Lola,12,12,0.35109088243902276,False,True,211
+jolyon_palmer,Jolyon,Palmer,PAL,2016,renault,Renault,20,20,0.3492425237458508,False,False,212
+liuzzi,Vitantonio,Liuzzi,LIU,2007,toro_rosso,Toro Rosso,17,39,0.3409523927214472,False,True,213
+kobayashi,Kamui,Kobayashi,KOB,2014,caterham,Caterham,15,75,0.3392171095210841,False,True,214
+heeks,Willi,Heeks,,1952,afm,AFM,1,1,0.33158397283739266,True,False,215
+wharton,Ken,Wharton,,1953,cooper,Cooper,5,9,0.3178742709859405,True,False,216
+ricardo_rodriguez,Ricardo,Rodríguez,,1962,ferrari,Ferrari,4,5,0.3151620088632272,True,False,217
+rosa,Pedro,de la Rosa,DLR,2001,jaguar,Jaguar,13,45,0.3123552345561048,False,True,218
+nasr,Felipe,Nasr,NAS,2015,sauber,Sauber,18,18,0.3110434410539719,False,False,219
+blundell,Mark,Blundell,,1995,mclaren,McLaren,15,61,0.30348364257115623,False,True,220
+comas,Érik,Comas,,1992,ligier,Ligier,15,28,0.3031968514854365,False,True,221
+donnelly,Martin,Donnelly,,1990,team_lotus,Team Lotus,13,14,0.3016155921891977,False,False,222
+claes,Johnny,Claes,,1951,lago,Talbot-Lago,7,13,0.29813029040715966,True,False,223
+maglioli,Umberto,Maglioli,,1954,ferrari,Ferrari,3,4,0.29651411036066955,True,False,224
+wacker,Fred,Wacker,,1954,gordini,Gordini,2,3,0.29000283211770767,True,False,225
+wilson_fittipaldi,Wilson,Fittipaldi,,1975,fittipaldi,Fittipaldi,10,35,0.2883390107553402,False,False,226
+ericsson,Marcus,Ericsson,ERI,2017,sauber,Sauber,20,76,0.2856558713211339,False,True,227
+macklin,Lance,Macklin,,1953,hwm,HWM,6,11,0.2752324211761069,True,False,228
+gabbiani,Beppe,Gabbiani,,1981,osella,Osella,3,3,0.265891744297765,True,False,229
+stevens,Will,Stevens,STE,2015,manor,Manor Marussia,17,18,0.2636684167683574,False,False,230
+fittipaldi,Christian,Fittipaldi,,1992,minardi,Minardi,10,10,0.25605792423855267,False,False,231
+capelli,Ivan,Capelli,,1992,ferrari,Ferrari,14,92,0.2536914490021819,False,True,232
+hart,Brian,Hart,,1967,protos,Protos,1,1,0.25050595776054274,True,False,233
+sutil,Adrian,Sutil,SUT,2011,force_india,Force India,19,90,0.24706531533602538,False,True,234
+merzario,Arturo,Merzario,,1974,iso_marlboro,Iso Marlboro,14,25,0.2432544705430416,False,True,235
+schenken,Tim,Schenken,,1971,brabham,Brabham,10,14,0.2414404009929429,False,False,236
+scarfiotti,Ludovico,Scarfiotti,,1967,eagle-weslake,Eagle-Weslake,3,7,0.2411899099862393,True,False,237
+duncan_hamilton,Duncan,Hamilton,,1951,lago,Talbot-Lago,2,2,0.2332430700149427,True,False,238
+titterington,Desmond,Titterington,,1956,connaught,Connaught,1,1,0.22752276137162508,True,False,239
+alan_brown,Alan,Brown,,1952,cooper,Cooper,4,4,0.2273219225840164,True,False,240
+solana,Moisés,Solana,,1965,lotus-climax,Lotus-Climax,2,4,0.2197248410316614,True,False,241
+giunti,Ignazio,Giunti,,1970,ferrari,Ferrari,4,4,0.21656264913543083,True,False,242
+barilla,Paolo,Barilla,,1990,minardi,Minardi,8,9,0.21494558076534598,False,False,243
+raphanel,Pierre-Henri,Raphanel,,1989,coloni,Coloni,1,1,0.213546949783357,True,False,244
+mackay-fraser,Herbert,MacKay-Fraser,,1957,brm,BRM,1,1,0.21311011242589017,True,False,245
+diniz,Pedro,Diniz,,1995,forti,Forti,17,17,0.20917717384716777,False,True,246
+verstappen,Jos,Verstappen,,2001,arrows,Arrows,17,90,0.207436684953925,False,True,247
+klenk,Hans,Klenk,,1952,veritas,Veritas,1,1,0.20074443664959501,True,False,248
+vaccarella,Nino,Vaccarella,,1962,lotus-climax,Lotus-Climax,2,3,0.19585725851926822,True,False,249
+jules_bianchi,Jules,Bianchi,BIA,2014,marussia,Marussia,15,34,0.1923282499656652,False,False,250
+klien,Christian,Klien,KLI,2005,red_bull,Red Bull,13,31,0.19004893481403282,False,False,251
+graffenried,Toulo,de Graffenried,,1953,maserati,Maserati,7,19,0.1878211992683534,True,False,252
+bucknum,Ronnie,Bucknum,,1965,honda,Honda,6,9,0.1843091648696854,True,False,253
+riess,Fritz,Riess,,1952,veritas,Veritas,1,1,0.1833106591833087,True,False,254
+klodwig,Ernst,Klodwig,,1952,bmw,BMW,1,1,0.1824313909685705,True,False,255
+fitch,John,Fitch,,1953,hwm,HWM,1,1,0.18187238019926422,True,False,256
+merhi,Roberto,Merhi,MER,2015,manor,Manor Marussia,13,13,0.172598695100822,False,False,257
+aitken,Jack,Aitken,AIT,2020,williams,Williams,1,1,0.1718129898230497,True,False,258
+hall,Jim,Hall,,1963,lotus-brm,Lotus-BRM,9,11,0.1633684319315752,False,False,259
+suzuki,Aguri,Suzuki,,1990,larrousse,Larrousse,16,17,0.1607845564906465,False,True,260
+arundell,Peter,Arundell,,1966,lotus-brm,Lotus-BRM,7,11,0.15516811754156662,True,False,261
+downing,Ken,Downing,,1952,connaught,Connaught,2,2,0.1532624677795031,True,False,262
+anderson,Bob,Anderson,,1964,brabham-climax,Brabham-Climax,7,9,0.14411784196193034,True,False,263
+speed,Scott,Speed,SPE,2007,toro_rosso,Toro Rosso,10,28,0.13676926217751917,False,False,264
+thompson,Eric,Thompson,,1952,connaught,Connaught,1,1,0.13649898371599206,True,False,265
+zonta,Ricardo,Zonta,ZON,1999,bar,BAR,12,12,0.1329672844981364,False,False,266
+mick_schumacher,Mick,Schumacher,MSC,2021,haas,Haas F1 Team,22,22,0.1316941210191501,False,False,267
+nannini,Alessandro,Nannini,,1990,benetton,Benetton,14,77,0.13049697039508332,False,True,268
+donohue,Mark,Donohue,,1975,march,March,11,14,0.12997443836204314,False,False,269
+resta,Paul,di Resta,DIR,2013,force_india,Force India,19,58,0.1284620784911375,False,True,270
+penske,Roger,Penske,,1961,cooper-climax,Cooper-Climax,1,1,0.12610675504172786,True,False,271
+balsa,Marcel,Balsa,,1952,bmw,BMW,1,1,0.12289852439068141,True,False,272
+levegh,Pierre,Levegh,,1950,lago,Talbot-Lago,3,3,0.12148280103584791,True,False,273
+serra,Chico,Serra,,1982,fittipaldi,Fittipaldi,9,14,0.1194867344237579,False,False,274
+brendon_hartley,Brendon,Hartley,HAR,2018,toro_rosso,Toro Rosso,21,25,0.1161502204436527,False,False,275
+danner,Christian,Danner,,1986,arrows,Arrows,15,17,0.11584606459338617,False,False,276
+follmer,George,Follmer,,1973,shadow,Shadow,12,12,0.11291778234571359,False,False,277
+ambrosio,Jérôme,d'Ambrosio,DAM,2011,virgin,Virgin,19,19,0.1061537756547195,False,False,278
+markus_winkelhock,Markus,Winkelhock,WIN,2007,spyker,Spyker,1,1,0.10397532651682101,True,False,279
+marr,Leslie,Marr,,1954,connaught,Connaught,1,1,0.102797668666732,True,False,280
+berg,Allen,Berg,,1986,osella,Osella,9,9,0.0982445679006686,False,False,281
+lovely,Pete,Lovely,,1969,lotus-ford,Lotus-Ford,3,4,0.0979662609542124,True,False,282
+ruttman,Troy,Ruttman,,1958,maserati,Maserati,1,1,0.09699786597621862,True,False,283
+daly,Derek,Daly,,1981,march,March,8,34,0.09615282504400496,False,False,284
+oliver,Jackie,Oliver,,1969,brm,BRM,10,19,0.0951995670419874,False,True,285
+latifi,Nicholas,Latifi,LAT,2020,williams,Williams,17,17,0.09339752999625239,False,True,286
+mieres,Roberto,Mieres,,1954,maserati,Maserati,8,11,0.09231018153450579,False,False,287
+katayama,Ukyo,Katayama,,1994,tyrrell,Tyrrell,16,46,0.08871999538849251,False,True,288
+firman,Ralph,Firman,,2003,jordan,Jordan,14,14,0.08728064899720481,False,False,289
+ghinzani,Piercarlo,Ghinzani,,1986,osella,Osella,15,49,0.0858087006758948,False,True,290
+brabham,David,Brabham,,1994,simtek,Simtek,16,24,0.08314644339777999,False,False,291
+pilette,Teddy,Pilette,,1974,brabham,Brabham,1,1,0.08309917109535148,True,False,292
+grignard,Georges,Grignard,,1951,lago,Talbot-Lago,1,1,0.0815612208541939,True,False,293
+matta,Cristiano,da Matta,,2003,toyota,Toyota,16,16,0.08141658152647789,False,False,294
+beaufort,Carel Godin,de Beaufort,,1962,porsche,Porsche,8,20,0.07149230248287236,False,False,295
+bristow,Chris,Bristow,,1960,cooper-climax,Cooper-Climax,3,4,0.069696931512227,True,False,296
+gene,Marc,Gené,,1999,minardi,Minardi,16,16,0.06476726424405571,False,False,297
+fabi,Teo,Fabi,,1985,toleman,Toleman,13,32,0.06199282158828917,False,True,298
+pollet,Jacques,Pollet,,1955,gordini,Gordini,3,5,0.060696845709855715,True,False,299
+koinigg,Helmuth,Koinigg,,1974,surtees,Surtees,2,2,0.056308031378883905,True,False,300
+krause,Rudolf,Krause,,1952,bmw,BMW,1,1,0.05469489019373508,True,False,301
+fontana,Norberto,Fontana,,1997,sauber,Sauber,4,4,0.0544199833468029,True,False,302
+lang,Hermann,Lang,,1953,maserati,Maserati,1,1,0.05440206476469972,True,False,303
+moreno,Roberto,Moreno,,1995,forti,Forti,17,43,0.0537936824883721,False,False,304
+lewis,Jackie,Lewis,,1961,cooper-climax,Cooper-Climax,5,5,0.0510205350844404,True,False,305
+crawford,Jim,Crawford,,1975,team_lotus,Team Lotus,2,2,0.05087457279522081,True,False,306
+kelly,Joe,Kelly,,1950,alta,Alta,1,1,0.047667030221645396,True,False,307
+godia,Paco,Godia,,1956,maserati,Maserati,5,7,0.04298462896250249,True,False,308
+gethin,Peter,Gethin,,1972,brm,BRM,10,28,0.0428989702623012,False,False,309
+lees,Geoff,Lees,,1980,ensign,Ensign,2,3,0.04152711604377679,True,False,310
+obrien,Robert,O'Brien,,1952,simca,Simca,1,1,0.036124499972165686,True,False,311
+guerrero,Roberto,Guerrero,,1983,theodore,Theodore,13,21,0.03548390163899501,False,False,312
+toshio_suzuki,Toshio,Suzuki,,1993,larrousse,Larrousse,2,2,0.03083655242717842,True,False,313
+colapinto,Franco,Colapinto,COL,2025,alpine,Alpine F1 Team,17,26,0.029330003381794367,False,False,314
+lunger,Brett,Lunger,,1976,surtees,Surtees,10,13,0.019421019748566692,False,False,315
+whitehouse,Bill,Whitehouse,,1954,connaught,Connaught,1,1,0.011000867164799893,True,False,316
+leoni,Lamberto,Leoni,,1978,ensign,Ensign,2,2,0.00861535812542591,True,False,317
+stroll,Lance,Stroll,STR,2022,aston_martin,Aston Martin,22,122,-0.004724867327233102,False,True,318
+allison,Cliff,Allison,,1958,team_lotus,Team Lotus,9,9,-0.004734897626506085,False,False,319
+tomaso,Alessandro,de Tomaso,,1957,ferrari,Ferrari,1,1,-0.005215936022590399,True,False,320
+orey,Fritz,d'Orey,,1959,tec-mec,Tec-Mec,3,3,-0.009959387268939301,True,False,321
+sommer,Raymond,Sommer,,1950,lago,Talbot-Lago,5,5,-0.016414404608911803,True,False,322
+petrov,Vitaly,Petrov,PET,2012,caterham,Caterham,19,57,-0.019393571335571,False,True,323
+streiff,Philippe,Streiff,,1986,tyrrell,Tyrrell,16,22,-0.02599634770489212,False,True,324
+wunderink,Roelof,Wunderink,,1975,ensign,Ensign,3,3,-0.0269494274398826,True,False,325
+wurz,Alexander,Wurz,WUR,1998,benetton,Benetton,16,19,-0.033099446485910705,False,True,326
+cecotto,Johnny,Cecotto,,1983,theodore,Theodore,9,9,-0.03548390163899501,False,False,327
+doornbos,Robert,Doornbos,DOO,2005,minardi,Minardi,8,8,-0.036702872635893904,False,False,328
+trevor_taylor,Trevor,Taylor,,1963,lotus-climax,Lotus-Climax,9,19,-0.03738265600318774,False,False,329
+crossley,Geoff,Crossley,,1950,alta,Alta,2,2,-0.047667030221645396,True,False,330
+thorne,Leslie,Thorne,,1954,connaught,Connaught,1,1,-0.055041208362578975,True,False,331
+dolhem,José,Dolhem,,1974,surtees,Surtees,1,1,-0.056308031378883905,True,False,332
+mcalpine,Kenneth,McAlpine,,1953,connaught,Connaught,4,6,-0.057950450485326196,True,False,333
+edwards,Guy,Edwards,,1974,lola,Lola,7,7,-0.06278470180765888,True,False,334
+mazzacane,Gastón,Mazzacane,,2000,minardi,Minardi,17,17,-0.07264391445471469,False,False,335
+gounon,Jean-Marc,Gounon,,1994,simtek,Simtek,7,9,-0.0760698707672316,True,False,336
+mitter,Gerhard,Mitter,,1963,porsche,Porsche,2,2,-0.0774537317016433,True,False,337
+binder,Hans,Binder,,1977,surtees,Surtees,11,13,-0.07789297452545219,False,False,338
+pozzi,Charles,Pozzi,,1950,lago,Talbot-Lago,1,1,-0.07990142390278465,True,False,339
+lamy,Pedro,Lamy,,1995,minardi,Minardi,8,16,-0.08061198080269301,False,False,340
+bondurant,Bob,Bondurant,,1966,eagle-weslake,Eagle-Weslake,7,9,-0.0911707204388892,True,False,341
+pirocchi,Renato,Pirocchi,,1961,cooper-maserati,Cooper-Maserati,1,1,-0.09166258287744383,True,False,342
+redman,Brian,Redman,,1972,brm,BRM,4,8,-0.09536282121941697,True,False,343
+wendlinger,Karl,Wendlinger,,1993,sauber,Sauber,16,32,-0.0979900941087795,False,False,344
+lammers,Jan,Lammers,,1979,shadow,Shadow,12,12,-0.0997620659895327,False,False,345
+grassi,Lucas,di Grassi,DIG,2010,virgin,Virgin,19,19,-0.1001433264294016,False,False,346
+mairesse,Willy,Mairesse,,1960,ferrari,Ferrari,3,3,-0.10086877490640328,True,False,347
+gavin,Johnny,Servoz-Gavin,,1968,matra-ford,Matra-Ford,5,6,-0.10323897383012362,True,False,348
+hampshire,David,Hampshire,,1950,maserati,Maserati,2,2,-0.10404291372318031,True,False,349
+jean,Max,Jean,,1971,march-ford,March-Ford,1,1,-0.12131034441015093,True,False,350
+hans_stuck,Hans,von Stuck,,1953,afm,AFM,2,3,-0.12280991338488953,True,False,351
+jimmy_stewart,Jimmy,Stewart,,1953,cooper,Cooper,1,1,-0.1296003665957569,True,False,352
+davidson,Anthony,Davidson,DAV,2007,super_aguri,Super Aguri,17,20,-0.1300602126371138,False,False,353
+mazepin,Nikita,Mazepin,MAZ,2021,haas,Haas F1 Team,21,21,-0.1316941210191501,False,False,354
+mazet,François,Mazet,,1971,march-ford,March-Ford,1,1,-0.13239896796614137,True,False,355
+karthikeyan,Narain,Karthikeyan,KAR,2005,jordan,Jordan,19,19,-0.13476137214249312,False,False,356
+chilton,Max,Chilton,CHI,2013,marussia,Marussia,19,19,-0.1350614368618675,False,False,357
+ulmen,Toni,Ulmen,,1952,veritas,Veritas,2,2,-0.13889790690789017,True,False,358
+bruno_senna,Bruno,Senna,SEN,2012,williams,Williams,20,46,-0.14471324996322532,False,False,359
+martin,Eugène,Martin,,1950,lago,Talbot-Lago,2,2,-0.14726028282421183,True,False,360
+magnussen,Jan,Magnussen,MAG,1997,stewart,Stewart,17,18,-0.147423057498527,False,False,361
+oscar_gonzalez,Óscar,González,,1956,maserati,Maserati,1,1,-0.1592411934295342,True,False,362
+gerini,Gerino,Gerini,,1958,maserati,Maserati,4,6,-0.1601813651094758,True,False,363
+simon,André,Simon,,1951,simca,Simca,4,4,-0.17053851354835842,True,False,364
+pagani,Nello,Pagani,,1950,maserati,Maserati,1,1,-0.17061179780392588,True,False,365
+driver,Paddy,Driver,,1974,team_lotus,Team Lotus,1,1,-0.17135507880038503,True,False,366
+friesacher,Patrick,Friesacher,FRI,2005,minardi,Minardi,11,11,-0.18321375871490708,False,False,367
+henry_taylor,Henry,Taylor,,1960,cooper-climax,Cooper-Climax,4,5,-0.18979341827256596,True,False,368
+sato,Takuma,Sato,SAT,2007,super_aguri,Super Aguri,17,86,-0.1954530838097221,False,True,369
+burgess,Ian,Burgess,,1959,cooper-maserati,Cooper-Maserati,4,6,-0.19714968222331689,True,False,370
+gutierrez,Esteban,Gutiérrez,GUT,2016,haas,Haas F1 Team,21,59,-0.2075048451707629,False,True,371
+andre_pilette,André,Pilette,,1954,gordini,Gordini,3,5,-0.20948966733353552,True,False,372
+sanesi,Consalvo,Sanesi,,1951,alfa,Alfa Romeo,4,5,-0.21602383060664365,True,False,373
+milhoux,André,Milhoux,,1956,gordini,Gordini,1,1,-0.21823879620577757,True,False,374
+poore,Dennis,Poore,,1952,connaught,Connaught,2,2,-0.22149042999124202,True,False,375
+nilsson,Gunnar,Nilsson,,1976,team_lotus,Team Lotus,15,15,-0.22893174979913258,False,False,376
+migault,François,Migault,,1974,brm,BRM,10,11,-0.231081632491379,False,False,377
+garde,Giedo,van der Garde,VDG,2013,caterham,Caterham,19,19,-0.23427990284283612,False,False,378
+nuckey,Rodney,Nuckey,,1953,cooper,Cooper,1,1,-0.23447839695298253,True,False,379
+nakajima,Kazuki,Nakajima,NAK,2008,williams,Williams,18,19,-0.23480867694873778,False,False,380
+adamich,Andrea,de Adamich,,1972,surtees,Surtees,12,25,-0.2353652717236912,False,False,381
+gachot,Bertrand,Gachot,,1995,pacific,Pacific,11,47,-0.2433276520892805,False,False,382
+bueb,Ivor,Bueb,,1957,maserati,Maserati,2,2,-0.2437279477859361,True,False,383
+flockhart,Ron,Flockhart,,1959,brm,BRM,5,11,-0.243751866424541,True,False,384
+revson,Peter,Revson,,1973,mclaren,McLaren,14,28,-0.2449750545364315,False,False,385
+takahara,Noritake,Takahara,,1976,surtees,Surtees,1,1,-0.2452950248091158,True,False,386
+lennep,Gijs,van Lennep,,1973,iso_marlboro,Iso Marlboro,3,4,-0.24667738334736516,True,False,387
+ahrens,Kurt,Ahrens,,1967,protos,Protos,1,1,-0.25050595776054274,True,False,388
+gaze,Tony,Gaze,,1952,hwm,HWM,3,3,-0.2572204582327354,True,False,389
+pizzonia,Antônio,Pizzonia,PIZ,2003,jaguar,Jaguar,11,11,-0.25867688605634875,False,False,390
+perkins,Larry,Perkins,,1976,brabham-alfa_romeo,Brabham-Alfa Romeo,8,8,-0.26377379982028726,False,False,391
+brandon,Eric,Brandon,,1952,cooper,Cooper,4,4,-0.26453290899568305,True,False,392
+hadjar,Isack,Hadjar,HAD,2025,rb,RB F1 Team,24,24,-0.27261835485899366,False,False,393
+haryanto,Rio,Haryanto,HAR,2016,manor,Manor Marussia,12,12,-0.2746848378167724,False,False,394
+estefano,Nasif,Estéfano,,1960,maserati,Maserati,1,1,-0.2775578333492287,True,False,395
+henton,Brian,Henton,,1982,tyrrell,Tyrrell,14,19,-0.28166318370342386,False,False,396
+pic,Charles,Pic,PIC,2013,caterham,Caterham,19,39,-0.28283519788306377,False,False,397
+parker,Philip,Fotheringham-Parker,,1951,maserati,Maserati,1,1,-0.295266700557263,True,False,398
+guy_mairesse,Guy,Mairesse,,1951,lago,Talbot-Lago,2,3,-0.2998109776231369,True,False,399
+fry,Joe,Fry,,1950,maserati,Maserati,1,1,-0.3020260067134053,True,False,400
+shawe_taylor,Brian,Shawe Taylor,,1950,maserati,Maserati,1,1,-0.3020260067134053,True,False,401
+pon,Ben,Pon,,1962,porsche,Porsche,1,1,-0.3066171643316768,True,False,402
+davis,Colin,Davis,,1959,cooper-maserati,Cooper-Maserati,2,2,-0.3090549222034441,True,False,403
+chandhok,Karun,Chandhok,CHA,2010,hrt,HRT,10,10,-0.3236948060506562,False,False,404
+murray,David,Murray,,1950,maserati,Maserati,2,2,-0.3245811718100117,True,False,405
+walter,Heini,Walter,,1962,porsche,Porsche,1,1,-0.32621858102685075,True,False,406
+fischer,Rudi,Fischer,,1952,ferrari,Ferrari,5,7,-0.3279372331598662,True,False,407
+ertl,Harald,Ertl,,1976,hesketh,Hesketh,11,14,-0.3290512663546937,False,False,408
+hutchison,Gus,Hutchison,,1970,brabham,Brabham,1,1,-0.3300709575750834,True,False,409
+niedermayr,Helmut,Niedermayr,,1952,afm,AFM,1,1,-0.33158397283739266,True,False,410
+fairman,Jack,Fairman,,1953,connaught,Connaught,2,2,-0.333411560817633,True,False,411
+bernoldi,Enrique,Bernoldi,,2001,arrows,Arrows,17,17,-0.3348691631007577,False,False,412
+baumgartner,Zsolt,Baumgartner,,2004,minardi,Minardi,18,20,-0.3369926154281943,False,False,413
+pieterse,Ernie,Pieterse,,1962,lotus-climax,Lotus-Climax,1,1,-0.3449026719112879,True,False,414
+sarrazin,Stéphane,Sarrazin,,1999,minardi,Minardi,1,1,-0.3462052510898398,True,False,415
+munaron,Gino,Munaron,,1960,cooper-castellotti,Cooper-Castellotti,4,4,-0.35093185172432523,True,False,416
+halford,Bruce,Halford,,1956,maserati,Maserati,3,3,-0.3524229055997132,True,False,417
+bechem,Günther,Bechem,,1952,bmw,BMW,1,1,-0.3600248055529843,True,False,418
+de_vries,Nyck,de Vries,DEV,2023,alphatauri,AlphaTauri,10,11,-0.36132914310399644,False,False,419
+takagi,Toranosuke,Takagi,,1999,arrows,Arrows,16,32,-0.3615387546463889,False,False,420
+bucci,Clemar,Bucci,,1954,gordini,Gordini,4,4,-0.3616887636327867,True,False,421
+portago,Alfonso,de Portago,,1956,ferrari,Ferrari,4,4,-0.3672905744683522,True,False,422
+rolt,Tony,Rolt,,1950,era,ERA,1,1,-0.3852225841274803,True,False,423
+ribeiro,Alex,Ribeiro,,1977,march,March,9,10,-0.3983246810952743,False,False,424
+bianchi,Lucien,Bianchi,,1968,cooper-brm,Cooper-BRM,7,17,-0.4029550965253882,True,False,425
+burti,Luciano,Burti,,2001,prost,Prost,14,15,-0.4300024513370998,False,False,426
+bleekemolen,Michael,Bleekemolen,,1978,ats,ATS,1,1,-0.43074408430480327,True,False,427
+enge,Tomáš,Enge,,2001,prost,Prost,3,3,-0.43335090586698827,True,False,428
+scott_Brown,Archie,Scott Brown,,1956,connaught,Connaught,1,1,-0.43415934379727106,True,False,429
+bruni,Gianmaria,Bruni,,2004,minardi,Minardi,18,18,-0.4373034240656306,False,False,430
+kinnunen,Leo,Kinnunen,,1974,surtees,Surtees,1,1,-0.4382195147863895,True,False,431
+baldi,Mauro,Baldi,,1982,arrows,Arrows,11,11,-0.43955444821589307,False,False,432
+vergne,Jean-Éric,Vergne,VER,2014,toro_rosso,Toro Rosso,19,58,-0.4415714520473462,False,True,433
+wilson,Justin,Wilson,,2003,jaguar,Jaguar,16,16,-0.44420369012015,False,False,434
+laurent,Roger,Laurent,,1952,ferrari,Ferrari,2,2,-0.4474748363102705,True,False,435
+salazar,Eliseo,Salazar,,1982,ats,ATS,13,22,-0.45195677432371223,False,False,436
+kiesa,Nicolas,Kiesa,,2003,minardi,Minardi,5,5,-0.45783316729787404,True,False,437
+boesel,Raul,Boesel,,1983,ligier,Ligier,13,23,-0.4582996417522194,False,False,438
+magee,Damien,Magee,,1975,williams,Williams,1,1,-0.45886495810009265,True,False,439
+settember,Tony,Settember,,1963,scirocco,Scirocco,4,6,-0.45898398630311893,True,False,440
+taylor,John,Taylor,,1966,brabham-brm,Brabham-BRM,4,5,-0.4614223466405479,True,False,441
+loyer,Roger,Loyer,,1954,gordini,Gordini,1,1,-0.4668797872051285,True,False,442
+neve,Patrick,Nève,,1977,march,March,8,10,-0.4713198310429614,False,False,443
+tingle,Sam,Tingle,,1963,lds,LDS,1,1,-0.48468439269593033,True,False,444
+sharp,Hap,Sharp,,1963,lotus-brm,Lotus-BRM,2,4,-0.49357191920282445,True,False,445
+montermini,Andrea,Montermini,,1995,pacific,Pacific,16,16,-0.49667332467240377,False,False,446
+gartner,Jo,Gartner,,1984,osella,Osella,8,8,-0.5056626017333284,False,False,447
+moser,Silvio,Moser,,1969,brabham-ford,Brabham-Ford,7,10,-0.5064478122279108,True,False,448
+cabianca,Giulio,Cabianca,,1958,maserati,Maserati,1,1,-0.5129638857074038,True,False,449
+baghetti,Giancarlo,Baghetti,,1964,brm,BRM,6,18,-0.5302918726705159,True,False,450
+zanardi,Alessandro,Zanardi,,1994,team_lotus,Team Lotus,10,25,-0.540013926509253,False,False,451
+bussinello,Roberto,Bussinello,,1961,de_tomaso-alfa_romeo,De Tomaso-Alfa Romeo,1,1,-0.5512096596289013,True,False,452
+widdows,Robin,Widdows,,1968,cooper-brm,Cooper-BRM,1,1,-0.5628503391316249,True,False,453
+marques,Tarso,Marques,,2001,minardi,Minardi,13,25,-0.5648310078975576,False,False,454
+filippis,Maria,de Filippis,,1958,maserati,Maserati,3,3,-0.56954696295182,True,False,455
+schroeder,Rob,Schroeder,,1962,lotus-climax,Lotus-Climax,1,1,-0.5719297726091719,True,False,456
+satoru_nakajima,Satoru,Nakajima,,1989,team_lotus,Team Lotus,13,43,-0.5795169782600057,False,True,457
+dalmas,Yannick,Dalmas,,1988,larrousse,Larrousse,13,16,-0.5828384393702619,False,False,458
+louveau,Henri,Louveau,,1950,lago,Talbot-Lago,1,1,-0.587325214174114,True,False,459
+pirro,Emanuele,Pirro,,1990,dallara,Dallara,14,24,-0.5991335720437256,False,False,460
+tunmer,Guy,Tunmer,,1975,team_lotus,Team Lotus,1,1,-0.6012055489471195,True,False,461
+hoffmann,Ingo,Hoffmann,,1977,fittipaldi,Fittipaldi,2,3,-0.604951590602531,True,False,462
+parnell,Tim,Parnell,,1961,lotus-climax,Lotus-Climax,2,2,-0.6091740176097944,True,False,463
+bortoleto,Gabriel,Bortoleto,BOR,2025,sauber,Sauber,24,24,-0.6110276395919227,False,False,464
+lotterer,André,Lotterer,LOT,2014,caterham,Caterham,1,1,-0.6118608588693022,True,False,465
+antonelli,Andrea Kimi,Antonelli,ANT,2025,mercedes,Mercedes,24,24,-0.6199562880161911,False,False,466
+guerra,Miguel Ángel,Guerra,,1981,osella,Osella,1,1,-0.6221784469685543,True,False,467
+pietro_fittipaldi,Pietro,Fittipaldi,FIT,2020,haas,Haas F1 Team,2,2,-0.6264661627885144,True,False,468
+beuttler,Mike,Beuttler,,1973,march,March,14,28,-0.6266519755496425,False,False,469
+ramos,Hernando,da Silva Ramos,,1956,gordini,Gordini,4,7,-0.6325027347613833,True,False,470
+posey,Sam,Posey,,1971,surtees,Surtees,1,1,-0.6327584564952327,True,False,471
+buemi,Sébastien,Buemi,BUE,2009,toro_rosso,Toro Rosso,17,17,-0.6400387044166934,False,True,472
+leclere,Michel,Leclère,,1976,wolf,Wolf,6,7,-0.6561947059568205,True,False,473
+schiattarella,Domenico,Schiattarella,,1995,simtek,Simtek,4,6,-0.6586139539207984,True,False,474
+jabouille,Jean-Pierre,Jabouille,,1978,renault,Renault,14,19,-0.6602580150417064,False,False,475
+may,Michael,May,,1961,lotus-climax,Lotus-Climax,2,2,-0.6654866174483007,True,False,476
+zhou,Guanyu,Zhou,ZHO,2023,alfa,Alfa Romeo,22,44,-0.6756962973034675,False,True,477
+morgan,Dave,Morgan,,1975,surtees,Surtees,1,1,-0.6811289819347378,True,False,478
+sirotkin,Sergey,Sirotkin,SIR,2018,williams,Williams,21,21,-0.696135019064605,False,False,479
+marsh,Tony,Marsh,,1961,lotus-climax,Lotus-Climax,2,4,-0.6965950615544529,True,False,480
+riseley_prichard,John,Riseley-Prichard,,1954,connaught,Connaught,1,1,-0.7084721958865853,True,False,481
+paletti,Riccardo,Paletti,,1982,osella,Osella,3,3,-0.7095163273312077,True,False,482
+ian_scheckter,Ian,Scheckter,,1977,march,March,13,18,-0.7214545067326836,False,False,483
+lawson,Liam,Lawson,LAW,2025,rb,RB F1 Team,24,35,-0.7435359168020678,False,False,484
+love,John,Love,,1962,cooper-climax,Cooper-Climax,1,1,-0.7441447010470922,True,False,485
+macdowel,Mike,MacDowel,,1957,cooper,Cooper,1,1,-0.7495659067234476,True,False,486
+mcnish,Allan,McNish,,2002,toyota,Toyota,16,16,-0.7539728083305889,False,False,487
+flinterman,Jan,Flinterman,,1952,maserati,Maserati,1,1,-0.7579044879660548,True,False,488
+lombardi,Lella,Lombardi,,1975,march,March,10,10,-0.7599057538944287,False,False,489
+bonomi,Roberto,Bonomi,,1960,cooper-maserati,Cooper-Maserati,1,1,-0.7608791627318725,True,False,490
+bourdais,Sébastien,Bourdais,BOU,2009,toro_rosso,Toro Rosso,9,27,-0.7760230220342311,False,False,491
+ian_stewart,Ian,Stewart,,1953,connaught,Connaught,1,1,-0.7827366582246396,True,False,492
+hesnault,François,Hesnault,,1984,ligier,Ligier,15,15,-0.7982658938461992,False,False,493
+rhodes,John,Rhodes,,1965,cooper-climax,Cooper-Climax,1,1,-0.7998689448115648,True,False,494
+sargeant,Logan,Sargeant,SAR,2024,williams,Williams,14,36,-0.8029587179558617,False,False,495
+greene,Keith,Greene,,1960,cooper-maserati,Cooper-Maserati,1,1,-0.8066964131571913,True,False,496
+eaton,George,Eaton,,1970,brm,BRM,8,10,-0.8077417406583457,False,False,497
+williams,Jonathan,Williams,,1967,ferrari,Ferrari,1,1,-0.8124446046074862,True,False,498
+tornaco,Charles,de Tornaco,,1952,ferrari,Ferrari,2,2,-0.8237616823817171,True,False,499
+doohan,Jack,Doohan,DOO,2025,alpine,Alpine F1 Team,6,7,-0.8352113125909049,True,False,500
+unser,Bobby,Unser,,1968,brm,BRM,1,1,-0.8446520235445214,True,False,501
+peter_walker,Peter,Walker,,1955,connaught,Connaught,2,4,-0.8552540090578269,True,False,502
+alguersuari,Jaime,Alguersuari,ALG,2011,toro_rosso,Toro Rosso,19,46,-0.8633893429691388,False,False,503
+keegan,Rupert,Keegan,,1977,hesketh,Hesketh,12,12,-0.8690555740219185,False,False,504
+thiele,Alfonso,Thiele,,1960,cooper-maserati,Cooper-Maserati,1,1,-0.8746556148403583,True,False,505
+roig,Alex,Soler-Roig,,1971,march-ford,March-Ford,4,4,-0.8816542829289312,True,False,506
+gardner,Frank,Gardner,,1965,brabham-brm,Brabham-BRM,7,8,-0.8819400557104463,True,False,507
+volonterio,Ottorino,Volonterio,,1954,maserati,Maserati,1,1,-0.8858425864314602,True,False,508
+leslie_johnson,Leslie,Johnson,,1950,era,ERA,1,1,-0.8894574031805423,True,False,509
+ligier,Guy,Ligier,,1967,brabham-repco,Brabham-Repco,7,12,-0.9018916684706547,True,False,510
+rosset,Ricardo,Rosset,,1996,footwork,Footwork,16,16,-0.9045690004760916,False,False,511
+geki,Giacomo,Russo,,1965,lotus-climax,Lotus-Climax,1,1,-0.9079657097414686,True,False,512
+john_james,John,James,,1951,maserati,Maserati,1,1,-0.9130668354537882,True,False,513
+la_caze,Robert,La Caze,,1958,cooper,Cooper,1,1,-0.9142792106875386,True,False,514
+landi,Chico,Landi,,1952,maserati,Maserati,2,3,-0.9286704744206781,True,False,515
+larreta,Alberto Rodriguez,Larreta,,1960,team_lotus,Team Lotus,1,1,-0.9354428838050556,True,False,516
+campbell-jones,John,Campbell-Jones,,1962,lotus-climax,Lotus-Climax,1,1,-0.9418040833865073,True,False,517
+lucas,Jean,Lucas,,1955,gordini,Gordini,1,1,-0.9445345632667483,True,False,518
+chimeri,Ettore,Chimeri,,1960,maserati,Maserati,1,1,-0.9484723384323452,True,False,519
+hansgen,Walt,Hansgen,,1961,cooper-climax,Cooper-Climax,1,1,-0.9579146205109585,True,False,520
+bueno,Luiz,Bueno,,1973,surtees,Surtees,1,1,-0.9606132722408693,True,False,521
+piquet_jr,Nelson,Piquet Jr.,PIQ,2009,renault,Renault,10,28,-0.9623697919032811,False,False,522
+pesenti_rossi,Alessandro,Pesenti-Rossi,,1976,tyrrell,Tyrrell,3,3,-0.9721660955448919,True,False,523
+acheson,Kenny,Acheson,,1985,ram,RAM,2,3,-0.974038790439098,True,False,524
+zorzi,Renzo,Zorzi,,1977,shadow,Shadow,5,7,-0.9753845841524045,True,False,525
+john_barber,John,Barber,,1953,cooper,Cooper,1,1,-0.9883174012890907,True,False,526
+gould,Horace,Gould,,1957,maserati,Maserati,5,13,-1.00458001699338,True,False,527
+montagny,Franck,Montagny,FMO,2006,super_aguri,Super Aguri,7,7,-1.0212333752149703,True,False,528
+naylor,Brian,Naylor,,1960,cooper-maserati,Cooper-Maserati,3,6,-1.0403518065121076,True,False,529
+stohr,Siegfried,Stohr,,1981,arrows,Arrows,9,9,-1.0445496160778,False,False,530
+purley,David,Purley,,1973,march,March,5,5,-1.053785392004461,True,False,531
+tarquini,Gabriele,Tarquini,,1988,coloni,Coloni,8,9,-1.0681343917557153,False,False,532
+drogo,Piero,Drogo,,1960,cooper-climax,Cooper-Climax,1,1,-1.0780661086260057,True,False,533
+andretti,Michael,Andretti,,1993,mclaren,McLaren,13,13,-1.0798330237384621,False,False,534
+brudes,Adolf,Brudes,,1952,veritas,Veritas,1,1,-1.0837313833486295,True,False,535
+williamson,Roger,Williamson,,1973,march,March,2,2,-1.0907670216624388,True,False,536
+ruby,Lloyd,Ruby,,1961,lotus-climax,Lotus-Climax,1,1,-1.1243305072079153,True,False,537
+cantoni,Eitel,Cantoni,,1952,maserati,Maserati,3,3,-1.1271022825275492,True,False,538
+branca,Toni,Branca,,1950,maserati,Maserati,2,2,-1.1358417418297626,True,False,539
+hayje,Boy,Lunger,,1977,march,March,2,3,-1.1492184282625153,True,False,540
+abecassis,George,Abecassis,,1951,hwm,HWM,1,1,-1.151830260056367,True,False,541
+ide,Yuji,Ide,IDE,2006,super_aguri,Super Aguri,4,4,-1.1525183739500109,True,False,542
+yoong,Alex,Yoong,,2002,minardi,Minardi,11,14,-1.1540573934310552,False,False,543
+botha,Luki,Botha,,1967,brabham-climax,Brabham-Climax,1,1,-1.155363226629627,True,False,544
+galli,Nanni,Galli,,1971,march-ford,March-Ford,6,6,-1.161316444976296,True,False,545
+swaters,Jacques,Swaters,,1954,ferrari,Ferrari,3,7,-1.166626174830038,True,False,546
+uria,Alberto,Uria,,1955,maserati,Maserati,1,1,-1.1669564058016921,True,False,547
+lavaggi,Giovanni,Lavaggi,,1995,pacific,Pacific,4,4,-1.1833919001771642,True,False,548
+creus,Antonio,Creus,,1960,maserati,Maserati,1,1,-1.1840387943836168,True,False,549
+stacey,Alan,Stacey,,1960,team_lotus,Team Lotus,4,7,-1.1917478543493163,True,False,550
+ashmore,Gerry,Ashmore,,1961,lotus-climax,Lotus-Climax,3,3,-1.1951166229725176,True,False,551
+mayer,Timmy,Mayer,,1962,cooper-climax,Cooper-Climax,1,1,-1.195725140157631,True,False,552
+deletraz,Jean-Denis,Délétraz,,1995,pacific,Pacific,2,3,-1.2039050607680817,True,False,553
+natili,Massimo,Natili,,1961,cooper-maserati,Cooper-Maserati,1,1,-1.2142486189466364,True,False,554
+lof,Dries,van der Lof,,1952,hwm,HWM,1,1,-1.2210585550558837,True,False,555
+dumfries,Johnny,Dumfries,,1986,team_lotus,Team Lotus,15,15,-1.2349436812971852,False,False,556
+collomb,Bernard,Collomb,,1961,cooper-climax,Cooper-Climax,2,2,-1.2506952702113727,True,False,557
+bianco,Gino,Bianco,,1952,maserati,Maserati,4,4,-1.258970916360785,True,False,558
+robarts,Richard,Robarts,,1974,brabham,Brabham,3,3,-1.2642536063648229,True,False,559
+guelfi,André,Guelfi,,1958,cooper,Cooper,1,1,-1.265924539588247,True,False,560
+andersson,Conny,Andersson,,1976,surtees,Surtees,1,1,-1.272293246343711,True,False,561
+bridger,Tom,Bridger,,1958,cooper,Cooper,1,1,-1.2749986346147946,True,False,562
+adams,Philippe,Adams,,1994,team_lotus,Team Lotus,2,2,-1.2754000268964387,True,False,563
+barber,Skip,Barber,,1971,march-ford,March-Ford,3,3,-1.2759297857953047,True,False,564
+seidel,Wolfgang,Seidel,,1958,cooper,Cooper,3,4,-1.2856856200649271,True,False,565
+comotti,Franco,Comotti,,1950,maserati,Maserati,1,1,-1.285842020530966,True,False,566
+rahal,Bobby,Rahal,,1978,wolf,Wolf,2,2,-1.3079374961474421,True,False,567
+walker,David,Walker,,1972,team_lotus,Team Lotus,10,11,-1.3179714862901015,False,False,568
+daponte,Jorge,Daponte,,1954,maserati,Maserati,2,2,-1.3242772704881465,True,False,569
+campos,Adrián,Campos,,1987,minardi,Minardi,15,15,-1.3243500041250793,False,False,570
+naspetti,Emanuele,Naspetti,,1992,march,March,5,5,-1.3560740414253192,True,False,571
+nakano,Shinji,Nakano,,1998,minardi,Minardi,16,33,-1.3620837425829442,False,False,572
+yamamoto,Sakon,Yamamoto,YAM,2006,super_aguri,Super Aguri,7,7,-1.3764897649953423,True,False,573
+piotti,Luigi,Piotti,,1957,maserati,Maserati,3,5,-1.377252671847161,True,False,574
+bell,Derek,Bell,,1968,ferrari,Ferrari,2,2,-1.3866054660955056,True,False,575
+rothengatter,Huub,Rothengatter,,1986,zakspeed,Zakspeed,12,26,-1.4063738013764666,False,False,576
+picard,François,Picard,,1958,cooper,Cooper,1,1,-1.431537749560007,True,False,577
+craft,Chris,Craft,,1971,brabham,Brabham,1,1,-1.4401414856065138,True,False,578
+beretta,Olivier,Beretta,,1994,larrousse,Larrousse,10,10,-1.4448755615976872,False,False,579
+bailey,Julian,Bailey,,1988,tyrrell,Tyrrell,6,6,-1.4458858821061653,True,False,580
+england,Paul,England,,1957,cooper,Cooper,1,1,-1.4479104726634777,True,False,581
+noda,Hideki,Noda,,1994,larrousse,Larrousse,3,3,-1.4522997827751412,True,False,582
+papis,Massimiliano,Papis,,1995,footwork,Footwork,7,7,-1.4855061203883704,True,False,583
+lagorce,Franck,Lagorce,,1994,ligier,Ligier,2,2,-1.4913917190866237,True,False,584
+thackwell,Mike,Thackwell,,1980,tyrrell,Tyrrell,1,1,-1.50414638842557,True,False,585
+kessel,Loris,Kessel,,1976,brabham-ford,Brabham-Ford,3,3,-1.5177631833241176,True,False,586
+Cannoc,John,Cannon,,1971,brm,BRM,1,1,-1.5268982454920945,True,False,587
+hirt,Peter,Hirt,,1952,ferrari,Ferrari,3,4,-1.5418659761836229,True,False,588
+terra,Max,de Terra,,1952,simca,Simca,1,1,-1.5471647041811867,True,False,589
+hoshino,Kazuyoshi,Hoshino,,1976,tyrrell,Tyrrell,1,1,-1.5542124537508535,True,False,590
+rebaque,Hector,Rebaque,,1979,rebaque,Rebaque,10,20,-1.5615997490578206,False,False,591
+owen,Arthur,Owen,,1960,cooper-climax,Cooper-Climax,1,1,-1.586098252280039,True,False,592
+wietzes,Eppie,Wietzes,,1967,lotus-ford,Lotus-Ford,1,1,-1.59931611288724,True,False,593
+villota,Emilio,de Villota,,1977,mclaren,McLaren,2,2,-1.6577911995596417,True,False,594
+leston,Les,Leston,,1956,connaught,Connaught,1,1,-1.6577967275457675,True,False,595
+gibson,Dick,Gibson,,1957,cooper,Cooper,1,1,-1.6633421370928847,True,False,596
+tuero,Esteban,Tuero,,1998,minardi,Minardi,16,16,-1.6694762244304677,False,False,597
+hawkins,Paul,Hawkins,,1965,lotus-climax,Lotus-Climax,3,3,-1.7043909044377874,True,False,598
+cruz,Adolfo,Cruz,,1953,cooper,Cooper,1,1,-1.7510318479206668,True,False,599
+brack,Bill,Brack,,1968,lotus-ford,Lotus-Ford,1,1,-1.815471961613312,True,False,600
+johnstone,Bruce,Johnstone,,1962,brm,BRM,1,1,-1.82102583653991,True,False,601
+bassi,Giorgio,Bassi,,1965,brm,BRM,1,1,-1.8318136102099667,True,False,602
+inoue,Taki,Inoue,,1995,footwork,Footwork,17,18,-1.8325779817459296,False,False,603
+fisher,Mike,Fisher,,1967,lotus-brm,Lotus-BRM,2,2,-1.846972096328436,True,False,604
+helfrich,Theo,Helfrich,,1952,veritas,Veritas,1,1,-1.852206021460768,True,False,605
+daigh,Chuck,Daigh,,1960,scarab,Scarab,3,3,-1.8757773696512652,True,False,606
+poele,Eric,van de Poele,,1992,fondmetal,Fondmetal,4,5,-1.8853116279221696,True,False,607
+chamberlain,Jay,Chamberlain,,1962,lotus-climax,Lotus-Climax,1,1,-1.887396437204416,True,False,608
+ashdown,Peter,Ashdown,,1959,cooper-climax,Cooper-Climax,1,1,-1.8938041916453257,True,False,609
+jo_schlesser,Jo,Schlesser,,1967,matra,Matra,1,1,-1.91292123239645,True,False,610
+charlton,Dave,Charlton,,1972,team_lotus,Team Lotus,3,8,-1.9964110521950116,True,False,611
+barbazza,Fabrizio,Barbazza,,1993,minardi,Minardi,8,8,-2.025928031785745,False,False,612
+pietsch,Paul,Pietsch,,1950,maserati,Maserati,1,1,-2.0387016351807294,True,False,613
+peters,Josef,Peters,,1952,veritas,Veritas,1,1,-2.092772834937524,True,False,614
+schoeller,Rudolf,Schoeller,,1952,ferrari,Ferrari,1,1,-2.1205760310657595,True,False,615
+reventlow,Lance,Reventlow,,1960,scarab,Scarab,1,1,-2.153496430650644,True,False,616
+vonlanthen,Jo,Vonlanthen,,1975,williams,Williams,1,1,-2.161564898444182,True,False,617
+goethals,Christian,Goethals,,1958,cooper,Cooper,1,1,-2.224174031975705,True,False,618
+prophet,David,Prophet,,1963,brabham,Brabham,1,1,-2.249156354034341,True,False,619
+zunino,Ricardo,Zunino,,1980,brabham,Brabham,6,8,-2.251918173652665,True,False,620
+karch,Oswald,Karch,,1953,veritas,Veritas,1,1,-2.2766469367762467,True,False,621
+schlesser,Jean-Louis,Schlesser,,1988,williams,Williams,1,1,-2.306777154624898,True,False,622
+vic_wilson,Vic,Wilson,,1960,cooper-climax,Cooper-Climax,1,1,-2.3190183816461802,True,False,623
+mcrae,Graham,McRae,,1973,iso_marlboro,Iso Marlboro,1,1,-2.3549209051766953,True,False,624
+chiesa,Andrea,Chiesa,,1992,fondmetal,Fondmetal,3,3,-2.3614966833521427,True,False,625
+shelly,Tony,Shelly,,1962,lotus-climax,Lotus-Climax,1,1,-2.3824590788663076,True,False,626
+belmondo,Paul,Belmondo,,1992,march,March,5,5,-2.424180915668092,True,False,627
+adolff,Kurt,Adolff,,1953,ferrari,Ferrari,1,1,-2.709788139892961,True,False,628
+carini,Piero,Carini,,1952,ferrari,Ferrari,2,2,-2.790120395491733,True,False,629
+whitehead,Peter,Whitehead,,1951,ferrari,Ferrari,4,6,-2.9244530088804686,True,False,630
+loof,Ernst,Loof,,1953,veritas,Veritas,1,1,-2.962814926469971,True,False,631
+bauer,Erwin,Bauer,,1953,veritas,Veritas,1,1,-2.9746747662063955,True,False,632
+larrauri,Oscar,Larrauri,,1988,eurobrun,Euro Brun,8,8,-3.021157936595011,False,False,633
+foitek,Gregor,Foitek,,1990,onyx,Onyx,7,7,-3.0560948446024208,True,False,634
+mike_taylor,Mike,Taylor,,1959,cooper-climax,Cooper-Climax,1,1,-3.0741142296453097,True,False,635
+biondetti,Clemente,Biondetti,,1950,ferrari,Ferrari,1,1,-3.076198890938321,True,False,636
+roos,Bertil,Roos,,1974,shadow,Shadow,1,1,-3.5126212600510556,True,False,637
+piper,David,Piper,,1959,team_lotus,Team Lotus,1,1,-3.7763636273640424,True,False,638
+belso,Tom,Belsø,,1974,iso_marlboro,Iso Marlboro,2,2,-4.273874199957643,True,False,639
+ashley,Ian,Ashley,,1974,token,Token,2,2,,True,False,640
+aston,Bill,Aston,,1952,butterworth,Aston Butterworth,1,1,,True,False,641
+barth,Edgar,Barth,,1953,emw,EMW,1,1,,True,False,642
+birger,Pablo,Birger,,1953,simca,Simca,1,1,,True,False,643
+blanchard,Harry,Blanchard,,1959,porsche,Porsche,1,1,,True,False,644
+blokdyk,Trevor,Blokdyk,,1963,cooper-maserati,Cooper-Maserati,1,1,,True,False,645
+borgudd,Slim,Borgudd,,1981,ats,ATS,7,7,,True,False,646
+broeker,Peter,Broeker,,1963,stebro,Stebro,1,1,,True,False,647
+byrne,Tommy,Byrne,,1982,theodore,Theodore,2,2,,True,False,648
+cabral,Mário de Araújo,Cabral,,1959,cooper-maserati,Cooper-Maserati,1,1,,True,False,649
+charrington,Robin,Montgomerie-Charrington,,1952,butterworth,Aston Butterworth,1,1,,True,False,650
+constantine,George,Constantine,,1959,cooper-borgward,Cooper-Borgward,1,1,,True,False,651
+cordts,John,Cordts,,1969,brabham-climax,Brabham-Climax,1,1,,True,False,652
+crook,Tony,Crook,,1952,frazer_nash,Frazer Nash,1,1,,True,False,653
+drake,Bob,Drake,,1960,maserati,Maserati,1,1,,True,False,654
+emery,Paul,Emery,,1956,emeryson,Emeryson,1,1,,True,False,655
+evans,Bob,Evans,,1975,brm,BRM,8,8,,True,False,656
+fabre,Pascal,Fabre,,1987,ags,AGS,11,11,,True,False,657
+gaillard,Patrick,Gaillard,,1979,ensign,Ensign,2,2,,True,False,658
+gamble,Fred,Gamble,,1960,behra-porsche,Behra-Porsche,1,1,,True,False,659
+georges_berger,Georges,Berger,,1953,simca,Simca,1,1,,True,False,660
+graham_whitehead,Graham,Whitehead,,1952,alta,Alta,1,1,,True,False,661
+harris,Mike,Harris,,1962,cooper-alfa_romeo,Cooper-Alfa Romeo,1,1,,True,False,662
+hasemi,Masahiro,Hasemi,,1976,kojima,Kojima,1,1,,True,False,663
+klerk,Peter,de Klerk,,1963,alfa,Alfa Romeo,1,1,,True,False,664
+lawrence,Chris,Lawrence,,1966,cooper-ferrari,Cooper-Ferrari,2,2,,True,False,665
+legat,Arthur,Legat,,1952,veritas,Veritas,1,1,,True,False,666
+lippi,Roberto,Lippi,,1961,de_tomaso-osca,De Tomaso-Osca,1,1,,True,False,667
+mccarthy,Perry,McCarthy,,1992,moda,Andrea Moda,1,1,,True,False,668
+needell,Tiff,Needell,,1980,ensign,Ensign,1,1,,True,False,669
+nicholson,John,Nicholson,,1975,lyncar,Lyncar,1,1,,True,False,670
+niemann,Brausch,Niemann,,1963,lotus-ford,Lotus-Ford,1,1,,True,False,671
+ongais,Danny,Ongais,,1977,penske,Penske,2,2,,True,False,672
+opel,Rikky,von Opel,,1973,ensign,Ensign,6,6,,True,False,673
+pease,Al,Pease,,1967,eagle-climax,Eagle-Climax,1,1,,True,False,674
+pretorius,Jackie,Pretorius,,1968,brabham-climax,Brabham-Climax,1,1,,True,False,675
+quester,Dieter,Quester,,1974,surtees,Surtees,1,1,,True,False,676
+raby,Ian,Raby,,1963,gilby,Gilby,1,1,,True,False,677
+rooyen,Basil,van Rooyen,,1968,cooper-climax,Cooper-Climax,1,1,,True,False,678
+said,Bob,Said,,1959,connaught,Connaught,1,1,,True,False,679
+schiller,Heinz,Schiller,,1962,lotus-brm,Lotus-BRM,1,1,,True,False,680
+schuppan,Vern,Schuppan,,1974,ensign,Ensign,5,5,,True,False,681
+scotti,Piero,Scotti,,1956,connaught,Connaught,1,1,,True,False,682
+serrurier,Doug,Serrurier,,1962,lds,LDS,1,1,,True,False,683
+starrabba,Gaetano,Starrabba,,1961,lotus-maserati,Lotus-Maserati,1,1,,True,False,684
+ward,Rodger,Ward,,1959,kurtis_kraft,Kurtis Kraft,1,1,,True,False,685
+weidler,Volker,Weidler,,1989,rial,Rial,1,1,,True,False,686
+wilds,Mike,Wilds,,1975,brm,BRM,2,3,,True,False,687

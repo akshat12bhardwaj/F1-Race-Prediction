@@ -1,1 +1,0 @@
-2026-09-25 22:32:36,927 INFO    __main__: Weather stats: {'cache_hits': 70, 'network_requests': 0, 'retries': 0, 'failures': 0} | runtime 0.0 min

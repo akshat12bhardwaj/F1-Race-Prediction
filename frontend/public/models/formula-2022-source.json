@@ -1,0 +1,163 @@
+{
+  "NOTICE": "This project's code is licensed under the MIT licence in LICENSE. The\nfollowing are not covered by it.\n\nThe 3D models in public/models are not covered by the MIT licence,\nand neither are the files baked from them. public/models/f1-2026.*.glb\nis derived from \"F1 2026 concept\" by Qvist_Designs, split into parts\nfollowing filan214's APEX project; public/models/f226.*.glb is derived from\n\"Formula F226\" and public/models/f222.*.glb from \"Formula F222 Ultimate\",\nboth by CarlosCG31. All three are licensed CC BY 4.0 and were modified for\nthis site.  public/models/f1-sdf.*.bin, the signed distance field baked\nfrom the f1-2026 model, is covered by the same licence. See README.md and\nsrc/data/credits.ts for the titles, links and notes on what was changed.\n\nThe BadCodes name, logo and wordmark, including the textures in\npublic/models/bc-*.png used by the BadCodes livery, are not licensed under\nthe MIT licence. A fork keeps the copyright notice in LICENSE but should\nnot present itself as BadCodes or use the logo as its own brand.\n",
+  "src/data/credits.ts": "export interface Credit {\n  title: string;\n  author: string;\n  licence: string;\n  licenceUrl: string;\n  sourceUrl: string;\n  note: string;\n}\n\n/** Model attribution. CC BY 4.0 requires the author, the licence and a note that the work was changed. */\nexport const credits: {\n  showroom: Credit;\n  showroom2022: Credit;\n  model: Credit;\n  partSplit: Credit;\n  powerUnit: string;\n  regulations: string;\n  disclaimer: string;\n  attributionLine: string;\n} = {\n  showroom: {\n    title: \"Formula F226\",\n    author: \"CarlosCG31\",\n    licence: \"CC BY 4.0\",\n    licenceUrl: \"https://creativecommons.org/licenses/by/4.0/\",\n    sourceUrl: \"https://sketchfab.com/3d-models/formula-f226-a4dd03155ab64a6a9b7c677af189c1a1\",\n    note: \"The car in the exploded view. Its parts were grouped for the explode, its textures replaced by a painted livery, and it was compressed for the web.\",\n  },\n  showroom2022: {\n    title: \"Formula F222 Ultimate\",\n    author: \"CarlosCG31\",\n    licence: \"CC BY 4.0\",\n    licenceUrl: \"https://creativecommons.org/licenses/by/4.0/\",\n    sourceUrl: \"https://sketchfab.com/3d-models/formula-f222-ultimate-de780743451748d6b5567b1e190c7908\",\n    note: \"The 2022 car in the exploded view. Its parts were grouped for the explode, its textures replaced by a neutral finish, and it was compressed for the web.\",\n  },\n  model: {\n    title: \"F1 2026 concept\",\n    author: \"Qvist_Designs\",\n    licence: \"CC BY 4.0\",\n    licenceUrl: \"https://creativecommons.org/licenses/by/4.0/\",\n    sourceUrl: \"https://sketchfab.com/3d-models/ea3bde709b1e4dc9b0ec8557d106ed42\",\n    note: \"The car in the wind tunnel: a generic 2026 regulation F1 car on Sketchfab. Split into parts, decimated and compressed for the web.\",\n  },\n  partSplit: {\n    title: \"F1 2026 Car Details (APEX)\",\n    author: \"filan214\",\n    licence: \"CC BY 4.0 (stated in the repository README; the repository carries no LICENSE file)\",\n    licenceUrl: \"https://creativecommons.org/licenses/by/4.0/\",\n    sourceUrl: \"https://github.com/filan214/F1---2026-Car-Details\",\n    note: \"The 16-part split of the model into wings, floor, chassis, sidepods, engine cover, halo, suspension, wheels, exhaust and mirrors follows this repository. The seams are illustrative display cuts, not the shape of real components.\",\n  },\n  powerUnit:\n    \"The power unit is not part of the scanned model. It is a simplified diagram built in code from the 2026 power unit regulations, so its shapes are illustrative and not to scale.\",\n  regulations:\n    \"Regulation figures come from the FIA 2026 Formula 1 Technical Regulations (Section C issue 11 and the Power Unit regulations issue 6) and from FIA and Formula 1 explainer articles. Where a 2026 number differs from 2025, the text says so.\",\n  disclaimer:\n    \"Qualitative flow, table-driven score. The airflow shown is a simplified visual and is not CFD. Lap-time and downforce scores come from a small coefficient table and a simple lap model, are given relative to a baseline setup, and are a game model, not the numbers of any real car or team.\",\n  attributionLine:\n    \"3D models: \\\"Formula F226\\\" and \\\"Formula F222 Ultimate\\\" by CarlosCG31 (CC BY 4.0), and \\\"F1 2026 concept\\\" by Qvist_Designs (CC BY 4.0) split into parts with the APEX project by filan214. All modified for this site.\",\n};\n",
+  "original-model": {
+    "animationCount": 0,
+    "categories": [
+      {
+        "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+        "name": "Cars & Vehicles",
+        "slug": "cars-vehicles",
+        "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+        "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+        "thumbnails": [
+          {
+            "width": "512",
+            "height": "288",
+            "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+          },
+          {
+            "width": "800",
+            "height": "450",
+            "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+          }
+        ]
+      }
+    ],
+    "commentCount": 0,
+    "createdAt": "2026-04-21T00:42:54.181696",
+    "embedUrl": "https://sketchfab.com/models/de780743451748d6b5567b1e190c7908/embed",
+    "faceCount": 59884,
+    "isAgeRestricted": false,
+    "license": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "likeCount": 3,
+    "name": "Formula F222 Ultimate",
+    "publishedAt": "2026-04-21T00:44:48.296562",
+    "soundCount": 0,
+    "staffpickedAt": null,
+    "tags": [
+      {
+        "name": "vehicles",
+        "slug": "vehicles",
+        "uri": "https://api.sketchfab.com/v3/tags/vehicles"
+      },
+      {
+        "name": "racecar",
+        "slug": "racecar",
+        "uri": "https://api.sketchfab.com/v3/tags/racecar"
+      },
+      {
+        "name": "f1car",
+        "slug": "f1car",
+        "uri": "https://api.sketchfab.com/v3/tags/f1car"
+      }
+    ],
+    "thumbnails": {
+      "images": [
+        {
+          "uid": "0ccb40a661ea4478940ffcab7195085b",
+          "width": 1920,
+          "height": 1080,
+          "size": 78572,
+          "url": "https://media.sketchfab.com/models/de780743451748d6b5567b1e190c7908/thumbnails/e6e9625504e843be9f601d0db352d4d7/b2ddbf1d0781409d9e3d8ef110df80bc.jpeg"
+        },
+        {
+          "uid": "9d51f4b939224f1a825ed1a15f8826f1",
+          "width": 1024,
+          "height": 576,
+          "size": 28930,
+          "url": "https://media.sketchfab.com/models/de780743451748d6b5567b1e190c7908/thumbnails/e6e9625504e843be9f601d0db352d4d7/3fce77a5f2e74be0a944c98e5c22cf7f.jpeg"
+        },
+        {
+          "uid": "b05cfbd5e4eb49e5a4c5bcb71f97a4cb",
+          "width": 720,
+          "height": 405,
+          "size": 17914,
+          "url": "https://media.sketchfab.com/models/de780743451748d6b5567b1e190c7908/thumbnails/e6e9625504e843be9f601d0db352d4d7/611905a172da46d287f03001aef320cb.jpeg"
+        },
+        {
+          "uid": "88421ffc78df42dbad9436ee3503212b",
+          "width": 256,
+          "height": 144,
+          "size": 4267,
+          "url": "https://media.sketchfab.com/models/de780743451748d6b5567b1e190c7908/thumbnails/e6e9625504e843be9f601d0db352d4d7/406f3d27572040168d39a57a463fbd6c.jpeg"
+        },
+        {
+          "uid": "20c9f9fd797644948f106852960e64d9",
+          "width": 64,
+          "height": 36,
+          "size": 1079,
+          "url": "https://media.sketchfab.com/models/de780743451748d6b5567b1e190c7908/thumbnails/e6e9625504e843be9f601d0db352d4d7/d95ef2ff0b014459bb12af33c188ecee.jpeg"
+        }
+      ]
+    },
+    "uid": "de780743451748d6b5567b1e190c7908",
+    "uri": "https://api.sketchfab.com/v3/models/de780743451748d6b5567b1e190c7908",
+    "user": {
+      "uid": "c207854986f44d8da1c1d64fe289ec27",
+      "username": "CarlosCG31",
+      "displayName": "CarlosCG31",
+      "account": "basic",
+      "profileUrl": "https://sketchfab.com/CarlosCG31",
+      "avatar": {
+        "uid": "e0341660ca734aaa955ebc8c1d920ea6",
+        "uri": "https://api.sketchfab.com/v3/avatars/e0341660ca734aaa955ebc8c1d920ea6",
+        "images": [
+          {
+            "width": 32,
+            "height": 32,
+            "size": 2130,
+            "url": "https://media.sketchfab.com/avatars/e0341660ca734aaa955ebc8c1d920ea6/73b30c823cb64e04b9816a6fde8643f1.png"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "size": 4606,
+            "url": "https://media.sketchfab.com/avatars/e0341660ca734aaa955ebc8c1d920ea6/3bd6ce2b722c4ee59a0af6ca3dfe885a.png"
+          },
+          {
+            "width": 90,
+            "height": 90,
+            "size": 14974,
+            "url": "https://media.sketchfab.com/avatars/e0341660ca734aaa955ebc8c1d920ea6/b2987ad6eef942758728c04157aa9a9a.png"
+          },
+          {
+            "width": 100,
+            "height": 100,
+            "size": 18077,
+            "url": "https://media.sketchfab.com/avatars/e0341660ca734aaa955ebc8c1d920ea6/0c13c963c9a541cd9410145d0076dbbb.png"
+          }
+        ]
+      },
+      "uri": "https://api.sketchfab.com/v3/users/c207854986f44d8da1c1d64fe289ec27"
+    },
+    "vertexCount": 30666,
+    "viewCount": 101,
+    "viewerUrl": "https://sketchfab.com/3d-models/formula-f222-ultimate-de780743451748d6b5567b1e190c7908",
+    "isDownloadable": true,
+    "isProtected": false,
+    "description": "My best model so far",
+    "price": null,
+    "downloadCount": 24,
+    "editorUrl": "https://sketchfab.com/models/de780743451748d6b5567b1e190c7908/edit",
+    "status": {
+      "warning": {},
+      "processing": "SUCCEEDED"
+    },
+    "source": "website",
+    "hasCommentsDisabled": false,
+    "updatedAt": "2026-07-23T01:53:42.477530",
+    "pbrType": null,
+    "textureCount": 2,
+    "materialCount": 17
+  },
+  "download": "https://raw.githubusercontent.com/BadCodesGG/interactive-f1/main/public/models/f222.d2c1885a.glb",
+  "sha256": "d2c1885aa5da1151abbddc486be5126c99733d2f5c6981d340a982816942a6ab"
+}

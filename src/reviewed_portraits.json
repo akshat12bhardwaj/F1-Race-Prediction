@@ -1,0 +1,109 @@
+{
+ "pizzonia": {
+  "article": "Antônio Pizzonia",
+  "file": "Fale F1 Monza 2004 11 cropped.jpg",
+  "author": "Fale_F1_Monza_2004_11.jpg: Fabio Alessandro Locati\nderivative work: Flyz1 (talk)",
+  "licence": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Fale_F1_Monza_2004_11_cropped.jpg",
+  "path": "/drivers/pizzonia.jpg",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "changes": "Cropped to head and shoulders; resized to 256×256 JPEG. Crop distributed under the source licence.",
+  "crop": [
+   65,
+   15,
+   360,
+   310
+  ],
+  "original_file": "pizzonia-source.jpg",
+  "original_sha256": "7d42490589635c68cca1e22c66614c066ada4bcb49547ca9e45c17393bd97eac",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Fale_F1_Monza_2004_11_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "verified": "2026-11-11",
+  "identity_evidence": "Commons category Antônio Pizzonia in 2004; used by the German, Italian and Polish driver biographies. Bareheaded Williams driver, Monza 2004."
+ },
+ "giacomelli": {
+  "article": "Bruno Giacomelli",
+  "file": "Bruno Giacomelli 1982.jpg",
+  "author": "User:Gel",
+  "licence": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bruno_Giacomelli_1982.jpg",
+  "path": "/drivers/giacomelli.jpg",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "changes": "Cropped to head and shoulders; resized to 256×256 JPEG. Crop distributed under the source licence.",
+  "crop": [
+   40,
+   0,
+   180,
+   140
+  ],
+  "original_file": "giacomelli-source.jpg",
+  "original_sha256": "0430d486bb8280abe40636aad9794c003e2e57f8057c75181ed4b06c02d3271b",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bruno_Giacomelli_1982.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "verified": "2026-11-11",
+  "identity_evidence": "Named Commons extraction of Bruno Giacomelli from the 1982 Alfa Romeo presentation; Giacomelli is the right-hand driver in the parent image."
+ },
+ "rebaque": {
+  "article": "Héctor Rebaque",
+  "file": "1981 Argentine Grand Prix, Rebaque.jpg",
+  "author": "Unknown photographer; Revista Corsa N.° 776 (April 1981)",
+  "licence": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:1981_Argentine_Grand_Prix,_Rebaque.jpg",
+  "path": "/drivers/rebaque.jpg",
+  "licence_url": "https://commons.wikimedia.org/wiki/Template:PD-AR-Photo",
+  "changes": "Cropped to head and shoulders; resized to 256×256 JPEG. Crop distributed under the source licence.",
+  "crop": [
+   115,
+   80,
+   290,
+   255
+  ],
+  "original_file": "rebaque-source.jpg",
+  "original_sha256": "30945c4780236d590257e13d14a5cda4c1605ae2f717669049973423fd2c3391",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/1981_Argentine_Grand_Prix%2C_Rebaque.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "verified": "2026-11-11",
+  "identity_evidence": "Commons file identifies Rebaque at the 1981 Argentine Grand Prix; bareheaded driver in the central Parmalat Brabham racing suit.",
+  "usage_note": "Commons marks this photograph public domain under the Argentine photographic term (PD-AR-Photo); see the source for jurisdiction details."
+ },
+ "gilles_villeneuve": {
+  "article": "Gilles Villeneuve",
+  "file": "Gilles Villeneuve imola 1979.jpg",
+  "author": "ideogibs",
+  "licence": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_imola_1979.jpg",
+  "path": "/drivers/gilles_villeneuve.jpg",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "changes": "Cropped to head and shoulders; resized to 256×256 JPEG. Crop distributed under the source licence.",
+  "crop": [
+   805,
+   455,
+   1015,
+   665
+  ],
+  "original_file": "villeneuve-source.jpg",
+  "original_sha256": "2e466c8a131593a3130fd60a73d1c655dd1ad9605a4efa422dcb6449f6f541fe",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Gilles_Villeneuve_imola_1979.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "verified": "2026-11-11",
+  "identity_evidence": "Commons caption identifies Gilles Villeneuve at Imola 1979. Crop isolates the bareheaded driver seated on the Ferrari number 12, not the foreground crew member."
+ },
+ "satoru_nakajima": {
+  "article": "Satoru Nakajima",
+  "file": "Satoru Nakajima (1457447616).jpg",
+  "author": "Derral Chen from Los Angeles, U.S.A",
+  "licence": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Satoru_Nakajima_(1457447616).jpg",
+  "path": "/drivers/satoru_nakajima.jpg",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "changes": "Cropped to head and shoulders; resized to 256×256 JPEG. Crop distributed under the source licence.",
+  "crop": [
+   220,
+   0,
+   510,
+   290
+  ],
+  "original_file": "nakajima-source.jpg",
+  "original_sha256": "ffd7c7716674bf55bd238e1ed5e9abb3c9c320b3a2e436a31d33e35311e63809",
+  "download_url": "https://live.staticflickr.com/1422/1457447616_5b12d5d6d7_z.jpg",
+  "verified": "2026-11-11",
+  "identity_evidence": "Commons and original Flickr photographer Derral Chen both explicitly name Satoru Nakajima. Bareheaded Honda team manager with headset, not Kazuki Nakajima.",
+  "original_source": "https://www.flickr.com/photos/derra1029/1457447616/"
+ }
+}

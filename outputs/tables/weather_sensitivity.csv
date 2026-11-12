@@ -1,0 +1,449 @@
+algorithm,feature_set,circuit,scenario,mean_abs_change,max_abs_change,podium_changed
+logistic_regression,v2,spa,wet (0.65 mm/h),0.14490000000000003,0.40800000000000125,True
+logistic_regression,v2,spa,heavy rain (3 mm/h),0.3810500000000002,1.0947499999999994,True
+logistic_regression,v2,spa,hot (33 °C),0.021800000000000052,0.04475000000000051,False
+logistic_regression,v2,spa,cold (10 °C),0.019399999999999973,0.0470000000000006,False
+logistic_regression,v2,spa,windy (35 km/h),0.06820000000000023,0.16125000000000078,False
+logistic_regression,v2,spa,humid (95%),0.0,0.0,False
+logistic_regression,v2,spa,dry air (20%),0.0,0.0,False
+decision_tree,v2,spa,wet (0.65 mm/h),0.0,0.0,False
+decision_tree,v2,spa,heavy rain (3 mm/h),0.5440250000000003,2.729,False
+decision_tree,v2,spa,hot (33 °C),0.0,0.0,False
+decision_tree,v2,spa,cold (10 °C),0.20070000000000032,2.0070000000000006,False
+decision_tree,v2,spa,windy (35 km/h),0.0,0.0,False
+decision_tree,v2,spa,humid (95%),0.5440250000000003,2.729,False
+decision_tree,v2,spa,dry air (20%),0.0,0.0,False
+knn,v1,spa,wet (0.65 mm/h),1.6014000000000004,5.283999999999999,False
+knn,v1,spa,heavy rain (3 mm/h),1.6014000000000004,5.283999999999999,False
+knn,v1,spa,hot (33 °C),0.0,0.0,False
+knn,v1,spa,cold (10 °C),0.0,0.0,False
+knn,v1,spa,windy (35 km/h),0.0,0.0,False
+knn,v1,spa,humid (95%),0.0,0.0,False
+knn,v1,spa,dry air (20%),0.0,0.0,False
+svm,v1,spa,wet (0.65 mm/h),0.2559249999999999,1.2289999999999992,True
+svm,v1,spa,heavy rain (3 mm/h),0.2559249999999999,1.2289999999999992,True
+svm,v1,spa,hot (33 °C),0.0,0.0,False
+svm,v1,spa,cold (10 °C),0.0,0.0,False
+svm,v1,spa,windy (35 km/h),0.0,0.0,False
+svm,v1,spa,humid (95%),0.0,0.0,False
+svm,v1,spa,dry air (20%),0.0,0.0,False
+naive_bayes,v2,spa,wet (0.65 mm/h),0.8570499999999999,2.0767500000000005,False
+naive_bayes,v2,spa,heavy rain (3 mm/h),1.6272749999999996,4.457000000000001,True
+naive_bayes,v2,spa,hot (33 °C),0.05357499999999991,0.12274999999999991,False
+naive_bayes,v2,spa,cold (10 °C),0.04229999999999993,0.09825000000000017,False
+naive_bayes,v2,spa,windy (35 km/h),0.6187499999999999,1.4112500000000008,False
+naive_bayes,v2,spa,humid (95%),0.0,0.0,False
+naive_bayes,v2,spa,dry air (20%),0.0,0.0,False
+random_forest,v1,spa,wet (0.65 mm/h),0.36295000000000005,1.8185000000000002,False
+random_forest,v1,spa,heavy rain (3 mm/h),0.36295000000000005,1.8185000000000002,False
+random_forest,v1,spa,hot (33 °C),0.0,0.0,False
+random_forest,v1,spa,cold (10 °C),0.0,0.0,False
+random_forest,v1,spa,windy (35 km/h),0.0,0.0,False
+random_forest,v1,spa,humid (95%),0.0,0.0,False
+random_forest,v1,spa,dry air (20%),0.0,0.0,False
+bagging,v1,spa,wet (0.65 mm/h),0.6112749999999998,2.9779999999999998,False
+bagging,v1,spa,heavy rain (3 mm/h),0.6112749999999998,2.9779999999999998,False
+bagging,v1,spa,hot (33 °C),0.0,0.0,False
+bagging,v1,spa,cold (10 °C),0.0,0.0,False
+bagging,v1,spa,windy (35 km/h),0.0,0.0,False
+bagging,v1,spa,humid (95%),0.0,0.0,False
+bagging,v1,spa,dry air (20%),0.0,0.0,False
+adaboost,v1,spa,wet (0.65 mm/h),0.0,0.0,False
+adaboost,v1,spa,heavy rain (3 mm/h),0.0,0.0,False
+adaboost,v1,spa,hot (33 °C),0.0,0.0,False
+adaboost,v1,spa,cold (10 °C),0.0,0.0,False
+adaboost,v1,spa,windy (35 km/h),0.0,0.0,False
+adaboost,v1,spa,humid (95%),0.0,0.0,False
+adaboost,v1,spa,dry air (20%),0.0,0.0,False
+gradient_boosting,v2,spa,wet (0.65 mm/h),0.27287499999999987,0.9902500000000014,False
+gradient_boosting,v2,spa,heavy rain (3 mm/h),0.7714749999999998,2.804249999999998,False
+gradient_boosting,v2,spa,hot (33 °C),0.029200000000000104,0.1030000000000002,False
+gradient_boosting,v2,spa,cold (10 °C),0.23987499999999998,0.9337499999999999,False
+gradient_boosting,v2,spa,windy (35 km/h),0.18312500000000004,0.568249999999999,False
+gradient_boosting,v2,spa,humid (95%),0.19544999999999996,0.5922499999999999,False
+gradient_boosting,v2,spa,dry air (20%),0.2233500000000001,1.032,False
+neural_network,v1,spa,wet (0.65 mm/h),0.26807499999999984,0.8877499999999996,False
+neural_network,v1,spa,heavy rain (3 mm/h),0.26807499999999984,0.8877499999999996,False
+neural_network,v1,spa,hot (33 °C),0.0,0.0,False
+neural_network,v1,spa,cold (10 °C),0.0,0.0,False
+neural_network,v1,spa,windy (35 km/h),0.0,0.0,False
+neural_network,v1,spa,humid (95%),0.0,0.0,False
+neural_network,v1,spa,dry air (20%),0.0,0.0,False
+linear_regression,v2,spa,wet (0.65 mm/h),0.1482750000000003,0.4820000000000002,True
+linear_regression,v2,spa,heavy rain (3 mm/h),0.35985000000000006,1.1524999999999999,True
+linear_regression,v2,spa,hot (33 °C),0.015450000000000085,0.03449999999999953,False
+linear_regression,v2,spa,cold (10 °C),0.014299999999999913,0.033500000000000085,False
+linear_regression,v2,spa,windy (35 km/h),0.012475000000000158,0.028999999999999915,False
+linear_regression,v2,spa,humid (95%),0.0,0.0,False
+linear_regression,v2,spa,dry air (20%),0.0,0.0,False
+ridge,v2,spa,wet (0.65 mm/h),0.13855000000000003,0.4474999999999998,False
+ridge,v2,spa,heavy rain (3 mm/h),0.3324000000000001,1.06325,False
+ridge,v2,spa,hot (33 °C),0.01757499999999964,0.03725000000000023,False
+ridge,v2,spa,cold (10 °C),0.016475000000000083,0.03524999999999956,False
+ridge,v2,spa,windy (35 km/h),0.005900000000000394,0.015250000000001762,False
+ridge,v2,spa,humid (95%),0.0,0.0,False
+ridge,v2,spa,dry air (20%),0.0,0.0,False
+lasso,v2,spa,wet (0.65 mm/h),0.12980000000000017,0.4327500000000004,True
+lasso,v2,spa,heavy rain (3 mm/h),0.3139249999999999,1.0357500000000002,True
+lasso,v2,spa,hot (33 °C),0.009124999999999928,0.02149999999999963,False
+lasso,v2,spa,cold (10 °C),0.008150000000000513,0.019999999999999574,False
+lasso,v2,spa,windy (35 km/h),0.0,0.0,False
+lasso,v2,spa,humid (95%),0.0,0.0,False
+lasso,v2,spa,dry air (20%),0.0,0.0,False
+decision_tree_regression,v1,spa,wet (0.65 mm/h),0.0,0.0,False
+decision_tree_regression,v1,spa,heavy rain (3 mm/h),0.0,0.0,False
+decision_tree_regression,v1,spa,hot (33 °C),0.0,0.0,False
+decision_tree_regression,v1,spa,cold (10 °C),0.0,0.0,False
+decision_tree_regression,v1,spa,windy (35 km/h),0.0,0.0,False
+decision_tree_regression,v1,spa,humid (95%),0.0,0.0,False
+decision_tree_regression,v1,spa,dry air (20%),0.0,0.0,False
+random_forest_regression,v1,spa,wet (0.65 mm/h),0.02215000000000017,0.07424999999999926,False
+random_forest_regression,v1,spa,heavy rain (3 mm/h),0.02215000000000017,0.07424999999999926,False
+random_forest_regression,v1,spa,hot (33 °C),0.0,0.0,False
+random_forest_regression,v1,spa,cold (10 °C),0.0,0.0,False
+random_forest_regression,v1,spa,windy (35 km/h),0.0,0.0,False
+random_forest_regression,v1,spa,humid (95%),0.0,0.0,False
+random_forest_regression,v1,spa,dry air (20%),0.0,0.0,False
+gradient_boosting_regression,v1,spa,wet (0.65 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,spa,heavy rain (3 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,spa,hot (33 °C),0.0,0.0,False
+gradient_boosting_regression,v1,spa,cold (10 °C),0.0,0.0,False
+gradient_boosting_regression,v1,spa,windy (35 km/h),0.0,0.0,False
+gradient_boosting_regression,v1,spa,humid (95%),0.0,0.0,False
+gradient_boosting_regression,v1,spa,dry air (20%),0.0,0.0,False
+logistic_regression,v2,monza,wet (0.65 mm/h),0.14015000000000005,0.3855000000000004,False
+logistic_regression,v2,monza,heavy rain (3 mm/h),0.36560000000000004,1.0317500000000024,True
+logistic_regression,v2,monza,hot (33 °C),0.020075000000000277,0.04824999999999946,False
+logistic_regression,v2,monza,cold (10 °C),0.020324999999999947,0.044500000000001094,False
+logistic_regression,v2,monza,windy (35 km/h),0.06445000000000019,0.1689999999999987,False
+logistic_regression,v2,monza,humid (95%),0.0,0.0,False
+logistic_regression,v2,monza,dry air (20%),0.0,0.0,False
+decision_tree,v2,monza,wet (0.65 mm/h),0.0,0.0,False
+decision_tree,v2,monza,heavy rain (3 mm/h),0.5440250000000003,2.729,False
+decision_tree,v2,monza,hot (33 °C),0.0,0.0,False
+decision_tree,v2,monza,cold (10 °C),0.20070000000000032,2.0070000000000006,False
+decision_tree,v2,monza,windy (35 km/h),0.0,0.0,False
+decision_tree,v2,monza,humid (95%),0.5440250000000003,2.729,False
+decision_tree,v2,monza,dry air (20%),0.0,0.0,False
+knn,v1,monza,wet (0.65 mm/h),1.8686749999999996,6.144999999999998,False
+knn,v1,monza,heavy rain (3 mm/h),1.8686749999999996,6.144999999999998,False
+knn,v1,monza,hot (33 °C),0.0,0.0,False
+knn,v1,monza,cold (10 °C),0.0,0.0,False
+knn,v1,monza,windy (35 km/h),0.0,0.0,False
+knn,v1,monza,humid (95%),0.0,0.0,False
+knn,v1,monza,dry air (20%),0.0,0.0,False
+svm,v1,monza,wet (0.65 mm/h),0.2617749999999999,1.0749999999999993,True
+svm,v1,monza,heavy rain (3 mm/h),0.2617749999999999,1.0749999999999993,True
+svm,v1,monza,hot (33 °C),0.0,0.0,False
+svm,v1,monza,cold (10 °C),0.0,0.0,False
+svm,v1,monza,windy (35 km/h),0.0,0.0,False
+svm,v1,monza,humid (95%),0.0,0.0,False
+svm,v1,monza,dry air (20%),0.0,0.0,False
+naive_bayes,v2,monza,wet (0.65 mm/h),0.7948500000000002,2.05175,False
+naive_bayes,v2,monza,heavy rain (3 mm/h),1.498675,4.45425,True
+naive_bayes,v2,monza,hot (33 °C),0.050324999999999884,0.11050000000000004,False
+naive_bayes,v2,monza,cold (10 °C),0.04057499999999984,0.09174999999999933,False
+naive_bayes,v2,monza,windy (35 km/h),0.5822999999999999,1.2617499999999993,True
+naive_bayes,v2,monza,humid (95%),0.0,0.0,False
+naive_bayes,v2,monza,dry air (20%),0.0,0.0,False
+random_forest,v1,monza,wet (0.65 mm/h),0.3064250000000002,1.0809999999999995,False
+random_forest,v1,monza,heavy rain (3 mm/h),0.3064250000000002,1.0809999999999995,False
+random_forest,v1,monza,hot (33 °C),0.0,0.0,False
+random_forest,v1,monza,cold (10 °C),0.0,0.0,False
+random_forest,v1,monza,windy (35 km/h),0.0,0.0,False
+random_forest,v1,monza,humid (95%),0.0,0.0,False
+random_forest,v1,monza,dry air (20%),0.0,0.0,False
+bagging,v1,monza,wet (0.65 mm/h),0.5804250000000001,2.341750000000001,False
+bagging,v1,monza,heavy rain (3 mm/h),0.5804250000000001,2.341750000000001,False
+bagging,v1,monza,hot (33 °C),0.0,0.0,False
+bagging,v1,monza,cold (10 °C),0.0,0.0,False
+bagging,v1,monza,windy (35 km/h),0.0,0.0,False
+bagging,v1,monza,humid (95%),0.0,0.0,False
+bagging,v1,monza,dry air (20%),0.0,0.0,False
+adaboost,v1,monza,wet (0.65 mm/h),0.0,0.0,False
+adaboost,v1,monza,heavy rain (3 mm/h),0.0,0.0,False
+adaboost,v1,monza,hot (33 °C),0.0,0.0,False
+adaboost,v1,monza,cold (10 °C),0.0,0.0,False
+adaboost,v1,monza,windy (35 km/h),0.0,0.0,False
+adaboost,v1,monza,humid (95%),0.0,0.0,False
+adaboost,v1,monza,dry air (20%),0.0,0.0,False
+gradient_boosting,v2,monza,wet (0.65 mm/h),0.27802499999999997,0.9622500000000009,False
+gradient_boosting,v2,monza,heavy rain (3 mm/h),0.8272749999999999,3.4682499999999976,False
+gradient_boosting,v2,monza,hot (33 °C),0.04467499999999989,0.3179999999999996,False
+gradient_boosting,v2,monza,cold (10 °C),0.3194499999999999,1.4357499999999987,False
+gradient_boosting,v2,monza,windy (35 km/h),0.1587750000000004,0.5137499999999999,False
+gradient_boosting,v2,monza,humid (95%),0.15175,0.5307500000000012,False
+gradient_boosting,v2,monza,dry air (20%),0.18067499999999997,1.024750000000001,False
+neural_network,v1,monza,wet (0.65 mm/h),0.34177500000000005,0.9182500000000005,False
+neural_network,v1,monza,heavy rain (3 mm/h),0.34177500000000005,0.9182500000000005,False
+neural_network,v1,monza,hot (33 °C),0.0,0.0,False
+neural_network,v1,monza,cold (10 °C),0.0,0.0,False
+neural_network,v1,monza,windy (35 km/h),0.0,0.0,False
+neural_network,v1,monza,humid (95%),0.0,0.0,False
+neural_network,v1,monza,dry air (20%),0.0,0.0,False
+linear_regression,v2,monza,wet (0.65 mm/h),0.14365000000000022,0.4787499999999998,False
+linear_regression,v2,monza,heavy rain (3 mm/h),0.35240000000000016,1.1364999999999998,True
+linear_regression,v2,monza,hot (33 °C),0.016025000000000077,0.03200000000000003,False
+linear_regression,v2,monza,cold (10 °C),0.013749999999999851,0.030999999999998806,False
+linear_regression,v2,monza,windy (35 km/h),0.01267500000000008,0.028999999999999915,False
+linear_regression,v2,monza,humid (95%),0.0,0.0,False
+linear_regression,v2,monza,dry air (20%),0.0,0.0,False
+ridge,v2,monza,wet (0.65 mm/h),0.13420000000000024,0.4482500000000007,True
+ridge,v2,monza,heavy rain (3 mm/h),0.3262249999999999,1.0540000000000003,True
+ridge,v2,monza,hot (33 °C),0.016049999999999797,0.03200000000000003,False
+ridge,v2,monza,cold (10 °C),0.015400000000000302,0.03575000000000017,False
+ridge,v2,monza,windy (35 km/h),0.005524999999999891,0.013500000000000512,False
+ridge,v2,monza,humid (95%),0.0,0.0,False
+ridge,v2,monza,dry air (20%),0.0,0.0,False
+lasso,v2,monza,wet (0.65 mm/h),0.12602499999999967,0.4299999999999997,False
+lasso,v2,monza,heavy rain (3 mm/h),0.30789999999999995,1.0227499999999994,True
+lasso,v2,monza,hot (33 °C),0.008500000000000351,0.018500000000001293,False
+lasso,v2,monza,cold (10 °C),0.008525000000000005,0.01875000000000071,False
+lasso,v2,monza,windy (35 km/h),0.0,0.0,False
+lasso,v2,monza,humid (95%),0.0,0.0,False
+lasso,v2,monza,dry air (20%),0.0,0.0,False
+decision_tree_regression,v1,monza,wet (0.65 mm/h),0.0,0.0,False
+decision_tree_regression,v1,monza,heavy rain (3 mm/h),0.0,0.0,False
+decision_tree_regression,v1,monza,hot (33 °C),0.0,0.0,False
+decision_tree_regression,v1,monza,cold (10 °C),0.0,0.0,False
+decision_tree_regression,v1,monza,windy (35 km/h),0.0,0.0,False
+decision_tree_regression,v1,monza,humid (95%),0.0,0.0,False
+decision_tree_regression,v1,monza,dry air (20%),0.0,0.0,False
+random_forest_regression,v1,monza,wet (0.65 mm/h),0.017599999999999803,0.07074999999999854,False
+random_forest_regression,v1,monza,heavy rain (3 mm/h),0.017599999999999803,0.07074999999999854,False
+random_forest_regression,v1,monza,hot (33 °C),0.0,0.0,False
+random_forest_regression,v1,monza,cold (10 °C),0.0,0.0,False
+random_forest_regression,v1,monza,windy (35 km/h),0.0,0.0,False
+random_forest_regression,v1,monza,humid (95%),0.0,0.0,False
+random_forest_regression,v1,monza,dry air (20%),0.0,0.0,False
+gradient_boosting_regression,v1,monza,wet (0.65 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,monza,heavy rain (3 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,monza,hot (33 °C),0.0,0.0,False
+gradient_boosting_regression,v1,monza,cold (10 °C),0.0,0.0,False
+gradient_boosting_regression,v1,monza,windy (35 km/h),0.0,0.0,False
+gradient_boosting_regression,v1,monza,humid (95%),0.0,0.0,False
+gradient_boosting_regression,v1,monza,dry air (20%),0.0,0.0,False
+logistic_regression,v2,monaco,wet (0.65 mm/h),0.145825,0.4132499999999979,False
+logistic_regression,v2,monaco,heavy rain (3 mm/h),0.378675,1.09525,True
+logistic_regression,v2,monaco,hot (33 °C),0.020249999999999834,0.0467499999999994,False
+logistic_regression,v2,monaco,cold (10 °C),0.018199999999999984,0.041499999999999204,False
+logistic_regression,v2,monaco,windy (35 km/h),0.06764999999999996,0.16774999999999984,False
+logistic_regression,v2,monaco,humid (95%),0.0,0.0,False
+logistic_regression,v2,monaco,dry air (20%),0.0,0.0,False
+decision_tree,v2,monaco,wet (0.65 mm/h),0.0,0.0,False
+decision_tree,v2,monaco,heavy rain (3 mm/h),0.5512750000000002,2.766250000000001,False
+decision_tree,v2,monaco,hot (33 °C),0.0,0.0,False
+decision_tree,v2,monaco,cold (10 °C),0.20272499999999968,2.0272500000000004,False
+decision_tree,v2,monaco,windy (35 km/h),0.0,0.0,False
+decision_tree,v2,monaco,humid (95%),0.5512750000000002,2.766250000000001,False
+decision_tree,v2,monaco,dry air (20%),0.0,0.0,False
+knn,v1,monaco,wet (0.65 mm/h),1.7987749999999998,5.674749999999998,False
+knn,v1,monaco,heavy rain (3 mm/h),1.7987749999999998,5.674749999999998,False
+knn,v1,monaco,hot (33 °C),0.0,0.0,False
+knn,v1,monaco,cold (10 °C),0.0,0.0,False
+knn,v1,monaco,windy (35 km/h),0.0,0.0,False
+knn,v1,monaco,humid (95%),0.0,0.0,False
+knn,v1,monaco,dry air (20%),0.0,0.0,False
+svm,v1,monaco,wet (0.65 mm/h),0.27887500000000004,1.1172500000000003,True
+svm,v1,monaco,heavy rain (3 mm/h),0.27887500000000004,1.1172500000000003,True
+svm,v1,monaco,hot (33 °C),0.0,0.0,False
+svm,v1,monaco,cold (10 °C),0.0,0.0,False
+svm,v1,monaco,windy (35 km/h),0.0,0.0,False
+svm,v1,monaco,humid (95%),0.0,0.0,False
+svm,v1,monaco,dry air (20%),0.0,0.0,False
+naive_bayes,v2,monaco,wet (0.65 mm/h),0.8418749999999999,2.0557499999999997,False
+naive_bayes,v2,monaco,heavy rain (3 mm/h),1.6163999999999998,4.441,True
+naive_bayes,v2,monaco,hot (33 °C),0.05274999999999983,0.11774999999999913,False
+naive_bayes,v2,monaco,cold (10 °C),0.04207499999999973,0.09699999999999953,False
+naive_bayes,v2,monaco,windy (35 km/h),0.6134999999999999,1.3565000000000005,False
+naive_bayes,v2,monaco,humid (95%),0.0,0.0,False
+naive_bayes,v2,monaco,dry air (20%),0.0,0.0,False
+random_forest,v1,monaco,wet (0.65 mm/h),0.2540999999999999,1.08075,False
+random_forest,v1,monaco,heavy rain (3 mm/h),0.2540999999999999,1.08075,False
+random_forest,v1,monaco,hot (33 °C),0.0,0.0,False
+random_forest,v1,monaco,cold (10 °C),0.0,0.0,False
+random_forest,v1,monaco,windy (35 km/h),0.0,0.0,False
+random_forest,v1,monaco,humid (95%),0.0,0.0,False
+random_forest,v1,monaco,dry air (20%),0.0,0.0,False
+bagging,v1,monaco,wet (0.65 mm/h),0.5079750000000001,2.068250000000001,False
+bagging,v1,monaco,heavy rain (3 mm/h),0.5079750000000001,2.068250000000001,False
+bagging,v1,monaco,hot (33 °C),0.0,0.0,False
+bagging,v1,monaco,cold (10 °C),0.0,0.0,False
+bagging,v1,monaco,windy (35 km/h),0.0,0.0,False
+bagging,v1,monaco,humid (95%),0.0,0.0,False
+bagging,v1,monaco,dry air (20%),0.0,0.0,False
+adaboost,v1,monaco,wet (0.65 mm/h),0.0,0.0,False
+adaboost,v1,monaco,heavy rain (3 mm/h),0.0,0.0,False
+adaboost,v1,monaco,hot (33 °C),0.0,0.0,False
+adaboost,v1,monaco,cold (10 °C),0.0,0.0,False
+adaboost,v1,monaco,windy (35 km/h),0.0,0.0,False
+adaboost,v1,monaco,humid (95%),0.0,0.0,False
+adaboost,v1,monaco,dry air (20%),0.0,0.0,False
+gradient_boosting,v2,monaco,wet (0.65 mm/h),0.2702249999999998,0.9749999999999996,False
+gradient_boosting,v2,monaco,heavy rain (3 mm/h),0.8753999999999996,3.0725,False
+gradient_boosting,v2,monaco,hot (33 °C),0.04315000000000002,0.32675000000000054,False
+gradient_boosting,v2,monaco,cold (10 °C),0.3203500000000001,1.43675,False
+gradient_boosting,v2,monaco,windy (35 km/h),0.1952500000000004,0.7712500000000002,False
+gradient_boosting,v2,monaco,humid (95%),0.2323249999999999,0.5850000000000009,False
+gradient_boosting,v2,monaco,dry air (20%),0.20235000000000017,0.9737500000000008,False
+neural_network,v1,monaco,wet (0.65 mm/h),0.382125,1.1079999999999988,False
+neural_network,v1,monaco,heavy rain (3 mm/h),0.382125,1.1079999999999988,False
+neural_network,v1,monaco,hot (33 °C),0.0,0.0,False
+neural_network,v1,monaco,cold (10 °C),0.0,0.0,False
+neural_network,v1,monaco,windy (35 km/h),0.0,0.0,False
+neural_network,v1,monaco,humid (95%),0.0,0.0,False
+neural_network,v1,monaco,dry air (20%),0.0,0.0,False
+linear_regression,v2,monaco,wet (0.65 mm/h),0.14690000000000009,0.4917499999999997,False
+linear_regression,v2,monaco,heavy rain (3 mm/h),0.35835000000000017,1.1582499999999998,True
+linear_regression,v2,monaco,hot (33 °C),0.015725000000000287,0.0329999999999977,False
+linear_regression,v2,monaco,cold (10 °C),0.014949999999999786,0.03275000000000006,False
+linear_regression,v2,monaco,windy (35 km/h),0.013000000000000057,0.03324999999999889,False
+linear_regression,v2,monaco,humid (95%),0.0,0.0,False
+linear_regression,v2,monaco,dry air (20%),0.0,0.0,False
+ridge,v2,monaco,wet (0.65 mm/h),0.1363,0.45199999999999996,False
+ridge,v2,monaco,heavy rain (3 mm/h),0.32985000000000014,1.0649999999999995,False
+ridge,v2,monaco,hot (33 °C),0.017624999999999825,0.037499999999999645,False
+ridge,v2,monaco,cold (10 °C),0.015325000000000089,0.030999999999998806,False
+ridge,v2,monaco,windy (35 km/h),0.006175000000000086,0.018499999999999517,False
+ridge,v2,monaco,humid (95%),0.0,0.0,False
+ridge,v2,monaco,dry air (20%),0.0,0.0,False
+lasso,v2,monaco,wet (0.65 mm/h),0.12989999999999965,0.4424999999999999,True
+lasso,v2,monaco,heavy rain (3 mm/h),0.31359999999999993,1.0415,True
+lasso,v2,monaco,hot (33 °C),0.009249999999999781,0.021999999999998465,False
+lasso,v2,monaco,cold (10 °C),0.008425000000000071,0.019499999999998963,False
+lasso,v2,monaco,windy (35 km/h),0.0,0.0,False
+lasso,v2,monaco,humid (95%),0.0,0.0,False
+lasso,v2,monaco,dry air (20%),0.0,0.0,False
+decision_tree_regression,v1,monaco,wet (0.65 mm/h),0.0,0.0,False
+decision_tree_regression,v1,monaco,heavy rain (3 mm/h),0.0,0.0,False
+decision_tree_regression,v1,monaco,hot (33 °C),0.0,0.0,False
+decision_tree_regression,v1,monaco,cold (10 °C),0.0,0.0,False
+decision_tree_regression,v1,monaco,windy (35 km/h),0.0,0.0,False
+decision_tree_regression,v1,monaco,humid (95%),0.0,0.0,False
+decision_tree_regression,v1,monaco,dry air (20%),0.0,0.0,False
+random_forest_regression,v1,monaco,wet (0.65 mm/h),0.01727500000000002,0.06099999999999994,False
+random_forest_regression,v1,monaco,heavy rain (3 mm/h),0.01727500000000002,0.06099999999999994,False
+random_forest_regression,v1,monaco,hot (33 °C),0.0,0.0,False
+random_forest_regression,v1,monaco,cold (10 °C),0.0,0.0,False
+random_forest_regression,v1,monaco,windy (35 km/h),0.0,0.0,False
+random_forest_regression,v1,monaco,humid (95%),0.0,0.0,False
+random_forest_regression,v1,monaco,dry air (20%),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,wet (0.65 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,heavy rain (3 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,hot (33 °C),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,cold (10 °C),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,windy (35 km/h),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,humid (95%),0.0,0.0,False
+gradient_boosting_regression,v1,monaco,dry air (20%),0.0,0.0,False
+logistic_regression,v2,silverstone,wet (0.65 mm/h),0.14212499999999967,0.4257499999999972,False
+logistic_regression,v2,silverstone,heavy rain (3 mm/h),0.36964999999999987,1.1067499999999981,True
+logistic_regression,v2,silverstone,hot (33 °C),0.020025000000000105,0.04600000000000115,False
+logistic_regression,v2,silverstone,cold (10 °C),0.021399999999999975,0.0467499999999994,False
+logistic_regression,v2,silverstone,windy (35 km/h),0.06569999999999983,0.1667500000000004,False
+logistic_regression,v2,silverstone,humid (95%),0.0,0.0,False
+logistic_regression,v2,silverstone,dry air (20%),0.0,0.0,False
+decision_tree,v2,silverstone,wet (0.65 mm/h),0.0,0.0,False
+decision_tree,v2,silverstone,heavy rain (3 mm/h),0.5440250000000003,2.729,False
+decision_tree,v2,silverstone,hot (33 °C),0.0,0.0,False
+decision_tree,v2,silverstone,cold (10 °C),0.20070000000000032,2.0070000000000006,False
+decision_tree,v2,silverstone,windy (35 km/h),0.0,0.0,False
+decision_tree,v2,silverstone,humid (95%),0.5440250000000003,2.729,False
+decision_tree,v2,silverstone,dry air (20%),0.0,0.0,False
+knn,v1,silverstone,wet (0.65 mm/h),1.7854500000000002,4.923999999999998,False
+knn,v1,silverstone,heavy rain (3 mm/h),1.7854500000000002,4.923999999999998,False
+knn,v1,silverstone,hot (33 °C),0.0,0.0,False
+knn,v1,silverstone,cold (10 °C),0.0,0.0,False
+knn,v1,silverstone,windy (35 km/h),0.0,0.0,False
+knn,v1,silverstone,humid (95%),0.0,0.0,False
+knn,v1,silverstone,dry air (20%),0.0,0.0,False
+svm,v1,silverstone,wet (0.65 mm/h),0.25702500000000006,1.2002500000000005,True
+svm,v1,silverstone,heavy rain (3 mm/h),0.25702500000000006,1.2002500000000005,True
+svm,v1,silverstone,hot (33 °C),0.0,0.0,False
+svm,v1,silverstone,cold (10 °C),0.0,0.0,False
+svm,v1,silverstone,windy (35 km/h),0.0,0.0,False
+svm,v1,silverstone,humid (95%),0.0,0.0,False
+svm,v1,silverstone,dry air (20%),0.0,0.0,False
+naive_bayes,v2,silverstone,wet (0.65 mm/h),0.8226000000000002,2.0372500000000002,False
+naive_bayes,v2,silverstone,heavy rain (3 mm/h),1.559625,4.4055,True
+naive_bayes,v2,silverstone,hot (33 °C),0.05337500000000012,0.11724999999999852,False
+naive_bayes,v2,silverstone,cold (10 °C),0.04250000000000009,0.09424999999999883,False
+naive_bayes,v2,silverstone,windy (35 km/h),0.5973500000000003,1.3652499999999996,False
+naive_bayes,v2,silverstone,humid (95%),0.0,0.0,False
+naive_bayes,v2,silverstone,dry air (20%),0.0,0.0,False
+random_forest,v1,silverstone,wet (0.65 mm/h),0.34320000000000017,1.7864999999999984,False
+random_forest,v1,silverstone,heavy rain (3 mm/h),0.34320000000000017,1.7864999999999984,False
+random_forest,v1,silverstone,hot (33 °C),0.0,0.0,False
+random_forest,v1,silverstone,cold (10 °C),0.0,0.0,False
+random_forest,v1,silverstone,windy (35 km/h),0.0,0.0,False
+random_forest,v1,silverstone,humid (95%),0.0,0.0,False
+random_forest,v1,silverstone,dry air (20%),0.0,0.0,False
+bagging,v1,silverstone,wet (0.65 mm/h),0.607075,2.9085,False
+bagging,v1,silverstone,heavy rain (3 mm/h),0.607075,2.9085,False
+bagging,v1,silverstone,hot (33 °C),0.0,0.0,False
+bagging,v1,silverstone,cold (10 °C),0.0,0.0,False
+bagging,v1,silverstone,windy (35 km/h),0.0,0.0,False
+bagging,v1,silverstone,humid (95%),0.0,0.0,False
+bagging,v1,silverstone,dry air (20%),0.0,0.0,False
+adaboost,v1,silverstone,wet (0.65 mm/h),0.0,0.0,False
+adaboost,v1,silverstone,heavy rain (3 mm/h),0.0,0.0,False
+adaboost,v1,silverstone,hot (33 °C),0.0,0.0,False
+adaboost,v1,silverstone,cold (10 °C),0.0,0.0,False
+adaboost,v1,silverstone,windy (35 km/h),0.0,0.0,False
+adaboost,v1,silverstone,humid (95%),0.0,0.0,False
+adaboost,v1,silverstone,dry air (20%),0.0,0.0,False
+gradient_boosting,v2,silverstone,wet (0.65 mm/h),0.27104999999999996,0.9755000000000003,False
+gradient_boosting,v2,silverstone,heavy rain (3 mm/h),0.8503000000000001,3.436250000000001,False
+gradient_boosting,v2,silverstone,hot (33 °C),0.03290000000000026,0.09125000000000005,False
+gradient_boosting,v2,silverstone,cold (10 °C),0.3151249999999998,1.440999999999999,False
+gradient_boosting,v2,silverstone,windy (35 km/h),0.1981000000000001,0.7745000000000015,False
+gradient_boosting,v2,silverstone,humid (95%),0.1988999999999998,0.5207499999999996,False
+gradient_boosting,v2,silverstone,dry air (20%),0.22087499999999965,1.0149999999999988,False
+neural_network,v1,silverstone,wet (0.65 mm/h),0.3126249999999997,0.85825,False
+neural_network,v1,silverstone,heavy rain (3 mm/h),0.3126249999999997,0.85825,False
+neural_network,v1,silverstone,hot (33 °C),0.0,0.0,False
+neural_network,v1,silverstone,cold (10 °C),0.0,0.0,False
+neural_network,v1,silverstone,windy (35 km/h),0.0,0.0,False
+neural_network,v1,silverstone,humid (95%),0.0,0.0,False
+neural_network,v1,silverstone,dry air (20%),0.0,0.0,False
+linear_regression,v2,silverstone,wet (0.65 mm/h),0.14662500000000014,0.4762500000000003,False
+linear_regression,v2,silverstone,heavy rain (3 mm/h),0.3551999999999999,1.12725,True
+linear_regression,v2,silverstone,hot (33 °C),0.015399999999999758,0.03375000000000128,False
+linear_regression,v2,silverstone,cold (10 °C),0.013625000000000087,0.027749999999999275,False
+linear_regression,v2,silverstone,windy (35 km/h),0.012050000000000172,0.029249999999999332,False
+linear_regression,v2,silverstone,humid (95%),0.0,0.0,False
+linear_regression,v2,silverstone,dry air (20%),0.0,0.0,False
+ridge,v2,silverstone,wet (0.65 mm/h),0.13702499999999995,0.4474999999999998,True
+ridge,v2,silverstone,heavy rain (3 mm/h),0.32942499999999963,1.04575,True
+ridge,v2,silverstone,hot (33 °C),0.017224999999999924,0.03649999999999842,False
+ridge,v2,silverstone,cold (10 °C),0.015500000000000258,0.03225000000000122,False
+ridge,v2,silverstone,windy (35 km/h),0.005200000000000049,0.013249999999999318,False
+ridge,v2,silverstone,humid (95%),0.0,0.0,False
+ridge,v2,silverstone,dry air (20%),0.0,0.0,False
+lasso,v2,silverstone,wet (0.65 mm/h),0.12884999999999985,0.4245000000000001,False
+lasso,v2,silverstone,heavy rain (3 mm/h),0.3111750000000001,1.0157500000000006,True
+lasso,v2,silverstone,hot (33 °C),0.008774999999999745,0.0182500000000001,False
+lasso,v2,silverstone,cold (10 °C),0.0075500000000001235,0.015000000000002345,False
+lasso,v2,silverstone,windy (35 km/h),0.0,0.0,False
+lasso,v2,silverstone,humid (95%),0.0,0.0,False
+lasso,v2,silverstone,dry air (20%),0.0,0.0,False
+decision_tree_regression,v1,silverstone,wet (0.65 mm/h),0.0,0.0,False
+decision_tree_regression,v1,silverstone,heavy rain (3 mm/h),0.0,0.0,False
+decision_tree_regression,v1,silverstone,hot (33 °C),0.0,0.0,False
+decision_tree_regression,v1,silverstone,cold (10 °C),0.0,0.0,False
+decision_tree_regression,v1,silverstone,windy (35 km/h),0.0,0.0,False
+decision_tree_regression,v1,silverstone,humid (95%),0.0,0.0,False
+decision_tree_regression,v1,silverstone,dry air (20%),0.0,0.0,False
+random_forest_regression,v1,silverstone,wet (0.65 mm/h),0.01972500000000016,0.0752499999999987,False
+random_forest_regression,v1,silverstone,heavy rain (3 mm/h),0.01972500000000016,0.0752499999999987,False
+random_forest_regression,v1,silverstone,hot (33 °C),0.0,0.0,False
+random_forest_regression,v1,silverstone,cold (10 °C),0.0,0.0,False
+random_forest_regression,v1,silverstone,windy (35 km/h),0.0,0.0,False
+random_forest_regression,v1,silverstone,humid (95%),0.0,0.0,False
+random_forest_regression,v1,silverstone,dry air (20%),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,wet (0.65 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,heavy rain (3 mm/h),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,hot (33 °C),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,cold (10 °C),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,windy (35 km/h),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,humid (95%),0.0,0.0,False
+gradient_boosting_regression,v1,silverstone,dry air (20%),0.0,0.0,False

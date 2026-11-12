@@ -1,0 +1,32 @@
+{
+  "name": "f1-race-prediction-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test e2e/motion.test.mjs e2e/lineup.test.mjs e2e/car-assets.test.mjs e2e/car-geometry.test.mjs e2e/camera-bounds.test.mjs e2e/logos.test.mjs",
+    "e2e": "npm run test && node e2e/app.mjs",
+    "showcase": "node e2e/showcase.mjs",
+    "e2e:visual": "node e2e/solid-camera.mjs",
+    "e2e:assets": "node e2e/car-assets-browser.mjs",
+    "e2e:gpu": "node e2e/gpu.mjs",
+    "e2e:portraits": "node e2e/portraits.mjs",
+    "e2e:logos": "node e2e/logos.mjs"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "playwright-core": "1.49.1",
+    "vite": "6.4.6"
+  }
+}

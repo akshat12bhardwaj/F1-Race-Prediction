@@ -1,0 +1,10 @@
+* text=auto eol=lf
+# Preserve exact frozen-artifact bytes for integrity checks and serialized models.
+data/** -text -whitespace
+models/** -text -whitespace
+frontend/public/** -text -whitespace
+*.png -text
+*.jpg -text
+*.webp -text
+*.glb -text
+*.joblib -text

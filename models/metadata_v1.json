@@ -1,0 +1,186 @@
+{
+  "version": "v1",
+  "features": [
+    "grid_position",
+    "grid_pct",
+    "front_row",
+    "pit_lane_start",
+    "field_size",
+    "qualifying_position",
+    "quali_gap_to_pole_pct",
+    "quali_missing",
+    "teammate_grid_diff",
+    "sprint_position",
+    "has_sprint",
+    "driver_prev_finish",
+    "driver_last3_avg_finish",
+    "driver_last5_avg_finish",
+    "driver_last10_avg_finish",
+    "driver_last10_avg_finish_pct",
+    "driver_avg_positions_gained_last10",
+    "driver_career_starts",
+    "driver_career_avg_finish",
+    "driver_win_rate",
+    "driver_podium_rate",
+    "driver_dnf_rate_last10",
+    "driver_age_years",
+    "is_rookie",
+    "driver_points_share_before_race",
+    "driver_champ_pos_before_race",
+    "driver_wins_season_before_race",
+    "constructor_points_share_before_race",
+    "constructor_champ_pos_before_race",
+    "constructor_last5_avg_finish",
+    "constructor_win_rate_last20",
+    "constructor_podium_rate_last20",
+    "constructor_dnf_rate_last10",
+    "constructor_prev_season_rank",
+    "driver_circuit_starts",
+    "driver_circuit_avg_finish",
+    "constructor_circuit_avg_finish",
+    "circuit_pole_win_rate",
+    "circuit_dnf_rate",
+    "wx_prestart_temp_mean_c",
+    "wx_prestart_humidity_mean_pct",
+    "wx_prestart_precip_sum_mm",
+    "wx_prestart_cloud_mean_pct",
+    "wx_prestart_wind_speed_mean_kmh",
+    "wx_prestart_weather_code_max",
+    "wx_time_imputed"
+  ],
+  "selected_models": {
+    "winner": "random_forest",
+    "podium": "gradient_boosting",
+    "position": "ridge"
+  },
+  "selected_params": {
+    "winner": {
+      "model__min_samples_leaf": 20,
+      "model__max_features": "sqrt",
+      "model__max_depth": null,
+      "model__class_weight": null
+    },
+    "podium": {
+      "model__min_samples_leaf": 50,
+      "model__max_leaf_nodes": 15,
+      "model__learning_rate": 0.03,
+      "model__l2_regularization": 1.0
+    },
+    "position": {
+      "model__alpha": 31.622776601683793
+    }
+  },
+  "selection_rule": "best pooled walk-forward 2017-2022 primary metric among ML models (winner/podium PR-AUC, position MAE)",
+  "tau": 1.0391536979083362,
+  "tau_check": {
+    "tau": 1.0391536979083362,
+    "holdout_winner_logloss_tau1": 1.300285643452031,
+    "holdout_winner_logloss_tau": 1.2885942180430927
+  },
+  "podium_method": "podium_classifier",
+  "train_start": 1950,
+  "walk_forward_seasons": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "cv_seasons": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "final_models_trained_on": "1950-2022",
+  "test_seasons_locked": [
+    2023,
+    2024,
+    2025
+  ],
+  "test_evaluated": true,
+  "system_walkforward_2017_2022": {
+    "races": 123,
+    "winner_top1": 0.5040650406504065,
+    "winner_top3": 0.8943089430894309,
+    "winner_logloss": 1.3618100558328032,
+    "podium_overlap": 0.7018970189701897,
+    "exact_podium": 0.13008130081300814,
+    "mean_spearman": 0.638537400411598,
+    "rank_mae": 3.454856653829696
+  },
+  "system_walkforward_ci95": {
+    "winner_top1": [
+      0.4146341463414634,
+      0.5934959349593496
+    ],
+    "winner_top3": [
+      0.8373983739837398,
+      0.9512195121951219
+    ],
+    "podium_overlap": [
+      0.6558265582655827,
+      0.7452574525745257
+    ],
+    "spearman": [
+      0.6023837031603398,
+      0.6754324836481446
+    ],
+    "rank_mae": [
+      3.235478177150193,
+      3.6674978605049207
+    ]
+  },
+  "system_holdout_2022": {
+    "races": 22,
+    "winner_top1": 0.36363636363636365,
+    "winner_top3": 0.9090909090909091,
+    "winner_logloss": 1.288594218038782,
+    "podium_overlap": 0.6818181818181817,
+    "exact_podium": 0.0,
+    "mean_spearman": 0.6101959444064707,
+    "rank_mae": 3.570813397129186
+  },
+  "seed": 42,
+  "python": "3.11.9",
+  "sklearn": "1.7.1",
+  "created": "2026-11-07 01:14:13",
+  "test_evaluated_on": "2026-11-07",
+  "final_test_2023_2025": {
+    "evaluation_status": "clean hold-out (v1 frozen 2026-11-06)",
+    "races": 70,
+    "winner_top1": 0.6428571428571429,
+    "winner_top3": 0.9428571428571428,
+    "winner_logloss": 1.1057607566184735,
+    "podium_overlap": 0.6619047619047619,
+    "exact_podium": 0.1,
+    "mean_spearman": 0.6953671995113835,
+    "rank_mae": 3.0993233082706766,
+    "win_brier": 0.026859618865791916,
+    "win_pr_auc": 0.6968169367828126,
+    "podium_brier": 0.0666668805992579,
+    "podium_pr_auc": 0.7410506896411808,
+    "winner_top1_ci95": [
+      0.5285714285714286,
+      0.7571428571428571
+    ],
+    "winner_logloss_ci95": [
+      0.9345314640354568,
+      1.2846335288824897
+    ],
+    "podium_overlap_ci95": [
+      0.6095238095238095,
+      0.7142857142857142
+    ],
+    "spearman_ci95": [
+      0.646857743097239,
+      0.7372443345759355
+    ],
+    "rank_mae_ci95": [
+      2.867105263157895,
+      3.3563439849624057
+    ]
+  }
+}

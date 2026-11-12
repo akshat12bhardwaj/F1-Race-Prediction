@@ -1,184 +1,160 @@
-# ML-Based Formula 1 Race Outcome Prediction
+<h1 align="center">APEX — Formula 1 ML Race Predictor</h1>
+<p align="center"><strong>Build an all-time grid. Choose the models. Watch their prediction race.</strong></p>
+<p align="center">
+  <img alt="Python 3.11" src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white">
+  <img alt="scikit-learn 1.7.1" src="https://img.shields.io/badge/scikit--learn-1.7.1-F7931E?logo=scikitlearn&logoColor=white">
+  <img alt="FastAPI" src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white">
+  <img alt="React 18" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black">
+  <img alt="Three.js" src="https://img.shields.io/badge/3D-Three.js-111111?logo=threedotjs&logoColor=white">
+</p>
 
-CSE20232 Machine Learning (AY 2026–27), end-semester project.
+![APEX running a real 22-driver ML prediction at Spa](docs/assets/screenshots/prediction-results.webp)
 
-This project predicts Formula 1 Grand Prix outcomes (finishing position, winner, podium) using only information available **before the race starts**. It compares linear, tree-based and ensemble models against a simple "grid order" baseline.
+<p align="center"><a href="#quick-start--windows-powershell">Run locally</a> · <a href="#inside-apex">Explore the app</a> · <a href="#how-the-ml-works">How it predicts</a> · <a href="#testing">Testing</a> · <a href="CREDITS.md">Credits</a></p>
 
-The full design is in [docs/MASTER_PROJECT_BLUEPRINT.md](docs/MASTER_PROJECT_BLUEPRINT.md).
+APEX is an **educational machine-learning race simulator**. Pick historical F1 drivers, assign constructors at their automatically selected peak, choose a classifier and regressor, configure a circuit and weather, then watch a 3D race end in the models’ predicted order.
 
-## Data sources
+**208 eligible drivers · 65 constructor identities · 537 historical car-season profiles · 22 grid positions · 11 teams, two seats each.** Historical data ends in 2025. This is an independent coursework project, not an official F1 forecasting service.
 
-- [Jolpica F1 API](https://api.jolpi.ca/ergast/f1/) (Ergast-compatible): races, results, qualifying, sprint
-- [Open-Meteo Historical Weather API](https://open-meteo.com/): hourly reanalysis weather (ERA5-based)
+## Inside APEX
 
-## Setup (Windows, PowerShell)
+Every image below comes from the running application at **1600 × 960**, using real model inference and local assets.
 
-Requires **Python 3.11**.
+| A circuit-first control room | Your all-time starting grid |
+|---|---|
+| ![Dashboard with the Spa 3D circuit](docs/assets/screenshots/dashboard.webp) | ![Three-column lineup editor with positions P1–P22](docs/assets/screenshots/lineup-editor.webp) |
+| True-scale terrain, circuit selection and two model pickers. | Portraits, performance years, team marks, drag-and-drop and Undo/Redo. |
 
-```powershell
-# 1. Create the virtual environment OUTSIDE OneDrive (avoids syncing ~500 MB of packages)
-py -3.11 -m venv "$env:USERPROFILE\.venvs\f1-race-prediction"
+| Search through F1 history | Give a driver a different car |
+|---|---|
+| ![Historical driver selection with Ayrton Senna](docs/assets/screenshots/driver-selection.webp) | ![Assigning peak Aston Martin cars to two grid seats](docs/assets/screenshots/constructor-selection.webp) |
+| Full-name A–Z lists and accent-insensitive search. | One constructor entry, automatic peak season, two-driver capacity. |
 
-# 2. Activate it
-& "$env:USERPROFILE\.venvs\f1-race-prediction\Scripts\Activate.ps1"
+| Set the conditions | Follow the running order |
+|---|---|
+| ![Rain, air temperature, humidity and wind controls](docs/assets/screenshots/environment.webp) | ![Paused 22-car race and live timing tower](docs/assets/screenshots/race-overview.webp) |
+| Dry / Damp / Wet presets plus supported weather sliders. | Five-light start, pause/resume and approximately ten-second playback. |
 
-# 3. Install the pinned dependencies (run from the project folder)
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+| A closer look at the car | The cockpit perspective |
+|---|---|
+| ![Detailed GLB car in Follow camera](docs/assets/screenshots/race-follow.webp) | ![Onboard camera during the model-predicted race](docs/assets/screenshots/race-onboard.webp) |
+| Local GLB geometry, constructor-colour patterns and rolling wheels. | Follow, Onboard, Overview, Top and bounded manual camera controls. |
 
-# 4. Verify the environment
-python -m pytest tests/test_environment.py -v
+## Features
 
-# 5. Register the environment as a Jupyter kernel (once per machine)
-python -m ipykernel install --user --name f1-race-prediction --display-name "Python 3.11 (f1-race-prediction)"
-```
+- **An all-time field:** 208 eligible drivers through 2025, each in their validated form season; 65 distinct historical constructors, including defunct teams.
+- **A coherent peak car:** era-relative qualifying/grid performance, race finishes and reliability select one real eligible season per constructor. Driver skill and car performance stay separate.
+- **A valid full grid:** exactly 22 unique drivers and 11 constructors with two seats each. Move/Swap, click or drag assignment, search, Undo/Redo and restore default.
+- **Two ML perspectives:** choose from 10 classifiers and 6 regressors. Circuit history and supported pre-start weather features can change the result.
+- **Interactive 3D:** five locally bundled GLB bodies, 39 mapped circuits, measured terrain where quality permits, start lights, timing tower and podium/full standings.
 
-In VS Code, open a notebook and choose the kernel **Python 3.11 (f1-race-prediction)**.
+Historical cars use simplified era approximations; 2010–2017 shares the disclosed 2000s body. The detailed ground-effect base covers 2022–2025. Car colour patterns are approximate, not exact constructor chassis or sponsor liveries.
 
-If PowerShell blocks the activation script, run once:
-`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+## How the ML works
 
-## Using the cached API client (`src/api_client.py`)
+| Stage | What it contributes |
+|---|---|
+| Classification | Scores each driver’s likelihood of a podium finish. |
+| Regression | Scores relative finishing performance. |
+| Race sampling | Calibrated scores drive 5,000 seeded simulations per selected model, using shared random numbers. |
+| Final result | Average the two models’ expected finishing positions, then rank the complete field and show P1–P22. |
 
-```python
-import logging
-from src.api_client import JolpicaClient
+Different models learn different relationships, so their expected positions and podium choices can differ. Driver inputs come from each driver’s validated eligible form season; constructor inputs come from **one complete real peak-season profile**, never a fictional combination of the best metrics from different cars.
 
-logging.basicConfig(level=logging.INFO)   # optional: show cache hits/misses and requests
+Peak selection weights relative qualifying-grid percentile **40%**, race finishing percentile **40%**, and DNF share against that season’s field **20%**. Eligible seasons with at least eight races are preferred; thinner constructors remain available with an internal evidence flag. [Methodology and decisions →](docs/DECISIONS_LOG.md)
 
-client = JolpicaClient()                  # settings come from config.yaml
-races = client.get_race_results(2024, 1)  # list of races (here 1) with all records merged
-quali = client.get_qualifying(2024, 1)
-sprint = client.get_sprint_results(2024, 5)
-season = client.get_race_results(2024)    # whole season: paginates automatically (limit=100)
-schedule = client.get_schedule(2024)
+**The finishing order is the model output. Overtakes and intermediate race motion are illustrative**, not predicted telemetry or lap-by-lap events. Cross-era matchups cannot be validated against an actual race. Model training/evaluation uses chronological splits; some reported simulator holdout results are explicitly post-hoc. [Research and limitations →](docs/LITERATURE_REVIEW.md)
 
-page = client.get_json("/2024/5/driverStandings.json", {"limit": 100})  # any other endpoint
-```
+## Quick start — Windows PowerShell
 
-- Returned data is the API's JSON, **unchanged**: all values are strings. Type conversion happens in the cleaning step.
-- `get_race_results`, `get_qualifying` and `get_sprint_results` return `[]` when the API has no data (e.g. no sprint that weekend).
-- Temporary failures (HTTP 429, 5xx, timeouts, connection errors) are retried with waits of 2, 4, 8, 16 and 32 s. HTTP 400/404 raise `JolpicaAPIError` immediately.
-
-**Cache location:** `data/raw/jolpica/`. The file path mirrors the request URL, with parameters sorted, for example:
-`/2024/1/results.json?limit=100&offset=0` → `data/raw/jolpica/2024/1/results__limit-100__offset-0.json`.
-Each download is logged in `data/raw/_manifest.csv`; permanent failures go to `data/raw/_failed_requests.csv`.
-
-**Bypass the cache** for one request: `client.get_race_results(2024, 1, refresh=True)` (downloads again and overwrites the file).
-**Clear the cache:** delete the folder `data/raw/jolpica/` (or one file inside it). The next request downloads it again.
-
-## Historical collection 1950–2025 (Step 5)
-
-```powershell
-python -m src.collect --start 1950 --end 2025
-# small test run into separate files:
-python -m src.collect --start 1950 --end 1951 --output-prefix subset_
-```
-
-- **Runtime:** first run ≈ 100 minutes (≈ 800 requests, 7.5 s apart to stay under Jolpica's 500 requests/hour). Afterwards everything comes from the cache and a full re-run takes about 1 minute with **0** requests.
-- **Resume:** if the run stops (network, laptop sleep, Ctrl+C), just run the same command again. Every response already downloaded is read from `data/raw/jolpica/`; only missing ones are downloaded.
-- **Outputs:**
-  - `data/interim/races.csv`, `results.csv`, `qualifying.csv`, `sprints.csv`, `drivers.csv`, `constructors.csv` (raw API text values, all seasons)
-  - `outputs/tables/historical_collection_summary.csv`: one row per season, compared with the API's `MRData.total`
-  - `outputs/tables/historical_race_validation.csv`: one row per race, with counts and flags
-  - `outputs/tables/historical_edge_cases.csv`: unusual observations (one row each)
-  - `outputs/tables/historical_status_vocabulary.csv` and `historical_field_coverage.csv`
-  - `outputs/logs/collection_*.log` (per run) and `outputs/logs/collection_runs.csv` (request counts, runtime)
-- **Validate:** `python -m pytest tests/ -v`. The season summary's `matches_api_totals` column must be `True` for every season.
-- Nothing is removed or recoded at this stage; duplicates and odd records are **flagged** in the reports.
-
-## Historical data policies (Steps 5.5–5.6)
+**Prerequisites:** Python **3.11**, Node.js **20+** with npm, and Git. Browser E2E checks use installed Microsoft Edge; Chrome can be selected where supported.
 
 ```powershell
-python -m src.policy_analysis   # read-only analysis of historical edge cases (Step 5.5)
-python -m src.policies          # apply the APPROVED policies P-01…P-11 (Step 5.6)
+git clone https://github.com/akshat12bhardwaj/F1-Race-Prediction.git
+Set-Location F1-Race-Prediction
+
+py -3.11 -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+
+Push-Location frontend
+npm ci
+npm run build
+Pop-Location
+
+# Models, frozen datasets, circuit geometry and assets are already included.
+# Verify them; no API key, download or retraining is needed.
+& .\.venv\Scripts\python.exe scripts/verify_bundle.py
+
+& .\.venv\Scripts\python.exe -m uvicorn src.api:app --host 127.0.0.1 --port 8012
 ```
 
-- The approved policies (shared drives, shared positions, qualifying gaps, grid = 0, status categories, DNF definition, ambiguous rows, model population, constructor identity, order exceptions, Indianapolis 500) are described with rationale and consequences in `docs/DECISIONS_LOG.md`.
-- They are applied as **extra columns** on copies of the interim tables: `data/interim/results_policy.csv` and `races_policy.csv`. The original collected files are never changed or reduced.
-- `in_model_population = True` marks the 25,066 rows that the later model dataset will use (drivers who started, primary entry, not the Indianapolis 500).
-- Counts: `outputs/tables/policy_application_summary.csv`.
+Open **[http://127.0.0.1:8012](http://127.0.0.1:8012)**. If the port is occupied, choose a free one with `--port`; frontend and API share the same origin. Using the environment’s Python directly avoids PowerShell activation-policy changes.
 
-## Historical race weather (Step 6)
+**Try it:** Edit Lineup → assign two seats per team → choose both models → choose a circuit and conditions → Predict Race → inspect the podium and full standings. Change the scenario and predict again.
+
+<details>
+<summary>Frontend development and scientific reproduction</summary>
+
+For hot reload, keep the backend running and use another PowerShell terminal:
 
 ```powershell
-python -m src.weather                                   # all races 1950-2025
-python -m src.weather --start 2023 --end 2024 --output-prefix subset_   # small test run
+Set-Location frontend
+$env:API_PORT = '8012'
+npm run dev
 ```
 
-- **Source:** Open-Meteo Historical Weather API (archive, ERA5-based **reanalysis**, CC-BY 4.0). These are reconstructed historical conditions, **not** a forecast that was available before the race.
-- **Runtime:** first run ≈ 20 minutes (≈ 1,215 requests at 1 per second; free limits 600/min, 5,000/h). Re-runs use the cache (`data/raw/openmeteo/`) and make 0 requests. An interrupted run is resumed by running the same command.
-- **Start times:** official UTC start for 2007–2025. For **2005–2006** the API's "UTC" values are really local clock times, so they are read as local time and converted (P-12, approved). **1950–2004 has no official start time, so 14:00 local is assumed.** All three cases are recorded in `start_time_source`.
-- **Local times** use Python's timezone database (historical daylight-saving rules). Open-Meteo's own local-time option applies one fixed offset to all dates, so it is not used (D-013).
-- **Indianapolis 500 (P-11):** not requested and never model-usable; the 2000–2007 US GPs at the same circuit are included.
-- **Outputs:** `data/interim/weather_race.csv` (one row per race, prestart and race-window summaries), `data/interim/weather_hourly.csv` (hourly values −6…+6 h around the start), and reports `outputs/tables/weather_*.csv`. Log: `outputs/logs/weather_*.log`.
+Use the URL Vite prints. Production builds are served directly by FastAPI.
 
-## Data validation (Step 7)
+The original data acquisition, policy, feature-engineering, training, calibration and evaluation scripts remain in `src/`. Required frozen tables and model bundles are committed so the showcase can run offline without re-collecting years of data. [Reproduction guide →](docs/REPRODUCIBILITY.md)
 
-```powershell
-python -m src.validate_raw     # read-only; about 30 s; no API requests
-```
-
-- Validates races, results, qualifying, sprints, drivers, constructors, the approved policy columns (P-01…P-11, recomputed from raw data) and the weather data (P-12, recomputed start times and window summaries), plus 14 cross-table relationships.
-- Outputs in `outputs/tables/`: `raw_validation_summary.csv` (PASS/FAIL/INFO per check), `raw_missingness.csv` (every missing value classified), `raw_cross_table_validation.csv`, `raw_anomalies.csv` (`known_handled` vs `review`).
-- Nothing is changed: no rows removed, no values imputed or recoded, no targets or features. The run stops with an error if any input file changes.
-- **Limitation:** 1950–2004 weather windows use an **assumed 14:00 local** start, and historical reanalysis is **not** a pre-race forecast.
-
-## Exploratory data analysis (Step 8)
-
-```powershell
-python -m src.eda              # read-only, deterministic; about 30 s
-```
-
-Open `notebooks/03_eda.ipynb` (kernel **Python 3.11 (f1-race-prediction)**) for the narrative. Outputs: `outputs/tables/eda_*.csv` (31) and `outputs/figures/eda/*.png` (19). The EDA is descriptive only: no targets, features, splits or imputation. Outcome variables are labelled POST-RACE in `eda_variable_roles.csv`. Weather is reanalysis, not a forecast (1950–2004 assumed 14:00 local start).
-
-## Running tests
-
-```powershell
-python -m pytest tests/ -v                  # everything (one test needs internet)
-python -m pytest tests/ -v -m "not live"    # offline only
-python -m pytest tests/test_api_client.py -v
-python tests/smoke_api_client.py            # live smoke test: at most 3 real requests
-```
+</details>
 
 ## Project structure
 
-```
+```text
 F1-Race-Prediction/
-├── config.yaml        settings: seasons, split years, paths, API settings, seed
-├── requirements.txt   pinned Python packages
-├── docs/              blueprint, decisions log, data dictionary
-├── data/raw/          exact API responses (never edited, not in git)
-├── data/interim/      cleaned flat tables (not in git)
-├── data/processed/    model-ready datasets
-├── data/external/     optional manual tables
-├── notebooks/         step-by-step notebooks (01 … 13)
-├── src/               reusable Python code used by the notebooks
-├── tests/             automated checks (environment, integrity, leakage)
-├── models/            saved trained pipelines
-├── outputs/           figures, tables, predictions, logs
-└── report/            report, slides and final figures
+├── src/                  API, features, training, calibration and prediction
+├── frontend/
+│   ├── src/              React UI and Three.js race renderer
+│   ├── public/           Circuit geometry, cars, portraits, logos and credits
+│   └── e2e/              Unit, browser, asset and GPU checks
+├── data/                 Frozen historical tables and derived features
+├── models/               Required trained bundles and exact metadata
+├── tests/                Python data, leakage, model and API checks
+├── scripts/              Artifact integrity and screenshot optimization
+├── docs/                 Decisions, reproduction, verification and screenshots
+├── notebooks/            Original exploration and EDA
+└── outputs/tables/       Scientific comparison and audit results
 ```
 
-## Progress
+Local environments, dependencies, raw download caches, old browser captures, logs, and unused rollback archives are excluded from Git. Required model files are committed directly; **Git LFS is not required**. [Publication exclusions and cleanup manifest →](docs/CLEANUP.md)
 
-| Step | Description | Status |
-|---|---|---|
-| 1 | Environment and repository setup | Complete |
-| 2 | Jolpica API exploration (`notebooks/01_api_exploration.ipynb`) | Complete |
-| 3 | Cached API client (`src/api_client.py`) | Complete |
-| 4 | 2024 pilot collection (`notebooks/02_pilot_collection_2024.ipynb`, `src/collect.py`) | Complete |
-| 5 | Historical collection 1950–2025 (`python -m src.collect`, `src/collection_checks.py`) | Complete: 1,149 races, 25,873 results |
-| 5.5 | Historical data policy analysis (`python -m src.policy_analysis`) | Complete |
-| 5.6 | Apply approved policies P-01…P-11 (`python -m src.policies`) | Complete, **policies APPROVED** |
-| 6 | Historical race weather (`python -m src.weather`) | Complete: 1,138/1,138 eligible races |
-| 6.1 | P-12: 2005–2006 start times read as local clock (APPROVED) | Complete: 1,138 races model-usable, 0 quality errors |
-| 7 | Raw data validation (`python -m src.validate_raw`) | Complete: 193 PASS, 7 INFO, 0 FAIL |
-| 8 | Exploratory data analysis (`python -m src.eda`, `notebooks/03_eda.ipynb`) | Complete, awaiting review: 31 tables, 19 figures |
+## Testing
 
-## Reproducibility
+From the repository root, with the application running on port 8012 for browser checks:
 
-- Random seed 42 everywhere (`config.yaml`).
-- Package versions pinned in `requirements.txt`.
-- Raw API responses are cached in `data/raw/` and every later file is rebuilt from them by code.
-- Every design change is recorded in `docs/DECISIONS_LOG.md`.
+```powershell
+& .\.venv\Scripts\python.exe -m pytest -m 'not live' -q
+
+Push-Location frontend
+npm run test                 # frontend unit, geometry, motion and asset checks
+$env:E2E_URL = 'http://127.0.0.1:8012'
+npm run e2e                  # unit tests + complete browser journey
+npm run e2e:assets           # all five GLB bodies and full-grid rendering
+npm run e2e:logos
+npm run e2e:portraits
+npm run e2e:gpu              # optional visible-browser hardware performance check
+Pop-Location
+```
+
+The live collection test is excluded from offline checks. GPU frame rates depend on the machine. [Actual publication verification and clean-copy results →](docs/VERIFICATION.md)
+
+To refresh the README’s real screenshots, run `npm run showcase` from `frontend` with `E2E_URL` set, then run `python scripts/optimize_screenshots.py` from the root. Only optimized WebP images are published.
+
+## Credits and scope
+
+Historical race data: [Jolpica-F1 / Ergast](https://github.com/jolpica/jolpica-f1), **CC BY-NC-SA 4.0**. Weather data by [Open-Meteo.com](https://open-meteo.com/), **CC BY 4.0**. Circuits: [Tomislav Bacinger](https://github.com/bacinger/f1-circuits), MIT; elevation: Copernicus DEM. Cars, driver photographs and constructor marks retain their individual licences and attribution.
+
+[Full data and asset credits](CREDITS.md) · [Per-image credits](frontend/public/credits.html) · [3D model credits](frontend/public/models/ATTRIBUTION.html)
+
+Independent educational ML simulation. No affiliation with Formula 1, the FIA, constructors or drivers. No actual race outcome or overtaking telemetry is promised.
