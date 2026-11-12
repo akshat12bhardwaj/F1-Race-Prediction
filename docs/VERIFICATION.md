@@ -37,7 +37,14 @@ The publication tree is approximately 126 MiB before Git compression. Its larges
 
 Real screenshot capture used the actual UI to replace both Toyota seats with peak Aston Martin cars, retaining 22 unique drivers and 11 two-seat constructors. It selected Logistic Regression and Ridge, configured damp conditions, ran a seeded prediction, captured live order and modern-car Follow/Onboard views, then checked all 22 final standings against the returned model prediction. No API responses were mocked. Capture provenance is in `assets/screenshots/capture.json`; the reusable capture/optimization scripts are committed.
 
-The index-export check establishes reproducibility before publication. Remote branch/commit availability, a real GitHub clone and rendered README images are checked after pushing and reported in the final publication handoff.
+The index-export check established reproducibility before publication. Post-push verification of the actual public GitHub repository then succeeded:
+
+- Repository: `https://github.com/akshat12bhardwaj/F1-Race-Prediction`, public, default branch `main`.
+- Tested implementation commit: `0467ba4a0d2a71eabfca13519229dc16639d3bee`. The original ten local development commits are preserved as ancestors.
+- A real network clone matched that commit and verified all 409 frozen artifacts without downloading models/data separately.
+- The clone passed 31 additional focused peak-grid/prediction tests, plus `npm ci` and a production build. Its working tree stayed clean after these checks.
+- All nine raw GitHub screenshot URLs returned valid WebP images. In the rendered GitHub README, all nine images decoded at 1600×960; the page was visually inspected in Edge.
+- Final publication includes a documentation-only follow-up recording these checks; runtime source, model/data/asset bytes and lockfiles are unchanged from the tested implementation commit.
 
 ## Limits and cleanup status
 
