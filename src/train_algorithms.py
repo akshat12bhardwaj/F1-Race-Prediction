@@ -7,7 +7,7 @@ Protocol (same for every algorithm; declared before results):
 - Walk-forward: for S in 2017..2022 the model is trained on seasons < S and scores season S (out-of-sample).
 - Calibration seasons 2017-2019: choose the hyper-parameters from a small grid AND fit the race temperature tau
   (maximum likelihood of the actual winners under softmax(tau * score)).
-- Comparison seasons 2020-2022 (65 races): every metric reported, with config and tau fixed beforehand.
+- Comparison seasons 2020-2022 (61 races): every metric reported, with config and tau fixed beforehand.
 - The existing Plackett-Luce simulator model and a grid-only baseline go through the same protocol.
 - "Best validated" = lowest winner log-loss on 2020-2022 (shown as an option, never forced; slightly optimistic
   because it is chosen on those seasons).

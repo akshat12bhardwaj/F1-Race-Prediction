@@ -149,7 +149,9 @@ def default_grid(circuit_id):
                                                  d["constructor_id"], -d["net_quali_skill"]))
     entries = [{"driver_id": d["driver_id"], "season": REFERENCE_SEASON, "constructor_id": d["constructor_id"],
                 "constructor_season": REFERENCE_SEASON} for d in el]
-    return {"circuit_id": circuit_id, "reference_season": REFERENCE_SEASON, "grid_capacity": len(cars) * REF_MAX_PER_TEAM,
+    return {"circuit_id": circuit_id, "reference_season": REFERENCE_SEASON, "reference_grid_capacity": len(cars) * REF_MAX_PER_TEAM,
+            "grid_capacity": capacity(circuit_id, entries),
+            "historical_grid_capacity": int(D["circuits"].set_index("circuit_id").loc[circuit_id, "grid_capacity"]),
             "entries": entries, "excluded": pool["excluded"]}
 
 
@@ -473,7 +475,7 @@ def build_scenario(circuit_id, entries, conditions=None, n_sims=5000):
     cap = capacity(circuit_id, entries)
     if len(entries) > cap:
         raise ScenarioError(f"{circ['circuit_name']} takes at most {cap} cars in this scenario "
-                            "(largest field it has held).")
+                            "(effective simulator capacity).")
     drv, teams, hist, team_race = D["drivers"], D["teams"], D["hist"], D["team_race"]
     primes = D["primes"].set_index("driver_id")
     rows, warnings, never, era_gap, no_history = [], [], [], [], []
@@ -544,7 +546,7 @@ def build_scenario(circuit_id, entries, conditions=None, n_sims=5000):
             for (c, y), n in over.items()) + "); real teams entered at most two cars.")
     if no_history:
         warnings.append(f"No previous race at this circuit for {len(no_history)} driver(s) "
-                        f"({', '.join(no_history[:6])}{'…' if len(no_history) > 6 else ''}); circuit history is imputed.")
+                        f"({', '.join(no_history[:6])}{'…' if len(no_history) > 6 else ''}); zero prior starts is recorded. Missing constructor track history is handled by each model.")
     yrs = list(df["season"]) + list(df["constructor_season"])
     if max(yrs) - min(yrs) > CROSS_ERA_YEARS:
         warnings.append(f"Cross-era field ({min(yrs)}–{max(yrs)}): drivers and cars are measured relative to their own "
@@ -609,7 +611,8 @@ def predict_custom_race(circuit_id, entries, conditions=None, n_sims=5000, seed=
         "scenario_id": hashlib.sha1(canon.encode()).hexdigest()[:12],
         "circuit": {"circuit_id": circuit_id, "circuit_name": circ["circuit_name"], "country": circ["country"],
                     "race_name": circ["race_name"], "pole_win_rate": float(circ["circuit_pole_win_rate"]),
-                    "races": int(circ["races"]), "grid_capacity": int(circ["grid_capacity"])},
+                    "races": int(circ["races"]), "historical_grid_capacity": int(circ["grid_capacity"]),
+                    "grid_capacity": capacity(circuit_id, entries)},
         "conditions": weather, "n_sims": int(n_sims), "seed": int(seed), "n_drivers": n,
         "results": results,
         "podium": [r["driver_id"] for r in results[:min(3, n)]],

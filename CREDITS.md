@@ -20,3 +20,5 @@ APEX is an independent educational project, unaffiliated with Formula 1, the FIA
 - README screenshots are actual APEX browser captures. They contain the assets credited above; the [capture record](docs/assets/screenshots/capture.json) records the UI states and actual finishing order. Screenshots were compressed to WebP, without invented interface states.
 
 Software dependencies retain their own licences. No single repository-wide software licence has been selected; the specific third-party data and asset terms above still apply.
+
+- Fuji, Jerez and Yeongam layouts: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/). [Pinned source](https://github.com/YangKuoshih/SimgentF1/blob/74468face35a888fe183e4d49ebcb6d38acf83d4/data/osm-circuits.geojson). The app projects and resamples the mapped centreline and displays it flat.

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 // Header circuit selector: a button showing the race, opening a searchable list (keyboard: arrows, Enter, Escape).
-export default function CircuitPicker({ circuits, value, onChange }) {
+export default function CircuitPicker({ circuits, value, onChange, geometry }) {
   const [open, setOpen] = useState(false)
   const [q, setQ] = useState('')
   const [hi, setHi] = useState(0)
@@ -49,7 +49,7 @@ export default function CircuitPicker({ circuits, value, onChange }) {
               return [head && <li key={g} className="cpick-group" role="presentation">{g}</li>,
                 <li key={c.circuit_id} id={`cp-${c.circuit_id}`} role="option" aria-selected={c.circuit_id === value} data-hi={i === hi ? '1' : undefined} data-circuit={c.circuit_id}
                   className={`${i === hi ? 'hi' : ''}${c.circuit_id === value ? ' cur' : ''}`} onPointerEnter={() => setHi(i)} onClick={() => choose(c)}>
-                  <b>{c.race_name}</b><small>{c.circuit_name} · {c.country}</small>
+                  <b>{c.race_name}</b><small>{c.circuit_name} · {c.country}{geometry && !geometry[c.circuit_id] ? " · Standings only" : ""}</small>
                 </li>]
             })}
             {!hits.length && <li className="cpick-none">No circuit matches.</li>}

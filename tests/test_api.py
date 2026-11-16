@@ -39,7 +39,7 @@ def test_races_and_drivers(client):
     assert all("target_finish_position" not in x and "position_text" not in x for x in d)
 
 
-@pytest.mark.parametrize("season,rnd", [(2017, 1), (2019, 10), (2020, 5), (2022, 1), (2022, 22)])
+@pytest.mark.parametrize("season,rnd", [(2017, 1), (2019, 10), (2020, 5), (2022, 1), (2022, 22), (2023, 8), (2025, 1)])
 def test_predict_is_coherent(client, season, rnd):
     r = _predict(client, season, rnd)
     assert r.status_code == 200, r.text
@@ -47,11 +47,14 @@ def test_predict_is_coherent(client, season, rnd):
     p = pd.DataFrame(body["predictions"])
     n = len(p)
     assert sorted(p["pred_rank"]) == list(range(1, n + 1))
+    assert p["driver_id"].is_unique
+    assert (p["win_prob"].between(0, 1) & p["podium_prob"].between(0, 1)).all()
+    assert (p["win_prob"] <= p["podium_prob"]).all()
     assert p["win_prob"].sum() == pytest.approx(1, abs=1e-9)
     assert p["podium_prob"].sum() == pytest.approx(3, abs=1e-9) and p["podium_prob"].max() <= 1 + 1e-9
     assert body["podium"] == p.sort_values("pred_rank")["driver_id"].head(3).tolist()
     assert not any(k.startswith("target_") or k in ("official_position", "points", "status") for k in p.columns)
-    assert body["model"]["trained_on"].endswith(str(season - 1))
+    assert body["model"]["trained_on"].endswith(str(min(season - 1, 2022)))
 
 
 def test_subset_does_not_change_field_probabilities(client):

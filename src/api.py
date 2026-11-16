@@ -163,7 +163,12 @@ def _csv(name):
 
 @app.get("/api/model-comparison")
 def model_comparison():
-    out = {"comparison": _csv("model_comparison.csv"), "paired_bootstrap": _csv("model_paired_bootstrap.csv"),
+    out = {"provenance": {
+               "comparison": {"system": "legacy historical", "period": "2017–2022 development", "protocol": "see group per row"},
+               "algorithm_comparison": {"schema": "archived v1", "period": "2020–2022", "races": 61,
+                                        "protocol": "annual refits; native metrics use a fixed pre-2020 fit"},
+               "active_algorithms": "/api/algorithms",
+           }, "comparison": _csv("model_comparison.csv"), "paired_bootstrap": _csv("model_paired_bootstrap.csv"),
            "podium_method": _csv("e4_podium_method.csv")}
     for extra in ("feature_importance.csv", "calibration_curve.csv", "ablation_groups.csv",
                   "e11_numpy_vs_sklearn.csv", "season_metrics.csv", "scenario_model_comparison.csv",
@@ -171,7 +176,7 @@ def model_comparison():
                   "algorithm_comparison.csv", "algorithm_permutation_importance.csv", "car_clusters.csv",
                   "car_cluster_summary.csv",
                   "scenario_paired_bootstrap.csv", "scenario_subset_experiment.csv", "final_test_2023_2025.csv",
-                  "final_test_by_season.csv"):
+                  "final_test_by_season.csv", "live_pair_replay.csv", "historical_coherent_replay.csv"):
         if (TABLES / extra).exists():
             out[extra.removesuffix(".csv")] = _csv(extra)
     return clean(out)
@@ -189,7 +194,9 @@ def _sim(fn, *a, **k):
 
 @app.get("/api/circuits")
 def circuits():
-    return clean(_sim(simulate.circuits))
+    return clean(_sim(lambda: [c | {"historical_grid_capacity": c["grid_capacity"],
+                                    "grid_capacity": max(c["grid_capacity"], simulate.GRID_SIZE)}
+                               for c in simulate.circuits()]))
 
 
 @app.get("/api/available-drivers")

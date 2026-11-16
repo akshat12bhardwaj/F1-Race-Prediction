@@ -41,3 +41,14 @@ def test_built_circuits_label_elevation_honestly():
             assert e["noise_m"] <= cg.NOISE_MAX, cid
         else:
             assert "y" not in c and "terrain" not in c, cid                   # flat, never invented
+
+
+def test_osm_layouts_are_scaled_flat_and_attributed():
+    d = json.loads((PROJECT_ROOT / "frontend/public/circuits-osm.json").read_text(encoding="utf-8"))
+    assert d["license"] == "ODbL 1.0"
+    assert set(d["circuits"]) == {"fuji", "jerez", "yeongam"}
+    for c in d["circuits"].values():
+        assert c["source"] == "OpenStreetMap contributors"
+        assert len(c["x"]) == len(c["z"]) == cg.N_POINTS
+        assert c["traced_m"] == pytest.approx(c["length_m"], rel=.015)
+        assert "y" not in c and "terrain" not in c

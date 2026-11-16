@@ -137,13 +137,13 @@ def test_circuit_changes_predictions_where_the_model_uses_circuit_features(grid2
         assert not np.allclose(s["monaco"], s["monza"]) and not np.allclose(s["monza"], s["silverstone"]), key
 
 
-def test_eligibility_tiers_and_diagnostics_are_kept_out_of_the_ui(client, grid):
+def test_eligibility_tiers_and_diagnostics_are_returned(client, grid):
     from src import simulate
     o = _predict(client, grid).json()
     assert o["eligibility"] == {"limited": [], "insufficient": []}          # the 2025 pool is fully supported
     ev = {s["driver_id"]: s for s in o["standings"]}
     assert all(s["eligibility"] == "supported" and s["evidence"]["imputed_skill_features"] == 0 for s in ev.values())
-    assert isinstance(o["diagnostics"], list) and "warnings" not in o   # kept for developers, not for the app
+    assert isinstance(o["diagnostics"], list) and "warnings" not in o
     # a real driver-season with very few starts is 'limited', not dropped or invented
     snaps = simulate._data()["drivers"]
     few = snaps[(snaps["driver_career_starts"].between(1, 4)) & (snaps["season"] < 2025)].iloc[0]
@@ -204,3 +204,11 @@ def test_2025_race_numbers_and_nationality(client, grid):
     assert pool["max_verstappen"]["season"] == 2025 and pool["max_verstappen"]["number"] == 1
     assert pool["senna"]["season"] == 1988 and pool["senna"]["number"] == 12
     assert pool["max_verstappen"]["nationality"] == "Dutch" and all(d["nationality"] for d in pool.values())
+
+
+def test_all_is_only_available_on_comparison_route(client, grid):
+    payload = {"circuit_id": "spa", "entries": grid[:3], "algorithm": "all", "n_sims": 100}
+    response = client.post("/api/simulate-custom-race", json=payload)
+    assert response.status_code == 422
+    assert "/api/compare-algorithms" in response.json()["detail"]["message"]
+    assert client.post("/api/explain-algorithm", json=payload | {"driver_id": grid[0]["driver_id"]}).status_code == 422

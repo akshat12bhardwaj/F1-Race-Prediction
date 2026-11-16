@@ -1,0 +1,154 @@
+{
+  "evaluated": [
+    2023,
+    2024,
+    2025
+  ],
+  "training_end": 2022,
+  "calibration": [
+    2017,
+    2018,
+    2019
+  ],
+  "selection": "installed default settings, fixed before this run; prior project work used these seasons",
+  "grid": "observed ordering, unknown grid positions last, driver ID breaks ties",
+  "inputs": "race-specific pre-start features with historical reanalysis; full observed fields",
+  "baseline": "negative log grid position calibrated on 2017\u20132019",
+  "seed": 42,
+  "draws": 5000,
+  "models": {
+    "random_forest": {
+      "params": {
+        "min_samples_leaf": 20
+      },
+      "features": [
+        "log_grid",
+        "front_row",
+        "pole",
+        "log_grid_x_pole_rate",
+        "log_grid_x_wet",
+        "net_race_skill",
+        "net_quali_skill",
+        "driver_teammate_finish_gap_last10",
+        "driver_teammate_grid_gap_last10",
+        "driver_teammate_beat_rate",
+        "log_driver_career_starts",
+        "driver_age_years",
+        "constructor_last5_avg_finish_pct",
+        "constructor_last5_avg_grid_pct",
+        "constructor_points_share_before_race",
+        "constructor_win_rate_last20",
+        "constructor_podium_rate_last20",
+        "car_crew_quali_skill",
+        "car_crew_race_skill",
+        "constructor_dnf_rate_last10",
+        "log_driver_circuit_starts",
+        "constructor_circuit_avg_finish_pct",
+        "circuit_dnf_rate",
+        "constructor_circuit_avg_grid_pct"
+      ],
+      "feature_set": "v1",
+      "train_start": 1981,
+      "source_artifact_sha256": "1bcada2d7b0ecbc0853b95a356e1b1630c8d0ec6af9be07c5cc5de8bbfef1f2c",
+      "refit_tau": 1.352620058043
+    },
+    "ridge": {
+      "params": {
+        "alpha": 100.0
+      },
+      "features": [
+        "log_grid",
+        "front_row",
+        "pole",
+        "log_grid_x_pole_rate",
+        "log_grid_x_wet",
+        "net_race_skill",
+        "net_quali_skill",
+        "driver_teammate_finish_gap_last10",
+        "driver_teammate_grid_gap_last10",
+        "driver_teammate_beat_rate",
+        "log_driver_career_starts",
+        "driver_age_years",
+        "constructor_last5_avg_finish_pct",
+        "constructor_last5_avg_grid_pct",
+        "constructor_points_share_before_race",
+        "constructor_win_rate_last20",
+        "constructor_podium_rate_last20",
+        "car_crew_quali_skill",
+        "car_crew_race_skill",
+        "constructor_dnf_rate_last10",
+        "log_driver_circuit_starts",
+        "constructor_circuit_avg_finish_pct",
+        "circuit_dnf_rate",
+        "constructor_circuit_avg_grid_pct",
+        "rain_log",
+        "air_temp_c",
+        "humidity_pct",
+        "wind_kmh",
+        "log_grid_x_rain",
+        "rain_x_race_skill",
+        "rain_x_car_pace",
+        "heat_x_car_dnf",
+        "wind_x_car_pace"
+      ],
+      "feature_set": "v2",
+      "train_start": 1981,
+      "source_artifact_sha256": "945752c4b69b6cdb026c18a5c7a0dc7a6d840d5684816f272ad23462275b3d12",
+      "refit_tau": 14.034101136366
+    },
+    "logistic_regression": {
+      "params": {
+        "C": 0.1
+      },
+      "features": [
+        "log_grid",
+        "front_row",
+        "pole",
+        "log_grid_x_pole_rate",
+        "log_grid_x_wet",
+        "net_race_skill",
+        "net_quali_skill",
+        "driver_teammate_finish_gap_last10",
+        "driver_teammate_grid_gap_last10",
+        "driver_teammate_beat_rate",
+        "log_driver_career_starts",
+        "driver_age_years",
+        "constructor_last5_avg_finish_pct",
+        "constructor_last5_avg_grid_pct",
+        "constructor_points_share_before_race",
+        "constructor_win_rate_last20",
+        "constructor_podium_rate_last20",
+        "car_crew_quali_skill",
+        "car_crew_race_skill",
+        "constructor_dnf_rate_last10",
+        "log_driver_circuit_starts",
+        "constructor_circuit_avg_finish_pct",
+        "circuit_dnf_rate",
+        "constructor_circuit_avg_grid_pct",
+        "rain_log",
+        "air_temp_c",
+        "humidity_pct",
+        "wind_kmh",
+        "log_grid_x_rain",
+        "rain_x_race_skill",
+        "rain_x_car_pace",
+        "heat_x_car_dnf",
+        "wind_x_car_pace"
+      ],
+      "feature_set": "v2",
+      "train_start": 1981,
+      "source_artifact_sha256": "51a3dff53936b24f1e586f41dcf2ae08e7d32302d30c0e5903066eb4847b96c7",
+      "refit_tau": 1.30073714775
+    }
+  },
+  "pairs": {
+    "default_pair": [
+      "random_forest",
+      "ridge"
+    ],
+    "demo_pair": [
+      "logistic_regression",
+      "ridge"
+    ]
+  }
+}

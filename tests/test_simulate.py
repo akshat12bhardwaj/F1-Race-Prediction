@@ -51,7 +51,8 @@ def _swap(entries, a, b):
 # ---------------- defaults: full grid, prime form, default cars ----------------
 def test_default_grid_is_full_capacity_with_prime_form(client, monaco, sim):
     caps = {c["circuit_id"]: c["grid_capacity"] for c in client.get("/api/circuits").json()}
-    assert caps["monaco"] == 26 and caps["miami"] == 20 and caps["baku"] == 22 and max(caps.values()) <= 26
+    assert caps["monaco"] == 26 and caps["miami"] == 22 and caps["baku"] == 22 and max(caps.values()) <= 26
+    assert next(c for c in client.get("/api/circuits").json() if c["circuit_id"] == "miami")["historical_grid_capacity"] == 20
     assert monaco["grid_capacity"] == 26 and len(monaco["entries"]) == 26
     primes = pd.read_csv(PROJECT_ROOT / "data/processed/driver_primes.csv").set_index("driver_id")
     for e in monaco["entries"]:

@@ -1,6 +1,6 @@
 # Reproducing APEX
 
-## Run the frozen release
+## Run the bundled release
 
 Use Python 3.11 and install `requirements-lock.txt`, the full resolved environment tested for publication. Direct dependencies remain documented in `requirements.txt` (especially scikit-learn 1.7.1, NumPy 2.2.6 and joblib 1.5.1). Use `npm ci` with `frontend/package-lock.json`, then `npm run build`. Launch `python -m uvicorn src.api:app --host 127.0.0.1 --port 8012` from the repository root. The README has complete PowerShell commands.
 
@@ -64,3 +64,8 @@ Portrait/logo fetchers remain in `src/` with the reviewed selections. Third-part
 Windows checks use installed Edge through Playwright Core, without downloading another browser. Set `E2E_URL` to the running app. `npm run e2e:visual` additionally uses a Vite server on port 5177 for isolated material views; start it in another terminal with `API_PORT=8012` and `npm run dev -- --port 5177 --strictPort`. The GPU check requires usable hardware WebGL and opens a visible browser.
 
 Screenshots can be regenerated using `npm run showcase`, then `python scripts/optimize_screenshots.py`. The capture script uses actual UI interactions and a real seeded 22-driver prediction. It never substitutes API responses.
+
+
+## Replay the website model pairs on observed grids
+
+Run `python -m src.evaluate_live_pair` from the repository root. The script uses the installed default and showcase pair configurations, calibrates on expanding 2017–2019 predictions, and refits only through 2022. It records model hashes and settings in `outputs/tables/live_pair_replay.json`. The 2023–2025 results are a chronological replay of previously examined races. The script also recomputes the legacy replay metrics with coherent podium probabilities in `historical_coherent_replay.csv`. Keep the first-run frozen table as an archival record. Development can continue; validate changed configurations on future races for an independent accuracy claim.

@@ -574,7 +574,9 @@ export default function Track3D({ geometry, circuitId, conditions, paused, entri
       </div>
       {elev && <span className="elev-note">{hasElev
         ? `Elevation: Copernicus DEM 30 m · ${elev.range_m} m range · true scale 1:1${B ? ` · crossover bridge approx. +${B.clearance_m} m` : ''}`
-        : 'Flat: no reliable elevation for this circuit'}</span>}
+        : geometry.source
+          ? <>Mapped layout · flat elevation · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></>
+          : 'Flat: no reliable elevation for this circuit'}</span>}
     </div>
   )
 }

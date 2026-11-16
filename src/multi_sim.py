@@ -20,7 +20,7 @@ import pandas as pd
 from src.algorithms import BASELINE_INFO, FEATURES as ALG_FEATURES, GROUPS_V1 as GROUPS, RANKING_INFO, REGISTRY, score as alg_score   # weather is race-level: no per-driver group effect
 from src.config import PROJECT_ROOT, load_config
 from src.ranking import GROUP_LABELS, _positions, scenario_matrix
-from src.simulate import ScenarioError, _data, build_scenario
+from src.simulate import ScenarioError, _data, build_scenario, capacity
 
 log = logging.getLogger("apex.prediction")
 
@@ -57,6 +57,12 @@ def info(key):
     return REGISTRY.get(key) or (RANKING_INFO if key == "plackett_luce" else BASELINE_INFO)
 
 
+@lru_cache(maxsize=None)
+def _artifact_sha(key):
+    path = PROJECT_ROOT / load_config()["paths"]["models"] / "algorithms" / f"{key}.joblib"
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def catalog():
     bundles, meta = _algos()
     out = []
@@ -67,8 +73,14 @@ def catalog():
         out.append({"key": k, "label": i["label"], "family": i["family"], "topic": i["topic"], "how": i["how"],
                     "strengths": i["strengths"], "weaknesses": i["weaknesses"], "sensitivity": i["sensitivity"],
                     "explain": i["explain"], "params": m.get("params", {}), "tau": bundles[k]["tau"],
+                    "artifact_sha256": _artifact_sha(k), "feature_schema": bundles[k].get("feature_set", i["family"]),
+                    "training_end": bundles[k].get("data_cutoff", 2025),
+                    "evaluation": {"start": 2020, "end": 2022, "races": 61,
+                                   "race_metrics": "annual refits before each evaluation season",
+                                   "native_metrics": "single fit before 2020",
+                                   "provenance": "active model configuration; chronological evaluation refits"},
                     "train_start": bundles[k]["train_start"], "best_validated": k == meta["best_validated"],
-                    "weather_inputs": WEATHER_INPUTS if bundles[k].get("feature_set") == "v2" else ["wet"],
+                    "weather_inputs": WEATHER_INPUTS if bundles[k].get("feature_set") == "v2" else [] if k == "grid_baseline" else ["wet"],
                     "metrics": {x: m.get(x) for x in (
                         "winner_logloss", "winner_top1", "winner_top3", "podium_overlap", "exact_podium",
                         "mean_spearman", "rank_mae", "podium_brier", "podium_roc_auc", "podium_pr_auc",
@@ -127,6 +139,18 @@ def outcomes(pos, win, df):
             "sample_race": [ids[j] for j in fin[0]]}
 
 
+def position_summary(pos):
+    return pos.mean(0), (pos == 1).mean(0), (pos <= min(3, pos.shape[1])).mean(0)
+
+
+def ensemble_values(classification, regression):
+    return (classification + regression) / 2
+
+
+def ensemble_key(expected, podium, driver_id):
+    return expected, -podium, driver_id
+
+
 def simulate_algorithms(circuit_id, entries, algorithms=None, conditions=None, n_sims=5000, seed=42,
                         grid_mode="qualifying"):
     D = _data()
@@ -144,7 +168,8 @@ def simulate_algorithms(circuit_id, entries, algorithms=None, conditions=None, n
         table = score_table(bundles[k], df)
         pos = _positions(table[np.arange(n)[None, :], grid - 1] + noise)
         dist = np.stack([(pos == j).mean(axis=0) for j in range(1, n + 1)], axis=1)
-        win, podium, top5, exp = (pos == 1).mean(0), (pos <= min(3, n)).mean(0), (pos <= min(5, n)).mean(0), pos.mean(0)
+        exp, win, podium = position_summary(pos)
+        top5 = (pos <= min(5, n)).mean(0)
         order = sorted(range(n), key=lambda i: (exp[i], -win[i], df.loc[i, "driver_id"]))
         rank = np.empty(n, int)
         rank[order] = np.arange(1, n + 1)
@@ -179,7 +204,8 @@ def simulate_algorithms(circuit_id, entries, algorithms=None, conditions=None, n
     return {"scenario_id": hashlib.sha1(canon.encode()).hexdigest()[:12],
             "circuit": {"circuit_id": circuit_id, "circuit_name": circ["circuit_name"], "country": circ["country"],
                         "race_name": circ["race_name"], "pole_win_rate": float(circ["circuit_pole_win_rate"]),
-                        "races": int(circ["races"]), "grid_capacity": int(circ["grid_capacity"])},
+                        "races": int(circ["races"]), "historical_grid_capacity": int(circ["grid_capacity"]),
+                        "grid_capacity": capacity(circuit_id, entries)},
             "conditions": weather, "n_sims": n_sims, "seed": int(seed), "n_drivers": n,
             "grid_mode": grid_mode,
             "qualifying": ("Fixed: your grid order is used in every simulated race." if grid_mode == "fixed" else
@@ -222,7 +248,7 @@ def group_sensitivity(b, df, est):
     for g, cols in GROUPS.items():
         alt = rows.copy()
         for c in {RAW_OF.get(c, c) for c in cols}:
-            if c in alt:
+            if c in alt and alt[c].notna().any():
                 med = alt[c].median()
                 alt[c] = float(np.round(med)) if c == "grid_position" else med
         eff = base - b["tau"] * bundle_score(b, alt)
@@ -254,20 +280,20 @@ def predict_pair(circuit_id, entries, classification, regression, conditions=Non
                                        "constructor_id", "constructor_name", "constructor_season", "car_basis",
                                        "real_pairing", "is_prime", "eligibility", "evidence")}
                     | {"grid": c["est_grid"],
-                       "expected_position": (c["expected_position"] + g["expected_position"]) / 2,
-                       "podium_prob": (c["podium_prob"] + g["podium_prob"]) / 2,
-                       "win_prob": (c["win_prob"] + g["win_prob"]) / 2,
+                       "expected_position": ensemble_values(c["expected_position"], g["expected_position"]),
+                       "podium_prob": ensemble_values(c["podium_prob"], g["podium_prob"]),
+                       "win_prob": ensemble_values(c["win_prob"], g["win_prob"]),
                        "classification": {"podium_prob": c["podium_prob"], "expected_position": c["expected_position"],
                                           "rank": c["pred_rank"]},
                        "regression": {"podium_prob": g["podium_prob"], "expected_position": g["expected_position"],
                                       "rank": g["pred_rank"]},
                        "key_factor": c["factors"][0]["label"] if c["factors"] else None})
-    rows.sort(key=lambda r: (r["expected_position"], -r["podium_prob"], r["driver_id"]))
+    rows.sort(key=lambda r: ensemble_key(r["expected_position"], r["podium_prob"], r["driver_id"]))
     for i, r in enumerate(rows, 1):
         r["position"] = i
     k = min(3, len(rows))
     pod_c, pod_r = out["runs"][classification]["podium"], out["runs"][regression]["podium"]
-    for w in out["warnings"]:          # developer diagnostics: logged and returned, not shown in the app
+    for w in out["warnings"]:
         log.info("scenario %s: %s", out["scenario_id"], w)
     lvl = {lv: [r["driver_id"] for r in rows if r["eligibility"] == lv] for lv in ("limited", "insufficient")}
     return {"scenario_id": out["scenario_id"], "circuit": out["circuit"], "conditions": out["conditions"],
@@ -281,6 +307,8 @@ def predict_pair(circuit_id, entries, classification, regression, conditions=Non
 def predict_single(circuit_id, entries, algorithm="plackett_luce", conditions=None, n_sims=5000, seed=42,
                    grid_mode="qualifying"):
     """One algorithm, backwards-compatible single-run response with per-driver factors."""
+    if algorithm == "all":
+        raise ScenarioError("Select one algorithm or use /api/compare-algorithms for all models.")
     out = simulate_algorithms(circuit_id, entries, [algorithm], conditions, n_sims, seed, grid_mode)
     key = out["algorithms"][0]
     run = out["runs"][key]
@@ -310,6 +338,8 @@ def predict_single(circuit_id, entries, algorithm="plackett_luce", conditions=No
 def explain_driver(circuit_id, entries, algorithm, driver_id, conditions=None, grid_mode="qualifying"):
     """Model-specific explanation of one driver's score in this scenario, at the estimated (or fixed) grid slot."""
     bundles, _ = _algos()
+    if algorithm == "all":
+        raise ScenarioError("Select one algorithm to explain.")
     key = resolve([algorithm])[0]
     b = bundles[key]
     df, _, _ = build_scenario(circuit_id, entries, conditions)

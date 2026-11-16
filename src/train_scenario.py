@@ -95,13 +95,13 @@ def fit_predict(cfg, train, test):
     return m, m.utility(test)
 
 
-def v1_system(df, models, tau, podium_method):
+def v1_system(df, models, tau, podium_method, coherent=False):
     """Frozen v1 historical system on given rows (same coherence steps as the prediction engine)."""
     X = df[FEATURES]
     o = df[["race_id", "season", "driver_id", "grid_position", "target_finish_position", "target_winner",
             "target_podium", "exclude_from_winner_metrics"]].copy()
     o["win_prob"] = normalize_win(models["winner"].predict_proba(X)[:, 1], o["race_id"], tau)
-    o["podium_prob"] = normalize_podium(models["podium"].predict_proba(X)[:, 1], o["race_id"])
+    o["podium_prob"] = normalize_podium(models["podium"].predict_proba(X)[:, 1], o["race_id"], o["win_prob"].to_numpy() if coherent else None)
     o["pred_position"] = models["position"].predict(X)
     o["pred_rank"] = assemble_order(o, podium_method)
     return o

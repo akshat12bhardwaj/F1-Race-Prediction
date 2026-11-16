@@ -162,7 +162,7 @@ class Predictor:
         out["qualifying_position"] = rows["qualifying_position"]
         out["raw_win_score"] = m["winner"].predict_proba(X)[:, 1]
         out["win_prob"] = normalize_win(out["raw_win_score"], out["race_id"], self.meta["tau"])
-        out["podium_prob"] = normalize_podium(m["podium"].predict_proba(X)[:, 1], out["race_id"])
+        out["podium_prob"] = normalize_podium(m["podium"].predict_proba(X)[:, 1], out["race_id"], out["win_prob"].to_numpy())
         out["pred_position"] = m["position"].predict(X)
         out["pred_rank"] = assemble_order(out, self.meta["podium_method"])
         if explain:

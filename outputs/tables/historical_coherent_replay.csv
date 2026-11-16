@@ -1,0 +1,2 @@
+model,races,winner_top1,winner_top3,winner_logloss,podium_overlap,exact_podium,mean_spearman,rank_mae,win_brier,win_pr_auc,podium_brier,podium_pr_auc
+legacy_coherent_replay,70,0.642857142857,0.942857142857,1.10576075662,0.661904761905,0.1,0.695367199511,3.09932330827,0.0268596188658,0.696816936783,0.0666670519544,0.741049361204

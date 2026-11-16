@@ -63,11 +63,13 @@ export default function RaceBoard({ result, stale, running, phase, order, starte
       </div>
     )
   }
+  const winLeader = S.reduce((best, row) => row.win_prob > best.win_prob ? row : best);
   const pod = [2, 1, 3].map(p => S[p - 1]).filter(Boolean)
   return (
     <div className="board done" id="results" aria-labelledby="board-h">
       <div className="board-head"><h2 id="board-h" className="side-h">Predicted result</h2></div>
       {used}
+      <p className="board-foot win-leader"><b>Highest win probability</b> · {winLeader.driver_name} {pct(winLeader.win_prob)}</p>
       <div className="podium">
         {pod.map(r => (
           <button key={r.driver_id} className={`pod p${r.position}${selected === r.driver_id ? ' sel' : ''}`} data-driver={r.driver_id}
@@ -94,6 +96,10 @@ export default function RaceBoard({ result, stale, running, phase, order, starte
           </li>
         ))}
       </ol>
+      {!!result.diagnostics?.length && <details className="prediction-context">
+        <summary>ⓘ Prediction context</summary>
+        <ul>{result.diagnostics.map(d => <li key={d}>{d}</li>)}</ul>
+      </details>}
       <p className="board-foot" data-inference-ms={result.inference_ms ?? ''}>
         {result.inference_ms != null ? `Models computed this in ${secs(result.inference_ms)}` : `Answer received in ${secs(result.round_trip_ms)}`} ({result.n_sims.toLocaleString()} simulated races) · {result.podium_agreement ? 'both models agree on the podium' : 'the two models differ on the podium'}</p>
     </div>

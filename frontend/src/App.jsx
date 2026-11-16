@@ -39,7 +39,9 @@ export default function App() {
     Promise.all([api.circuits(), api.pool(), api.models(), api.conditions()])
       .then(([c, p, m, w]) => { setCircuits(c); setPool(p); setModels(m); setBase(p.default_grid); setHist(history.start(p.default_grid)); setCondSpec(w); setCond({ ...w.presets.dry }) })
       .catch(e => setError(e.message))
-    fetch('/circuits.json').then(r => r.json()).then(j => setGeo(j.circuits)).catch(() => setGeo({}))
+    const layouts = path => fetch(path).then(r => r.json()).then(j => j.circuits).catch(() => ({}))
+    Promise.all([layouts('/circuits.json'), layouts('/circuits-osm.json')])
+      .then(([original, mapped]) => setGeo({ ...original, ...mapped }))
   }, [])
 
   const entries = hist.now
@@ -52,6 +54,10 @@ export default function App() {
     const d = byId[id]
     if (!d) return id
     return short ? (d.code || d.last_name.slice(0, 3)).toUpperCase() : `${d.first_name} ${d.last_name}`
+  }
+  const modelTitle = key => {
+    const m = models.find(x => x.key === key)
+    return m?.evaluation && Number.isFinite(m.metrics?.winner_logloss) ? `${m.feature_schema} · trained ${m.train_start}–${m.training_end} · ${m.evaluation.start}–${m.evaluation.end} validation log loss: ${m.metrics.winner_logloss.toFixed(3)}` : MODEL_TAG[key]
   }
   const clsModels = models.filter(m => m.family === 'classification')
   const regModels = models.filter(m => m.family === 'regression')
@@ -69,7 +75,7 @@ export default function App() {
     const fin = shown && Object.fromEntries(shown.standings.map(r => [r.driver_id, r.position - 1]))
     return Object.fromEntries(entries.map((e, i) => [e.driver_id, [i, fin?.[e.driver_id] ?? i]]))
   }, [entries, shown])
-  const phase = !shown ? 'idle' : pb.ui.p >= 1 ? 'done' : 'racing'
+  const phase = !shown ? 'idle' : !g || pb.ui.p >= 1 ? 'done' : 'racing'
   const order = phase === 'racing' ? orderAt(slots, pb.ui.p) : null   // illustrative running order (same function as the cars)
   const lit = phase === 'racing' && pb.ui.p < LIGHTS_OUT + 0.06 ? lightsAt(pb.ui.p) : null
 
@@ -93,8 +99,12 @@ export default function App() {
           <Track3D geometry={g} circuitId={circuitId} conditions={{ ...cond, weather }} paused={phase === 'racing' && !pb.ui.playing} entries={entries} result={shown} names={names} selected={selected} onSelect={setSelected} onToggle={toggle}
             focus={focus} progress={pb.progress} isPlaying={pb.isPlaying} />
         </Suspense>
-      : <div className="track-loading" role="alert">Circuit geometry is unavailable.</div>
-  const status = running ? 'Predicting…' : phase === 'racing' ? (pb.ui.playing ? 'Race in progress' : 'Paused') : phase === 'done' ? `Predicted winner: ${names(shown.podium[0], true)}`
+      : <div className="track-loading standings-only">
+          <div><h2>Standings only</h2><p>{circuits.find(c => c.circuit_id === circuitId)?.circuit_name}</p>
+            <span>This circuit has no verified 3D layout. Predictions appear in the results panel.</span>
+          </div>
+        </div>
+  const status = running ? 'Predicting…' : phase === 'racing' ? (pb.ui.playing ? 'Race in progress' : 'Paused') : phase === 'done' ? `Predicted P1: ${names(shown.podium[0], true)}`
     : stale ? 'Prediction out of date' : health?.status === 'ok' ? 'Ready' : health ? 'Server offline' : 'Connecting…'
   const carTag = e => { const c = carOf[carKey(e.constructor_id, e.constructor_season)]; return c ? `${teamAbbr(c)}${e.constructor_season !== 2025 ? ` ’${String(e.constructor_season).slice(2)}` : ''}` : '' }
 
@@ -102,7 +112,7 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <Logo />
-        <CircuitPicker circuits={circuits} value={circuitId} onChange={setCircuitId} />
+        <CircuitPicker circuits={circuits} value={circuitId} onChange={setCircuitId} geometry={geo} />
         <div className="top-meta">
           <span className="chip" title="Drivers and cars from any eligible F1 season, 1981-2025">F1 data 1981–2025</span>
           <span className="chip" data-count>{entries.length}/{limit} cars</span>
@@ -121,12 +131,12 @@ export default function App() {
           <section className="panel" aria-labelledby="models-h">
             <h2 id="models-h" className="side-h">Models</h2>
             <label className="field"><span>Classification · podium</span>
-              <select value={cls} onChange={e => setCls(e.target.value)} aria-label="Classification model" title={MODEL_TAG[cls]}>
+              <select value={cls} onChange={e => setCls(e.target.value)} aria-label="Classification model" title={modelTitle(cls)}>
                 {clsModels.map(m => <option key={m.key} value={m.key}>{m.label}</option>)}
               </select>
             </label>
             <label className="field"><span>Regression · finishing position</span>
-              <select value={reg} onChange={e => setReg(e.target.value)} aria-label="Regression model" title={MODEL_TAG[reg]}>
+              <select value={reg} onChange={e => setReg(e.target.value)} aria-label="Regression model" title={modelTitle(reg)}>
                 {regModels.map(m => <option key={m.key} value={m.key}>{m.label}</option>)}
               </select>
             </label>
@@ -176,7 +186,7 @@ export default function App() {
               <button className="btn ghost sm" onClick={() => setSelected(null)} aria-label="Clear selection">✕</button>
             </div>
           )}
-          <div className="playback" aria-label="Race playback">
+          {g && <div className="playback" aria-label="Race playback">
             <button className="btn ghost sm" disabled={!shown} onClick={pb.act.toggle} aria-label={pb.ui.playing ? 'Pause' : phase === 'done' ? 'Replay' : 'Resume'}>{pb.ui.playing ? '❚❚' : '▶'}</button>
             <button className="btn ghost sm" disabled={!shown} onClick={pb.act.restart} aria-label="Restart">↺</button>
             <button className="btn ghost sm skip" disabled={phase !== 'racing'} onClick={pb.act.skip}>Skip to Results</button>
@@ -185,7 +195,7 @@ export default function App() {
             <span className="lap">{shown ? (phase === 'done' ? 'Finish' : pb.ui.p < LIGHTS_OUT ? 'Start' : 'Racing') : running ? 'Predicting…' : 'On the grid'}</span>
             <span className="replay-note" title="The finishing order is the prediction of the two selected models. The overtakes on the way there are an illustration, not predicted events.">
               Finishing order = model prediction · overtakes illustrative</span>
-          </div>
+          </div>}
         </section>
 
         <aside className="side side-right" aria-label="Prediction">

@@ -27,7 +27,7 @@ desktop.ini
 ~$*
 
 # ---------- Frontend ----------
-frontend/node_modules/
+node_modules/
 frontend/dist/
 
 # ---------- Local artifact backups ----------
@@ -66,3 +66,17 @@ models/algorithms_v1_backup/
 /data/interim/subset_weather_hourly.csv
 outputs/asset_review/
 docs/assets/screenshots/*.png
+
+# Local test reports, editor state and credentials
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+*.log
+*.swp
+*.suo
+*.pfx
+*.p12
+.netrc
+.npmrc.local
+/REPORT_CREDIBILITY_AUDIT.md

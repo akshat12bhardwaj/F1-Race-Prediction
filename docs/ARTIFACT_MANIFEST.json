@@ -17,6 +17,11 @@
       "sha256": "7dcd3b9a5fe25b46c7ea276ea513475854a4187cebcf4384f9cd9a3465deee55"
     },
     {
+      "path": "data/external/f1-circuits/osm-circuits.geojson",
+      "bytes": 110362,
+      "sha256": "af099d78df145de5ad57393e9687aa572af5c520cc56b8a0c34be3475d1e9d04"
+    },
+    {
       "path": "data/interim/constructors.csv",
       "bytes": 34670,
       "sha256": "01bab22cda3fa5983484275625feaf6dd0b40534fc388aba51cd35df4777f1ee"
@@ -115,6 +120,11 @@
       "path": "data/processed/master_features.csv",
       "bytes": 18848325,
       "sha256": "0010449836b2c350a6112132da9dc38a72eb9985e8f89a19e7b4e9cdc2ea60d6"
+    },
+    {
+      "path": "frontend/public/circuits-osm.json",
+      "bytes": 12674,
+      "sha256": "38c688f5c229aec4acc6fcd7fa0c3026287972c91fe8ce480fa8555a36e8db58"
     },
     {
       "path": "frontend/public/circuits.json",

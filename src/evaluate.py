@@ -46,11 +46,27 @@ def scale_capped(p, total):
     return out
 
 
-def normalize_podium(p, race_ids):
+def normalize_podium(p, race_ids, win=None):
     p = np.asarray(p, float)
     out = np.empty_like(p)
     for _, idx in pd.Series(np.arange(len(p))).groupby(np.asarray(race_ids)):
-        out[idx.to_numpy()] = scale_capped(p[idx.to_numpy()], 3)
+        ix = idx.to_numpy()
+        out[ix] = scale_capped(p[ix], 3)
+        if win is not None and (win[ix] > out[ix]).any():
+            # Reserve winner mass, then redistribute the remaining podium mass within the available headroom.
+            floor = win[ix]
+            room = 1 - floor
+            extra = np.maximum(out[ix] - floor, 0)
+            remaining = min(3, len(ix)) - floor.sum()
+            while remaining > 1e-12:
+                free = room > 0
+                weights = extra[free]
+                if weights.sum() == 0:
+                    weights = room[free]
+                add = np.minimum(room[free], weights * remaining / weights.sum())
+                room[free] -= add
+                remaining -= add.sum()
+            out[ix] = np.maximum(floor, 1 - room)
     return out
 
 

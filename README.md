@@ -1,16 +1,16 @@
 <h1 align="center">APEX — Formula 1 ML Race Predictor</h1>
-<p align="center"><strong>Build an all-time grid. Choose the models. Watch their prediction race.</strong></p>
+<p align="center"><strong>Compare ML models on a custom Formula 1 grid.</strong></p>
 <p align="center">
   <img alt="Python 3.11" src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white">
   <img alt="scikit-learn 1.7.1" src="https://img.shields.io/badge/scikit--learn-1.7.1-F7931E?logo=scikitlearn&logoColor=white">
-  <img alt="FastAPI" src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white">
+  <img alt="FastAPI" src="https://img.shields.io/badge/API-FastAPI-D2F03C?logo=fastapi&logoColor=141516">
   <img alt="React 18" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black">
-  <img alt="Three.js" src="https://img.shields.io/badge/3D-Three.js-111111?logo=threedotjs&logoColor=white">
+  <img alt="Three.js" src="https://img.shields.io/badge/3D-Three.js-141516?logo=threedotjs&logoColor=D2F03C">
 </p>
 
 ![APEX running a real 22-driver ML prediction at Spa](docs/assets/screenshots/prediction-results.webp)
 
-<p align="center"><a href="#quick-start--windows-powershell">Run locally</a> · <a href="#inside-apex">Explore the app</a> · <a href="#how-the-ml-works">How it predicts</a> · <a href="#testing">Testing</a> · <a href="CREDITS.md">Credits</a></p>
+<p align="center"><a href="#quick-start--windows-powershell">Run locally</a> · <a href="#inside-apex">Explore the app</a> · <a href="#how-the-ml-works">How it predicts</a> · <a href="#dataset-and-model-results">Results</a> · <a href="#coursework-deliverables">Coursework</a> · <a href="CREDITS.md">Credits</a></p>
 
 APEX is an **educational machine-learning race simulator**. Pick historical F1 drivers, assign constructors at their automatically selected peak, choose a classifier and regressor, configure a circuit and weather, then watch a 3D race end in the models’ predicted order.
 
@@ -46,7 +46,7 @@ Every image below comes from the running application at **1600 × 960**, using r
 - **A coherent peak car:** era-relative qualifying/grid performance, race finishes and reliability select one real eligible season per constructor. Driver skill and car performance stay separate.
 - **A valid full grid:** exactly 22 unique drivers and 11 constructors with two seats each. Move/Swap, click or drag assignment, search, Undo/Redo and restore default.
 - **Two ML perspectives:** choose from 10 classifiers and 6 regressors. Circuit history and supported pre-start weather features can change the result.
-- **Interactive 3D:** five locally bundled GLB bodies, 39 mapped circuits, measured terrain where quality permits, start lights, timing tower and podium/full standings.
+- **Interactive 3D:** five locally bundled GLB bodies, 42 mapped circuits, measured terrain where quality permits, start lights, timing tower and podium/full standings.
 
 Historical cars use simplified era approximations; 2010–2017 shares the disclosed 2000s body. The detailed ground-effect base covers 2022–2025. Car colour patterns are approximate, not exact constructor chassis or sponsor liveries.
 
@@ -108,6 +108,32 @@ Use the URL Vite prints. Production builds are served directly by FastAPI.
 The original data acquisition, policy, feature-engineering, training, calibration and evaluation scripts remain in `src/`. Required frozen tables and model bundles are committed so the showcase can run offline without re-collecting years of data. [Reproduction guide →](docs/REPRODUCIBILITY.md)
 
 </details>
+
+## Dataset and model results
+
+The bundled Jolpica F1 and Open-Meteo data cover 1950–2025. The collected history contains **25,873 entries across 1,149 races**. Eligibility filters leave **25,066 modelling rows across 1,138 races**. Historical features use race-by-race chronology. Weather is retrospective pre-start reanalysis.
+
+| Evaluation | System | Winner top-1 ↑ | Winner log loss ↓ | Podium overlap ↑ | Rank MAE ↓ |
+|---|---|---:|---:|---:|---:|
+| First frozen test, 70 races in 2023–2025 | Grid Plackett–Luce | 58.6% | 2.335 | 69.0% | 3.284 |
+| First frozen test, 70 races in 2023–2025 | Legacy historical system | 64.3% | 1.106 | 66.2% | 3.099 |
+| Chronological replay, same previously examined races | Calibrated grid baseline | 58.6% | 1.376 | 69.0% | 3.284 |
+| Chronological replay, same previously examined races | APEX default: Random Forest + Ridge | 60.0% | 1.122 | 69.0% | 3.211 |
+| Chronological replay, same previously examined races | APEX showcase: Logistic Regression + Ridge | 60.0% | 1.117 | 69.5% | 3.159 |
+
+Compare rows within the same evaluation. The APEX replays fixed the model settings and refitted through 2022. The project had already examined the 2023–2025 outcomes. The released pair has no independent accuracy score on new races, and cross-era matchups have no observed results.
+
+[Frozen test](outputs/tables/final_test_2023_2025_run1_frozen.csv) · [Full replay and component results](outputs/tables/live_pair_replay.csv) · [Replay settings and model hashes](outputs/tables/live_pair_replay.json)
+
+The site shows both **predicted P1 by average finish** and **highest win probability**. Expand **Prediction context** for evidence limitations. Of 77 selectable circuits, 42 have 3D layouts and 35 show standings directly. Fuji, Jerez and Yeongam use attributed mapped outlines at flat elevation.
+
+## Coursework deliverables
+
+- [Word report](report/final/F1_Machine_Learning_Project_Report.docx) · [Report PDF](report/final/F1_Machine_Learning_Project_Report.pdf)
+- [Editable PowerPoint](reports/F1_ML_Project_Presentation.pptx) · [Slides PDF](reports/F1_ML_Project_Presentation.pdf)
+- [Verification record](report/final/REPORT_VERIFICATION.md)
+
+The contribution assignments are proposed. The declaration awaits the candidates’ signatures and signing date.
 
 ## Project structure
 

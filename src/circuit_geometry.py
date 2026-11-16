@@ -169,6 +169,35 @@ def build(cid, feature):
     return out
 
 
+def write_osm_layouts():
+    """Resample mapped OSM centrelines in metres, with no inferred elevation."""
+    source = SRC.with_name("osm-circuits.geojson")
+    mapping = {"osm-fuji": "fuji", "osm-yeongam": "yeongam", "osm-jerez": "jerez"}
+    tracks = {}
+    for feature in json.loads(source.read_text(encoding="utf-8"))["features"]:
+        props = feature["properties"]
+        if props["id"] not in mapping:
+            continue
+        coords = feature["geometry"]["coordinates"]
+        if feature["geometry"]["type"] != "LineString" or coords[0] != coords[-1]:
+            raise ValueError(f"Expected a closed track: {props['Name']}")
+        x, z, _, _, traced, _ = centreline(coords)
+        if abs(traced / props["length"] - 1) > .015:
+            raise ValueError(f"Track length mismatch: {props['Name']}")
+        tracks[mapping[props["id"]]] = {
+            "name": props["Name"], "length_m": props["length"], "traced_m": round(traced),
+            "x": np.round(x, 1).tolist(), "z": np.round(z, 1).tolist(),
+            "elevation": {"quality": "approximate", "reason": "mapped layout; elevation not verified"},
+            "source": "OpenStreetMap contributors",
+        }
+    if set(tracks) != set(mapping.values()):
+        raise ValueError("Missing mapped OSM circuit")
+    OUT.with_name("circuits-osm.json").write_text(json.dumps({
+        "license": "ODbL 1.0", "attribution": "© OpenStreetMap contributors",
+        "source": "https://www.openstreetmap.org/copyright", "circuits": tracks,
+    }, separators=(",", ":")), encoding="utf-8")
+
+
 def main():
     g = json.loads(SRC.read_text(encoding="utf-8"))
     by_id = {f["properties"]["id"]: f for f in g["features"]}
@@ -179,6 +208,7 @@ def main():
                                                    "Space GmbH 2014-2018, provided under COPERNICUS by the EU and ESA); "
                                                    "smoothed along the track",
                                "circuits": out}, separators=(",", ":")))
+    write_osm_layouts()
     for cid, v in sorted(out.items(), key=lambda kv: -kv[1]["elevation"].get("range_m", -1)):
         e = v["elevation"]
         if "range_m" not in e:
